@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use phpDocumentor\Reflection\PseudoTypes\True_;
 
 class CreateUsersTable extends Migration
 {
@@ -28,12 +29,16 @@ class CreateUsersTable extends Migration
             $table->string('city')->nullable();
             $table->integer('school_id')->nullable();
             $table->longText('about_me')->nullable();
+            $table->integer('Role');
             $table->integer('campaign_num')->nullable();
             $table->integer('comments_num')->nullable();
             $table->integer('contribution_num')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
+    
+
+        
 
     }
 
