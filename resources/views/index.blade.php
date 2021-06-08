@@ -3,5 +3,5 @@
 @section('content')
 
 
-iuww;;k;klsklk;slks
+
 @endsection
