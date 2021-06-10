@@ -90,7 +90,7 @@
             </div>
         </nav>
 
-        <main style="padding-top: 1.5rem; margin-bottom: 20rem;">
+        <main style="padding-top: 1.5rem; margin-bottom: 5rem;">
             @yield('content')
         </main>
 
