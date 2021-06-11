@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+
+        <center><h2><img src="images/icon.gif" class="img-fluid mr-2" style="height: 2.0em; border-radius:30px" alt="...">TekFund</h2></center>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
