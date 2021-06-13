@@ -131,7 +131,7 @@
                           </div>
                       </form>
       <center>
-     <p><small> By continuing, you agree to Amazon's  <a href="" style="text-decoration: none;">Conditions of Use</a> and <a href="" style="text-decoration: none;">Privacy Notice</a>.</small></p>
+     <p><small> By continuing, you agree to TekFund's  <a href="" style="text-decoration: none;">Conditions of Use</a> and <a href="" style="text-decoration: none;">Privacy Notice</a>.</small></p>
       <p><small><i class="fas fa-caret-right"></i> <a href="#" style="text-decoration: none;">Need help?</a></small></p>
       </center>
     </div>
@@ -155,7 +155,7 @@
   <div>
   <hr>
   <center><p><small><a href="#" style="text-decoration: none; padding-right:5%; font: size 0.5em;">Condition of Use</a>  <a href="#" style="text-decoration: none; padding-right:5%; font: size 0.5em;">Privacy Notice</a>  <a href="#" style="text-decoration: none; font: size 0.5em;"> Help</a></small></p></center>
-  <center><p><small>© 1996-2021, Amazon.com, Inc. or its affiliates</small></p></center>
+  <center><p><small>© 2021, TekFund.com, Inc. or its affiliates</small></p></center>
   </div>
   </div>
   
