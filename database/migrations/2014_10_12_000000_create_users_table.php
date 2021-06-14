@@ -23,13 +23,13 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('user_id');
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
-            $table->string('username')->nullable();
-            $table->string('phone_number')->nullable();
+            $table->string('username');
+            $table->string('phone_number');
             $table->string('country')->nullable();
             $table->string('city')->nullable();
             $table->integer('school_id')->nullable();
             $table->longText('about_me')->nullable();
-            $table->integer('Role');
+            $table->integer('role');
             $table->integer('campaign_num')->nullable();
             $table->integer('comments_num')->nullable();
             $table->integer('contribution_num')->nullable();

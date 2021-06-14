@@ -18,12 +18,13 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d78432a841.js" crossorigin="anonymous"></script>
+    
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
-<body>
+<body style="background-color:white; ">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg shadow-sm" style="background-color: rgb(20, 7, 63)">
             <div class="container-fluid" >
