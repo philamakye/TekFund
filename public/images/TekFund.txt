@@ -1,9 +1,0 @@
-<svg id="proj_group" data-name="proj group" xmlns="http://www.w3.org/2000/svg" width="768" height="549" viewBox="0 0 768 549">
-  <g id="Rectangle_18" data-name="Rectangle 18" fill="#f9f9f9" stroke="#b2a2a2" stroke-width="1">
-    <rect width="768" height="549" stroke="none"/>
-    <rect x="0.5" y="0.5" width="767" height="548" fill="none"/>
-  </g>
-
- 
- <text id="TekFund" transform="translate(384 493)" fill="#707070" font-size="70" font-family="CooperBlack, Cooper"><tspan x="-161.875" y="0">TekFund</tspan></text>
-</svg>

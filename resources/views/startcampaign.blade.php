@@ -1,6 +1,5 @@
 <style>
 
-}
 
 </style>
 
