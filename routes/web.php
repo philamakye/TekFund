@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CampaignController;
 use App\Models\UserContribution;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -34,6 +35,8 @@ Route::get('/startcampaign', [App\Http\Controllers\CampaignController::class, 'i
 Route::get('/admin', 'AdminController@index' )->name('admin')->middleware('admin');
 #Route::get('/startcampaign', 'CampaignController@index') ->name('start campaign');
 Route::get('/setting',[App\Http\Controllers\UserControler::class, 'setting'])->name('settings');
+Route::get('/healthcare', 'CampaignController@health_step1')->name('healthcare');
+
 
 #Route::get('/startcampaign', function(){
  #   return view('startcampaign');

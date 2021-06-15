@@ -11,7 +11,7 @@
 
     <div class="row text-center">
         <div class="col-1">
-         
+
         </div>
 
         <div class="col">
@@ -26,23 +26,23 @@
             </div>
         </div>
         <div class="col-1">
-          
+
         </div>
       </div>
-      
+
       <div class="row text-center my-3 pt-4">
-      <div class="col"> 
+      <div class="col">
           <center>
         <div class="card " style="width: 20rem; height:16rem; background-color:rgb(245, 241, 241)" >
-            <div class="card-body">
+            <div class="card-body" >
               <h5 class="card-title"><b>Health Care</b></h5>
               <img src="https://img.icons8.com/emoji/48/000000/hospital-emoji.png"/>
               <p class="card-text">Tekfund is a crowdfunding platform which helps individuals with health related issues to begin fund raising campaigns</p>
               <h6 class="card-subtitle mb-2 text-muted">0% Platform fee</h6>
-              <a class="TekFund" style="font-size: 2em">
+              <a class="TekFund" style="font-size: 2em" href = "{{route('healthcare')}}">
                 <text id="TekFund" style=" color:#707070; text-decoration:none;  font-family:CooperBlack, Cooper "><tspan x="-161.875" y="0">TekFund</tspan></text>
               </a>
-              
+
             </div>
           </div>
           </center>
@@ -58,7 +58,7 @@
                   <a class="TekFund" style="font-size: 2em">
                     <text id="TekFund" style=" color:#707070; text-decoration:none;  font-family:CooperBlack, Cooper "><tspan x="-161.875" y="0">TekFund</tspan></text>
                   </a>
-                  
+
                 </div>
               </div>
           </center>
@@ -67,7 +67,7 @@
       </div>
 
       <div class="row text-center mt-5">
-        <div class="col"> 
+        <div class="col">
             <center>
                 <div class="card " style="width: 20rem; height:17rem; background-color:rgb(245, 241, 241)" >
                     <div class="card-body">
@@ -78,7 +78,7 @@
                       <a class="TekFund" style="font-size: 2em">
                         <text id="TekFund" style=" color:#707070; text-decoration:none;  font-family:CooperBlack, Cooper "><tspan x="-161.875" y="0">TekFund</tspan></text>
                       </a>
-                      
+
                     </div>
                   </div>
             </center>
@@ -94,12 +94,12 @@
                       <a class="TekFund" style="font-size: 2em">
                         <text id="TekFund" style=" color:#707070; text-decoration:none;  font-family:CooperBlack, Cooper "><tspan x="-161.875" y="0">TekFund</tspan></text>
                       </a>
-                      
+
                     </div>
                   </div>
             </center>
         </div>
-  
+
         </div>
 
 

@@ -16,6 +16,9 @@ class CampaignController extends Controller
     {
         return view('startcampaign');
     }
+    public function health_step1(){
+        return view('healthcare.step1');
+    }
 
     /**
      * Show the form for creating a new resource.
