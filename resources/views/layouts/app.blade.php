@@ -18,7 +18,7 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d78432a841.js" crossorigin="anonymous"></script>
-    
+
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -69,7 +69,7 @@
                             @endif
                         @else
                            <li class="nav-item dropdown">
-                           <a id="navbarDropdown" style="color: white;" class="nav-link " href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >{{ __('Start Campaign') }}</a>
+                           <a id="navbarDropdown" style="color: white;" class="nav-link " href="{{ route('start campaign') }}" role="button"  aria-haspopup="true" aria-expanded="false" >{{ __('Start Campaign') }}</a>
                            </li>
                            <li class="nav-item dropdown">
 
@@ -85,7 +85,7 @@
                                     <a class="dropdown-item" href="#">My Campaigns</a>
                                     <a class="dropdown-item" href="#">My Contributions</a>
                                     <a class="dropdown-item" href="#">Profile</a>
-                                    <a class="dropdown-item" href="#">Settings</a>
+                                    <a class="dropdown-item" href="{{route('settings')}}">Settings</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -410,7 +410,10 @@
 
 </footer>
 <!-- Footer -->
-
+<script>
+    import * as mdb from 'mdb-ui-kit'; // lib
+import { Input } from 'mdb-ui-kit'; // module
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>

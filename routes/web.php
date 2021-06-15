@@ -1,7 +1,9 @@
 <?php
 
+use App\Models\UserContribution;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use PHPUnit\TextUI\XmlConfiguration\IniSetting;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,10 +27,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/startcampaign', [App\Http\Controllers\CampaignController::class, 'index'])->name('start campaign');
 
 //Route::view('admin','admin');
 
 Route::get('/admin', 'AdminController@index' )->name('admin')->middleware('admin');
-Route::get('/startcampaign', function(){
-    return view('startcampaign');
-});
+#Route::get('/startcampaign', 'CampaignController@index') ->name('start campaign');
+Route::get('/setting',[App\Http\Controllers\UserControler::class, 'setting'])->name('settings');
+
+#Route::get('/startcampaign', function(){
+ #   return view('startcampaign');
+#});
