@@ -32,3 +32,7 @@ Route::get('/admin', 'AdminController@index' )->name('admin')->middleware('admin
 Route::get('/startcampaign', function(){
     return view('startcampaign');
 });
+
+Route::get('/step1', function(){
+    return view('healthcare.step1');
+});

@@ -68,9 +68,9 @@
                                 </li>
                             @endif
                         @else
-                           <li class="nav-item dropdown">
-                           <a id="navbarDropdown" style="color: white;" class="nav-link " href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >{{ __('Start Campaign') }}</a>
-                           </li>
+                           <li class="nav-item dropdown"> 
+                           <a id="navbarDropdown" style="color: white;" class="nav-link " href="/startcampaign" role="button"  aria-haspopup="true" aria-expanded="false" >Start Campaign</a>
+                          </li>
                            <li class="nav-item dropdown">
 
                                 <a id="navbarDropdown" style="color: white" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
