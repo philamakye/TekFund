@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+<<<<<<< HEAD
 @section('content')
 <button type="button" class="btn btn-primary" style="margin-left: 15px; background-color: white; color: black;"><i class="fa fa-eye" aria-hidden="true"></i>
     View Profile <span class="badge bg-secondary"></span>
@@ -78,3 +79,8 @@
 <br>
 <br>
 @endsection
+=======
+@section()
+ <p> Bitsldkjf</p>
+@endsection
+>>>>>>> a9eb51dee011305398fd1ebbfa29363a870ae9dd
