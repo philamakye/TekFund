@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class UserControler extends Controller
+class UserController extends Controller
 {
     //
     public function index()
@@ -15,6 +15,15 @@ class UserControler extends Controller
     public function profile2(){
 
         return view('profile2');
+    }
+    public function email(){
+
+        return view ('editemail');
+    }
+
+    public function profile(){
+
+        return view('profile');
     }
 }
 

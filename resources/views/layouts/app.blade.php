@@ -22,6 +22,15 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+   <style>
+       .nopadding{
+           padding: 0;
+       }
+       .nomargin{
+           margin: 0;
+       }
+   </style>
+
 </head>
 
 <body style="background-color:white; ">

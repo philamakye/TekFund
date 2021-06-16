@@ -3,12 +3,16 @@
 @extends('layouts.app')
 
 @section('content')
-<button type="button" class="btn btn-primary" style="margin-left: 15px; background-color: white; color: black;"><i class="fa fa-eye" aria-hidden="true"></i>
+<form action="profile" method="GET" style="display: inline" >
+<button class="btn btn-primary" style="margin-left: 15px; background-color: white; color: black;" type="submit"><i class="fa fa-eye" aria-hidden="false"></i>
 View Profile <span class="badge bg-secondary"></span>
 </button>
-<button type="button" class="btn btn-primary" style="background-color: rgb(44, 20, 124); color: white;"><i class="fa fa-pencil" aria-hidden="true"></i>
+</form>
+<form action="editprofile" method="GET" style="display: inline">
+<button type="submit" class="btn btn-primary" style="background-color: rgb(44, 20, 124); color: white;" ><i class="fa fa-pencil" aria-hidden="true"></i>
 Edit profile & Settings<span class="badge bg-secondary"></span>
 </button>
+</form>
 
 <h2 style="margin-left:30px; font-family: cooper; margin-top:10px; font-size: 25px;">MANASSEH WEST</h2>
 <h6 style="margin-left: 40px; color: grey;"><i class="fa fa-map-marker" aria-hidden="true"></i>  Kumasi, Ghana</h6>
@@ -32,7 +36,7 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
       class="nav-link active"
       id="ex1-tab-2"
       data-mdb-toggle="tab"
-      href="#ex1-tabs-2"
+      href="{{route('settings')}}"
       role="tab"
       aria-controls="ex1-tabs-2"
       aria-selected="false"
@@ -44,7 +48,7 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
       class="nav-link"
       id="ex1-tab-3"
       data-mdb-toggle="tab"
-      href="#ex1-tabs-3"
+      href="{{route('Email') }}"
       role="tab"
       aria-controls="ex1-tabs-3"
       aria-selected="false"
