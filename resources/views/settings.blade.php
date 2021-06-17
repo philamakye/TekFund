@@ -3,12 +3,16 @@
 @extends('layouts.app')
 
 @section('content')
-<button type="button" class="btn btn-primary" style="margin-left: 15px; background-color: white; color: black;"><i class="fa fa-eye" aria-hidden="true"></i>
+<form action="profile" method="GET" style="display: inline" >
+<button class="btn btn-primary" style="margin-left: 15px; background-color: white; color: black;" type="submit"><i class="fa fa-eye" aria-hidden="false"></i>
 View Profile <span class="badge bg-secondary"></span>
 </button>
-<button type="button" class="btn btn-primary" style="background-color: rgb(44, 20, 124); color: white;"><i class="fa fa-pencil" aria-hidden="true"></i>
+</form>
+<form action="editprofile" method="GET" style="display: inline">
+<button type="submit" class="btn btn-primary" style="background-color: rgb(44, 20, 124); color: white;" ><i class="fa fa-pencil" aria-hidden="true"></i>
 Edit profile & Settings<span class="badge bg-secondary"></span>
 </button>
+</form>
 
 <h2 style="margin-left:30px; font-family: cooper; margin-top:10px; font-size: 25px;">MANASSEH WEST</h2>
 <h6 style="margin-left: 40px; color: grey;"><i class="fa fa-map-marker" aria-hidden="true"></i>  Kumasi, Ghana</h6>
@@ -32,7 +36,7 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
       class="nav-link active"
       id="ex1-tab-2"
       data-mdb-toggle="tab"
-      href="#ex1-tabs-2"
+      href="{{route('settings')}}"
       role="tab"
       aria-controls="ex1-tabs-2"
       aria-selected="false"
@@ -44,7 +48,7 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
       class="nav-link"
       id="ex1-tab-3"
       data-mdb-toggle="tab"
-      href="#ex1-tabs-3"
+      href="{{route('Email') }}"
       role="tab"
       aria-controls="ex1-tabs-3"
       aria-selected="false"
@@ -72,7 +76,33 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
 <hr style="margin: 10px;">
   <div class="card-body">
 
-    <h5 class="card-title">heyitzwest@gmal.com         <a href="#" style="margin-left: 100px; color: red;">Edit</a> </h5>
+    <h5 class="card-title">heyitzwest@gmal.com         <a href="{{route('Email')}}" style="margin-left: 100px; color: red;"></a>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Edit
+</button><div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Update Email Address</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+    <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Email Address</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Bitch@gmail.com">
+</div>
+      </div>
+      <div class="mb-3" style="padding: 15px;">
+    <label for="exampleInputPassword1">New Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter New Password">
+  </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div> </h5>
     <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
 
   </div>
@@ -92,15 +122,15 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
 
    <div class="form-group">
     <label for="exampleInputPassword1">Current Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Current Password">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">New Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter New Password">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Password Confirmation</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm New Password">
 <br>
     <button type="submit" class="btn btn-primary mb-2" style="background-color:rgb(44, 20, 124)">SAVE</button>
   </div>

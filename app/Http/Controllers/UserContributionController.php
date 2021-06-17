@@ -15,6 +15,7 @@ class UserContributionController extends Controller
     public function index()
     {
         //
+        return view('contribution');
     }
 
 
