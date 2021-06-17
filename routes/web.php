@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CampaignController;
+use App\Http\Controllers\UserContributionController;
 use App\Http\Controllers\UserController;
 use App\Models\UserContribution;
 use Illuminate\Support\Facades\Route;
@@ -40,6 +41,12 @@ Route::get('/healthcare', 'CampaignController@health_step1')->name('healthcare')
 Route::get('/editprofile', 'UserController@profile2')->name('profile-2');
 Route::get('/email', 'UserController@email')->name('Email');
 Route::get('/profile', 'UserController@profile')->name(('Profile'));
+Route::post('/upload', 'userController@uploadAvt')->name('Upload-profile image');
+Route::post('/upload-avatar', 'userController@uploadImg')->name('Upload-avatar');
+Route::get('/contributions','UserContributionController@index')->name('Contributions');
+Route::get('/mycampaigns','CampaignController@mycamps')->name('My Campaigns');
+
+
 
 #Route::get('/startcampaign', function(){
  #   return view('startcampaign');

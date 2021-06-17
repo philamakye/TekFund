@@ -76,7 +76,33 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
 <hr style="margin: 10px;">
   <div class="card-body">
 
-    <h5 class="card-title">heyitzwest@gmal.com         <a href="#" style="margin-left: 100px; color: red;">Edit</a> </h5>
+    <h5 class="card-title">heyitzwest@gmal.com         <a href="{{route('Email')}}" style="margin-left: 100px; color: red;"></a>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Edit
+</button><div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Update Email Address</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+    <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Email Address</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Bitch@gmail.com">
+</div>
+      </div>
+      <div class="mb-3" style="padding: 15px;">
+    <label for="exampleInputPassword1">New Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter New Password">
+  </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div> </h5>
     <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
 
   </div>
@@ -96,15 +122,15 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
 
    <div class="form-group">
     <label for="exampleInputPassword1">Current Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Current Password">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">New Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter New Password">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Password Confirmation</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm New Password">
 <br>
     <button type="submit" class="btn btn-primary mb-2" style="background-color:rgb(44, 20, 124)">SAVE</button>
   </div>

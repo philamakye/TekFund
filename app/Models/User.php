@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Storage;
 
 class User extends Authenticatable
 {
@@ -22,7 +23,9 @@ class User extends Authenticatable
         'password',
         'role',
         'username',
-        'phone_number'
+        'phone_number',
+        'avatar',
+        'pro_image',
     ];
 
     /**
@@ -44,4 +47,30 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
     protected $primaryKey = 'user_id';
+    public static function uploadAvatar($image)
+    {
+        $filename = $image->getClientOriginalName();
+        (new Self())->delOld();
+        $image->storeAs('images', $filename, 'public');
+        auth()->user()->update(['pro_image' => $filename]);
+    }
+    protected function delOld()
+    {
+        if (auth()->user()->pro_image) {
+            Storage::delete('/public/images/' . auth()->user()->pro_image);
+        }
+    }
+    public static function uploadImage($image)
+    {
+        $filename = $image->getClientOriginalName();
+        (new Self())->delOldAvatar();
+        $image->storeAs('images', $filename, 'public');
+        auth()->user()->update(['avatar' => $filename]);
+    }
+    protected function delOldAvatar()
+    {
+        if (auth()->user()->avatar) {
+            Storage::delete('/public/images/' . auth()->user()->avatar);
+        }
+    }
 }

@@ -131,16 +131,38 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
    <h3 style="margin-top: 20px; margin-left: 20px;">Your Photos</h3>
 <hr style="margin: 10px;">
   <div class="card-body">
+      @include('layouts.flash')
       <h4>Profile Image<i class="fa fa-question-circle" aria-hidden="true"style="margin-left:30px;"></i></h4>
       <center>
-         <img src="https://i.pinimg.com/474x/65/25/a0/6525a08f1df98a2e3a545fe2ace4be47.jpg" alt="avatar" style=" border-radius:250px; height: 230px;"/></center>
-         <center><button type="submit" class="btn btn-primary mb-2" style="background-color:rgb(44, 20, 124); margin-top: 10px;">ADD IMAGE</button></center>
-         <br>
-<h4>Avatar<i class="fa fa-question-circle" aria-hidden="true"style="margin-left:30px;"></i></h4>
-<center>
-         <img src="https://i.pinimg.com/474x/65/25/a0/6525a08f1df98a2e3a545fe2ace4be47.jpg" alt="avatar" style=" border-radius:150px; height: 70px;"/></center>
-         <center><button type="submit" class="btn btn-primary mb-2" style="background-color:rgb(44, 20, 124); margin-top: 10px;">ADD IMAGE</button></center>
-  </div>
+        @if(Auth::user()->pro_image)
+                <img src="{{asset('storage/images/'. Auth::user()->pro_image)}}" alt="avatar" style="border-radius:250px; height: 250px; width: 250px;"/>
+        @else
+        <img src="https://i.pinimg.com/474x/65/25/a0/6525a08f1df98a2e3a545fe2ace4be47.jpg" alt="avatar" style=" border-radius:250px; height: 230px; width: 230px;"/></center>
+        @endif
+         <form action="{{route('Upload-profile image')}}" method="POST" enctype="multipart/form-data">
+            @csrf
+            <center><input type="file" name="image" accept= "image/*" style="background-color:rgb(246, 246, 248); margin-top: 10px;"/></center>
+            <br>
+            <center><button type="submit" class="btn btn-primary mb-2" style="background-color:rgb(44, 20, 124); margin-top: 10px; ">ADD IMAGE</button></center>
+         </form>
+<br>
+    <h4 style="float: left;">Avatar<i class="fa fa-question-circle" aria-hidden="true"style="margin-left:30px;"></i></h4>
+<br>
+    <center>
+        @if(Auth::user()->avatar)
+            <img src="{{asset('storage/images/'. Auth::user()->avatar)}}" alt="avatar" style="border-radius:200px; height: 70px; width: 70px; margin-right: 120px;"/>
+        @endif
+        @if (empty(Auth::user()->avatar))
+        <img src="https://i.pinimg.com/474x/65/25/a0/6525a08f1df98a2e3a545fe2ace4be47.jpg" alt="avatar" style=" border-radius:150px; height: 70px; "/></center>
+        @endif
+
+            <form action="{{route('Upload-avatar')}}" method="POST" enctype="multipart/form-data">
+            @csrf
+            <center><input type="file" name="image" accept= "image/*" style="background-color:rgb(246, 246, 248); margin-top: 10px;"/></center>
+            <br>
+            <center><button type="submit" class="btn btn-primary mb-2" style="background-color:rgb(44, 20, 124); margin-top: 10px;">ADD IMAGE</button></center>
+            </form>
+</div>
   </div>
 </div>
 <br>
