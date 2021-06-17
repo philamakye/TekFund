@@ -20,11 +20,7 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
       class="nav-link"
       id="ex1-tab-1"
       data-mdb-toggle="tab"
-<<<<<<< HEAD
-      href="{{route('profile2')}}"
-=======
       href="{{route('profile-2')}}"
->>>>>>> a9eb51dee011305398fd1ebbfa29363a870ae9dd
       role="tab"
       aria-controls="ex1-tabs-1"
       aria-selected="true"
