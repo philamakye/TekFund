@@ -84,16 +84,16 @@
 
                                 <a id="navbarDropdown" style="color: white" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                    {{ Auth::user()->name }}
-                                    <!-- if(Auth::user()->avatar)-->
+                                     @if(Auth::user()->avatar)
                                     <img src="{{asset('storage/images/'. Auth::user()->avatar)}}" alt="avatar" style="height: 1.5em;width:1.5em; border-radius:40px;"/>
-                                   <!-- endif-->
+                                    @endif
                                     <span class="caret" </span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="#">My Campaigns</a>
                                     <a class="dropdown-item" href="#">My Contributions</a>
-                                    <a class="dropdown-item" href="#">Profile</a>
+                                    <a class="dropdown-item" href="{{route('Profile')}}">Profile</a>
                                     <a class="dropdown-item" href="{{route('settings')}}">Settings</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

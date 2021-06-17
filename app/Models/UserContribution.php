@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class UserContribution extends Model
 {
     use HasFactory;
+
+    public function myContribution(){
+        return view('contribution');
+    }
 }

@@ -4,6 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use phpDocumentor\Reflection\PseudoTypes\True_;
+use phpDocumentor\Reflection\Types\Nullable;
 
 class CreateUsersTable extends Migration
 {
@@ -24,6 +25,8 @@ class CreateUsersTable extends Migration
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
             $table->string('username');
+            $table->string('avatar')->nullable();
+            $table->string('pro_image')->nullable();
             $table->string('phone_number');
             $table->string('country')->nullable();
             $table->string('city')->nullable();
@@ -36,9 +39,9 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
-    
 
-        
+
+
 
     }
 
