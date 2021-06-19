@@ -26,6 +26,9 @@ use PHPUnit\TextUI\XmlConfiguration\IniSetting;
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/campaign', function () {
+    return view('viewcampaign');
+});
 
 Auth::routes();
 

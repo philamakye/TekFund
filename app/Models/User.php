@@ -47,6 +47,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
     protected $primaryKey = 'user_id';
+    
     public static function uploadAvatar($image)
     {
         $filename = $image->getClientOriginalName();
