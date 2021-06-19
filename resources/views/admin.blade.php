@@ -1,17 +1,37 @@
+<style>
+main{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.navbar input{
+    display: none !important;
+}
+
+.navbar-toggler{
+    display: none !important;
+}
+
+</style>
+
+
 @extends('layouts.app')
 @section('content')
 
 <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
             <div class="border-end bg-white" id="sidebar-wrapper">
-                <div class="sidebar-heading border-bottom bg-light">Start Bootstrap</div>
-                <div class="list-group list-group-flush">
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Dashboard</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Shortcuts</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Overview</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Events</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Profile</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Status</a>
+                <div class="sidebar-heading border-bottom bg-light"></div>
+                <div class="list-group list-group-flush" style="width: 200px;">
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center" href="#!">Campaigns</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Live</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Pending</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Suspended</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center" href="#!">Users</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Signed up</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Anonymous Contributors</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center" href="#!">Actions</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center" href="#!">Logout</a>
                 </div>
             </div>
             <!-- Page content wrapper-->
@@ -33,13 +53,36 @@
                 <div class="container-fluid">
                     <h1 class="mt-4">Simple Sidebar</h1>
                     <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-                    <p>
-                        Make sure to keep all page content within the
-                        <code>#page-content-wrapper</code>
-                        . The top navbar is optional, and just for demonstration. Just create an element with the
-                        <code>#sidebarToggle</code>
-                        ID which will toggle the menu when clicked.
-                    </p>
+
+
+                    <div class="card">
+                        <div class="card-header">
+                            Featured
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Featured
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Featured
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>

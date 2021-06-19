@@ -15,7 +15,6 @@ class UserController extends Controller
     {
         return view('settings');
     }
-
     public function profile2(){
 
         return view('profile2');

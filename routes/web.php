@@ -41,6 +41,7 @@ Route::get('/admin', 'AdminController@index' )->name('admin')->middleware('admin
 #Route::get('/startcampaign', 'CampaignController@index') ->name('start campaign');
 Route::get('/setting',[App\Http\Controllers\UserController::class, 'index'])->name('settings');
 Route::get('/healthcare', 'CampaignController@health_step1')->name('healthcare');
+Route::get('/healthcare2', 'CampaignController@health_step2')->name('healthcare');
 Route::get('/editprofile', 'UserController@profile2')->name('profile-2');
 Route::get('/email', 'UserController@email')->name('Email');
 Route::get('/profile', 'UserController@profile')->name(('Profile'));

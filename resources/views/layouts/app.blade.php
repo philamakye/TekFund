@@ -46,7 +46,7 @@
                 </a>
                 <a href="#" class="navbar-brand pl-2" style="color: white; font-size:1em">
                   <div class="input-group input-group-sm ">
-                <input type="text" class="form-control" placeholder="Search" aria-label=Search" aria-describedby="basic-addon2">
+                <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
                 <span class="input-group-text "><i class="fas fa-search"></i></span>
                 </div>
                 </a>
