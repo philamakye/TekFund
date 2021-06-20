@@ -13,7 +13,7 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
 </form>
 
 
-<h2 style="margin-left:30px; font-family: cooper; margin-top:10px; font-size: 25px;">MANASSEH WEST</h2>
+<h2 style="margin-left:30px; font-family: cooper; margin-top:10px; font-size: 25px;text-transform: uppercase;">{{ Auth::user()->name}}</h2>
 <h6 style="margin-left: 40px; color: grey;"><i class="fa fa-map-marker" aria-hidden="true"></i>  Kumasi, Ghana</h6>
 
 <!-- Tabs navs -->

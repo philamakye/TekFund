@@ -12,7 +12,7 @@ Edit Profile & Settings<span class="badge bg-secondary"></span>
 </form>
 
 
-<h2 style="margin-left:30px; font-family: cooper; margin-top:10px; font-size: 25px;">MANASSEH WEST</h2>
+<h2 style="margin-left:30px; font-family: cooper; margin-top:10px; font-size: 25px;text-transform: uppercase;">{{ Auth::user()->name}}</h2>
 <h6 style="margin-left: 40px; color: grey;"><i class="fa fa-map-marker" aria-hidden="true"></i>  Kumasi, Ghana</h6>
 
 <!-- Tabs navs -->
@@ -34,7 +34,7 @@ Edit Profile & Settings<span class="badge bg-secondary"></span>
       class="nav-link"
       id="ex1-tab-2"
       data-mdb-toggle="tab"
-      href=""
+      href="{{route('My Campaigns')}}"
       role="tab"
       aria-controls="ex1-tabs-2"
       aria-selected="false"
@@ -73,7 +73,7 @@ Edit Profile & Settings<span class="badge bg-secondary"></span>
         @if (empty(Auth::user()->avatar))
         <img src="https://i.pinimg.com/474x/65/25/a0/6525a08f1df98a2e3a545fe2ace4be47.jpg" alt="avatar" style=" border-radius:150px; height: 70px; "/></center>
         @endif
-         <h2 style="margin-left:10px; font-family: cooper; font-size: 25px; display: inline;">MANASSEH WEST</h2>
+         <h2 style="margin-left:10px; font-family: cooper; font-size: 25px; display: inline;text-transform: uppercase;">{{ Auth::user()->name}}</h2>
     <br>
     <br>
     <hr style="margin-right: 1070px; margin-left: 100px;">

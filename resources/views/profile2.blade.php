@@ -13,7 +13,7 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
 </form>
 
 
-<h2 style="margin-left:30px; font-family: cooper; margin-top:10px; font-size: 25px;">MANASSEH WEST</h2>
+<h2 style="margin-left:30px; font-family: cooper; margin-top:10px; font-size: 25px;text-transform: uppercase;">{{ Auth::user()->name}}</h2>
 <h6 style="margin-left: 40px; color: grey;"><i class="fa fa-map-marker" aria-hidden="true"></i>  Kumasi, Ghana</h6>
 
 <!-- Tabs navs -->
@@ -75,25 +75,25 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
 
 <div class="mb-3" style="width:50%;">
   <label for="exampleFormControlInput1" class="form-label">First Name</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Bitch">
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ex: Manasseh">
 </div>
 <div class="mb-3" style="width:50%;">
   <label for="exampleFormControlInput1" class="form-label">Last Name</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ass">
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="West">
 </div>
 <div class="mb-3" style="width:50%;">
   <label for="exampleFormControlInput1" class="form-label">Country</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Cameroon">
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ex: Ghana">
 </div>
 <!--<div class="container">-->
     <div class="row">
 <div class="mb-3" style="width: 25%; margin-left:5px;">
   <label for="exampleFormControlInput1" class="form-label">City</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Korle-Bu">
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ex: Takoradi">
 </div>
 <div class="mb-3" style="width: 25%; margin-left:5px;">
   <label for="exampleFormControlInput1" class="form-label">School ID</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="2057763">
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ex: 2057763">
 </div>
     </div>
   </div>
@@ -111,11 +111,11 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
   <div class="card-body">
       <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Short Description</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Bitch">
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
 <br>
    <label for="exampleFormControlInput1" class="form-label">About Me</label>
   <div class="form-floating">
-  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 250px"></textarea>
+  <textarea class="form-control" maxlength = "1000" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 250px"></textarea>
 </div>
 </div>
   </div>

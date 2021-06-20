@@ -14,7 +14,7 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
 </button>
 </form>
 
-<h2 style="margin-left:30px; font-family: cooper; margin-top:10px; font-size: 25px;">MANASSEH WEST</h2>
+<h2 style="margin-left:30px; font-family: cooper; margin-top:10px; font-size: 25px; text-transform: uppercase;">{{ Auth::user()->name}}</h2>
 <h6 style="margin-left: 40px; color: grey;"><i class="fa fa-map-marker" aria-hidden="true"></i>  Kumasi, Ghana</h6>
 
 <!-- Tabs navs -->
@@ -89,12 +89,15 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
       <div class="modal-body">
     <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Email Address</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Bitch@gmail.com">
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ex: tekfund@gmail.com">
 </div>
       </div>
       <div class="mb-3" style="padding: 15px;">
-    <label for="exampleInputPassword1">New Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter New Password">
+    <label for="exampleInputPassword1">Current Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Current Password">
+    <br>
+    <a href="{{ route('password.request') }}"><small> Forgot Your Password?</small></a>
+
   </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -119,14 +122,14 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
    <h3 style="margin-top: 20px; margin-left: 20px;"> Update Your Password</h3>
 <hr style="margin: 10px;">
   <div class="card-body">
-
-   <div class="form-group">
-    <label for="exampleInputPassword1">Current Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Current Password">
+<div class="form-group">
+    <label for="">Current Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter current Password">
   </div>
+
   <div class="form-group">
     <label for="exampleInputPassword1">New Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter New Password">
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter New password">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Password Confirmation</label>

@@ -13,5 +13,9 @@ class AdminController extends Controller
 
         return view('admin');
     }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
 }

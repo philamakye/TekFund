@@ -7,7 +7,7 @@
 
     </div>
     <div class="col" style="background-color: rgb(250, 244, 233)">
-            
+
         <div class="text-center">
             <img src="images/healthcare.svg" class="img-fluid" alt="..." ">
         </div>
@@ -34,7 +34,7 @@
                     <option value="staff">Staff</option>
                     <option value="lecturer">Lecturer</option>
                   </select>
-            
+
                   <label for="Default select example2" style="font-size: large"><b>Who are you crowdfunding for? </b></label>
                   <select class="form-select mb-5" aria-label="Default select example2">
                       <option selected hidden>Benefactor</option>
@@ -48,11 +48,11 @@
                     <i class="fas fa-exclamation-circle"></i> Try to include a person's name and the purpose.
                   </div>
                   <p><small> By continuing, you agree to Tekfund's  <a href="#" style="text-decoration: none;">Conditions of Use</a> and <a href="#" style="text-decoration: none;">Privacy Notice</a>.</small></p>
-            
+
                   <div>
-                      <a type="submit" style="font-size:xx-large; color:turquoise; float:right" ><i class="fas fa-arrow-circle-right"></i></a>
+                      <a type="submit" href = "{{route('healthcare-step 2')}}" style="font-size:xx-large; color:turquoise; float:right" ><i class="fas fa-arrow-circle-right"></i></a>
                   </div>
-                   
+
                 </form>
             </div>
             <div class="col-3"></div>
