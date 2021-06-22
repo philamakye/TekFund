@@ -96,7 +96,7 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
     <label for="exampleInputPassword1">Current Password</label>
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Current Password">
     <br>
-    <a href="{{ route('password.request') }}"><small> Forgot Your Password?</small></a>
+    <a href="{{ route('password.request') }}"><small> Forgot Your  Password?</small></a>
 
   </div>
       <div class="modal-footer">

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Attribute;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -28,6 +29,12 @@ class User extends Authenticatable
         'pro_image',
     ];
 
+    protected $attributes = [
+        'contribution_num'=>0,
+        'campaign_num'=>0,
+        'comments_num'=>0,
+    ];
+
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -47,7 +54,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
     protected $primaryKey = 'user_id';
-    
+
     public static function uploadAvatar($image)
     {
         $filename = $image->getClientOriginalName();

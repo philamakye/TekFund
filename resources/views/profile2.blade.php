@@ -153,7 +153,7 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
             <img src="{{asset('storage/images/'. Auth::user()->avatar)}}" alt="avatar" style="border-radius:200px; height: 70px; width: 70px; margin-right: 120px;"/>
         @endif
         @if (empty(Auth::user()->avatar))
-        <img src="https://i.pinimg.com/474x/65/25/a0/6525a08f1df98a2e3a545fe2ace4be47.jpg" alt="avatar" style=" border-radius:150px; height: 70px; "/></center>
+        <img src="https://i.pinimg.com/474x/65/25/a0/6525a08f1df98a2e3a545fe2ace4be47.jpg" alt="avatar" style=" border-radius:150px; height: 70px; margin-right: 120px; "/></center>
         @endif
 
             <form action="{{route('Upload-avatar')}}" method="POST" enctype="multipart/form-data">

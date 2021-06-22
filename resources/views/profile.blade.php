@@ -71,7 +71,7 @@ Edit Profile & Settings<span class="badge bg-secondary"></span>
             <img src="{{asset('storage/images/'. Auth::user()->avatar)}}" alt="avatar" style="border-radius:200px; height: 70px; width: 70px; margin-left:100px;"/>
         @endif
         @if (empty(Auth::user()->avatar))
-        <img src="https://i.pinimg.com/474x/65/25/a0/6525a08f1df98a2e3a545fe2ace4be47.jpg" alt="avatar" style=" border-radius:150px; height: 70px; "/></center>
+        <img src="https://i.pinimg.com/474x/65/25/a0/6525a08f1df98a2e3a545fe2ace4be47.jpg" alt="avatar" style=" border-radius:150px; height: 70px; margin-left:100px;"/></center>
         @endif
          <h2 style="margin-left:10px; font-family: cooper; font-size: 25px; display: inline;text-transform: uppercase;">{{ Auth::user()->name}}</h2>
     <br>
@@ -79,11 +79,11 @@ Edit Profile & Settings<span class="badge bg-secondary"></span>
     <hr style="margin-right: 1070px; margin-left: 100px;">
     <br>
     <br>
-    <h3 style="margin-left: 150px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">32 Campaigns<i class="fa fa-question-circle" aria-hidden="true"style="margin-left:70px;"></i></h3>
+    <h3 style="margin-left: 150px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">{{Auth::user()->campaign_num}} Campaigns<i class="fa fa-question-circle" aria-hidden="true"style="margin-left:70px;"></i></h3>
     <br>
-    <h3 style="margin-left: 150px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">23 Comments<i class="fa fa-question-circle" aria-hidden="true"style="margin-left:70px;"></i></h3>
+    <h3 style="margin-left: 150px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">{{Auth::user()->comments_num}} Comments<i class="fa fa-question-circle" aria-hidden="true"style="margin-left:70px;"></i></h3>
     <br>
-    <h3 style="margin-left: 150px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">666 Contributions<i class="fa fa-question-circle" aria-hidden="true"style="margin-left:30px;"></i></h3>
+    <h3 style="margin-left: 150px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">{{Auth::user()->contribution_num}} Contributions<i class="fa fa-question-circle" aria-hidden="true"style="margin-left:30px;"></i></h3>
 <br>
 <br>
 <br>
