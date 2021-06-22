@@ -56,31 +56,67 @@ main{
                     <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
 
 
-                    <div class="card">
-                        <div class="card-header">
-                            Featured
-                        </div>
+                    <div class="card my-3">
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <div class="row align-items-start">
+                                <div class="col">
+                                <h3>Smart Crops</h3>
+                                </div>
+                                <div class="col">
+                                <p>Campaign Starter</p>
+                                <p>Starting date</p>
+                                <p>Ending Date</p>
+                                <p>Target Amount</p>
+                                </div>
+                                <div class="col">
+                                <p>Jehu Stevenson</p>
+                                <p>21 May 2021</p>
+                                <p>21 May 2021</p>
+                                <p>GHC 25,000</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-header">
-                            Featured
-                        </div>
+                    <div class="card my-3">
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <div class="row align-items-start">
+                                <div class="col">
+                                <h3>Smart Crops</h3>
+                                </div>
+                                <div class="col">
+                                <p>Campaign Starter</p>
+                                <p>Starting date</p>
+                                <p>Ending Date</p>
+                                <p>Target Amount</p>
+                                </div>
+                                <div class="col">
+                                <p>Jehu Stevenson</p>
+                                <p>21 May 2021</p>
+                                <p>21 May 2021</p>
+                                <p>GHC 25,000</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-header">
-                            Featured
-                        </div>
+                    <div class="card my-3">
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <div class="row align-items-start">
+                                <div class="col">
+                                <h3>Smart Crops</h3>
+                                </div>
+                                <div class="col">
+                                <p>Campaign Starter</p>
+                                <p>Starting date</p>
+                                <p>Ending Date</p>
+                                <p>Target Amount</p>
+                                </div>
+                                <div class="col">
+                                <p>Jehu Stevenson</p>
+                                <p>21 May 2021</p>
+                                <p>21 May 2021</p>
+                                <p>GHC 25,000</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
