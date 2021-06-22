@@ -79,11 +79,11 @@ Edit Profile & Settings<span class="badge bg-secondary"></span>
     <hr style="margin-right: 1070px; margin-left: 100px;">
     <br>
     <br>
-    <h3 style="margin-left: 150px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">{{Auth::user()->campaign_num}} Campaigns<i class="fa fa-question-circle" aria-hidden="true"style="margin-left:70px;"></i></h3>
+    <h3 style="margin-left: 150px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">{{Auth::user()->campaign_num}} Campaigns<i class="fa fa-question-circle" aria-hidden="true"style="margin-left:65px;"></i></h3>
     <br>
     <h3 style="margin-left: 150px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">{{Auth::user()->comments_num}} Comments<i class="fa fa-question-circle" aria-hidden="true"style="margin-left:70px;"></i></h3>
     <br>
-    <h3 style="margin-left: 150px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">{{Auth::user()->contribution_num}} Contributions<i class="fa fa-question-circle" aria-hidden="true"style="margin-left:30px;"></i></h3>
+    <h3 style="margin-left: 150px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">{{Auth::user()->contribution_num}} Contributions<i class="fa fa-question-circle" aria-hidden="true"style="margin-left:35px;"></i></h3>
 <br>
 <br>
 <br>
