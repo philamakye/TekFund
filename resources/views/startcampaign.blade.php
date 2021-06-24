@@ -33,13 +33,13 @@
       <div class="row text-center my-3 pt-4">
       <div class="col">
           <center>
-        <a style="text-decoration: none; color:black"><div class="card " style="width: 20rem; height:16rem; background-color:rgb(245, 241, 241)" >
+        <a href = "{{route('healthcare')}}" style="text-decoration: none; color:black"><div class="card " style="width: 20rem; height:16rem; background-color:rgb(245, 241, 241)" >
             <div class="card-body" >
               <h5 class="card-title"><b>Health Care</b></h5>
               <img src="https://img.icons8.com/emoji/48/000000/hospital-emoji.png"/>
               <p class="card-text">Tekfund is a crowdfunding platform which helps individuals with health related issues to begin fund raising campaigns</p>
               <h6 class="card-subtitle mb-2 text-muted">0% Platform fee</h6>
-              <a class="TekFund" style="font-size: 2em" href = "{{route('healthcare')}}">
+              <a class="TekFund" style="font-size: 2em">
                 <text id="TekFund" style=" color:#707070; text-decoration:none;  font-family:CooperBlack, Cooper "><tspan x="-161.875" y="0">TekFund</tspan></text>
               </a>
 
