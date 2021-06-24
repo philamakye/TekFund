@@ -28,6 +28,10 @@ class CampaignController extends Controller
     public function health_step2(){
         return view('healthcare.step2');
     }
+
+    public function others_step1(){
+        return view('otherss.others-step1');
+    }
     public function mycamps(){
         return view('mycampaign');
     }
