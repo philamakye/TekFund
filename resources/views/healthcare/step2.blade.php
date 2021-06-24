@@ -72,8 +72,14 @@
             </div>
 
         </div>
-        <div class="col-1">
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
 
+                </ul>
+              </div>
         </div>
     </div>
 
