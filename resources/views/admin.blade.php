@@ -21,18 +21,17 @@ main{
 
 <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
-            <div class="border-end bg-white" id="sidebar-wrapper">
-                <div class="sidebar-heading border-bottom bg-light"></div>
-                <div class="list-group list-group-flush" style="width: 210px; font-size: 15px;">
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center" href="#!" style="color: rgb(56,216,208);">Campaigns</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Live</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Pending</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Suspended</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center" href="#!" style="color: rgb(56,216,208);">Users</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Signed up</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Anonymous Contributors</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center" href="#!" style="color: rgb(56,216,208);">Actions</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center" href="#!" style="color: rgb(56,216,208);">Logout</a>
+            <div class="border-end bg-blue" id="sidebar-wrapper">
+                <div class="list-group list-group-flush" style="width: 210px; font-size: 15px; background-color:rgb(8,4,32);">
+                    <a class="list-group-item list-group-item-action  p-3 text-center" href="#!" style="color: rgb(56,216,208);">Campaigns</a>
+                    <a class="list-group-item list-group-item-action  p-3" href="#!">Live</a>
+                    <a class="list-group-item list-group-item-action  p-3" href="#!">Pending</a>
+                    <a class="list-group-item list-group-item-action  p-3" href="#!">Suspended</a>
+                    <a class="list-group-item list-group-item-action  p-3 text-center" href="#!" style="color: rgb(56,216,208);">Users</a>
+                    <a class="list-group-item list-group-item-action  p-3" href="#!">Signed up</a>
+                    <a class="list-group-item list-group-item-action  p-3" href="#!">Anonymous Contributors</a>
+                    <a class="list-group-item list-group-item-action  p-3 text-center" href="#!" style="color: rgb(56,216,208);">Actions</a>
+                    <a class="list-group-item list-group-item-action  p-3 text-center" href="#!" style="color: rgb(56,216,208);">Logout</a>
                 </div>
             </div>
             <!-- Page content wrapper-->
