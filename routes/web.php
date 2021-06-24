@@ -48,6 +48,7 @@ Route::post('/upload', 'userController@uploadAvt')->name('Upload-profile image')
 Route::post('/upload-avatar', 'userController@uploadImg')->name('Upload-avatar');
 Route::get('/contributions','UserContributionController@index')->name('Contributions');
 Route::get('/mycampaigns','CampaignController@mycamps')->name('My Campaigns');
+Route::get('/others','CampaignController@others_step1')->name('Others');
 
 
 

@@ -8,9 +8,9 @@
 
         </div>
         <div class="col" style="background-color: rgb(250, 244, 233)">
-
+<br>
             <div class="text-center">
-                <img src="images/healthcare.svg" class="img-fluid" alt="..." ">
+            <h2 style = "font-family:Comic Sans MS, cursive, sans-serif; font-size:40px; color:rgb(52, 2, 145)">HEALTHCARE</h2>
             </div>
            <div class="row text-center">
                <center>
