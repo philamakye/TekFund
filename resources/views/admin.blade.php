@@ -23,16 +23,16 @@ main{
             <!-- Sidebar-->
             <div class="border-end bg-white" id="sidebar-wrapper">
                 <div class="sidebar-heading border-bottom bg-light"></div>
-                <div class="list-group list-group-flush" style="width: 200px;">
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center" href="#!">Campaigns</a>
+                <div class="list-group list-group-flush" style="width: 210px; font-size: 15px;">
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center" href="#!" style="color: rgb(56,216,208);">Campaigns</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Live</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Pending</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Suspended</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center" href="#!">Users</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center" href="#!" style="color: rgb(56,216,208);">Users</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Signed up</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Anonymous Contributors</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center" href="#!">Actions</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center" href="#!">Logout</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center" href="#!" style="color: rgb(56,216,208);">Actions</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center" href="#!" style="color: rgb(56,216,208);">Logout</a>
                 </div>
             </div>
             <!-- Page content wrapper-->
@@ -40,8 +40,12 @@ main{
                 <!-- Top navigation-->
                 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
                     <div class="container-fluid">
-                        <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <select class="custom-select custom-select-sm" style="width:auto;">
+                            <option selected>Sort</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
                                 <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
@@ -51,7 +55,7 @@ main{
                     </div>
                 </nav>
                 <!-- Page content-->
-                <div class="container-fluid">
+                <div class="container-fluid"> 
                     <h1 class="mt-4">Simple Sidebar</h1>
                     <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
 
