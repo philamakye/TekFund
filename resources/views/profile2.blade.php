@@ -197,25 +197,6 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
 <br>
 <br>
 <!--</div>-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
 
 @endsection
