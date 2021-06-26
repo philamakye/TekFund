@@ -1,6 +1,14 @@
 @extends('layouts.app')
 
 <style>
+
+    .nomargin{
+        margin:0 !important;
+    }
+    .nopadding{
+        padding: 0 !important;
+    }
+
     /* Mark input boxes that gets an error on validation: */
     input.invalid {
     background-color: #ffdddd;
@@ -97,15 +105,6 @@
             </h3>
                     <label for="title" style="font-size: large"><b>How much would you like to raise?</b></label>
                     <input type="text" id="inputPassword5" placeholder="Enter goal amount in GHS" class="form-control mb-4" aria-describedby="passwordHelpBlock">
-
-
-                      {{-- <label for="Default select example2" style="font-size: large"><b>Who are you crowdfunding for? </b></label>
-                      <select class="form-select mb-5" aria-label="Default select example2">
-                          <option selected hidden>Benefactor</option>
-                          <option value="self">Self</option>
-                          <option value="others">Others</option>
-                      </select> --}}
-
                       <h4 class="mb-5">
                         <small class="text-muted">Keep in mind that transaction fees including credit and debit charges, are deducted from each donation
                         <br><br>
@@ -126,17 +125,46 @@
 
                 <div class="tab" id="step-3">
                     <h3 class="offset-2 mb-5">
-                Set your fundraising goal
+                Add a cover photo or video
             </h3>
-                    boom shakalaka
+                    <h4 class="text-muted mb-5">A high-quality photo or video will help tell your story and build trust with donors</h4>
+
+                    <div class="mb-5" style="border-style: dashed">
+                        <div class="my-3 px-3 text-center">
+                            <label for="formFile" class="form-label">Select a photo that best describes your campiagn</label>
+                            <input class="form-control" type="file" id="formFile">
+                          </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                          <div class="col">
+                            <hr>
+                          </div>
+                          <div class="col-1 text-center">
+                            OR
+                          </div>
+                          <div class="col">
+                            <hr>
+                          </div>
+                        </div>
+                      </div>
+
+                     <div class="input-group input-group mt-1 mb-3">
+                     <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Add a youtube link" aria-describedby="inputGroup-sizing-default">
+                     </div>
                 </div>
 
                 <div class="tab" id="step-4">
-                    <h3 class="offset-2 mb-5">
-                Set your fundraising goal
+                    <h3 class="text-center offset-2 mb-5">
+                Tell Your Story
             </h3>
-                    boom shakalaka
+
+            <div>
+
+            </div>
+
                 </div>
+
                 <div class="tab" id="step-5">
                     <h3 class="offset-2 mb-5">
                 Set your fundraising goal
