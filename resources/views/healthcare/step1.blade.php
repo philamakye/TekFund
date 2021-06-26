@@ -155,12 +155,14 @@
                 </div>
 
                 <div class="tab" id="step-4">
-                    <h3 class="text-center offset-2 mb-5">
+                    <h3 class=" offset-2 mb-5">
                 Tell Your Story
             </h3>
 
             <div>
+             <textarea name="story" id="" cols="50" rows="10">
 
+             </textarea>
             </div>
 
                 </div>
