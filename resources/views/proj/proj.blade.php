@@ -88,7 +88,6 @@
                             <option value="main">Maintenance of Process Industries</option>
                             <option value="res">Research</option>
                             <option value="others">Others</option>
-
                         </select>
 
 <br>
@@ -240,7 +239,7 @@
         }
     }
 
-    // A loop that checks every se;ect field in the current tab:
+    // A loop that checks every select field in the current tab:
     for (i=0; i<z.length; i++){
         // if the select field has no value
         if(z[i].value == ""){

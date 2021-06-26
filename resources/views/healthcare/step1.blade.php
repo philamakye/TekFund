@@ -80,7 +80,7 @@
                         <select class="form-select mb-5" aria-label="Default select example2">
                             <option selected disabled value="" hidden>--please select--</option>
                             <option value="self">Self</option>
-                            <option value="others">Others</option>
+                            <option value="others">Other</option>
                         </select>
 
                         <label for="title" style="font-size: large"><b>What is your fundraiser title?</b></label>
