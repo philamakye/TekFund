@@ -159,7 +159,7 @@
                 Tell Your Story
             </h3>
 
-            <div>
+            <div class="mb-3">
              <textarea name="story" id="" cols="50" rows="10">
 
              </textarea>
@@ -169,10 +169,30 @@
 
                 <div class="tab" id="step-5">
                     <h3 class="offset-2 mb-5">
-                Set your fundraising goal
+                You're Almost There!
             </h3>
-                    boom shakalaka
-                </div>
+           <h5 class="text-muted"> <i class="fas fa-lock"></i> We just need a little more information before you can accept donations</h5>
+
+           <label for="title" style="font-size: large"><b>Full Name of Person of Concern</b></label>
+           <input oninput="this.className = 'form-control'" type="text" id="inputPassword5"  class="form-control mb-5" aria-describedby="passwordHelpBlock">
+
+           <label for="Default select example" style="font-size: large"><b>Hospital of concern</b></label>
+           <select class="form-select mb-5" aria-label="Default select example">
+               <option selected disabled value="" hidden>--please select--</option>
+               <option value="student">KNUST Hospital</option>
+               <option value="staff">Komfo Anokye Teaching Hospital</option>
+               <option value="lecturer">Other</option>
+           </select>
+
+           <label for="Default select example" style="font-size: large"><b>Doctor's Report</b></label>
+           <div class="mb-5" style="border-style: dashed">
+            <div class="my-3 px-3 text-center">
+                <label for="formFile" class="form-label">Upload a clear image of doctor's report</label>
+                <input class="form-control" type="file" id="formFile">
+              </div>
+        </div>
+
+          </div>
 
                 <div style="overflow:auto;">
                     <div style="float:right;">
