@@ -197,7 +197,7 @@
                 <div style="overflow:auto;">
                     <div style="float:right;">
                         <a id="nextBtn" type="button" role="button" onclick="nextPrev(1)" style="font-size:xx-large; color:turquoise;" ><i class="fas fa-arrow-circle-right"></i></a>
-                        <button type="submit" id="submitBtn">Submit</button>
+                        <button type="submit" style=" background-color:rgb(44, 20, 124); color:white; border:none;padding:5px; text-decoration:none; border-radius:30px" id="submitBtn">Submit Application</button>
                     </div>
                     <div style="float:left;">
                         <a type="button" role="button" id="prevBtn" onclick="nextPrev(-1)" style="font-size:xx-large; color:rgb(44, 20, 124); " ><i class="fas fa-arrow-circle-left"></i></a>
