@@ -3,10 +3,10 @@
 <style>
     /* Mark input boxes that gets an error on validation: */
     input.invalid {
-    background-color: #ffdddd;
+    background-color: #fffbfb;
     }
 
-    /* Hide all steps by default: */
+    /* Hide all steps by default: #ffdddd*/
     .tab {
     display: none;
     }
@@ -63,7 +63,7 @@
             <div class="col-3"></div>
             <div class=col>
 
-            <form action="{{route('healthcare')}}" method="post" id="regForm">
+            <form action="{{route('store start up')}}" method="post" id="regForm" enctype="multipart/form-data">
                 <div class="tab" id="step-1">
                     <h3 class="offset-2 mb-5">
                 Let's start with the basics
@@ -194,6 +194,8 @@
     } else {
         // document.getElementById("nextBtn").innerHTML = "Next";
         document.getElementById("submitBtn").style.display = "none";
+        document.getElementById("nextBtn").style.display = "inline";
+
     }
     // ... and run a function that displays the correct step indicator:
     fixStepIndicator(n)

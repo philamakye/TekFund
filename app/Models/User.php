@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Storage;
+use phpDocumentor\Reflection\Types\Self_;
 
 class User extends Authenticatable
 {
@@ -18,22 +19,14 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'role',
-        'username',
-        'phone_number',
-        'avatar',
-        'pro_image',
-    ];
+    protected $guarded = [];
 
     protected $attributes = [
-        'contribution_num'=>0,
-        'campaign_num'=>0,
-        'comments_num'=>0,
+        'contribution_num' => 0,
+        'campaign_num' => 0,
+        'comments_num' => 0,
     ];
+
 
     /**
      * The attributes that should be hidden for arrays.
@@ -81,4 +74,6 @@ class User extends Authenticatable
             Storage::delete('/public/images/' . auth()->user()->avatar);
         }
     }
+
+
 }
