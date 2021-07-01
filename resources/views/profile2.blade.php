@@ -12,7 +12,6 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
 </button>
 </form>
 
-
 <h2 style="margin-left:30px; font-family: cooper; margin-top:10px; font-size: 25px;text-transform: uppercase;">{{ Auth::user()->name}}</h2>
 <h6 style="margin-left: 40px; color: grey;"><i class="fa fa-map-marker" aria-hidden="true"></i>  Kumasi, Ghana</h6>
 
@@ -58,6 +57,8 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
 <!-- Tabs navs -->
 
 <!--Tabs contenmt-->
+<form action="{{route('store Basic info')}}" method="POST">
+    @csrf
 <div
     class="tab-pane fade show active"
     id="ex1-tabs-1"
@@ -70,58 +71,68 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
 
    <h3 style="margin-top: 20px; margin-left: 20px;">Basic Info</h3>
 <hr style="margin: 10px;">
+@include('layouts.success')
   <div class="card-body">
 
-
-<div class="mb-3" style="width:50%;">
-  <label for="exampleFormControlInput1" class="form-label">First Name</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ex: Manasseh">
-</div>
-<div class="mb-3" style="width:50%;">
-  <label for="exampleFormControlInput1" class="form-label">Last Name</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="West">
-</div>
-<div class="mb-3" style="width:50%;">
-  <label for="exampleFormControlInput1" class="form-label">Country</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ex: Ghana">
-</div>
-<!--<div class="container">-->
-    <div class="row">
-<div class="mb-3" style="width: 25%; margin-left:5px;">
-  <label for="exampleFormControlInput1" class="form-label">City</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ex: Takoradi">
-</div>
-<div class="mb-3" style="width: 25%; margin-left:5px;">
-  <label for="exampleFormControlInput1" class="form-label">School ID</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ex: 2057763">
-</div>
+    <div class="mb-3" style="width:50%;">
+    <label for="exampleFormControlInput1" class="form-label">First Name</label>
+    <input type="text" placeholder="Ex: Manasseh" class="form-control" name="first_name" value ="{{old('first_name')}}"id="first_name"autofocus >
     </div>
-  </div>
-  </div>
-</div>
-</div>
+    <div class="mb-3" style="width:50%;">
+    <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+    <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Ex: West">
+    </div>
+    <div class="mb-3" style="width:50%;">
+    <label for="exampleFormControlInput1" class="form-label">Country</label>
+    <input type="text" class="form-control" name="country" id="country" placeholder="Ex: Ghana">
+    </div>
+    <!--<div class="container">-->
+        <div class="row">
+    <div class="mb-3" style="width: 25%; margin-left:5px;">
+    <label for="exampleFormControlInput1" class="form-label">City</label>
+    <input type="text" class="form-control" name="city" id="city" placeholder="Ex: Takoradi">
+    </div>
+    <div class="mb-3" style="width: 25%; margin-left:5px;">
+    <label for="exampleFormControlInput1" class="form-label">School ID</label>
+    <input type="text" class="form-control" name="school_id" id="school_id" placeholder="Ex: 2057763">
+    </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <button type="submit" class="btn btn-primary mb-2" style="background-color:rgb(44, 20, 124); margin-top: 10px; float: right; margin-right: 80px;">  SAVE  </button>
+</form>
+<br>
+<br>
 <br>
 <br>
 <div class="tab-pane fade show active" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
 
-  <div class="card" style="margin-left:70px; width: 90%;    background-color: rgb(175, 250, 242);">
-
-   <h3 style="margin-top: 20px; margin-left: 20px;">Your Story</h3>
-<hr style="margin: 10px;">
-  <div class="card-body">
-      <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Short Description</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+    <div class="card" style="margin-left:70px; width: 90%;    background-color: rgb(175, 250, 242);">
+<form action="{{route('Your Story')}}" method="POST">
+    @csrf
+    <h3 style="margin-top: 20px; margin-left: 20px;">Your Story</h3>
+    <hr style="margin: 10px;">
+    @include('layouts.error')
+    <div class="card-body">
+        <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Short Description</label>
+    <input type="text" name = "shrt_desc" class="form-control" id="exampleFormControlInput1" placeholder="">
+    <br>
+    <label for="exampleFormControlInput1" class="form-label">About Me</label>
+    <div class="form-floating">
+    <textarea class="form-control" name="about_me" maxlength = "1000" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 250px"></textarea>
+    </div>
+    </div>
+    </div>
+    <h3 style="margin-left: 20px;">500/500</h3>
+    </div>
+    </div>
+    <button type="submit" class="btn btn-primary mb-2" style="background-color:rgb(44, 20, 124); margin-top: 10px; float: right; margin-right: 80px;">  SAVE  </button>
+</form>
 <br>
-   <label for="exampleFormControlInput1" class="form-label">About Me</label>
-  <div class="form-floating">
-  <textarea class="form-control" maxlength = "1000" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 250px"></textarea>
-</div>
-</div>
-  </div>
-  <h3 style="margin-left: 20px;">500/500</h3>
-  </div>
-</div>
+<br>
 <br>
 <br>
 <div class="tab-pane fade show active" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
@@ -167,55 +178,40 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
 </div>
 <br>
 <br>
+<form action="{{route('other links')}}" method="POST" >
+        @csrf
 <div class="tab-pane fade show active" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
-
+<form action="" method="POST" id="">
   <div class="card" style="margin-left:70px; width: 90%;    background-color: rgb(175, 250, 242);">
 
    <h3 style="margin-top: 20px; margin-left: 20px;">Outside Links</h3>
    <hr style="margin: 10px;">
    <div class="card-body">
       <div class="mb-3">
+
   <label for="exampleFormControlInput1" class="form-label">Facebook Links</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+  <input type="url" class="form-control" id="exampleFormControlInput1" placeholder="">
 <br>
   <label for="exampleFormControlInput1" class="form-label">Twitter Links</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+  <input type="url" class="form-control" id="exampleFormControlInput1" placeholder="">
 <br>
   <label for="exampleFormControlInput1" class="form-label">YouTube Links</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+  <input type="url" class="form-control" id="exampleFormControlInput1" placeholder="">
 <br>
   <label for="exampleFormControlInput1" class="form-label">IMDb Links</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+  <input type="url" class="form-control" id="exampleFormControlInput1" placeholder="">
 <br>
   <label for="exampleFormControlInput1" class="form-label">Your Website</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
   </div>
 </div>
   </div>
 </div>
 <button type="submit" class="btn btn-primary mb-2" style="background-color:rgb(44, 20, 124); margin-top: 10px; float: right; margin-right: 80px;">  SAVE  </button>
+</form>
 <br>
 <br>
 <!--</div>-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
 
 @endsection

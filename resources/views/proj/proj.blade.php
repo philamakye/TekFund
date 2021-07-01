@@ -43,7 +43,7 @@
     <div class="col" style="background-color: rgb(250, 244, 233)">
 <br>
         <div class="text-center">
-            <h2 style = "font-family:Comic Sans MS, cursive, sans-serif; font-size:40px; color:rgb(52, 2, 145)">OTHERS</h2>
+            <h2 style = "font-family:Comic Sans MS, cursive, sans-serif; font-size:40px; color:rgb(52, 2, 145)">PROJECT</h2>
             <!--<img src="images/healthcare.svg" class="img-fluid" alt="..." "> -->
         </div>
        <div class="row text-center">
@@ -63,7 +63,7 @@
             <div class="col-3"></div>
             <div class=col>
 
-            <form action="{{route('store others')}}" method="post" id="regForm" enctype="multipart/form-data">
+            <form action="{{route('store project')}}" method="post" id="regForm" enctype="multipart/form-data">
                 <div class="tab" id="step-1">
                     <h3 class="offset-2 mb-5">
                 Let's start with the basics
@@ -76,8 +76,20 @@
                             <option value="lecturer">Lecturer</option>
                         </select>
 
-                          <label for="title" style="font-size: large"><b>Cause for Fundraising</b></label>
-                        <input oninput="this.className = 'form-control'" type="text" id="inputPassword6" placeholder="Ex: Honoring COE(IV) Class Rep" class="form-control" aria-describedby="passwordHelpBlock">
+                          <label for="title" style="font-size: large"><b>Field of Project</b></label>
+                          <select class="form-select mb-5" aria-label="Default select example">
+                            <option selected disabled value="" hidden>--please select--</option>
+                            <option value="administer">Administrative</option>
+                            <option value="const">Construction</option>
+                            <option value="comp">Computer Software Development</option>
+                            <option value="design">Design of Plans</option>
+                            <option value="equip">Equipment or System Installation</option>
+                            <option value="new">New Product Development</option>
+                            <option value="main">Maintenance of Process Industries</option>
+                            <option value="res">Research</option>
+                            <option value="others">Others</option>
+                        </select>
+
 <br>
 <br>
                         <label for="title" style="font-size: large"><b>What is your fundraiser title?</b></label>
@@ -229,7 +241,7 @@
         }
     }
 
-    // A loop that checks every se;ect field in the current tab:
+    // A loop that checks every select field in the current tab:
     for (i=0; i<z.length; i++){
         // if the select field has no value
         if(z[i].value == ""){

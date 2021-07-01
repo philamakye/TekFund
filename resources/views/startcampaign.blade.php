@@ -50,7 +50,7 @@
       </div>
       <div class="col">
           <center>
-           <a style="text-decoration: none; color:black"> <div class="card " style="width: 20rem; height:16rem; background-color:rgb(245, 241, 241)" >
+           <a href = "{{route('Start Up')}}"style="text-decoration: none; color:black"> <div class="card " style="width: 20rem; height:16rem; background-color:rgb(245, 241, 241)" >
                 <div class="card-body">
                   <h5 class="card-title"><b>Start Up</b></h5>
                   <img src="https://img.icons8.com/bubbles/50/000000/growing-money.png"/>
@@ -71,7 +71,7 @@
       <div class="row text-center mt-5">
         <div class="col">
             <center>
-              <a style="text-decoration: none; color:black">  <div class="card " style="width: 20rem; height:17rem; background-color:rgb(245, 241, 241)" >
+              <a href = "{{route('project')}}" style="text-decoration: none; color:black">  <div class="card " style="width: 20rem; height:17rem; background-color:rgb(245, 241, 241)" >
                     <div class="card-body">
                       <h5 class="card-title"><b>Project</b></h5>
                       <img src="https://img.icons8.com/dusk/64/000000/microsoft-project.png"/>

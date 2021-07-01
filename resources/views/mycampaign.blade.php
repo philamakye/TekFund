@@ -11,7 +11,6 @@ Edit Profile & Settings<span class="badge bg-secondary"></span>
 </button>
 </form>
 
-
 <h2 style="margin-left:30px; font-family: cooper; margin-top:10px; font-size: 25px;text-transform: uppercase;">{{ Auth::user()->name}}</h2>
 <h6 style="margin-left: 40px; color: grey;"><i class="fa fa-map-marker" aria-hidden="true"></i>  Kumasi, Ghana</h6>
 
@@ -57,6 +56,7 @@ Edit Profile & Settings<span class="badge bg-secondary"></span>
 <br>
 <br>
 <h3 style="margin-left: 15px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">Campaigns I'm On<i aria-hidden="true"></i></h3>
+<hr style="margin:15px;">
 <br>
-<br>
+
 @endsection

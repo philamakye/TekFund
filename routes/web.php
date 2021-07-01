@@ -36,12 +36,10 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/startcampaign', [App\Http\Controllers\CampaignController::class, 'index'])->name('start campaign');
 
-//Route::view('admin','admin');
 
 Route::get('/admin', 'AdminController@index' )->name('admin')->middleware('admin');
 Route::get('/setting',[App\Http\Controllers\UserController::class, 'index'])->name('settings');
 Route::get('/healthcare', 'CampaignController@health_step1')->name('healthcare');
-Route::get('/healthcare2', 'CampaignController@health_step2')->name('healthcare-step 2');
 Route::get('/editprofile', 'UserController@profile2')->name('profile-2');
 Route::get('/email', 'UserController@email')->name('Email');
 Route::get('/profile', 'UserController@profile')->name(('Profile'));
@@ -50,6 +48,16 @@ Route::post('/upload-avatar', 'userController@uploadImg')->name('Upload-avatar')
 Route::get('/contributions','UserContributionController@index')->name('Contributions');
 Route::get('/mycampaigns','CampaignController@mycamps')->name('My Campaigns');
 Route::get('/others','CampaignController@others_step1')->name('Others');
+Route::get('/project','CampaignController@proj_step1')->name('project');
+Route::get('/startup', 'CampaignController@startup_step1')->name('Start Up');
+Route::post('/storehealth','CampaignController@store_health')->name('Store health info');
+Route::post('/storestartup','CampaignController@store_start')->name('store start up');
+Route::post('/storeproject','CampaignController@store_proj')->name('store project');
+Route::post('/storeothers','CampaignController@store_others')->name('store others');
+Route::post('/store-BasicInfo', 'UserController@storeBasic')->name('store Basic info');
+Route::post('/store-story', 'UserController@storeStory')->name('Your Story');
+Route::post('/other-links', 'UserController@storelinks')->name('other links');
+
 
 
 

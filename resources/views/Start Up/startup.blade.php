@@ -3,10 +3,10 @@
 <style>
     /* Mark input boxes that gets an error on validation: */
     input.invalid {
-    background-color: #ffdddd;
+    background-color: #fffbfb;
     }
 
-    /* Hide all steps by default: */
+    /* Hide all steps by default: #ffdddd*/
     .tab {
     display: none;
     }
@@ -43,7 +43,7 @@
     <div class="col" style="background-color: rgb(250, 244, 233)">
 <br>
         <div class="text-center">
-            <h2 style = "font-family:Comic Sans MS, cursive, sans-serif; font-size:40px; color:rgb(52, 2, 145)">OTHERS</h2>
+            <h2 style = "font-family:Comic Sans MS, cursive, sans-serif; font-size:40px; color:rgb(52, 2, 145)">START UP</h2>
             <!--<img src="images/healthcare.svg" class="img-fluid" alt="..." "> -->
         </div>
        <div class="row text-center">
@@ -63,7 +63,7 @@
             <div class="col-3"></div>
             <div class=col>
 
-            <form action="{{route('store others')}}" method="post" id="regForm" enctype="multipart/form-data">
+            <form action="{{route('store start up')}}" method="post" id="regForm" enctype="multipart/form-data">
                 <div class="tab" id="step-1">
                     <h3 class="offset-2 mb-5">
                 Let's start with the basics
@@ -76,10 +76,18 @@
                             <option value="lecturer">Lecturer</option>
                         </select>
 
-                          <label for="title" style="font-size: large"><b>Cause for Fundraising</b></label>
-                        <input oninput="this.className = 'form-control'" type="text" id="inputPassword6" placeholder="Ex: Honoring COE(IV) Class Rep" class="form-control" aria-describedby="passwordHelpBlock">
-<br>
-<br>
+                        <label for="Default select example2" style="font-size: large"><b>Category of Business</b></label>
+                        <select class="form-select mb-5" aria-label="Default select example2">
+                            <option selected disabled value="" hidden>--please select--</option>
+                            <option value="retailer">Retailer</option>
+                            <option value="distro">Distributor</option>
+                            <option value="food">Food Service</option>
+                            <option value="manu">Manufacturer</option>
+                            <option value="investor">Investor</option>
+                            <option value="others">Others</option>
+
+                        </select>
+
                         <label for="title" style="font-size: large"><b>What is your fundraiser title?</b></label>
                         <input oninput="this.className = 'form-control'" type="text" id="inputPassword5" placeholder="Ex: Help Stevenson get a new brain" class="form-control" aria-describedby="passwordHelpBlock">
                         <div id="passwordHelpBlock" class="form-text mb-4">

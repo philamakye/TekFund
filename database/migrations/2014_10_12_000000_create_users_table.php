@@ -32,16 +32,19 @@ class CreateUsersTable extends Migration
             $table->string('city')->nullable();
             $table->integer('school_id')->nullable();
             $table->longText('about_me')->nullable();
+            $table->longText('shrt_desc')->nullable();
             $table->integer('role');
-            $table->integer('campaign_num')->nullable();
-            $table->integer('comments_num')->nullable();
-            $table->integer('contribution_num')->nullable();
+            $table->integer('campaign_num');
+            $table->integer('comments_num');
+            $table->integer('contribution_num');
+            $table->string('user_facebooklink')->nullable();
+            $table->string('user_twitterlink')->nullable();
+            $table->string('user_youtubelink')->nullable();
+            $table->string('user_imdb')->nullable();
+            $table->string('user_websitelink')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
-
-
-
 
     }
 
