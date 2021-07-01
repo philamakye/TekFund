@@ -110,7 +110,7 @@ class UserController extends Controller
 
         $story->save();
 
-        return redirect()->back()->with('success', 'Update success!!');
+        return redirect()->back()->with('status', 'Update success!!');
 
 
     }
@@ -119,19 +119,17 @@ class UserController extends Controller
         $userId = Auth::id();
         $links = User::findOrFail($userId);
 
-        $rules = [
+        $linkrules = [
             'user_facebooklink' => 'nullable|url',
             'user_twitterlink' => 'nullable|url',
-            'user_youtubelink' => 'nullabe|url',
+            'user_youtubelink' => 'nullable|url',
             'user_imdb' => 'nullable|url',
             'user_websitelink'=> 'nullable|url',
         ];
 
 
-        $this->validate($request, $rules);
+        $this->validate($request, $linkrules);
         $links->fill([
-            'shrt_desc' => $request->shrt_desc,
-            'about_me' => $request->about_me,
             'user_facebooklink'=>$request->user_facebooklink,
             'user_twitterlink' =>$request->user_twitterlink,
             'user_youtubelink' =>$request->user_youtubelink,
@@ -139,10 +137,12 @@ class UserController extends Controller
             'user_websitelink'=>$request->user_websitelink,
         ]);
 
-        $links->save();
+        if($links){
+            $links->save();
+            return redirect()->back()->with('msg', 'Links updated!!');
 
-        return redirect()->back()->with('success', 'Links updated!!');
-
+        }
+        return redirect()->back()->with('err', 'Nothing to update!!');
     }
 }
 

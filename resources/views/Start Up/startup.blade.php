@@ -3,7 +3,7 @@
 <style>
     /* Mark input boxes that gets an error on validation: */
     input.invalid {
-    background-color: #fffbfb;
+    background-color: #f89797;
     }
 
     /* Hide all steps by default: #ffdddd*/
@@ -30,7 +30,7 @@
 
     /* Mark the steps that are finished and valid: */
     .step.finish {
-    background-color: turquoise;
+    background-color:rgb(18,214,27);
     }
 </style>
 
@@ -40,7 +40,7 @@
     <div class="col-1">
 
     </div>
-    <div class="col" style="background-color: rgb(250, 244, 233)">
+    <div class="col" style="background-color: #b2e6f0; border-radius:5px">
 <br>
         <div class="text-center">
             <h2 style = "font-family:Comic Sans MS, cursive, sans-serif; font-size:40px; color:rgb(52, 2, 145)">START UP</h2>
@@ -65,7 +65,7 @@
 
             <form action="{{route('store start up')}}" method="post" id="regForm" enctype="multipart/form-data">
                 <div class="tab" id="step-1">
-                    <h3 class="offset-2 mb-5">
+                    <h3 class="offset-2 mb-5" style="font-family: Snell Roundhand, cursive; margin-inline-start: 5px;font-weight:bold">
                 Let's start with the basics
             </h3>
                     <label for="Default select example" style="font-size: large"><b>I am a ... ?</b></label>
@@ -97,12 +97,14 @@
                 </div>
 
                 <div class="tab" id="step-2">
-                    <h3 class="offset-2 mb-5">
+                    <h3 class="offset-2 mb-5" style="font-family: Snell Roundhand, cursive; margin-inline-start: 5px;font-weight:bold">
                 Set your fundraising goal
             </h3>
                     <label for="title" style="font-size: large"><b>How much would you like to raise?</b></label>
-                    <input type="text" id="inputPassword5" placeholder="Enter goal amount in GHS" class="form-control mb-4" aria-describedby="passwordHelpBlock">
-
+                    <input type="number" min="200" oninput="validity.valid||(value='');" id="inputPassword5" placeholder="Enter Target Amount in GHC" class="form-control" aria-describedby="passwordHelpBlock">
+                    <div id="passwordHelpBlock" class="form-text mb-4">
+                            <i class="fas fa-exclamation-circle"></i> Minimum target amount that can be set is GHC 200.
+                        </div>
 
                       {{-- <label for="Default select example2" style="font-size: large"><b>Who are you crowdfunding for? </b></label>
                       <select class="form-select mb-5" aria-label="Default select example2">
@@ -121,8 +123,10 @@
                         </small>
                       </h4>
                       <label for="title" style="font-size: large"><b>Campaign Duration</b></label>
-                      <input type="text" id="inputPassword5" placeholder="Days" class="form-control" aria-describedby="passwordHelpBlock">
-                      <h4 class="mb-5">
+                      <input type="number" min="10" oninput="validity.valid||(value='');" id="inputPassword5" placeholder="Set Campaign duration in Days" class="form-control" aria-describedby="passwordHelpBlock">
+                      <div id="passwordHelpBlock" class="form-text mb-4">
+                            <i class="fas fa-exclamation-circle"></i> Minimum campaign duration that can be set is 10 days.
+                        </div>                      <h4 class="mb-5">
                           <small class="text-muted">
                             Duration begins after campaign goes online
                           </small>
@@ -130,29 +134,72 @@
                 </div>
 
                 <div class="tab" id="step-3">
-                    <h3 class="offset-2 mb-5">
-                Set your fundraising goal
+                    <h3 class="offset-2 mb-5" style="font-family: Snell Roundhand, cursive; margin-inline-start: 5px;font-weight:bold">
+                Add a Cover Photo Or Video
             </h3>
-                    boom shakalaka
+                    <h4 class="text-muted mb-5">A high-quality photo or video will help tell your story and build trust with donors</h4>
+
+                    <div class="mb-5" style="border-style: dashed">
+                        <div class="my-3 px-3 text-center">
+                            <label for="formFile" class="form-label">Select a photo that best describes your campiagn</label>
+                            <input class="form-control" type="file" id="formFile">
+                          </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                          <div class="col">
+                            <hr>
+                          </div>
+                          <div class="col-1 text-center">
+                            OR
+                          </div>
+                          <div class="col">
+                            <hr>
+                          </div>
+                        </div>
+                      </div>
+
+                     <div class="input-group input-group mt-1 mb-3">
+                     <input type="url" class="form-control" aria-label="Sizing example input" placeholder="Add a youtube link" aria-describedby="inputGroup-sizing-default">
+                     </div>
                 </div>
 
                 <div class="tab" id="step-4">
-                    <h3 class="offset-2 mb-5">
-                Set your fundraising goal
+                    <h3 class="offset-2 mb-5" style="font-family: Snell Roundhand, cursive; margin-inline-start: 5px;font-weight:bold">
+                Tell Your Story
             </h3>
-                    boom shakalaka
+                   <div class="mb-3">
+             <textarea name="story" id="" cols="50" rows="10">
+
+             </textarea>
+            </div>
                 </div>
                 <div class="tab" id="step-5">
-                    <h3 class="offset-2 mb-5">
-                Set your fundraising goal
+                    <h3 class="offset-2 mb-5" style="font-family: Snell Roundhand, cursive; margin-inline-start: 5px;font-weight:bold">
+                You're Almost There!
             </h3>
-                    boom shakalaka
+                    <h5 class="text-muted"> <i class="fas fa-lock"></i> We just need a little more information before you can accept donations</h5>
+
+           <label for="title" style="font-size: large"><b>Full Name</b></label>
+           <input oninput="this.className = 'form-control'" type="text" id="inputPassword5"  class="form-control mb-5" aria-describedby="passwordHelpBlock">
+
+           <label for="title" style="font-size: large"><b>Name of Startup Business</b></label>
+           <input oninput="this.className = 'form-control'" type="text" id="inputPassword5"  class="form-control mb-5" aria-describedby="passwordHelpBlock">
+
+
+           <label for="Default select example" style="font-size: large"><b>Business Plan</b></label>
+           <div class="mb-5" style="border-style: dashed">
+            <div class="my-3 px-3 text-center">
+                <label for="formFile" class="form-label">Upload a PDF file of business plan. Must include budget</label>
+                <input class="form-control" type="file" id="formFile">
+              </div>
+        </div>
                 </div>
 
                 <div style="overflow:auto;">
                     <div style="float:right;">
-                        <a id="nextBtn" type="button" role="button" onclick="nextPrev(1)" style="font-size:xx-large; color:turquoise;" ><i class="fas fa-arrow-circle-right"></i></a>
-                        <button type="submit" id="submitBtn">Submit</button>
+                        <a id="nextBtn" type="button" role="button" onclick="nextPrev(1)" style="font-size:xx-large; color:rgb(18,214,27);" ><i class="fas fa-arrow-circle-right"></i></a>
+                        <button type="submit" class="btn btn-primary mb-2" id="submitBtn" style="background-color:rgb(18, 214, 27); margin-top: 10px; margin-right: 20px;">Complete Fundraiser</button>
                     </div>
                     <div style="float:left;">
                         <a type="button" role="button" id="prevBtn" onclick="nextPrev(-1)" style="font-size:xx-large; color:rgb(44, 20, 124); " ><i class="fas fa-arrow-circle-left"></i></a>

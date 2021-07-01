@@ -8,16 +8,16 @@
                     </ul>
                 </div>
             </div>
-        @elseif (session()->has('success'))
+        @elseif (session()->has('status'))
 <div class="alert alert-success">
-    @if(is_array(session('success')))
+    @if(is_array(session('status')))
         <ul>
-            @foreach (session('success') as $message)
+            @foreach (session('status') as $message)
                 <li>{{ $message }}</li>
             @endforeach
         </ul>
     @else
-        {{ session('success') }}
+        {{ session('status') }}
     @endif
 </div>
         @endif

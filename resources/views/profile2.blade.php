@@ -76,7 +76,7 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
 
     <div class="mb-3" style="width:50%;">
     <label for="exampleFormControlInput1" class="form-label">First Name</label>
-    <input type="text" placeholder="Ex: Manasseh" class="form-control" name="first_name" value ="{{old('first_name')}}"id="first_name"autofocus >
+    <input type="text" placeholder="Ex: Manasseh" class="form-control" name="first_name" value ="{{old('first_name')}}"id="first_name">
     </div>
     <div class="mb-3" style="width:50%;">
     <label for="exampleFormControlInput1" class="form-label">Last Name</label>
@@ -186,23 +186,24 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
 
    <h3 style="margin-top: 20px; margin-left: 20px;">Outside Links</h3>
    <hr style="margin: 10px;">
+   @include('layouts.linkflash')
    <div class="card-body">
       <div class="mb-3">
 
   <label for="exampleFormControlInput1" class="form-label">Facebook Links</label>
-  <input type="url" class="form-control" id="exampleFormControlInput1" placeholder="">
+  <input type="url" class="form-control" name="user_facebooklink" id="user_facebooklink" placeholder="">
 <br>
   <label for="exampleFormControlInput1" class="form-label">Twitter Links</label>
-  <input type="url" class="form-control" id="exampleFormControlInput1" placeholder="">
+  <input type="url" class="form-control" name="user_twitterlink" id="user_facebooklink" placeholder="">
 <br>
   <label for="exampleFormControlInput1" class="form-label">YouTube Links</label>
-  <input type="url" class="form-control" id="exampleFormControlInput1" placeholder="">
+  <input type="url" class="form-control" name="user_youtubelink" id="exampleFormControlInput1" placeholder="">
 <br>
   <label for="exampleFormControlInput1" class="form-label">IMDb Links</label>
-  <input type="url" class="form-control" id="exampleFormControlInput1" placeholder="">
+  <input type="url" class="form-control" name="user_imdb" id="user_imdb" placeholder="">
 <br>
   <label for="exampleFormControlInput1" class="form-label">Your Website</label>
-  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+  <input type="url" class="form-control" name="user_websitelink" id="user_websitelink" placeholder="">
   </div>
 </div>
   </div>
