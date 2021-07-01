@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use phpDocumentor\Reflection\Types\Nullable;
 
 class CreateCampaignsTable extends Migration
 {
@@ -33,6 +34,7 @@ class CreateCampaignsTable extends Migration
             $table->string('project_plan')->nullable();
             $table->string('cause')->nullable();
             $table->string('prototype')->nullable();
+            $table->string('camp_youtubelink')->nullable();
             //$table->string('reference_1');
             //$table->string('reference_2');
             $table->timestamps();

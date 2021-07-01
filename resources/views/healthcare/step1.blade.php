@@ -52,7 +52,6 @@
 <br>
         <div class="text-center">
             <h2 style = "font-family:Comic Sans MS, cursive, sans-serif; font-size:40px; color:rgb(52, 2, 145)">HEALTHCARE</h2>
-            <!--<img src="images/healthcare.svg" class="img-fluid" alt="..." "> -->
         </div>
        <div class="row text-center">
            <center>
@@ -71,7 +70,7 @@
             <div class="col-3"></div>
             <div class=col>
 
-            <form action="{{route('healthcare')}}" method="post" id="regForm">
+            <form action="{{route('Store health info')}}" method="post" id="regForm" enctype="multipart/form-data">
                 <div class="tab" id="step-1">
                     <h3 class="offset-2 mb-5">
                 Let's start with the basics
@@ -238,6 +237,7 @@
         //add a property to submit the form to the desired link
     } else {
         // document.getElementById("nextBtn").innerHTML = "Next";
+        document.getElementById("nextBtn").style.display = "inline";
         document.getElementById("submitBtn").style.display = "none";
     }
     // ... and run a function that displays the correct step indicator:
