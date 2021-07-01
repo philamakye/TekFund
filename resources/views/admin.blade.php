@@ -57,12 +57,11 @@ main{
                     </div>
                 </nav>
                 <!-- Page content-->
-                <div class="container-fluid lg-12"> 
-                    <h1 class="mt-4">Simple Sidebar</h1>
+                <div class="container-fluid bg-light"> 
                     <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
 
 
-                    <div class="card my-3">
+                    <div class="card my-4 mx-3">
                         <div class="card-body">
                             <div class="row align-items-start">
                                 <div class="col">
@@ -83,7 +82,7 @@ main{
                             </div>
                         </div>
                     </div>
-                    <div class="card my-3">
+                    <div class="card my-4 mx-3">
                         <div class="card-body">
                         <div class="row align-items-start">
                                 <div class="col">
@@ -104,7 +103,7 @@ main{
                             </div>
                         </div>
                     </div>
-                    <div class="card my-3">
+                    <div class="card my-4 mx-3">
                         <div class="card-body">
                         <div class="row align-items-start">
                                 <div class="col">
