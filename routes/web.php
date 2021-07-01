@@ -30,6 +30,7 @@ Route::get('/campaign', function () {
     return view('viewcampaign');
 });
 
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
