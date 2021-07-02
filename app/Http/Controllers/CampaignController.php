@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Campaign;
 use Illuminate\Http\Request;
+use Laravel\Ui\Presets\React;
 
 class CampaignController extends Controller
 {
@@ -51,6 +52,18 @@ class CampaignController extends Controller
     public function create()
     {
         //
+    }
+    public function store_health(Request $request){
+
+    }
+    public function store_start(Request $request){
+
+    }
+    public function store_proj(Request $request){
+
+    }
+    public function store_others(Request $request){
+
     }
 
     /**

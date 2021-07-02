@@ -172,7 +172,7 @@
       <a href="#!" style="color: white"><i class="fas fa-envelope-open-text"></i></a>
     </div>
     <div class="col">
-      <a href="#!" style="color: white"> fucktekfund@gmail.com</a>
+      <a href="#!" style="color: white"> tekfund@gmail.com</a>
     </div>
 
   </div>
