@@ -57,6 +57,7 @@ Route::post('/storeothers','CampaignController@store_others')->name('store other
 Route::post('/store-BasicInfo', 'UserController@storeBasic')->name('store Basic info');
 Route::post('/store-story', 'UserController@storeStory')->name('Your Story');
 Route::post('/other-links', 'UserController@storelinks')->name('other links');
+Route::post('/storecampaign', 'CampaignController@store')->name('store-campaign');
 
 
 

@@ -29,7 +29,7 @@
 
         </div>
       </div>
-
+      @include('layouts.flash')
       <div class="row text-center my-3 pt-4">
       <div class="col">
           <center>

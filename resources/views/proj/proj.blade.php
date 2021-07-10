@@ -63,13 +63,14 @@
             <div class="col-3"></div>
             <div class=col>
 
-            <form action="{{route('store project')}}" method="post" id="regForm" enctype="multipart/form-data">
+            <form action="{{route('store-campaign')}}" method="post" id="regForm" enctype="multipart/form-data">
+                @csrf
                 <div class="tab" id="step-1">
                     <h3 class="offset-2 mb-5" style="font-family: Snell Roundhand, cursive; margin-inline-start: 5px;font-weight:bold">
                 Let's start with the basics
             </h3>
                     <label for="Default select example" style="font-size: large"><b>I am a ... ?</b></label>
-                        <select class="form-select mb-5" aria-label="Default select example">
+                        <select class="form-select mb-5" name="starter" aria-label="Default select example">
                             <option selected disabled value="" hidden>--please select--</option>
                             <option value="student">Student</option>
                             <option value="staff">Staff</option>
@@ -77,21 +78,21 @@
                         </select>
 
                           <label for="title" style="font-size: large"><b>Field of Project</b></label>
-                          <select class="form-select mb-5" aria-label="Default select example">
+                          <select class="form-select mb-5" name="project_field" aria-label="Default select example">
                             <option selected disabled value="" hidden>--please select--</option>
-                            <option value="administer">Administrative</option>
-                            <option value="const">Construction</option>
-                            <option value="comp">Computer Software Development</option>
-                            <option value="design">Design of Plans</option>
-                            <option value="equip">Equipment or System Installation</option>
-                            <option value="new">New Product Development</option>
-                            <option value="main">Maintenance of Process Industries</option>
-                            <option value="res">Research</option>
-                            <option value="others">Others</option>
+                            <option value="Administrative">Administrative</option>
+                            <option value="Construction">Construction</option>
+                            <option value="Computer Software Development">Computer Software Development</option>
+                            <option value="Design of Plans">Design of Plans</option>
+                            <option value="Equipment or System Installation">Equipment or System Installation</option>
+                            <option value="New Product Development">New Product Development</option>
+                            <option value="Maintenance of Process Industries">Maintenance of Process Industries</option>
+                            <option value="Research">Research</option>
+                            <option value="Others">Others</option>
                         </select>
 
                         <label for="title" style="font-size: large"><b>What is your fundraiser title?</b></label>
-                        <input oninput="this.className = 'form-control'" type="text" id="inputPassword5" placeholder="Ex: Help Stevenson get a new brain" class="form-control" aria-describedby="passwordHelpBlock">
+                        <input oninput="this.className = 'form-control'" name="title" type="text" id="inputPassword5" placeholder="Ex: Help Stevenson get a new brain" class="form-control" aria-describedby="passwordHelpBlock">
                         <div id="passwordHelpBlock" class="form-text mb-4">
                             <i class="fas fa-exclamation-circle"></i> Try to include a person's name and the purpose.
                         </div>
@@ -103,17 +104,10 @@
                 Set your fundraising goal
             </h3>
                     <label for="title" style="font-size: large"><b>How much would you like to raise?</b></label>
-                    <input type="number" min="200" oninput="validity.valid||(value='');" id="inputPassword5" placeholder="Enter Target Amount in GHC" class="form-control" aria-describedby="passwordHelpBlock">
+                    <input type="number" min="200" oninput="validity.valid||(value='');" name="target" id="inputPassword5" placeholder="Enter Target Amount in GHC" class="form-control" aria-describedby="passwordHelpBlock">
                     <div id="passwordHelpBlock" class="form-text mb-4">
                             <i class="fas fa-exclamation-circle"></i> Minimum target amount that can be set is GHC 200.
                         </div>
-
-                      {{-- <label for="Default select example2" style="font-size: large"><b>Who are you crowdfunding for? </b></label>
-                      <select class="form-select mb-5" aria-label="Default select example2">
-                          <option selected hidden>Benefactor</option>
-                          <option value="self">Self</option>
-                          <option value="others">Others</option>
-                      </select> --}}
 
                       <h4 class="mb-5">
                         <small class="text-muted">Keep in mind that transaction fees including credit and debit charges, are deducted from each donation
@@ -125,10 +119,11 @@
                         </small>
                       </h4>
                       <label for="title" style="font-size: large"><b>Campaign Duration</b></label>
-                      <input type="number" min="10" oninput="validity.valid||(value='');" id="inputPassword5" placeholder="Set Campaign duration in Days" class="form-control" aria-describedby="passwordHelpBlock">
+                      <input type="number" min="10" oninput="validity.valid||(value='');" name="duration" id="inputPassword5" placeholder="Set Campaign duration in Days" class="form-control" aria-describedby="passwordHelpBlock">
                       <div id="passwordHelpBlock" class="form-text mb-4">
                             <i class="fas fa-exclamation-circle"></i> Minimum campaign duration that can be set is 10 days.
-                        </div>                      <h4 class="mb-5">
+                        </div>
+                             <h4 class="mb-5">
                           <small class="text-muted">
                             Duration begins after campaign goes online
                           </small>
@@ -144,7 +139,7 @@
                     <div class="mb-5" style="border-style: dashed">
                         <div class="my-3 px-3 text-center">
                             <label for="formFile" class="form-label">Select a photo that best describes your campiagn</label>
-                            <input class="form-control" type="file" id="formFile">
+                            <input class="form-control" name="cover_img" type="file" id="formFile">
                           </div>
                     </div>
                     <div class="container">
@@ -162,7 +157,7 @@
                       </div>
 
                      <div class="input-group input-group mt-1 mb-3">
-                     <input type="url" class="form-control" aria-label="Sizing example input" placeholder="Add a youtube link" aria-describedby="inputGroup-sizing-default">
+                     <input type="url" name="camp_youtubelink" id="tubeUrl" class="form-control" aria-label="Sizing example input" placeholder="Add a youtube link" aria-describedby="inputGroup-sizing-default">
                      </div>
                 </div>
 
@@ -171,7 +166,7 @@
                 Tell Your Story
             </h3>
                    <div class="mb-3">
-             <textarea name="story" id="" cols="50" rows="10">
+             <textarea name="story" id="story" cols="50" rows="10" required>
 
              </textarea>
             </div>
@@ -182,22 +177,22 @@
             </h3>
                      <h5 class="text-muted"> <i class="fas fa-lock"></i> We just need a little more information before you can accept donations</h5>
 
-           <label for="title" style="font-size: large"><b>Full Name</b></label>
-           <input oninput="this.className = 'form-control'" type="text" id="inputPassword5"  class="form-control mb-5" aria-describedby="passwordHelpBlock">
-
-           <label for="Default select example" style="font-size: large"><b>Project Prototype</b></label>
+           <label for="title" style="font-size: large; margin:13px"><b>Full Name</b></label>
+           <input oninput="this.className = 'form-control'" name="full_name" type="text" id="inputPassword5"  class="form-control mb-5" aria-describedby="passwordHelpBlock">
+<br>
+           <label for="Default select example" style="font-size: large; margin:13px"><b>Project Prototype</b></label>
            <div class="mb-5" style="border-style: dashed">
             <div class="my-3 px-3 text-center">
                 <label for="formFile" class="form-label">Add an image or video of project protoype</label>
-                <input class="form-control" type="file" id="formFile">
+                <input class="form-control" name="prototype" type="file" id="formFile">
               </div>
         </div>
-
-           <label for="Default select example" style="font-size: large"><b>Project Plan</b></label>
+<br>
+           <label for="Default select example" style="font-size: large; margin:13px"><b>Project Plan</b></label>
            <div class="mb-5" style="border-style: dashed">
             <div class="my-3 px-3 text-center">
                 <label for="formFile" class="form-label">Upload a PDF file of your project plan</label>
-                <input class="form-control" type="file" id="formFile">
+                <input class="form-control" name="project_plan" type="file" id="formFile">
               </div>
         </div>
                 </div>
@@ -205,10 +200,10 @@
                 <div style="overflow:auto;">
                     <div style="float:right;">
                         <a id="nextBtn" type="button" role="button" onclick="nextPrev(1)" style="font-size:xx-large; color:rgb(18,214,27);" ><i class="fas fa-arrow-circle-right"></i></a>
-                        <button type="submit" style=" background-color:rgb(18, 214, 27); color:white; border:none;padding:5px; text-decoration:none; border-radius:30px" id="submitBtn">Submit Application</button>
+                        <button type="submit" style=" background-color:rgb(18, 214, 27); color:white; border:none;margin:15px; float:right; padding:5px;margin-bottom:20px; text-decoration:none; border-radius:7px" id="submitBtn">Submit Application</button>
                     </div>
                     <div style="float:left;">
-                        <a type="button" role="button" id="prevBtn" onclick="nextPrev(-1)" style="font-size:xx-large; color:rgb(44, 20, 124); " ><i class="fas fa-arrow-circle-left"></i></a>
+                        <a type="button" role="button" id="prevBtn" onclick="nextPrev(-1)" style="font-size:xx-large; color:rgb(44, 20, 124);margin:15px;" ><i class="fas fa-arrow-circle-left"></i></a>
                     </div>
                 </div>
             </form>
@@ -274,12 +269,14 @@
     showTab(currentTab);
     }
 
-    function validateForm() {
+     function validateForm() {
     // This function deals with validation of the form fields
-    var x, y, i, z, valid = true;
+    var x, y, i, z,a, valid = true, youtube_link, choose_step;
     x = document.getElementsByClassName("tab");
     y = x[currentTab].getElementsByTagName("input");
     z = x[currentTab].getElementsByTagName("select");
+    a = $('#tubeUrl');
+    b = $('#story');
     // A loop that checks every input field in the current tab:
     for (i = 0; i < y.length; i++) {
         // If a field is empty...
@@ -289,6 +286,8 @@
         // and set the current valid status to false:
         valid = false;
         }
+
+
     }
 
     // A loop that checks every select field in the current tab:
@@ -300,6 +299,23 @@
             //set the current valid status to false
             valid = false;
         }
+    }
+
+    //validating youtube_link
+    if (x[currentTab].id == "step-3"){
+        youtube_link = validateYouTubeUrl();
+        if (youtube_link){
+            valid = true;
+        } else{
+            valid = false;
+            a.classname += " invalid";
+        }
+    }
+
+    //validating the textarea
+    if (b.value == ""){
+        b.classname += " invalid";
+        valid = false;
     }
     // If the valid status is true, mark the step as finished and valid:
     if (valid) {
@@ -317,6 +333,24 @@
     //... and adds the "active" class to the current step:
     x[n].className += " active";
     }
+    function validateYouTubeUrl()
+{
+    var url = $('#tubeUrl').val();
+        if (url != undefined || url != '') {
+            var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=|\?v=)([^#\&\?]*).*/;
+            var match = url.match(regExp);
+            if (match && match[2].length == 11) {
+                // Do anything for being valid
+                // if need to change the url to embed url then use below line
+                $('#ytplayerSide').attr('src', 'https://www.youtube.com/embed/' + match[2] + '?autoplay=0');
+                return true;
+            }
+            else {
+                // Do anything for not being valid
+                return false;
+            }
+        }
+}
 
 </script>
 @endsection
