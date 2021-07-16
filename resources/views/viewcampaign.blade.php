@@ -62,12 +62,61 @@
 
 
   <div class="container mt-3">
-      <a href="" class="mr-5 px-4 py-2" style="background-color: rgb(65, 39, 151); color:white; text-decoration:none;">Back it</a>
+      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="mr-5 px-4 py-2" style="background-color: rgb(65, 39, 151); color:white; text-decoration:none;">Contribute</a>
       <a href="" class="mr-5 px-3 py-2" style="background-color: whitesmoke; color:black; border:1px solid; text-decoration:none;" ><i class="far fa-heart"></i> Follow</a>
       <a href="" class="mr-1 px-1 py-2 " style="color:rgb(51, 51, 248); font-size: 1.5em"><i class="fab fa-facebook-f"></i></a>
       <a href="" class="mr-2 px-1 py-2" style="color:rgb(66, 201, 241); font-size: 1.5em"><i class="fab fa-twitter"></i></a>
       <a href="" class="mr-2 px-1 py-2" style="color:rgb(116, 119, 121); font-size: 1.5em"><i class="fas fa-link"></i></a>
   </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title " id="exampleModalLabel"><b>Back this Campaign</b></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+        <div>
+            <h4>Make a Contribution</h4>
+            <div class="container px-2 py-2" style="border: solid 1px">
+                <div class="row">
+                  <div class="col-7 mx-4 my-2" style="border: solid 1px">
+                    <a>10</a>
+                    <a style="float: right">GHC</a>
+                  </div>
+                  <a href="#" class="col mx-4 my-2" style="border: solid 1px; text-decoration:none; color:rgb(65, 39, 151)">
+                  Continue
+                  </a>
+                </div>
+              </div>
+        </div>
+
+        </div>
+        <div class="modal-footer">
+         <br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </div>
 
