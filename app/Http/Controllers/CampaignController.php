@@ -3,7 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Campaign;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Laravel\Ui\Presets\React;
+use Illuminate\Support\Facades\Validator;
+
 
 class CampaignController extends Controller
 {
@@ -52,6 +57,18 @@ class CampaignController extends Controller
     {
         //
     }
+    public function store_health(Request $request){
+
+    }
+    public function store_start(Request $request){
+
+    }
+    public function store_proj(Request $request){
+
+    }
+    public function store_others(Request $request){
+
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -61,7 +78,99 @@ class CampaignController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //$campid = Auth::id();
+        //$store = Campaign::findOrFail($campid);
+        $store = new Campaign();
+         $val = Validator::make($request->all(),[
+            'hospital_name' => 'nullable',
+            'doctors_report' => 'nullable',
+            'business_cate' => 'nullable',
+            'business_plan' => 'nullable',
+            'project_field' => 'nullable',
+            'project_plan' => 'nullable',
+            'cause' => 'nullable',
+            'prototype' =>'nullable',
+            'cover_img' =>'nullable',
+            'reference_1' =>'nullable',
+            'reference_2' =>'nullable',
+            'starter' => 'nullable',
+
+
+         ]);
+       //  $this->validate($request, $store_rule)
+         if($val->fails()){
+            return redirect('start campaign')->with('error', 'Fundraiser validation error!!! Please try again');
+         }
+
+
+         if ($request->hasFile('cover_img')){
+            $cover = $request->cover_img;
+            $covers = $cover->getClientOriginalName();
+            $cover->storeAs('covers', $covers, 'public');
+         }
+         if ($request->hasFile('business_plan')){
+             $business = $request->business_plan;
+             $businesses = $business->getClientOriginalName();
+             $business->storeAs('business-plans', $businesses, 'public');
+             $store->business_plan = $businesses;
+         }
+         if ($request->hasFile('doctors_report')){
+             $report = $request->doctors_report;
+             $reports =$report->getClientOriginalName();
+             $report->storeAs('docReports', $reports,'public');
+             $store->campaign_type = 'health';
+             $store->doctors_report = $reports;
+         }
+         if ($request->hasFile('project_plan')){
+             $store->campaign_type = 'project';
+             $proj =$request->project_plan;
+             $projs =$proj->getClientOriginalName();
+             $proj->storeAs('project-files',$projs, 'public');
+             $store->project_plan = $projs;
+         }
+         if ($request->hasFile('prototype')){
+             $prot =$request->prototype;
+             $prots =$prot->getClientOriginalName();
+             $prot->storeAs('Project-prototypes', $prots,'public');
+             $store->prototype = $prots;
+         }
+
+         if ($request->has('cause')){
+             $store->campaign_type = 'other';
+         }
+         if ($request->has('business_cate')){
+             $store->campaign_type = 'startup';
+         }
+
+        // Campaign::create($request->all());
+        $store->fill([
+            'starter' => $request->starter,
+            'benefactor' =>$request->benefactor,
+            'title' =>$request->title,
+            'target' =>$request->target,
+            'duration' =>$request->duration,
+            'camp_youtubelink' =>$request->camp_youtubelink,
+            'cover_img' =>$covers,
+            'story' =>$request->story,
+            'full_name' =>$request->full_name,
+            'hospital_name' =>$request->hospital_name,
+           // 'doctors_report' =>$reports,
+            'business_cate' =>$request->business_cate,
+            //'business_plan' =>$businesses,
+            'business_name' =>$request->business_name,
+            'project_field' =>$request->project_field,
+            //'project_plan' =>$request->project_plan,
+            'cause' => $request->cause,
+           // 'prototype' =>$request->prototype,
+            'reference_1' =>$request->reference_1,
+            'reference_2' =>$request->reference_2,
+
+        ]);
+        $store->status = 'pending';
+        $store->us_id = Auth::id();
+        $store->save();
+        return redirect('/startcampaign')->with('message', 'Fundraiser Successfully Completed!!... You will be notified once the campaign is verified.');
+
     }
 
     /**

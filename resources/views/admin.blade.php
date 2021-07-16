@@ -19,7 +19,7 @@ main{
 </style>
 
 
-@extends('layouts.app')
+@extends('layouts.adminlay')
 @section('content')
 
 <div class="d-flex" id="wrapper">
@@ -57,7 +57,7 @@ main{
                     </div>
                 </nav>
                 <!-- Page content-->
-                <div class="container-fluid bg-light"> 
+                <div class="container-fluid bg-light">
                     <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
 
 
@@ -124,7 +124,7 @@ main{
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
