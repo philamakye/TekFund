@@ -83,15 +83,47 @@
         <div>
             <h4>Make a Contribution</h4>
             <div class="container px-2 py-2" style="border: solid 1px">
-                <div class="row">
-                  <div class="col-7 mx-4 my-2" style="border: solid 1px">
-                    <a>10</a>
-                    <a style="float: right">GHC</a>
-                  </div>
-                  <a href="#" class="col mx-4 my-2" style="border: solid 1px; text-decoration:none; color:rgb(65, 39, 151)">
-                  Continue
-                  </a>
-                </div>
+
+                <form id="paymentForm" method="GET">
+
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                          <div id="emailHelp" class="form-text">Payment receipt would to sent to this mail</div>
+                        </div>
+
+                        <div class="row mb-3">
+                           <div class="col">
+                            <div class="mb-3">
+                                <label for="fn" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="fn" aria-describedby="emailHelp" required>
+                              </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="Sn" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                              </div>
+                        </div>
+                        </div>
+
+                        <div class="row">
+                           <div class="col">
+                            <div class="mb-3">
+                                <label for="amount" class="form-label">Amount</label>
+                                <input type="tel" class="form-control" id="amount" aria-describedby="emailHelp" required>
+                              </div>
+                          </div>
+                        </div>
+
+                    <div class="row">
+                     <div class="col-8">
+                    <button onclick='payWithPaystack()' class="btn btn-primary">Continue</button>
+                    </div>
+                    </div>
+                </form>
+
               </div>
         </div>
 
@@ -104,18 +136,29 @@
   </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script>
+      const paymentForm = document.getElementById('paymentForm');
+paymentForm.addEventListener("submit", payWithPaystack, false);
+function payWithPaystack(e) {
+  e.preventDefault();
+  let handler = PaystackPop.setup({
+    key: 'pk_test_xxxxxxxxxx', // Replace with your public key
+    email: document.getElementById("email-address").value,
+    amount: document.getElementById("amount").value * 100,
+    ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+    // label: "Optional string that replaces customer email"
+    onClose: function(){
+      alert('Window closed.');
+    },
+    callback: function(response){
+      let message = 'Payment complete! Reference: ' + response.reference;
+      alert(message);
+    }
+  });
+  handler.openIframe();
+}
+  </script>
 
 
     </div>
