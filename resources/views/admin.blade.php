@@ -231,6 +231,25 @@ main{
                         <div class="row align-items-start">
                                 <div class="col">
                                 <h3>Smart Crops</h3>
+                                <div class="circular">
+                                    <div class="inner"></div>
+                                    <div class="outer"></div>
+                                    <div class="numb">
+                                    75%
+                                    </div>
+                                    <div class="circle">
+                                    <div class="dot">
+                                        <span></span>
+                                    </div>
+                                    <div class="bar left">
+                                        <div class="progress"></div>
+                                    </div>
+                                    <div class="bar right">
+                                        <div class="progress"></div>
+                                    </div>
+                                    </div>
+                                </div>
+
                                 </div>
                                 <div class="col">
                                 <p>Campaign Starter</p>
@@ -252,6 +271,25 @@ main{
                         <div class="row align-items-start">
                                 <div class="col">
                                 <h3>Smart Crops</h3>
+                                <div class="circular">
+                                    <div class="inner"></div>
+                                    <div class="outer"></div>
+                                    <div class="numb">
+                                    75%
+                                    </div>
+                                    <div class="circle">
+                                    <div class="dot">
+                                        <span></span>
+                                    </div>
+                                    <div class="bar left">
+                                        <div class="progress"></div>
+                                    </div>
+                                    <div class="bar right">
+                                        <div class="progress"></div>
+                                    </div>
+                                    </div>
+                                </div>
+                                
                                 </div>
                                 <div class="col">
                                 <p>Campaign Starter</p>
