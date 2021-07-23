@@ -14,7 +14,7 @@ height: 35em;
 
   
 </style>
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
 @extends('layouts.app')
 
 
