@@ -84,25 +84,25 @@
             <h4>Make a Contribution</h4>
             <div class="container px-2 py-2" style="border: solid 1px">
 
-                <form id="paymentForm" method="GET">
-
+                <form id="paymentForm" method="post" action="/pay">
+                         @csrf
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Email address</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                          <input type="email" name="user_email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                           <div id="emailHelp" class="form-text">Payment receipt would to sent to this mail</div>
                         </div>
 
                         <div class="row mb-3">
                            <div class="col">
                             <div class="mb-3">
-                                <label for="fn" class="form-label">First Name</label>
+                                <label for="fn" name="first_name" class="form-label">First Name</label>
                                 <input type="text" class="form-control" id="fn" aria-describedby="emailHelp" required>
                               </div>
                         </div>
 
                         <div class="col">
                             <div class="mb-3">
-                                <label for="Sn" class="form-label">Last Name</label>
+                                <label for="Sn" name="last_name" class="form-label">Last Name</label>
                                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                               </div>
                         </div>
@@ -111,7 +111,7 @@
                         <div class="row">
                            <div class="col">
                             <div class="mb-3">
-                                <label for="amount" class="form-label">Amount</label>
+                                <label for="amount" name="amount" class="form-label">Amount</label>
                                 <input type="tel" class="form-control" id="amount" aria-describedby="emailHelp" required>
                               </div>
                           </div>
@@ -119,7 +119,7 @@
 
                     <div class="row">
                      <div class="col-8">
-                    <button onclick='payWithPaystack()' class="btn btn-primary">Continue</button>
+                    <button type="submit" class="btn btn-primary">Continue</button>
                     </div>
                     </div>
                 </form>
@@ -136,8 +136,8 @@
   </div>
 
 
-  <script src="https://js.paystack.co/v1/inline.js"></script>
-  <script>
+  {{-- <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script src="https://js.paystack.co/v1/inline.js" >
       const paymentForm = document.getElementById('paymentForm');
 paymentForm.addEventListener("submit", payWithPaystack, false);
 function payWithPaystack(e) {
@@ -158,7 +158,7 @@ function payWithPaystack(e) {
   });
   handler.openIframe();
 }
-  </script>
+  </script> --}}
 
 
     </div>
