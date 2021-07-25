@@ -87,23 +87,23 @@
                 <form id="paymentForm" method="post" action="/pay">
                          @csrf
                         <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-label">Email address</label>
-                          <input type="email" name="user_email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                          <label for="email-address" class="form-label">Email address</label>
+                          <input type="email" name="user_email" class="form-control" id="email-address" aria-describedby="emailHelp" required>
                           <div id="emailHelp" class="form-text">Payment receipt would to sent to this mail</div>
                         </div>
 
                         <div class="row mb-3">
                            <div class="col">
                             <div class="mb-3">
-                                <label for="fn" name="first_name" class="form-label">First Name</label>
-                                <input type="text" class="form-control" id="fn" aria-describedby="emailHelp" required>
+                                <label for="first-name"  class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="first-name" aria-describedby="emailHelp" required>
                               </div>
                         </div>
 
                         <div class="col">
                             <div class="mb-3">
-                                <label for="Sn" name="last_name" class="form-label">Last Name</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                <label for="last-name" name="last_name" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="last-name" aria-describedby="emailHelp" required>
                               </div>
                         </div>
                         </div>
@@ -134,32 +134,6 @@
       </div>
     </div>
   </div>
-
-
-  {{-- <script src="https://js.paystack.co/v1/inline.js"></script>
-  <script src="https://js.paystack.co/v1/inline.js" >
-      const paymentForm = document.getElementById('paymentForm');
-paymentForm.addEventListener("submit", payWithPaystack, false);
-function payWithPaystack(e) {
-  e.preventDefault();
-  let handler = PaystackPop.setup({
-    key: 'pk_test_xxxxxxxxxx', // Replace with your public key
-    email: document.getElementById("email-address").value,
-    amount: document.getElementById("amount").value * 100,
-    ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
-    // label: "Optional string that replaces customer email"
-    onClose: function(){
-      alert('Window closed.');
-    },
-    callback: function(response){
-      let message = 'Payment complete! Reference: ' + response.reference;
-      alert(message);
-    }
-  });
-  handler.openIframe();
-}
-  </script> --}}
-
 
     </div>
 
@@ -412,3 +386,31 @@ function payWithPaystack(e) {
 <br>
 
 @endsection
+
+
+
+<script>
+    const paymentForm = document.getElementById('paymentForm');
+paymentForm.addEventListener("submit", payWithPaystack, false);
+function payWithPaystack(e) {
+e.preventDefault();
+let handler = PaystackPop.setup({
+  key: 'pk_test_21e06242bcedd353065b56a55c5ad3b369750ab3', // Replace with your public key
+  email: document.getElementById("email-address").value,
+  amount: document.getElementById("amount").value * 100,
+  currency: "GHS",
+  ref: 'TF'+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+  // label: "Optional string that replaces customer email"
+  onClose: function(){
+      window.location = "http://127.0.0.1:8000/campaign";
+    alert('Transaction cancelled.');
+  },
+  callback: function(response){
+    let message = 'Payment complete! Reference: ' + response.reference;
+    alert(message);
+    window.location = "http://127.0.0.1:8000/verify_transaction.php?reference=" + response.reference;
+  }
+});
+handler.openIframe();
+}
+</script>
