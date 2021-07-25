@@ -49,7 +49,8 @@ main{
   height: 80px;
   width: 80px;
   margin: -40px 0 0 -40px;
-  background-color: #dde6f0;
+  /*background-color: #dde6f0; */
+  background-color: #fff;
   border-radius: 100%;
   box-shadow: 0 1px 0 rgba(0,0,0,0.2);
 }
@@ -71,8 +72,9 @@ main{
   position: absolute;
   height: 100%;
   width: 100%;
-  background: #fff;
+  background:rgb(8,4,100);
   -webkit-border-radius: 100%;
+  border-radius: 100%;
   clip: rect(0px, 100px, 100px, 50px);
 }
 .circle .bar .progress{
@@ -80,10 +82,11 @@ main{
   height: 100%;
   width: 100%;
   -webkit-border-radius: 100%;
+        border-radius: 100%;
   clip: rect(0px, 50px, 100px, 0px);
 }
 .circle .bar .progress, .dot span{
-  background: #4158d0;
+  background: rgb(56,216,208);
 }
 .circle .left .progress{
   z-index: 1;
@@ -223,6 +226,53 @@ main{
                                 <p>21 May 2021</p>
                                 <p>GHC 25,000</p>
                                 </div>
+                                <div class="col">
+                                  <button type="button" class="btn btn-outline-primary">DETAILS</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card my-4 mx-3">
+                        <div class="card-body">
+                        <div class="row align-items-start">
+                                <div class="col">
+                                <h3>Smart Crops</h3>
+                                <div class="circular">
+                                    <div class="inner"></div>
+                                    <div class="outer"></div>
+                                    <div class="numb">
+                                    75%
+                                    </div>
+                                    <div class="circle">
+                                    <div class="dot">
+                                        <span></span>
+                                    </div>
+                                    <div class="bar left">
+                                        <div class="progress"></div>
+                                    </div>
+                                    <div class="bar right">
+                                        <div class="progress"></div>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                </div>
+                                <div class="col">
+                                  <p>Campaign Starter</p>
+                                  <p>Starting date</p>
+                                  <p>Ending Date</p>
+                                  <p>Target Amount</p>
+                                </div>
+                                <div class="col">
+                                  <p>Jehu Stevenson</p>
+                                  <p>21 May 2021</p>
+                                  <p>21 May 2021</p>
+                                  <p>GHC 25,000</p>
+                                </div>
+                                <div class="col">
+                                  <button type="button" class="btn btn-outline-primary">DETAILS</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -263,45 +313,8 @@ main{
                                 <p>21 May 2021</p>
                                 <p>GHC 25,000</p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card my-4 mx-3">
-                        <div class="card-body">
-                        <div class="row align-items-start">
                                 <div class="col">
-                                <h3>Smart Crops</h3>
-                                <div class="circular">
-                                    <div class="inner"></div>
-                                    <div class="outer"></div>
-                                    <div class="numb">
-                                    75%
-                                    </div>
-                                    <div class="circle">
-                                    <div class="dot">
-                                        <span></span>
-                                    </div>
-                                    <div class="bar left">
-                                        <div class="progress"></div>
-                                    </div>
-                                    <div class="bar right">
-                                        <div class="progress"></div>
-                                    </div>
-                                    </div>
-                                </div>
-                                
-                                </div>
-                                <div class="col">
-                                <p>Campaign Starter</p>
-                                <p>Starting date</p>
-                                <p>Ending Date</p>
-                                <p>Target Amount</p>
-                                </div>
-                                <div class="col">
-                                <p>Jehu Stevenson</p>
-                                <p>21 May 2021</p>
-                                <p>21 May 2021</p>
-                                <p>GHC 25,000</p>
+                                  <button type="button" class="btn btn-outline-primary">DETAILS</button>
                                 </div>
                             </div>
                         </div>
