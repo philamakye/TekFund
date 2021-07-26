@@ -84,8 +84,8 @@
             <h4>Make a Contribution</h4>
             <div class="container px-2 py-2" style="border: solid 1px">
 
-                <form id="paymentForm" method="post" action="/pay">
-                         @csrf
+                <form id="paymentForm">
+
                         <div class="mb-3">
                           <label for="email-address" class="form-label">Email address</label>
                           <input type="email" name="user_email" class="form-control" id="email-address" aria-describedby="emailHelp" required>
@@ -119,10 +119,11 @@
 
                     <div class="row">
                      <div class="col-8">
-                    <button type="submit" class="btn btn-primary">Continue</button>
+                    <button type="submit" onclick="payWithPaystack()" class="btn btn-primary">Continue</button>
                     </div>
                     </div>
                 </form>
+                <script src="https://js.paystack.co/v1/inline.js"></script>
 
               </div>
         </div>
