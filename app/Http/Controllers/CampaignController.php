@@ -107,6 +107,7 @@ class CampaignController extends Controller
             $cover = $request->cover_img;
             $covers = $cover->getClientOriginalName();
             $cover->storeAs('covers', $covers, 'public');
+            $store->cover_img = $covers;
          }
          if ($request->hasFile('business_plan')){
              $business = $request->business_plan;
@@ -150,7 +151,7 @@ class CampaignController extends Controller
             'target' =>$request->target,
             'duration' =>$request->duration,
             'camp_youtubelink' =>$request->camp_youtubelink,
-            'cover_img' =>$covers,
+            //'cover_img' =>$covers,
             'story' =>$request->story,
             'full_name' =>$request->full_name,
             'hospital_name' =>$request->hospital_name,
@@ -170,7 +171,6 @@ class CampaignController extends Controller
         $store->us_id = Auth::id();
         $store->save();
         return redirect('/startcampaign')->with('message', 'Fundraiser Successfully Completed!!... You will be notified once the campaign is verified.');
-
     }
 
     /**

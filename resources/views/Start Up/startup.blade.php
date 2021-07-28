@@ -59,7 +59,7 @@
                 </div>
            </center>
         </div>
-        <div class="row mt-5 pt-2">
+        < class="row mt-5 pt-2">
             <div class="col-3"></div>
             <div class=col>
 
@@ -102,7 +102,7 @@
                 Set your fundraising goal
             </h3>
                     <label for="title" style="font-size: large"><b>How much would you like to raise?</b></label>
-                    <input type="number" min="200" name="target" oninput="validity.valid||(value='');" id="inputPassword5" placeholder="Enter Target Amount in GHC" class="form-control" aria-describedby="passwordHelpBlock">
+                    <input type="text" min="200" name="target" oninput="validity.valid||(value='');" id="inputPassword5" placeholder="Enter Target Amount in GHC" class="form-control" aria-describedby="passwordHelpBlock">
                     <div id="passwordHelpBlock" class="form-text mb-4">
                             <i class="fas fa-exclamation-circle"></i> Minimum target amount that can be set is GHC 200.
                         </div>
@@ -124,7 +124,7 @@
                         </small>
                       </h4>
                       <label for="title" style="font-size: large"><b>Campaign Duration</b></label>
-                      <input type="number" name="duration" min="10" oninput="validity.valid||(value='');" id="inputPassword5" placeholder="Set Campaign duration in Days" class="form-control" aria-describedby="passwordHelpBlock">
+                      <input type="text" name="duration" min="10" oninput="validity.valid||(value='');" id="inputPassword5" placeholder="Set Campaign duration in Days" class="form-control" aria-describedby="passwordHelpBlock">
                       <div id="passwordHelpBlock" class="form-text mb-4">
                             <i class="fas fa-exclamation-circle"></i> Minimum campaign duration that can be set is 10 days.
                         </div>                      <h4 class="mb-5">
@@ -209,7 +209,6 @@
                 </div>
             </form>
             </div>
-
 
             <div class="col-3"></div>
         </div>
