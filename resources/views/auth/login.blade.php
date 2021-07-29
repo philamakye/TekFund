@@ -1,5 +1,10 @@
 <style>
-    .container .icon {
+ body{
+     background: grey !important;
+ }
+ 
+ 
+ .container .icon {
     margin-top: 0px;
     padding-top: 10px;
 }
@@ -25,15 +30,21 @@
     cursor: pointer;
     background-color: rgb(50, 18, 156);
 }
+
+.search-bar {
+    display: none !important;
+}
 </style>
 
 @extends('layouts.app')
 
 @section('content')
 
-        <center><h2><img src="images/icon.gif" class="img-fluid mr-2" style="height: 2.0em; border-radius:30px; font-family: Garamond;" alt="...">TekFund</h2></center>
 
-        <div class="container">
+        <div class="container" style="border: 1px solid red; background:white; ">
+            <div>
+            <center><h2><img src="images/icon.gif" class="img-fluid mr-2" style="height: 2.0em; border-radius:30px; font-family: Garamond;" alt="...">TekFund</h2></center>
+            </div>
             <div class="row">
               <div class="col-sm-3">
 

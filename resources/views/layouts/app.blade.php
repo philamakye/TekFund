@@ -35,18 +35,18 @@
 
 <body style="background-color:white; ">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg shadow-sm" style="background-color: rgb(20, 7, 63)">
+        <nav class="navbar navbar-expand-md navbar-light bg shadow-sm" style="background-color: rgb(20, 7, 63) !important">
             <div class="container-fluid" >
               <img src="images/icon.gif" class="img-fluid mr-2" style="height: 2.1em; border-radius:20px" alt="...">
                 <a class="navbar-brand" style="color: white" href="{{ url('/') }}">
                     {{ config('app.name', 'TekFund') }}
                 </a>
-                <a href="#" class="navbar-brand pl-2" style="color: white; font-size:1em">
+                <a href="#" class="navbar-brand pl-2" style="color: white !important; font-size:1em">
                   About Us
                 </a>
-                <a href="#" class="navbar-brand pl-2" style="color: white; font-size:1em">
-                  <div class="input-group input-group-sm ">
-                <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
+                <a href="#" class="navbar-brand pl-2" style="color: white !important; font-size:1em">
+                  <div class="input-group input-group-sm search-bar">
+                <input type="text" class="form-control " placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
                 <span class="input-group-text "><i class="fas fa-search"></i></span>
                 </div>
                 </a>
