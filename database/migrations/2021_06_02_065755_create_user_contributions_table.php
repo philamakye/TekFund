@@ -15,12 +15,17 @@ class CreateUserContributionsTable extends Migration
     {
         Schema::create('user_contributions', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_contribution_id')->unique();
-            $table->integer('contributed_user_id');
+            $table->integer('campaign_id')->unique();
+            $table->string('status')->nullable();
+            $table->string('reference')->nullable();
+            $table->string('contributor_name')->nullable();
+            $table->string('cont_email')->nullable();
+            $table->string('transaction_phone_num')->nullable();
            // $table->date('contri_date');
             //$table->string('cont_compaign_title');
             $table->integer('contributed_amount');
             $table->boolean('visibility')->default(false)->change();
+            $table->time('paidAt');
             $table->timestamps();
         });
     }

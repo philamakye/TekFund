@@ -59,11 +59,11 @@ Route::post('/store-story', 'UserController@storeStory')->name('Your Story');
 Route::post('/other-links', 'UserController@storelinks')->name('other links');
 Route::post('/storecampaign', 'CampaignController@store')->name('store-campaign');
 
-Route::post('/pay', 'PaymentController@pay');
+Route::get('/verify_transaction', 'PaymentController@verify')->name('pay');
+// // Laravel 8
+// Route::get('/payment/callback', [App\Http\Controllers\PaymentController::class, 'handleGatewayCallback']);
 
 
 
 
-#Route::get('/startcampaign', function(){
- #   return view('startcampaign');
-#});
+

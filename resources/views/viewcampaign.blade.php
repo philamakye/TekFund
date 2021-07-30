@@ -84,46 +84,57 @@
             <h4>Make a Contribution</h4>
             <div class="container px-2 py-2" style="border: solid 1px">
 
-                <form id="paymentForm">
 
-                        <div class="mb-3">
-                          <label for="email-address" class="form-label">Email address</label>
-                          <input type="email" name="user_email" class="form-control" id="email-address" aria-describedby="emailHelp" required>
-                          <div id="emailHelp" class="form-text">Payment receipt would to sent to this mail</div>
-                        </div>
 
-                        <div class="row mb-3">
-                           <div class="col">
-                            <div class="mb-3">
-                                <label for="first-name"  class="form-label">First Name</label>
-                                <input type="text" class="form-control" id="first-name" aria-describedby="emailHelp" required>
-                              </div>
-                        </div>
+              <form id="paymentForm">
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email-address" required />
+                </div>
+                <!-- <div class="form-group">
+                  <label for="amount">Amount</label>
+                  <input type="tel" id="amount" required />
+                </div> -->
+                <div class="form-group">
+                  <label for="first-name">First Name</label>
+                  <input type="text" id="first-name" />
+                </div>
+                <div class="form-group">
+                  <label for="last-name">Last Name</label>
+                  <input type="text" id="last-name" />
+                </div>
+                <div class="form-submit">
+                  <button type="submit" onclick="payWithPaystack()"> Pay </button>
+                </div>
+              </form>
+              <script src="https://js.paystack.co/v1/inline.js"></script>
+              <script>
+                var paymentForm = document.getElementById('paymentForm');
+                if(paymentForm)
+                paymentForm.addEventListener("submit", payWithPaystack, false);
+            function payWithPaystack(e) {
+            e.preventDefault();
+            let handler = PaystackPop.setup({
+              key: 'pk_test_21e06242bcedd353065b56a55c5ad3b369750ab3', // Replace with your public key
+              email: document.getElementById("email-address").value,
+              amount: 1000 * 100,
+              currency: "GHS",
+              ref: 'TF'+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+              // label: "Optional string that replaces customer email"
+              onClose: function(){
+                  window.location = "http://127.0.0.1:8000/campaign";
+                alert('Transaction cancelled.');
+              },
+              callback: function(response){
+                let message = 'Payment complete! Reference: ' + response.reference;
+                alert(message);
+                window.location.href = "/verify_transaction?reference="+ response.reference ;
+              }
+            });
+            handler.openIframe();
+            }
+            </script>
 
-                        <div class="col">
-                            <div class="mb-3">
-                                <label for="last-name" name="last_name" class="form-label">Last Name</label>
-                                <input type="text" class="form-control" id="last-name" aria-describedby="emailHelp" required>
-                              </div>
-                        </div>
-                        </div>
-
-                        <div class="row">
-                           <div class="col">
-                            <div class="mb-3">
-                                <label for="amount" name="amount" class="form-label">Amount</label>
-                                <input type="tel" class="form-control" id="amount" aria-describedby="emailHelp" required>
-                              </div>
-                          </div>
-                        </div>
-
-                    <div class="row">
-                     <div class="col-8">
-                    <button type="submit" onclick="payWithPaystack()" class="btn btn-primary">Continue</button>
-                    </div>
-                    </div>
-                </form>
-                <script src="https://js.paystack.co/v1/inline.js"></script>
 
               </div>
         </div>
@@ -386,13 +397,15 @@
 </div>
 <br>
 
+
 @endsection
 
 
 
 <script>
-    const paymentForm = document.getElementById('paymentForm');
-paymentForm.addEventListener("submit", payWithPaystack, false);
+    var paymentForm = document.getElementById('paymentForm');
+    if(paymentForm)
+    paymentForm.addEventListener("submit", payWithPaystack, false);
 function payWithPaystack(e) {
 e.preventDefault();
 let handler = PaystackPop.setup({
