@@ -35,16 +35,16 @@
 
 <body style="background-color:white; ">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg shadow-sm" style="background-color: rgb(20, 7, 63)">
+        <nav class="navbar navbar-expand-md navbar-light bg shadow-sm" style="background-color:white">
             <div class="container-fluid" >
               <img src="images/icon.gif" class="img-fluid mr-2" style="height: 2.1em; border-radius:20px" alt="...">
-                <a class="navbar-brand" style="color: white" href="#">
+                <a class="navbar-brand" style="color: rgb(8,4,32)" href="#">
                     {{ config('app.name', 'TekFund') }}
                 </a>
-                <a href="#" class="navbar-brand pl-2" style="color: white; font-size:1em">
+                <a href="#" class="navbar-brand pl-2" style="color: rgb(8,4,32); font-size:1em">
                   About Us
                 </a>
-                <a href="#" class="navbar-brand pl-2" style="color: white; font-size:1em">
+                <a href="#" class="navbar-brand pl-2" style="color: rgb(8,4,32); font-size:1em">
                   <div class="input-group input-group-sm ">
                 <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
                 <span class="input-group-text "><i class="fas fa-search"></i></span>
@@ -67,20 +67,20 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: white" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" style="color: rgb(8,4,32)" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: white" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" style="color: rgb(8,4,32)" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
 
                            <li class="nav-item dropdown">
 
-                                <a id="navbarDropdown" style="color: white" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" style="color: rgb(8,4,32)" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                    {{ Auth::user()->username }}
                                      @if(Auth::user()->avatar)
                                     <img src="{{asset('storage/images/'. Auth::user()->avatar)}}" alt="avatar" style="height: 1.5em;width:1.5em; border-radius:40px;"/>

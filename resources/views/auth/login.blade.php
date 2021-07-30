@@ -1,4 +1,4 @@
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
 <style>
 
@@ -52,7 +52,7 @@
               <div class="col-sm-3">
 
               </div>
-              <div class="col-sm icon" style="border: 0.2px solid rgb(202,199,199); background:white; border-radius: 5px; box-shadow: 2px 2px 5px 5px rgb(8,4,32);">
+              <div class="col-sm icon" style="border: 0.2px solid rgb(202,199,199); background:white; border-radius: 5px; box-shadow:5px 5px rgb(8,4,32);">
               <div>
             <center><h2><img src="images/icon.gif" class="img-fluid mr-2" style="height: 2.0em; border-radius:30px; font-family: Garamond;" alt="...">TekFund</h2></center>
             </div>
@@ -137,8 +137,8 @@
             </span>
           </div>
           <form action="{{ route('register') }}">
-          <div class="d-grid gap-2 mt-3 sign">
-          <button type="submit" style="border-radius:3px; border-width: 1.5px;"> Create your TekFund account</button>
+          <div class="d-grid gap-2 mt-3">
+          <button class="waves-effect waves-light btn" type="submit" name="action"> Create your TekFund account</button>
         </div>
          </form>
           </div>

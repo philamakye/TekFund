@@ -105,7 +105,7 @@ main{
   animation: right 4s linear both;
   animation-delay: 4s;
 }
-@keyframes right {
+@keyframes right {  
   100%{
     transform: rotate(180deg);
   }
@@ -226,9 +226,15 @@ main{
                                 <p>21 May 2021</p>
                                 <p>GHC 25,000</p>
                                 </div>
+                                
                                 <div class="col">
-                                  <button type="button" class="btn btn-outline-primary">DETAILS</button>
+                                <form action="{{route('admin_analytics')}}" method="get" style="display: inline;">
+                                  <button type="submit"  class="btn btn-outline-primary">DETAILS</button>
+                                  </form>
                                 </div>
+                                
+                                 
+                                
 
                             </div>
                         </div>

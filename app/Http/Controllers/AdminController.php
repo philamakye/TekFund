@@ -13,6 +13,10 @@ class AdminController extends Controller
 
         return view('admin');
     }
+    public function view_camp(){
+
+    }
+
     public function __construct()
     {
         $this->middleware('auth');
