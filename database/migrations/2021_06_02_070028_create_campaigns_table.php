@@ -43,6 +43,7 @@ class CreateCampaignsTable extends Migration
             $table->foreign('us_id')->references('user_id')->on('users')->onDelete('cascade');
             $table->string('reference_1')->nullable();
             $table->string('reference_2')->nullable();
+            $table->
             $table->timestamps();
         });
 

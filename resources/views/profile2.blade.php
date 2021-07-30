@@ -60,6 +60,7 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
 <!-- Tabs navs -->
 
 <!--Tabs contenmt-->
+@include('layouts.camplay')
 <form action="{{route('store Basic info')}}" method="POST">
     @csrf
 <div
