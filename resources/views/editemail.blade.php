@@ -1,3 +1,13 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<style>
+   .basic-model{
+  background: #fafafa !important;
+}
+.search-bar, .about-css {
+    display: none !important;
+}
+</style>
 @extends('layouts.app')
 
 @section('content')
@@ -62,7 +72,7 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
 <!-- Tabs navs -->
   <div class="tab-pane fade show active" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
 
-  <div class="card" style="margin-left:70px; width: 90%;    background-color: rgb(175, 250, 242);">
+  <div class="card basic-model" style="margin-left:70px; width: 90%;    background-color: rgb(175, 250, 242);">
 
    <h3 style="margin-top: 20px; margin-left: 20px;">Stay In The Loop</h3>
 <hr style="margin: 10px;">

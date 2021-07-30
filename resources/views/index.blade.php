@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap">
 <style>
   .carousel img{
 height: 35em;
@@ -5,16 +6,15 @@ height: 35em;
 
 .nopadding{
   padding: 0 !important;
-   
+
 }
 
 .nomargin{
   margin: 0 !important;
 }
 
-  
-</style>
 
+</style>
 @extends('layouts.app')
 
 
@@ -44,9 +44,9 @@ height: 35em;
   <div class=" my-4 mx-3">
     <h2>
       Recently Viewed
-      <hr>  
+      <hr>
     </h2>
-    
+
     <div class="row text trio">
 
       <div class="col-lg-3 col-md-6 mb-4">
@@ -65,10 +65,10 @@ height: 35em;
                         <i class="far fa-heart "></i>
                       </p>
                     </div>
-                  </div>  
-                  <hr>  
+                  </div>
+                  <hr>
                 </div>
-             
+
                   <h4 class="card-title px-2">Dwarf Telescope - A portable digital telescope</h4>
                   <p class="card-text px-2">
                     <small style="font-size:1em">See your friends clearly from 2000 meters away</small>
@@ -76,12 +76,12 @@ height: 35em;
                   <p class="card-text px-2 nomargin">
                     <small class="text-muted" style="font-size: 1.1em">TECH AND INNOVATION</small>
                   </p>
-                 
+
                   <div class="container nopadding">
                     <div class="row ">
                       <div class="col ">
                         <p class="lead pl-2 nomargin " style="font-size: 1em " >
-                          24,546 GHS raised 
+                          24,546 GHS raised
                         </p>
                       </div>
                       <div class="col nopadding">
@@ -89,21 +89,21 @@ height: 35em;
                           76%
                         </p>
                       </div>
-                    </div>  
+                    </div>
                     <div class="row mx-2" >
                       <div class="progress nopadding" style="height: 10px;">
                         <div class="progress-bar bg-success" role="progressbar" style="width: 76%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                     </div>
                     <div class="row px-3 pt-2 pb-0">
-                     
+
                       <p>
                         <i class="far fa-clock"></i><small class="text-muted pl-2" >33 days left</small>
                       </p>
-                      
+
 
                     </div>
-                     
+
                   </div>
 
               </div>
@@ -129,10 +129,10 @@ height: 35em;
                       <i class="far fa-heart "></i>
                     </p>
                   </div>
-                </div>  
-                <hr>  
+                </div>
+                <hr>
               </div>
-           
+
                 <h4 class="card-title px-2">Dwarf Telescope - A portable digital telescope</h4>
                 <p class="card-text px-2">
                   <small style="font-size:1em">See your friends clearly from 2000 meters away</small>
@@ -140,12 +140,12 @@ height: 35em;
                 <p class="card-text px-2 nomargin">
                   <small class="text-muted" style="font-size: 1.1em">TECH AND INNOVATION</small>
                 </p>
-               
+
                 <div class="container nopadding">
                   <div class="row ">
                     <div class="col ">
                       <p class="lead pl-2 nomargin " style="font-size: 1em " >
-                        24,546 GHS raised 
+                        24,546 GHS raised
                       </p>
                     </div>
                     <div class="col nopadding">
@@ -153,21 +153,21 @@ height: 35em;
                         76%
                       </p>
                     </div>
-                  </div>  
+                  </div>
                   <div class="row mx-2" >
                     <div class="progress nopadding" style="height: 10px;">
                       <div class="progress-bar bg-success" role="progressbar" style="width: 76%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
                   <div class="row px-3 pt-2 pb-0">
-                   
+
                     <p>
                       <i class="far fa-clock"></i><small class="text-muted pl-2" >33 days left</small>
                     </p>
-                    
+
 
                   </div>
-                   
+
                 </div>
 
             </div>
@@ -193,10 +193,10 @@ height: 35em;
                     <i class="far fa-heart "></i>
                   </p>
                 </div>
-              </div>  
-              <hr>  
+              </div>
+              <hr>
             </div>
-         
+
               <h4 class="card-title px-2">Dwarf Telescope - A portable digital telescope</h4>
               <p class="card-text px-2">
                 <small style="font-size:1em">See your friends clearly from 2000 meters away</small>
@@ -204,12 +204,12 @@ height: 35em;
               <p class="card-text px-2 nomargin">
                 <small class="text-muted" style="font-size: 1.1em">TECH AND INNOVATION</small>
               </p>
-             
+
               <div class="container nopadding">
                 <div class="row ">
                   <div class="col ">
                     <p class="lead pl-2 nomargin " style="font-size: 1em " >
-                      24,546 GHS raised 
+                      24,546 GHS raised
                     </p>
                   </div>
                   <div class="col nopadding">
@@ -217,21 +217,21 @@ height: 35em;
                       76%
                     </p>
                   </div>
-                </div>  
+                </div>
                 <div class="row mx-2" >
                   <div class="progress nopadding" style="height: 10px;">
                     <div class="progress-bar bg-success" role="progressbar" style="width: 76%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
                 <div class="row px-3 pt-2 pb-0">
-                 
+
                   <p>
                     <i class="far fa-clock"></i><small class="text-muted pl-2" >33 days left</small>
                   </p>
-                  
+
 
                 </div>
-                 
+
               </div>
 
           </div>
@@ -257,10 +257,10 @@ height: 35em;
                   <i class="far fa-heart "></i>
                 </p>
               </div>
-            </div>  
-            <hr>  
+            </div>
+            <hr>
           </div>
-       
+
             <h4 class="card-title px-2">Dwarf Telescope - A portable digital telescope</h4>
             <p class="card-text px-2">
               <small style="font-size:1em">See your friends clearly from 2000 meters away</small>
@@ -268,12 +268,12 @@ height: 35em;
             <p class="card-text px-2 nomargin">
               <small class="text-muted" style="font-size: 1.1em">TECH AND INNOVATION</small>
             </p>
-           
+
             <div class="container nopadding">
               <div class="row ">
                 <div class="col ">
                   <p class="lead pl-2 nomargin " style="font-size: 1em " >
-                    24,546 GHS raised 
+                    24,546 GHS raised
                   </p>
                 </div>
                 <div class="col nopadding">
@@ -281,21 +281,21 @@ height: 35em;
                     76%
                   </p>
                 </div>
-              </div>  
+              </div>
               <div class="row mx-2" >
                 <div class="progress nopadding" style="height: 10px;">
                   <div class="progress-bar bg-success" role="progressbar" style="width: 76%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div>
               <div class="row px-3 pt-2 pb-0">
-               
+
                 <p>
                   <i class="far fa-clock"></i><small class="text-muted pl-2" >33 days left</small>
                 </p>
-                
+
 
               </div>
-               
+
             </div>
 
         </div>
@@ -321,14 +321,14 @@ height: 35em;
     <div class="row pt-4">
       <img src="images/Screenshot (208).png"  class="img-fluid" alt="...">
     </div>
-   
+
   </div>
   <div class=" my-5 mx-3">
     <h2>
       Trending Campaigns
-      <hr>  
+      <hr>
     </h2>
-    
+
     <div class="row text trio">
 
       <div class="col-lg-3 col-md-6 mb-4">
@@ -347,10 +347,10 @@ height: 35em;
                         <i class="far fa-heart "></i>
                       </p>
                     </div>
-                  </div>  
-                  <hr>  
+                  </div>
+                  <hr>
                 </div>
-             
+
                   <h4 class="card-title px-2">Dwarf Telescope - A portable digital telescope</h4>
                   <p class="card-text px-2">
                     <small style="font-size:1em">See your friends clearly from 2000 meters away</small>
@@ -358,12 +358,12 @@ height: 35em;
                   <p class="card-text px-2 nomargin">
                     <small class="text-muted" style="font-size: 1.1em">TECH AND INNOVATION</small>
                   </p>
-                 
+
                   <div class="container nopadding">
                     <div class="row ">
                       <div class="col ">
                         <p class="lead pl-2 nomargin " style="font-size: 1em " >
-                          24,546 GHS raised 
+                          24,546 GHS raised
                         </p>
                       </div>
                       <div class="col nopadding">
@@ -371,21 +371,21 @@ height: 35em;
                           76%
                         </p>
                       </div>
-                    </div>  
+                    </div>
                     <div class="row mx-2" >
                       <div class="progress nopadding" style="height: 10px;">
                         <div class="progress-bar bg-success" role="progressbar" style="width: 76%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                     </div>
                     <div class="row px-3 pt-2 pb-0">
-                     
+
                       <p>
                         <i class="far fa-clock"></i><small class="text-muted pl-2" >33 days left</small>
                       </p>
-                      
+
 
                     </div>
-                     
+
                   </div>
 
               </div>
@@ -411,10 +411,10 @@ height: 35em;
                       <i class="far fa-heart "></i>
                     </p>
                   </div>
-                </div>  
-                <hr>  
+                </div>
+                <hr>
               </div>
-           
+
                 <h4 class="card-title px-2">Dwarf Telescope - A portable digital telescope</h4>
                 <p class="card-text px-2">
                   <small style="font-size:1em">See your friends clearly from 2000 meters away</small>
@@ -422,12 +422,12 @@ height: 35em;
                 <p class="card-text px-2 nomargin">
                   <small class="text-muted" style="font-size: 1.1em">TECH AND INNOVATION</small>
                 </p>
-               
+
                 <div class="container nopadding">
                   <div class="row ">
                     <div class="col ">
                       <p class="lead pl-2 nomargin " style="font-size: 1em " >
-                        24,546 GHS raised 
+                        24,546 GHS raised
                       </p>
                     </div>
                     <div class="col nopadding">
@@ -435,21 +435,21 @@ height: 35em;
                         76%
                       </p>
                     </div>
-                  </div>  
+                  </div>
                   <div class="row mx-2" >
                     <div class="progress nopadding" style="height: 10px;">
                       <div class="progress-bar bg-success" role="progressbar" style="width: 76%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
                   <div class="row px-3 pt-2 pb-0">
-                   
+
                     <p>
                       <i class="far fa-clock"></i><small class="text-muted pl-2" >33 days left</small>
                     </p>
-                    
+
 
                   </div>
-                   
+
                 </div>
 
             </div>
@@ -475,10 +475,10 @@ height: 35em;
                     <i class="far fa-heart "></i>
                   </p>
                 </div>
-              </div>  
-              <hr>  
+              </div>
+              <hr>
             </div>
-         
+
               <h4 class="card-title px-2">Dwarf Telescope - A portable digital telescope</h4>
               <p class="card-text px-2">
                 <small style="font-size:1em">See your friends clearly from 2000 meters away</small>
@@ -486,12 +486,12 @@ height: 35em;
               <p class="card-text px-2 nomargin">
                 <small class="text-muted" style="font-size: 1.1em">TECH AND INNOVATION</small>
               </p>
-             
+
               <div class="container nopadding">
                 <div class="row ">
                   <div class="col ">
                     <p class="lead pl-2 nomargin " style="font-size: 1em " >
-                      24,546 GHS raised 
+                      24,546 GHS raised
                     </p>
                   </div>
                   <div class="col nopadding">
@@ -499,21 +499,21 @@ height: 35em;
                       76%
                     </p>
                   </div>
-                </div>  
+                </div>
                 <div class="row mx-2" >
                   <div class="progress nopadding" style="height: 10px;">
                     <div class="progress-bar bg-success" role="progressbar" style="width: 76%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
                 <div class="row px-3 pt-2 pb-0">
-                 
+
                   <p>
                     <i class="far fa-clock"></i><small class="text-muted pl-2" >33 days left</small>
                   </p>
-                  
+
 
                 </div>
-                 
+
               </div>
 
           </div>
@@ -539,10 +539,10 @@ height: 35em;
                   <i class="far fa-heart "></i>
                 </p>
               </div>
-            </div>  
-            <hr>  
+            </div>
+            <hr>
           </div>
-       
+
             <h4 class="card-title px-2">Dwarf Telescope - A portable digital telescope</h4>
             <p class="card-text px-2">
               <small style="font-size:1em">See your friends clearly from 2000 meters away</small>
@@ -550,12 +550,12 @@ height: 35em;
             <p class="card-text px-2 nomargin">
               <small class="text-muted" style="font-size: 1.1em">TECH AND INNOVATION</small>
             </p>
-           
+
             <div class="container nopadding">
               <div class="row ">
                 <div class="col ">
                   <p class="lead pl-2 nomargin " style="font-size: 1em " >
-                    24,546 GHS raised 
+                    24,546 GHS raised
                   </p>
                 </div>
                 <div class="col nopadding">
@@ -563,21 +563,21 @@ height: 35em;
                     76%
                   </p>
                 </div>
-              </div>  
+              </div>
               <div class="row mx-2" >
                 <div class="progress nopadding" style="height: 10px;">
                   <div class="progress-bar bg-success" role="progressbar" style="width: 76%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div>
               <div class="row px-3 pt-2 pb-0">
-               
+
                 <p>
                   <i class="far fa-clock"></i><small class="text-muted pl-2" >33 days left</small>
                 </p>
-                
+
 
               </div>
-               
+
             </div>
 
         </div>
@@ -592,9 +592,9 @@ height: 35em;
   <div class=" mt-4 mx-3">
     <h2>
       Recently Lauched Campaigns
-      <hr>  
+      <hr>
     </h2>
-    
+
     <div class="row text trio">
 
       <div class="col-lg-3 col-md-6 mb-4">
@@ -613,10 +613,10 @@ height: 35em;
                         <i class="far fa-heart "></i>
                       </p>
                     </div>
-                  </div>  
-                  <hr>  
+                  </div>
+                  <hr>
                 </div>
-             
+
                   <h4 class="card-title px-2">Dwarf Telescope - A portable digital telescope</h4>
                   <p class="card-text px-2">
                     <small style="font-size:1em">See your friends clearly from 2000 meters away</small>
@@ -624,12 +624,12 @@ height: 35em;
                   <p class="card-text px-2 nomargin">
                     <small class="text-muted" style="font-size: 1.1em">TECH AND INNOVATION</small>
                   </p>
-                 
+
                   <div class="container nopadding">
                     <div class="row ">
                       <div class="col ">
                         <p class="lead pl-2 nomargin " style="font-size: 1em " >
-                          24,546 GHS raised 
+                          24,546 GHS raised
                         </p>
                       </div>
                       <div class="col nopadding">
@@ -637,21 +637,21 @@ height: 35em;
                           76%
                         </p>
                       </div>
-                    </div>  
+                    </div>
                     <div class="row mx-2" >
                       <div class="progress nopadding" style="height: 10px;">
                         <div class="progress-bar bg-success" role="progressbar" style="width: 76%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                     </div>
                     <div class="row px-3 pt-2 pb-0">
-                     
+
                       <p>
                         <i class="far fa-clock"></i><small class="text-muted pl-2" >33 days left</small>
                       </p>
-                      
+
 
                     </div>
-                     
+
                   </div>
 
               </div>
@@ -677,10 +677,10 @@ height: 35em;
                       <i class="far fa-heart "></i>
                     </p>
                   </div>
-                </div>  
-                <hr>  
+                </div>
+                <hr>
               </div>
-           
+
                 <h4 class="card-title px-2">Dwarf Telescope - A portable digital telescope</h4>
                 <p class="card-text px-2">
                   <small style="font-size:1em">See your friends clearly from 2000 meters away</small>
@@ -688,12 +688,12 @@ height: 35em;
                 <p class="card-text px-2 nomargin">
                   <small class="text-muted" style="font-size: 1.1em">TECH AND INNOVATION</small>
                 </p>
-               
+
                 <div class="container nopadding">
                   <div class="row ">
                     <div class="col ">
                       <p class="lead pl-2 nomargin " style="font-size: 1em " >
-                        24,546 GHS raised 
+                        24,546 GHS raised
                       </p>
                     </div>
                     <div class="col nopadding">
@@ -701,21 +701,21 @@ height: 35em;
                         76%
                       </p>
                     </div>
-                  </div>  
+                  </div>
                   <div class="row mx-2" >
                     <div class="progress nopadding" style="height: 10px;">
                       <div class="progress-bar bg-success" role="progressbar" style="width: 76%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
                   <div class="row px-3 pt-2 pb-0">
-                   
+
                     <p>
                       <i class="far fa-clock"></i><small class="text-muted pl-2" >33 days left</small>
                     </p>
-                    
+
 
                   </div>
-                   
+
                 </div>
 
             </div>
@@ -741,10 +741,10 @@ height: 35em;
                     <i class="far fa-heart "></i>
                   </p>
                 </div>
-              </div>  
-              <hr>  
+              </div>
+              <hr>
             </div>
-         
+
               <h4 class="card-title px-2">Dwarf Telescope - A portable digital telescope</h4>
               <p class="card-text px-2">
                 <small style="font-size:1em">See your friends clearly from 2000 meters away</small>
@@ -752,12 +752,12 @@ height: 35em;
               <p class="card-text px-2 nomargin">
                 <small class="text-muted" style="font-size: 1.1em">TECH AND INNOVATION</small>
               </p>
-             
+
               <div class="container nopadding">
                 <div class="row ">
                   <div class="col ">
                     <p class="lead pl-2 nomargin " style="font-size: 1em " >
-                      24,546 GHS raised 
+                      24,546 GHS raised
                     </p>
                   </div>
                   <div class="col nopadding">
@@ -765,21 +765,21 @@ height: 35em;
                       76%
                     </p>
                   </div>
-                </div>  
+                </div>
                 <div class="row mx-2" >
                   <div class="progress nopadding" style="height: 10px;">
                     <div class="progress-bar bg-success" role="progressbar" style="width: 76%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
                 <div class="row px-3 pt-2 pb-0">
-                 
+
                   <p>
                     <i class="far fa-clock"></i><small class="text-muted pl-2" >33 days left</small>
                   </p>
-                  
+
 
                 </div>
-                 
+
               </div>
 
           </div>
@@ -805,10 +805,10 @@ height: 35em;
                   <i class="far fa-heart "></i>
                 </p>
               </div>
-            </div>  
-            <hr>  
+            </div>
+            <hr>
           </div>
-       
+
             <h4 class="card-title px-2">Dwarf Telescope - A portable digital telescope</h4>
             <p class="card-text px-2">
               <small style="font-size:1em">See your friends clearly from 2000 meters away</small>
@@ -816,12 +816,12 @@ height: 35em;
             <p class="card-text px-2 nomargin">
               <small class="text-muted" style="font-size: 1.1em">TECH AND INNOVATION</small>
             </p>
-           
+
             <div class="container nopadding">
               <div class="row ">
                 <div class="col ">
                   <p class="lead pl-2 nomargin " style="font-size: 1em " >
-                    24,546 GHS raised 
+                    24,546 GHS raised
                   </p>
                 </div>
                 <div class="col nopadding">
@@ -829,21 +829,21 @@ height: 35em;
                     76%
                   </p>
                 </div>
-              </div>  
+              </div>
               <div class="row mx-2" >
                 <div class="progress nopadding" style="height: 10px;">
                   <div class="progress-bar bg-success" role="progressbar" style="width: 76%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div>
               <div class="row px-3 pt-2 pb-0">
-               
+
                 <p>
                   <i class="far fa-clock"></i><small class="text-muted pl-2" >33 days left</small>
                 </p>
-                
+
 
               </div>
-               
+
             </div>
 
         </div>

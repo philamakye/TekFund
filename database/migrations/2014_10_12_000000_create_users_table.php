@@ -42,6 +42,7 @@ class CreateUsersTable extends Migration
             $table->string('user_youtubelink')->nullable();
             $table->string('user_imdb')->nullable();
             $table->string('user_websitelink')->nullable();
+            $table->integer('total_cont_amount')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

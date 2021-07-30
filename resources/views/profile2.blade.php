@@ -1,8 +1,20 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+<style>
+.basic-model{
+  background: #fafafa !important;
+}
+.search-bar, .about-css {
+    display: none !important;
+}
+</style>
+
 @extends('layouts.app')
 
 @section('content')
 <form action="profile" method="GET" style="display: inline" >
-<button class="btn btn-primary" style="margin-left: 15px; background-color: white; color: black;" type="submit"><i class="fa fa-eye" aria-hidden="false"></i>
+<button class="btn btn-primary" style="margin-left: 15px; background-color: white; color: black; font-size:13px; padding:2px 2px;" type="submit"><i class="fa fa-eye" aria-hidden="false"></i>
 View Profile <span class="badge bg-secondary"></span>
 </button>
 </form>
@@ -71,7 +83,7 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
   >
 <div class="tab-pane fade show active" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
 
-  <div class="card" style="margin-left:70px; width: 90%;    background-color: rgb(175, 250, 242);">
+  <div class="card basic-model" style="margin-left:70px; width: 90%;">
 
    <h3 style="margin-top: 20px; margin-left: 20px;">Basic Info</h3>
 <hr style="margin: 10px;">
@@ -113,7 +125,7 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
 <br>
 <div class="tab-pane fade show active" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
 
-    <div class="card" style="margin-left:70px; width: 90%;    background-color: rgb(175, 250, 242);">
+    <div class="card basic-model" style="margin-left:70px; width: 90%;    background-color: rgb(175, 250, 242);">
 <form action="{{route('Your Story')}}" method="POST">
     @csrf
     <h3 style="margin-top: 20px; margin-left: 20px;">Your Story</h3>
@@ -141,7 +153,7 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
 <br>
 <div class="tab-pane fade show active" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
 
-  <div class="card" style="margin-left:70px; width: 90%;    background-color: rgb(175, 250, 242);">
+  <div class="card basic-model" style="margin-left:70px; width: 90%;    background-color: rgb(175, 250, 242);">
 
    <h3 style="margin-top: 20px; margin-left: 20px;">Your Photos</h3>
 <hr style="margin: 10px;">
@@ -186,7 +198,7 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
         @csrf
 <div class="tab-pane fade show active" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
 <form action="" method="POST" id="">
-  <div class="card" style="margin-left:70px; width: 90%;    background-color: rgb(175, 250, 242);">
+  <div class="card basic-model" style="margin-left:70px; width: 90%;    background-color: rgb(175, 250, 242);">
 
    <h3 style="margin-top: 20px; margin-left: 20px;">Outside Links</h3>
    <hr style="margin: 10px;">
