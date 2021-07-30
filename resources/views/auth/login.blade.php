@@ -1,6 +1,10 @@
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+
 <style>
+
  body{
-     background: grey !important;
+     /* background: rgb(224,221,221) !important; */
+     background: #fff !important;
  }
  
  
@@ -31,9 +35,10 @@
     background-color: rgb(50, 18, 156);
 }
 
-.search-bar {
+.search-bar, .about-css {
     display: none !important;
 }
+
 </style>
 
 @extends('layouts.app')
@@ -41,16 +46,16 @@
 @section('content')
 
 
-        <div class="container" style="border: 1px solid red; background:white; ">
-            <div>
-            <center><h2><img src="images/icon.gif" class="img-fluid mr-2" style="height: 2.0em; border-radius:30px; font-family: Garamond;" alt="...">TekFund</h2></center>
-            </div>
+        <div class="container mt-2" >
+            
             <div class="row">
               <div class="col-sm-3">
 
               </div>
-              <div class="col-sm icon">
-
+              <div class="col-sm icon" style="border: 0.2px solid rgb(202,199,199); background:white; border-radius: 5px; box-shadow: 2px 2px 5px 5px rgb(8,4,32);">
+              <div>
+            <center><h2><img src="images/icon.gif" class="img-fluid mr-2" style="height: 2.0em; border-radius:30px; font-family: Garamond;" alt="...">TekFund</h2></center>
+            </div>
              <div class=" sign-box">
 
               <center><h3 style="text-decoration-style: solid; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Sign-In</h3></center>
@@ -131,7 +136,7 @@
               New to TekFund?
             </span>
           </div>
-          <form action="{{ route('register') }}"">
+          <form action="{{ route('register') }}">
           <div class="d-grid gap-2 mt-3 sign">
           <button type="submit" style="border-radius:3px; border-width: 1.5px;"> Create your TekFund account</button>
         </div>
@@ -150,11 +155,11 @@
           </div>
           </div>
           <div class="col-sm"></div>
-          <div>
+          <!-- <div>
           <hr>
           <center><p><small><a href="#" style="text-decoration: none; padding-right:5%; font: size 0.5em;">Condition of Use</a>  <a href="#" style="text-decoration: none; padding-right:5%; font: size 0.5em;">Privacy Notice</a>  <a href="#" style="text-decoration: none; font: size 0.5em;"> Help</a></small></p></center>
           <center><p><small>© 2021, TekFund.com, Inc. or its affiliates</small></p></center>
-          </div>
+          </div> -->
           </div>
 
           </div>

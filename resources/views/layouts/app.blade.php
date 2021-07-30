@@ -13,6 +13,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -35,19 +36,19 @@
 
 <body style="background-color:white; ">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg shadow-sm" style="background-color: rgb(20, 7, 63) !important">
+        <nav class="navbar navbar-expand-md navbar-light bg shadow-sm" style="background-color: white">
             <div class="container-fluid" >
               <img src="images/icon.gif" class="img-fluid mr-2" style="height: 2.1em; border-radius:20px" alt="...">
-                <a class="navbar-brand" style="color: white" href="{{ url('/') }}">
+                <a class="navbar-brand" style="color: rgb(8, 4,32)" href="{{ url('/') }}">
                     {{ config('app.name', 'TekFund') }}
                 </a>
-                <a href="#" class="navbar-brand pl-2" style="color: white !important; font-size:1em">
+                <a href="#" class="navbar-brand pl-2 about-css" style="color: rgb(8, 4,32) !important; font-size:1em">
                   About Us
                 </a>
-                <a href="#" class="navbar-brand pl-2" style="color: white !important; font-size:1em">
+                <a href="#" class="navbar-brand pl-2" style="color: rgb(8, 4,32) !important; font-size:1em">
                   <div class="input-group input-group-sm search-bar">
                 <input type="text" class="form-control " placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
-                <span class="input-group-text "><i class="fas fa-search"></i></span>
+                <span class="input-group-text "><i class="fas fa-search" style = "color:rgb(8, 4,32)"></i></span>
                 </div>
                 </a>
 
@@ -67,22 +68,22 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: white" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" style="color: rgb(8, 4,32)hite" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: white" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" style="color: rgb(8, 4,32)" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
                            <li class="nav-item dropdown">
-                           <a id="navbarDropdown" style="color: white;" class="nav-link " href="{{ route('start campaign') }}" role="button"  aria-haspopup="true" aria-expanded="false" >{{ __('Start Campaign') }}</a>
+                           <a id="navbarDropdown" style="color: rgb(8, 4,32);" class="nav-link " href="{{ route('start campaign') }}" role="button"  aria-haspopup="true" aria-expanded="false" >{{ __('Start Campaign') }}</a>
                            </li>
                            <li class="nav-item dropdown">
 
-                                <a id="navbarDropdown" style="color: white" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" style="color: rgb(8, 4,32)" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                    {{ Auth::user()->username }}
                                      @if(Auth::user()->avatar)
                                     <img src="{{asset('storage/images/'. Auth::user()->avatar)}}" alt="avatar" style="height: 1.5em;width:1.5em; border-radius:40px;"/>

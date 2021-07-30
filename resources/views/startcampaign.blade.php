@@ -1,5 +1,7 @@
 <style>
-
+.search-bar, .about-css {
+    display: none !important;
+}
 
 </style>
 
