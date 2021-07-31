@@ -23,7 +23,7 @@ class CreateUserContributionsTable extends Migration
             $table->string('transaction_phone_num')->nullable();
            // $table->date('contri_date');
             //$table->string('cont_compaign_title');
-            $table->integer('contributed_amount');
+            $table->numeric('contributed_amount');
             $table->boolean('visibility')->default(false)->change();
             $table->time('paidAt');
             $table->timestamps();

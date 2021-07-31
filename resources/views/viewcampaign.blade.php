@@ -91,10 +91,10 @@
                   <label for="email">Email Address</label>
                   <input type="email" id="email-address" required />
                 </div>
-                <!-- <div class="form-group">
+                 <div class="form-group">
                   <label for="amount">Amount</label>
                   <input type="tel" id="amount" required />
-                </div> -->
+                </div>
                 <div class="form-group">
                   <label for="first-name">First Name</label>
                   <input type="text" id="first-name" />
@@ -117,8 +117,10 @@
             let handler = PaystackPop.setup({
               key: 'pk_test_21e06242bcedd353065b56a55c5ad3b369750ab3', // Replace with your public key
               email: document.getElementById("email-address").value,
-              amount: 1000 * 100,
+              amount: document.getElementById("amount").value * 100,
               currency: "GHS",
+              first_name: document.getElementById("first-name").value,
+              last_name: document.getElementById("last-name").value,
               ref: 'TF'+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
               // label: "Optional string that replaces customer email"
               onClose: function(){

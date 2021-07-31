@@ -106,7 +106,7 @@ if ($ref == "") {
         $contribution->status = $result->data->status;
         $fn = $result->data->customer->first_name;
         $Sn = $result->data->customer->last_name;
-        $name= $fn.' '.$Sn;
+        $name=  $fn;
         $contribution->contributor_name = $name;
         $contribution->cont_email = $result->data->customer->email;
         $contribution->transaction_phone_num = $result->data->customer->phone;
@@ -114,7 +114,7 @@ if ($ref == "") {
         $amount= $amount/100;
         $contribution->	contributed_amount = $amount;
         date_default_timezone_set('Africa/Accra');
-        $Date_time = date('d/m/y h:i:s a', time());
+        $Date_time = date('d/m/Y h:i:s a', time());
         $contribution->paidAt = $Date_time;
         $contribution->save();
 
