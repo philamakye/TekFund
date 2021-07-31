@@ -25,7 +25,13 @@ class CampaignController extends Controller
 
     public function index()
     {
-        return view('startcampaign');
+        $get_schoolid = auth()->user()->school_id;
+        if (!empty($get_schoolid)){
+            return view('startcampaign');
+        }
+        else{
+            return redirect('editprofile')->with('camp_error', 'Please fill out your basic information on your profile before you can begin a campaign!!');
+        }
     }
     public function health_step1(){
         return view('healthcare.step1');
@@ -99,7 +105,7 @@ class CampaignController extends Controller
          ]);
        //  $this->validate($request, $store_rule)
          if($val->fails()){
-            return redirect('start campaign')->with('error', 'Fundraiser validation error!!! Please try again');
+            return redirect('startcampaign')->with('error', 'Fundraiser validation error!!! Please try again');
          }
 
 

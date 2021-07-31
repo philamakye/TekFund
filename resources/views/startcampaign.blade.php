@@ -2,7 +2,16 @@
 .search-bar, .about-css {
     display: none !important;
 }
-
+.camp-card:hover{
+  box-shadow: 5px 10px #000;
+  background-color: white !important;
+  color: #fff !important;
+  margin-left: 20px;
+  transition: 1s;
+}
+#TekFund:hover{
+  color: turquoise !important;
+}
 </style>
 
 @extends('layouts.app')
@@ -35,7 +44,7 @@
       <div class="row text-center my-3 pt-4">
       <div class="col">
           <center>
-        <a href = "{{route('healthcare')}}" style="text-decoration: none; color:black"><div class="card " style="width: 20rem; height:16rem; background-color:rgb(245, 241, 241)" >
+        <a href = "{{route('healthcare')}}" style="text-decoration: none; color:black"><div class="card camp-card" style="width: 20rem; height:16rem; background-color:rgb(245, 241, 241)" >
             <div class="card-body" >
               <h5 class="card-title"><b>Health Care</b></h5>
               <img src="https://img.icons8.com/emoji/48/000000/hospital-emoji.png"/>
@@ -52,7 +61,7 @@
       </div>
       <div class="col">
           <center>
-           <a href = "{{route('Start Up')}}"style="text-decoration: none; color:black"> <div class="card " style="width: 20rem; height:16rem; background-color:rgb(245, 241, 241)" >
+           <a href = "{{route('Start Up')}}"style="text-decoration: none; color:black"> <div class="card camp-card" style="width: 20rem; height:16rem; background-color:rgb(245, 241, 241)" >
                 <div class="card-body">
                   <h5 class="card-title"><b>Start Up</b></h5>
                   <img src="https://img.icons8.com/bubbles/50/000000/growing-money.png"/>
@@ -73,7 +82,7 @@
       <div class="row text-center mt-5">
         <div class="col">
             <center>
-              <a href = "{{route('project')}}" style="text-decoration: none; color:black">  <div class="card " style="width: 20rem; height:17rem; background-color:rgb(245, 241, 241)" >
+              <a href = "{{route('project')}}" style="text-decoration: none; color:black">  <div class="card camp-card" style="width: 20rem; height:17rem; background-color:rgb(245, 241, 241)" >
                     <div class="card-body">
                       <h5 class="card-title"><b>Project</b></h5>
                       <img src="https://img.icons8.com/dusk/64/000000/microsoft-project.png"/>
@@ -90,7 +99,7 @@
         </div>
         <div class="col">
             <center>
-               <a href = "{{route('Others')}}" style="text-decoration: none; color:black"> <div class="card " style="width: 20rem; height:17rem; background-color:rgb(245, 241, 241)" >
+               <a href = "{{route('Others')}}" style="text-decoration: none; color:black"> <div class="card camp-card" style="width: 20rem; height:17rem; background-color:rgb(245, 241, 241)" >
                     <div class="card-body">
                       <h5 class="card-title"><b>Others</b></h5>
                       <img src="https://img.icons8.com/dusk/64/000000/money.png"/>
