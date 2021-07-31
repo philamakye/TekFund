@@ -13,7 +13,12 @@ height: 35em;
   margin: 0 !important;
 }
 
+.index-card:hover {
+  /* margin-bottom: 2px; */
+  box-shadow: 5px 5px 5px 5px grey;
+  transition: .3s;
 
+}
 </style>
 @extends('layouts.app')
 
@@ -50,7 +55,7 @@ height: 35em;
     <div class="row text trio">
 
       <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card " style="height: 90vh">
+          <div class="card index-card" style="height: 90vh">
               <img class="card-img-top" src="images/cards/card1.jpg" alt="Img" style="height:40%">
               <div class="card-body nopadding mt-2" style="margin-left:0px;">
                 <div class="container nopadding">
@@ -114,7 +119,7 @@ height: 35em;
       </div>
 
       <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card " style="height: 90vh">
+        <div class="card index-card" style="height: 90vh">
             <img class="card-img-top" src="images/cards/card2.jpg" alt="Img" style="height:40%">
             <div class="card-body nopadding mt-2" style="margin-left:0px;">
               <div class="container nopadding">
@@ -178,7 +183,7 @@ height: 35em;
     </div>
 
     <div class="col-lg-3 col-md-6 mb-4">
-      <div class="card " style="height: 90vh">
+      <div class="card index-card" style="height: 90vh">
           <img class="card-img-top" src="images/cards/card3.jpg" alt="Img" style="height:40%">
           <div class="card-body nopadding mt-2" style="margin-left:0px;">
             <div class="container nopadding">
@@ -242,7 +247,7 @@ height: 35em;
   </div>
 
   <div class="col-lg-3 col-md-6 mb-4">
-    <div class="card" style="height: 90vh">
+    <div class="card index-card" style="height: 90vh">
         <img class="card-img-top" src="images/cards/card4.jpeg" alt="Img" style="height:40%">
         <div class="card-body nopadding mt-2" style="margin-left:0px;">
           <div class="container nopadding">
@@ -332,7 +337,7 @@ height: 35em;
     <div class="row text trio">
 
       <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card " style="height: 90vh">
+          <div class="card index-card" style="height: 90vh">
               <img class="card-img-top" src="images/cards/card1.jpg" alt="Img" style="height:40%">
               <div class="card-body nopadding mt-2" style="margin-left:0px;">
                 <div class="container nopadding">
@@ -396,7 +401,7 @@ height: 35em;
       </div>
 
       <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card " style="height: 90vh">
+        <div class="card index-card" style="height: 90vh">
             <img class="card-img-top" src="images/cards/card2.jpg" alt="Img" style="height:40%">
             <div class="card-body nopadding mt-2" style="margin-left:0px;">
               <div class="container nopadding">
@@ -460,7 +465,7 @@ height: 35em;
     </div>
 
     <div class="col-lg-3 col-md-6 mb-4">
-      <div class="card " style="height: 90vh">
+      <div class="card index-card" style="height: 90vh">
           <img class="card-img-top" src="images/cards/card3.jpg" alt="Img" style="height:40%">
           <div class="card-body nopadding mt-2" style="margin-left:0px;">
             <div class="container nopadding">
@@ -524,7 +529,7 @@ height: 35em;
   </div>
 
   <div class="col-lg-3 col-md-6 mb-4">
-    <div class="card" style="height: 90vh">
+    <div class="card index-card" style="height: 90vh">
         <img class="card-img-top" src="images/cards/card4.jpeg" alt="Img" style="height:40%">
         <div class="card-body nopadding mt-2" style="margin-left:0px;">
           <div class="container nopadding">
@@ -598,7 +603,7 @@ height: 35em;
     <div class="row text trio">
 
       <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card " style="height: 90vh">
+          <div class="card index-card" style="height: 90vh">
               <img class="card-img-top" src="images/cards/card1.jpg" alt="Img" style="height:40%">
               <div class="card-body nopadding mt-2" style="margin-left:0px;">
                 <div class="container nopadding">
@@ -662,7 +667,7 @@ height: 35em;
       </div>
 
       <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card " style="height: 90vh">
+        <div class="card index-card " style="height: 90vh">
             <img class="card-img-top" src="images/cards/card2.jpg" alt="Img" style="height:40%">
             <div class="card-body nopadding mt-2" style="margin-left:0px;">
               <div class="container nopadding">
@@ -726,7 +731,7 @@ height: 35em;
     </div>
 
     <div class="col-lg-3 col-md-6 mb-4">
-      <div class="card " style="height: 90vh">
+      <div class="card index-card" style="height: 90vh">
           <img class="card-img-top" src="images/cards/card3.jpg" alt="Img" style="height:40%">
           <div class="card-body nopadding mt-2" style="margin-left:0px;">
             <div class="container nopadding">
@@ -790,7 +795,7 @@ height: 35em;
   </div>
 
   <div class="col-lg-3 col-md-6 mb-4">
-    <div class="card" style="height: 90vh">
+    <div class="card index-card" style="height: 90vh">
         <img class="card-img-top" src="images/cards/card4.jpeg" alt="Img" style="height:40%">
         <div class="card-body nopadding mt-2" style="margin-left:0px;">
           <div class="container nopadding">
