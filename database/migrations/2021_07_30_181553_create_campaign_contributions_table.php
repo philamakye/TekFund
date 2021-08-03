@@ -17,7 +17,7 @@ class CreateCampaignContributionsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('campaign_id')->unique();
-            $table->numeric('total_amount');
+            $table->unsignedFloat('total_amount');
             $table->integer('num_contributors');
         });
     }
