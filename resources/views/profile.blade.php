@@ -65,6 +65,7 @@ Edit Profile & Settings<span class="badge bg-secondary"></span>
         <img src="https://i.pinimg.com/474x/65/25/a0/6525a08f1df98a2e3a545fe2ace4be47.jpg" alt="avatar" style=" border-radius:250px; height: 230px; width: 230px;"/></center>
         @endif</center>
          <center><h3 style="margin-top: 10px;font-family: cooper; margin-top:50px;color:rgb(90, 86, 86); font-size: 25px;">About Me</h3></center>
+
          <br>
 </center>
     <hr style="margin:15px;">

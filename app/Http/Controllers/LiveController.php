@@ -3,34 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Models\Campaign;
-use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Laravel\Ui\Presets\React;
-use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\DB;
 
-
-class CampaignController extends Controller
+class LiveController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
-     *
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-    // public function please(){
-    //     return view('health2');
-    // }
-
     public function index()
     {
-
+        $live['campaigns'] = DB::table('campaigns')->where('status', 'live')->get();
+        return view('admins.admin')->with($live);
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -50,7 +37,7 @@ class CampaignController extends Controller
      */
     public function store(Request $request)
     {
-
+        //
     }
 
     /**

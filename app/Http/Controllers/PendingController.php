@@ -3,34 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Models\Campaign;
-use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Laravel\Ui\Presets\React;
-use Illuminate\Support\Facades\Validator;
 
-
-class CampaignController extends Controller
+class PendingController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
-     *
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-    // public function please(){
-    //     return view('health2');
-    // }
-
     public function index()
     {
-
+        //
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -50,7 +35,7 @@ class CampaignController extends Controller
      */
     public function store(Request $request)
     {
-
+        //
     }
 
     /**
