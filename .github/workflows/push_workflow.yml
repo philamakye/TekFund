@@ -3,8 +3,8 @@ name: PUSH Workflow
 on:
   push:
     branches:
-      - master
-      - staging
+      - main
+    - staging
 
 jobs:
   app-tests:
