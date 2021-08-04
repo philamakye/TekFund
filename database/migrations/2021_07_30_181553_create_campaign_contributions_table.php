@@ -15,10 +15,11 @@ class CreateCampaignContributionsTable extends Migration
     {
         Schema::create('campaign_contributions', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-            $table->integer('campaign_id')->unique();
+            $table->integer('campaign_id');
             $table->unsignedFloat('total_amount');
             $table->integer('num_contributors');
+            $table->string('last_contribution');
+            $table->timestamps();
         });
     }
 

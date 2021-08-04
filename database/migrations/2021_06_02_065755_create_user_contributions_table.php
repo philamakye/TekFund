@@ -25,7 +25,7 @@ class CreateUserContributionsTable extends Migration
             //$table->string('cont_compaign_title');
             $table->unsignedFloat('contributed_amount');
             $table->boolean('visibility')->default(false)->change();
-            $table->time('paidAt');
+            $table->string('paidAt');
             $table->timestamps();
         });
     }
