@@ -39,7 +39,7 @@ Route::get('/startcampaign', [App\Http\Controllers\CampaignController::class, 'i
 
 Route::get('/admin', 'AdminController@index' )->name('admin')->middleware('admin');
 Route::get('/analytics', 'AdminController@analytics') ->name('admin_analytics')->middleware('admin');
-Route::get('/setting',[App\Http\Controllers\UserController::class, 'indexr'])->name('settings');
+Route::get('/setting',[App\Http\Controllers\UserController::class, 'index'])->name('settings');
 Route::get('/healthcare', 'CampaignController@health_step1')->name('healthcare');
 Route::get('/editprofile', 'UserController@profile2')->name('profile-2');
 Route::get('/email', 'UserController@email')->name('Email');

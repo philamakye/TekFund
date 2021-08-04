@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\campaign_contribution;
 use App\Models\UserContribution;
 use Illuminate\Http\Request;
 use Unicodeveloper\Paystack\Paystack;
@@ -117,6 +118,13 @@ if ($ref == "") {
         $Date_time = date('d/m/Y h:i:s a', time());
         $contribution->paidAt = $Date_time;
         $contribution->save();
+
+
+        $campCont = new campaign_contribution();
+        $campCont->total_amount += $amount;
+        $campCont->num_contributors += 1;
+        $campCont->last_contribution = $Date_time;
+        $campCont->save();
 
          return view('layouts.payments.verify_transaction');
 
