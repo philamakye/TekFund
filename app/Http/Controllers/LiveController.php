@@ -48,7 +48,7 @@ class LiveController extends Controller
      */
     public function show(Campaign $campaign)
     {
-        //
+        echo $campaign->campaign_id;
     }
 
     /**

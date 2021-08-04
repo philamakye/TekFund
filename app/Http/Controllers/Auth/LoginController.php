@@ -38,14 +38,14 @@ class LoginController extends Controller
     protected $redirectTo;
 
     public function redirectTo(){
-     
+
         switch(Auth::user()->role){
             case 1:
                 $this->redirectTo = '/home';
                 return $this->redirectTo;
                 break;
             case 2:
-                $this->redirectTo = '/admin';
+                $this->redirectTo = '/live';
                 return $this->redirectTo;
                 break;
             default:
@@ -53,7 +53,7 @@ class LoginController extends Controller
                 return $this->redirectTo;
 
         }
-  
+
 
     }
 

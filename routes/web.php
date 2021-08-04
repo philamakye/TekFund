@@ -43,12 +43,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/startcampaign', [App\Http\Controllers\UserController::class, 'startcampaign'])->name('start campaign');
 
 
-Route::get('/admin', 'AdminController@index' )->name('admin')->middleware('admin');
-Route::get('/admin/pending', 'AdminController@pendingCamp')->name('pending campaigns');
-Route::get('/analytics', 'AdminController@analytics')->name('admin_analytics');
+//Route::get('/admin', 'AdminController@index' )->name('admin')->middleware('admin');
+//Route::get('/admin/pending', 'AdminController@pendingCamp')->name('pending campaigns');
+//Route::get('/analytics', 'AdminController@analytics')->name('admin_analytics');
 //Route::resource('campaigns', 'CampaignController');
-//Route::resource('live', 'LiveController')->parameters(['live' => 'campaign']);
-//Route::resource('pendcamp', 'PendingController')->parameters(['pendcamp' => 'campaign']);
+Route::resource('live', 'LiveController')->parameters(['live' => 'campaign']);
+Route::resource('pendcamp', 'PendingController')->parameters(['pendcamp' => 'campaign']);
 Route::get('/setting',[App\Http\Controllers\UserController::class, 'index'])->name('settings');
 Route::get('/healthcare', 'UserController@health_step1')->name('healthcare');
 Route::get('/analytics', 'AdminController@analytics') ->name('admin_analytics')->middleware('admin');

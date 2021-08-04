@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Campaign;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class PendingController extends Controller
 {
@@ -14,7 +16,8 @@ class PendingController extends Controller
      */
     public function index()
     {
-        //
+        $pending['pend'] = DB::table('campaigns')->where('status', 'pending')->get();
+        return view('admins.pending')->with($pending);
     }
 
     /**

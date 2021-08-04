@@ -155,7 +155,7 @@ main{
                 <div class="list-group list-group-flush" style="width: 210px; font-size: 15px; background-color:rgb(8,4,32);">
                     <a class="list-group-item list-group-item-action sideColor  p-3 text-center" href="#!" style="color: rgb(56,216,208);">Campaigns</a>
                     <a class="list-group-item list-group-item-action sideColor p-3" href="#!" style="color: white;">Live</a>
-                    <a class="list-group-item list-group-item-action sideColor p-3" href="{{route('pending campaigns')}}" style="color: white;">Pending</a>
+                    <a class="list-group-item list-group-item-action sideColor p-3" href="{{route('pendcamp.index')}}" style="color: white;">Pending</a>
                     <a class="list-group-item list-group-item-action sideColor  p-3" href="#!"style="color: white;">Suspended</a>
                     <a class="list-group-item list-group-item-action sideColor p-3 text-center" href="#!" style="color: rgb(56,216,208);">Users</a>
                     <a class="list-group-item list-group-item-action sideColor p-3" href="#!" style="color: white;">Signed up</a>
@@ -228,7 +228,7 @@ main{
                                 </div>
 
                                 <div class="col">
-                                <form action="{{route('admin_analytics')}}" method="get" style="display: inline;">
+                                <form action="" href= "{{route('live.show, $liv->campaign_id')}}" method="get" style="display: inline;">
                                   <button type="submit"  class="btn btn-outline-primary">DETAILS</button>
                                   </form>
                                 </div>

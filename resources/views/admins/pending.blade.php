@@ -154,7 +154,7 @@ main{
             <div class="border-end bg-blue sideColor" id="sidebar-wrapper">
                 <div class="list-group list-group-flush" style="width: 210px; font-size: 15px; background-color:rgb(8,4,32);">
                     <a class="list-group-item list-group-item-action sideColor  p-3 text-center" href="#!" style="color: rgb(56,216,208);">Campaigns</a>
-                    <a class="list-group-item list-group-item-action sideColor p-3" href="{{route('admin')}}" style="color: white;">Live</a>
+                    <a class="list-group-item list-group-item-action sideColor p-3" href="{{route('live.index')}}" style="color: white;">Live</a>
                     <a class="list-group-item list-group-item-action sideColor p-3" href="#!" style="color: white;">Pending</a>
                     <a class="list-group-item list-group-item-action sideColor  p-3" href="#!"style="color: white;">Suspended</a>
                     <a class="list-group-item list-group-item-action sideColor p-3 text-center" href="#!" style="color: rgb(56,216,208);">Users</a>
