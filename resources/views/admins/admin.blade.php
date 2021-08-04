@@ -105,7 +105,7 @@ main{
   animation: right 4s linear both;
   animation-delay: 4s;
 }
-@keyframes right {  
+@keyframes right {
   100%{
     transform: rotate(180deg);
   }
@@ -155,7 +155,7 @@ main{
                 <div class="list-group list-group-flush" style="width: 210px; font-size: 15px; background-color:rgb(8,4,32);">
                     <a class="list-group-item list-group-item-action sideColor  p-3 text-center" href="#!" style="color: rgb(56,216,208);">Campaigns</a>
                     <a class="list-group-item list-group-item-action sideColor p-3" href="#!" style="color: white;">Live</a>
-                    <a class="list-group-item list-group-item-action sideColor p-3" href="#!" style="color: white;">Pending</a>
+                    <a class="list-group-item list-group-item-action sideColor p-3" href="{{route('pending campaigns')}}" style="color: white;">Pending</a>
                     <a class="list-group-item list-group-item-action sideColor  p-3" href="#!"style="color: white;">Suspended</a>
                     <a class="list-group-item list-group-item-action sideColor p-3 text-center" href="#!" style="color: rgb(56,216,208);">Users</a>
                     <a class="list-group-item list-group-item-action sideColor p-3" href="#!" style="color: white;">Signed up</a>
@@ -187,12 +187,12 @@ main{
                 <div class="container-fluid bg-light">
                     <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
 
-
+                 @foreach ($campaigns as $liv)
                     <div class="card my-4 mx-3">
                         <div class="card-body">
                             <div class="row align-items-start">
                                 <div class="col">
-                                <h3>Smart Crops</h3>
+                                <h3 style="text-transform: capitalize;">{{ $liv->title }}</h3>
                                 <div class="circular">
                                     <div class="inner"></div>
                                     <div class="outer"></div>
@@ -221,24 +221,26 @@ main{
                                 <p>Target Amount</p>
                                 </div>
                                 <div class="col">
-                                <p>Jehu Stevenson</p>
+                                <p style="text-transform:capitalize;">{{ $liv->full_name }}</p>
                                 <p>21 May 2021</p>
                                 <p>21 May 2021</p>
-                                <p>GHC 25,000</p>
+                                <p>GHC {{ $liv->target }}</p>
                                 </div>
-                                
+
                                 <div class="col">
                                 <form action="{{route('admin_analytics')}}" method="get" style="display: inline;">
                                   <button type="submit"  class="btn btn-outline-primary">DETAILS</button>
                                   </form>
                                 </div>
-                                
-                                 
-                                
+
+
+
 
                             </div>
                         </div>
                     </div>
+
+                 @endforeach
                     <div class="card my-4 mx-3">
                         <div class="card-body">
                         <div class="row align-items-start">
