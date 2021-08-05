@@ -22,6 +22,9 @@ class CampaignController extends Controller
     {
         $this->middleware('auth');
     }
+    public function tryhealth(){
+        return view('healthcare.step2');
+    }
 
     public function index()
     {

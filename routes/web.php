@@ -30,7 +30,7 @@ Route::get('/campaign', function () {
     return view('viewcampaign');
 });
 
-
+Route::get('/trialshealth' ,'CampaignController@tryhealth')->name('oh please');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
