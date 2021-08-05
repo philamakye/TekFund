@@ -12,9 +12,12 @@
     padding: 0 !important;
     width: 100%;
 }
+
+
 </style>
 @extends('layouts.app')
 @section('content')
+
 
 <div class="container-fluid" >
     <div class="row px-2 mx-1" style="border: 1px solid rgb(155, 146, 155); ">
@@ -61,14 +64,20 @@
   <a style="float: right">31 days left</a>
 
 
-  <div class="container mt-3">
+  <div class="container mt-3 ">
       <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="mr-5 px-4 py-2" style="background-color: rgb(65, 39, 151); color:white; text-decoration:none;">Contribute</a>
-      <a href="" class="mr-5 px-3 py-2" style="background-color: whitesmoke; color:black; border:1px solid; text-decoration:none;" ><i class="far fa-heart"></i> Follow</a>
-      <a href="" class="mr-1 px-1 py-2 " style="color:rgb(51, 51, 248); font-size: 1.5em"><i class="fab fa-facebook-f"></i></a>
+      <button id="follow-btn1" onclick="document.getElementById('follow-btn2').style.display = 'inline'; this.style.display = 'none';" class="mr-5 px-3 py-2" style="background-color: whitesmoke; color:black; border:1px solid; text-decoration:none; display:inline;" ><i class="far fa-heart"></i> Follow</button>
+      <button id="follow-btn2" onclick="document.getElementById('follow-btn1').style.display = 'inline'; this.style.display = 'none';" class="mr-5 px-3 py-2" style="background-color: whitesmoke; color:red; border:1px solid; text-decoration:none; display:none" ><i class="fas fa-heart"></i> Following</button>
+      <a href="" class="mr-1 px-1 py-2" style="color:rgb(51, 51, 248); font-size: 1.5em"><i class="fab fa-facebook-f"></i></a>
       <a href="" class="mr-2 px-1 py-2" style="color:rgb(66, 201, 241); font-size: 1.5em"><i class="fab fa-twitter"></i></a>
       <a href="" class="mr-2 px-1 py-2" style="color:rgb(116, 119, 121); font-size: 1.5em"><i class="fas fa-link"></i></a>
   </div>
 
+  <script>
+follow(){
+    console.log('3tw3')
+}
+  </script>
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -88,23 +97,36 @@
 
               <form id="paymentForm">
                 <div class="form-group">
-                  <label for="email">Email Address</label>
-                  <input type="email" id="email-address" required />
+
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" class="form-control" id="email-address" required />
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
+                </div>
+
                  <div class="form-group">
-                  <label for="amount">Amount</label>
-                  <input type="tel" id="amount" required />
+                    <div class="mb-3">
+                  <label for="amount" class="form-label">Amount</label>
+                  <input type="tel" class="form-control" id="amount" required />
                 </div>
+                </div>
+
                 <div class="form-group">
-                  <label for="first-name">First Name</label>
-                  <input type="text" id="first-name" />
+                 <div class="mb-3">
+                  <label for="first-name" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="first-name" />
                 </div>
+                </div>
+
+
                 <div class="form-group">
-                  <label for="last-name">Last Name</label>
-                  <input type="text" id="last-name" />
+                  <label for="last-name" class="form-label">Last Name</label>
+                  <input class="form-control" type="text" id="last-name" />
                 </div>
+
                 <div class="form-submit">
-                  <button type="submit" onclick="payWithPaystack()"> Pay </button>
+                <center>  <button class="btn btn-success" type="submit" onclick="payWithPaystack()"> Pay </button> </center>
                 </div>
               </form>
               <script src="https://js.paystack.co/v1/inline.js"></script>
