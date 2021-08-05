@@ -53,7 +53,7 @@ Route::get('/setting',[App\Http\Controllers\UserController::class, 'index'])->na
 Route::get('/healthcare', 'UserController@health_step1')->name('healthcare');
 Route::get('/analytics', 'AdminController@analytics') ->name('admin_analytics')->middleware('admin');
 Route::get('/setting',[App\Http\Controllers\UserController::class, 'index'])->name('settings');
-Route::get('/healthcare', 'CampaignController@health_step1')->name('healthcare');
+Route::get('/healthcare', 'UserController@health_step1')->name('healthcare');
 Route::get('/editprofile', 'UserController@profile2')->name('profile-2');
 Route::get('/email', 'UserController@email')->name('Email');
 Route::get('/profile', 'UserController@profile')->name(('Profile'));

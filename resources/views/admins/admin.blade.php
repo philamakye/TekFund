@@ -27,6 +27,9 @@ main{
 .sideColor {
     background-color:rgb(8,4,32) !important;
 }
+.sideColor:active{
+  background-color: yellow !important;
+}
 
 /* progress bar*/
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
