@@ -2,12 +2,12 @@
 @section('content')
 <form action="profile" method="GET" style="display: inline" >
 <button class="btn btn-primary" style="margin-left: 15px;background-color: rgb(44, 20, 124); color: white;" type="submit"><i class="fa fa-eye" aria-hidden="false"></i>
-View Profile <span class="badge bg-secondary"></span>
+VIEW PROFILE <span class="badge bg-secondary"></span>
 </button>
 </form>
 <form action="editprofile" method="GET" style="display: inline" >
 <button class="btn btn-primary" style="background-color: rgb(255, 255, 255); color: black;" type="submit"><i class="fa fa-pencil" aria-hidden="true"></i>
-Edit Profile & Settings<span class="badge bg-secondary"></span>
+EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 </button>
 </form>
 

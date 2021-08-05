@@ -59,7 +59,7 @@
                 </div>
            </center>
         </div>
-        < class="row mt-5 pt-2">
+        <div class="row mt-5 pt-2">
             <div class="col-3"></div>
             <div class=col>
 

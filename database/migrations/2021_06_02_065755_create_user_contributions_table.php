@@ -15,7 +15,7 @@ class CreateUserContributionsTable extends Migration
     {
         Schema::create('user_contributions', function (Blueprint $table) {
             $table->id();
-            $table->integer('campaign_id')->unique();
+            $table->integer('campaign_id');
             $table->string('status')->nullable();
             $table->string('reference')->nullable();
             $table->string('contributor_name')->nullable();
@@ -23,9 +23,9 @@ class CreateUserContributionsTable extends Migration
             $table->string('transaction_phone_num')->nullable();
            // $table->date('contri_date');
             //$table->string('cont_compaign_title');
-            $table->numeric('contributed_amount');
+            $table->unsignedFloat('contributed_amount');
             $table->boolean('visibility')->default(false)->change();
-            $table->time('paidAt');
+            $table->string('paidAt');
             $table->timestamps();
         });
     }
