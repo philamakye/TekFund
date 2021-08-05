@@ -231,7 +231,7 @@ main{
                                 </div>
 
                                 <div class="col">
-                                <form action="" href= "{{route('live.show, $liv->campaign_id')}}" method="get" style="display: inline;">
+                                <form action="{{ route('live.edit', $liv->id) }}" method="get" style="display: inline;">
                                   <button type="submit"  class="btn btn-outline-primary">DETAILS</button>
                                   </form>
                                 </div>
