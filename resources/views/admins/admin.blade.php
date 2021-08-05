@@ -27,6 +27,9 @@ main{
 .sideColor {
     background-color:rgb(8,4,32) !important;
 }
+.sideColor:{
+    background-color: yellow !important;
+}
 
 /* progress bar*/
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
@@ -228,7 +231,7 @@ main{
                                 </div>
 
                                 <div class="col">
-                                <form action="" href= "{{route('live.show, $liv->campaign_id')}}" method="get" style="display: inline;">
+                                <form action="{{ route('live.edit', $liv->id) }}" method="get" style="display: inline;">
                                   <button type="submit"  class="btn btn-outline-primary">DETAILS</button>
                                   </form>
                                 </div>

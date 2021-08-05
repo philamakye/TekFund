@@ -48,7 +48,7 @@ class LiveController extends Controller
      */
     public function show(Campaign $campaign)
     {
-        echo $campaign->campaign_id;
+
     }
 
     /**
@@ -59,7 +59,8 @@ class LiveController extends Controller
      */
     public function edit(Campaign $campaign)
     {
-        //
+        echo $campaign->full_name;
+
     }
 
     /**

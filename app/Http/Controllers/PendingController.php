@@ -49,7 +49,7 @@ class PendingController extends Controller
      */
     public function show(Campaign $campaign)
     {
-        //
+        echo $campaign->title;
     }
 
     /**

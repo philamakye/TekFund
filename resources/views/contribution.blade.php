@@ -1,4 +1,23 @@
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
 @extends('layouts.app')
+
 
 @section('content')
 <form action="profile" method="GET" style="display: inline" >
@@ -62,14 +81,41 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 <br>
 <br>
 <h3 style="margin-left: 15px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">My Contributions<i aria-hidden="true"></i></h3>
-<br>
-<br>
+
+
 <hr style="margin: 10px;">
-<h5 style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; padding: 20px; margin-left: 50px; display: inline;">Date</h5>
+{{-- <h5 style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; padding: 20px; margin-left: 50px; display: inline;">Date</h5>
 <h5 style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; padding: 20px; margin-left: 270px;display: inline;">Campaign</h5>
 <h5 style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; padding: 350px; margin-right: 50px; display: inline;">Amount</h5>
-<h5 style ="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; float: right;margin-right: 100px; display: inline;">Visibility</h5>
-<hr style="margin: 10px;">
+<h5 style ="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; float: right;margin-right: 100px; display: inline;">Visibility</h5> --}}
+{{-- <hr style="margin: 10px;"> --}}
+<br>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Campaign</th>
+    <th>Amount</th>
+    <th>Visibility</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+    <td>True</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+    <td>Ghana</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+    <td>Ghana</td>
+  </tr>
+</table>
 <br>
 <br>
 <br>
