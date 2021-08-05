@@ -228,7 +228,7 @@ main{
                                 </div>
 
                                 <div class="col">
-                                <form action="{{route('admin_analytics')}}" method="get" style="display: inline;">
+                                <form action="{{route('pendcamp.show',$p->id)}}" method="get" style="display: inline;">
                                   <button type="submit"  class="btn btn-outline-primary">DETAILS</button>
                                   </form>
                                 </div>

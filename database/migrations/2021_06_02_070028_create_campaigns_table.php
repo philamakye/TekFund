@@ -16,8 +16,8 @@ class CreateCampaignsTable extends Migration
     public function up()
     {
         Schema::create('campaigns', function (Blueprint $table) {
-           // $table->id();
-            $table->increments('campaign_id');
+            $table->id();
+            //$table->increments('campaign_id');
             $table->char('status');
             $table->string('campaign_type')->nullable();
             $table->string('starter')->nullable();

@@ -1,8 +1,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
 <style>
+  body{
+    background: #fbf8f6 !important;
+  }
   .basic-model{
-  background: #fafafa !important;
+  background: #fff !important;
 }
 .search-bar, .about-css {
     display: none !important;

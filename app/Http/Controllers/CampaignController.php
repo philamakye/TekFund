@@ -18,6 +18,8 @@ class CampaignController extends Controller
      * @return \Illuminate\Http\Response
      *
      */
+
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -25,6 +27,7 @@ class CampaignController extends Controller
     // public function please(){
     //     return view('health2');
     // }
+>>>>>>>HEAD
 
     public function index()
     {

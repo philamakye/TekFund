@@ -2,8 +2,11 @@
 
 
 <style>
+  body{
+    background: #fbf8f6 !important;
+  }
 .basic-model{
-  background: #fafafa !important;
+  background: #fff !important;
 }
 .search-bar, .about-css {
     display: none !important;
@@ -13,6 +16,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <form action="profile" method="GET" style="display: inline" >
 <button class="btn btn-primary" style="margin-left: 15px; background-color: white; color: black; font-size:13px; padding:2px 2px;" type="submit"><i class="fa fa-eye" aria-hidden="false"></i>
 View Profile <span class="badge bg-secondary"></span>
