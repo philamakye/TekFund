@@ -1,3 +1,5 @@
+
+
 @extends('layouts.app')
 @section('content')
 <form action="profile" method="GET" style="display: inline" >

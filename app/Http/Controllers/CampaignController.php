@@ -19,9 +19,15 @@ class CampaignController extends Controller
      *
      */
 
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     // public function please(){
     //     return view('health2');
     // }
+>>>>>>>HEAD
 
     public function index()
     {
