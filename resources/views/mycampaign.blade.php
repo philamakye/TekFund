@@ -62,4 +62,55 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 <hr style="margin:15px;">
 <br>
 
+<div class="mx-3 px-2 py-2" style="border: 1px dashed rgb(88, 86, 86)">
+        <div class="row">
+          <div class="col-3">
+            <img src="/images/test.svg" class="img-fluid" style="height:15em" alt="...">
+          </div>
+          <div class="col">
+            <h4><b>KNUST Student innovation to end Ghana's waste management challenges</b></h4>
+            <p style="font-weight: bold; font-size:large">By: <a style="color: rgb(40, 245, 211)">West</a></p>
+            <p class="lead">Too much waste in this country. Time for a change</p>
+          </div>
+          <div class="col-2">
+            <button onclick="document.getElementById('drop-btn').style.display='block'; document.getElementById('down-tog').style.display='none';document.getElementById('up-tog').style.display='inline'"> Actions    <i class="fas fa-chevron-down" id="down-tog"></i><i class="fab fa-artstation" style="display: none" id="up-tog"></i></button>
+            <button style="display: none; padding-left:22px; padding-right:22px;" id="drop-btn"> Drop</button>
+          </div>
+        </div>
+</div>
+
+<div class="mx-3 px-2 py-2" style="border: 1px dashed rgb(88, 86, 86)">
+    <div class="row">
+      <div class="col-3">
+        <img src="/images/test.svg" class="img-fluid" style="height:15em" alt="...">
+      </div>
+      <div class="col">
+        <h4><b>KNUST Student innovation to end Ghana's waste management challenges</b></h4>
+        <p style="font-weight: bold; font-size:large">By: <a style="color: rgb(40, 245, 211)">West</a></p>
+        <p class="lead">Too much waste in this country. Time for a change</p>
+      </div>
+      <div class="col-2">
+        <button onclick="document.getElementById('drop-btn').style.display='block'; document.getElementById('down-tog').style.display='none';document.getElementById('up-tog').style.display='inline'"> Actions    <i class="fas fa-chevron-down" id="down-tog"></i><i class="fab fa-artstation" style="display: none" id="up-tog"></i></button>
+        <button style="display: none; padding-left:22px; padding-right:22px;" id="drop-btn"> Drop</button>
+      </div>
+    </div>
+</div>
+
+<div class="mx-3 px-2 py-2" style="border: 1px dashed rgb(88, 86, 86)">
+    <div class="row">
+      <div class="col-3">
+        <img src="/images/test.svg" class="img-fluid" style="height:15em" alt="...">
+      </div>
+      <div class="col">
+        <h4><b>KNUST Student innovation to end Ghana's waste management challenges</b></h4>
+        <p style="font-weight: bold; font-size:large">By: <a style="color: rgb(40, 245, 211)">West</a></p>
+        <p class="lead">Too much waste in this country. Time for a change</p>
+      </div>
+      <div class="col-2">
+        <button onclick="document.getElementById('drop-btn').style.display='block'; document.getElementById('down-tog').style.display='none';document.getElementById('up-tog').style.display='inline'"> Actions    <i class="fas fa-chevron-down" id="down-tog"></i><i class="fab fa-artstation" style="display: none" id="up-tog"></i></button>
+        <button style="display: none; padding-left:22px; padding-right:22px;" id="drop-btn"> Drop</button>
+      </div>
+    </div>
+</div>
+
 @endsection
