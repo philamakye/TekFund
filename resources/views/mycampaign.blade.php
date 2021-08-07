@@ -73,8 +73,8 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
             <p class="lead">Too much waste in this country. Time for a change</p>
           </div>
           <div class="col-2">
-            <button onclick="document.getElementById('drop-btn').style.display='block'; document.getElementById('down-tog').style.display='none';document.getElementById('up-tog').style.display='inline'"> Actions    <i class="fas fa-chevron-down" id="down-tog"></i><i class="fab fa-artstation" style="display: none" id="up-tog"></i></button>
-            <button style="display: none; padding-left:22px; padding-right:22px;" id="drop-btn"> Drop</button>
+            <button onclick="document.getElementById('drop-btn-1').style.display='block'; document.getElementById('down-tog-1').style.display='none';document.getElementById('up-tog-1').style.display='inline'"> Actions    <i class="fas fa-chevron-down" id="down-tog-1"></i><i class="fab fa-artstation" style="display: none" id="up-tog-1"></i></button>
+            <button style="display: none; padding-left:22px; padding-right:22px;" id="drop-btn-1"> Drop</button>
           </div>
         </div>
 </div>
@@ -90,8 +90,8 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
         <p class="lead">Too much waste in this country. Time for a change</p>
       </div>
       <div class="col-2">
-        <button onclick="document.getElementById('drop-btn').style.display='block'; document.getElementById('down-tog').style.display='none';document.getElementById('up-tog').style.display='inline'"> Actions    <i class="fas fa-chevron-down" id="down-tog"></i><i class="fab fa-artstation" style="display: none" id="up-tog"></i></button>
-        <button style="display: none; padding-left:22px; padding-right:22px;" id="drop-btn"> Drop</button>
+        <button onclick="document.getElementById('drop-btn-2').style.display='block'; document.getElementById('down-tog-2').style.display='none';document.getElementById('up-tog-2').style.display='inline'"> Actions    <i class="fas fa-chevron-down" id="down-tog-2"></i><i class="fab fa-artstation" style="display: none" id="up-tog-2"></i></button>
+        <button style="display: none; padding-left:22px; padding-right:22px;" id="drop-btn-2"> Drop</button>
       </div>
     </div>
 </div>
@@ -107,8 +107,8 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
         <p class="lead">Too much waste in this country. Time for a change</p>
       </div>
       <div class="col-2">
-        <button onclick="document.getElementById('drop-btn').style.display='block'; document.getElementById('down-tog').style.display='none';document.getElementById('up-tog').style.display='inline'"> Actions    <i class="fas fa-chevron-down" id="down-tog"></i><i class="fab fa-artstation" style="display: none" id="up-tog"></i></button>
-        <button style="display: none; padding-left:22px; padding-right:22px;" id="drop-btn"> Drop</button>
+        <button onclick="document.getElementById('drop-btn-3').style.display='block'; document.getElementById('down-tog-3').style.display='none';document.getElementById('up-tog-3').style.display='inline'"> Actions    <i class="fas fa-chevron-down" id="down-tog-3"></i><i class="fab fa-artstation" style="display: none" id="up-tog-3"></i></button>
+        <button style="display: none; padding-left:22px; padding-right:22px;" id="drop-btn-3"> Drop</button>
       </div>
     </div>
 </div>
