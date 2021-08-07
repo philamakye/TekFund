@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Campaign;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -24,16 +23,18 @@ class CampaignController extends Controller
     {
         $this->middleware('auth');
     }
+<<<<<<< HEAD
     // public function please(){
     //     return view('health2');
     // }
 
+=======
+>>>>>>> 43caa3334edbb21bb2495a7672d7a9713ae9d848
 
     public function index()
     {
-
+        //
     }
-
 
     /**
      * Show the form for creating a new resource.
