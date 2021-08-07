@@ -27,8 +27,8 @@ main{
 .sideColor {
     background-color:rgb(8,4,32) !important;
 }
-.sideColor:active{
-  background-color: yellow !important;
+.sideColor:{
+    background-color: yellow !important;
 }
 
 /* progress bar*/
@@ -154,7 +154,7 @@ main{
 
 <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
-            <div class="border-end bg-blue sideColor" id="sidebar-wrapper" style="position: fixed;">
+            <div class="border-end bg-blue sideColor" id="sidebar-wrapper">
                 <div class="list-group list-group-flush" style="width: 210px; font-size: 15px; background-color:rgb(8,4,32);">
                     <a class="list-group-item list-group-item-action sideColor  p-3 text-center" href="#!" style="color: rgb(56,216,208);">Campaigns</a>
                     <a class="list-group-item list-group-item-action sideColor p-3" href="#!" style="color: white;">Live</a>
