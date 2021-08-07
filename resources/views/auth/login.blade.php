@@ -3,8 +3,6 @@
 <style>
 
  body{
-     /* background: rgb(224,221,221) !important; */
-     /* background: #fff !important; */
      background: #fbf8f6 !important;
  }
  
@@ -39,7 +37,9 @@
 .search-bar, .about-css {
     display: none !important;
 }
-
+.login-ft{
+    display: none !important;
+}
 </style>
 
 @extends('layouts.app')
@@ -53,7 +53,7 @@
               <div class="col-sm-3">
 
               </div>
-              <div class="col-sm icon" style="border: 0.2px solid rgb(202,199,199); background:white; border-radius: 5px; box-shadow:5px 5px rgb(8,4,32);">
+              <div class="col-sm icon" style="border: 0.2px solid rgb(202,199,199); background:white; border-radius: 5px; box-shadow:5px 5px #666666">
               <div>
             <center><h2><img src="images/icon.gif" class="img-fluid mr-2" style="height: 2.0em; border-radius:30px; font-family: Garamond;" alt="...">TekFund</h2></center>
             </div>

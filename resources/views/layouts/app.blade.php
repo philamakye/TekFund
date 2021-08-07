@@ -67,13 +67,13 @@
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
-                                <li class="nav-item">
+                                <li class="nav-item login-ft">
                                     <a class="nav-link" style="color: rgb(8, 4,32)hite" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
-                                <li class="nav-item">
+                                <li class="nav-item reg-ft">
                                     <a class="nav-link" style="color: rgb(8, 4,32)" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
