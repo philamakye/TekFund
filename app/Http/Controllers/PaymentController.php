@@ -126,7 +126,7 @@ if ($ref == "") {
         $campCont->last_contribution = $Date_time;
         $campCont->save();
 
-         return view('layouts.payments.verify_transaction');
+         return redirect('/home');
 
     }else{
         header("Location: http://127.0.0.1:8000/campaign");
