@@ -1,5 +1,11 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
 <style>
-    .container .icon {
+body{
+     background: #fbf8f6 !important;
+ }
+ .container .icon {
     margin-top: 0px;
     padding-top: 10px;
 }
@@ -25,20 +31,26 @@
     cursor: pointer;
     background-color: rgb(50, 18, 156);
 }
+.search-bar, .about-css {
+    display: none !important;
+}
+.reg-ft{
+    display: none !important;
+}
 </style>
 @extends('layouts.app')
 
 @section('content')
-
-<center><h2><img src="images/icon.gif" class="img-fluid mr-2" style="height: 2.0em; border-radius:30px" alt="...">TekFund</h2></center>
 
 <div class="container">
     <div class="row">
       <div class="col-sm-3">
 
       </div>
-      <div class="col-sm icon">
-
+      <div class="col-sm icon" style="border: 0.2px solid rgb(202,199,199); background:white; border-radius: 5px; box-shadow:5px 5px #666666">
+      <div>
+            <center><h2><img src="images/icon.gif" class="img-fluid mr-2" style="height: 2.0em; border-radius:30px; font-family: Garamond;" alt="...">TekFund</h2></center>
+    </div>
      <div class=" sign-box">
 
 
@@ -152,11 +164,11 @@
   </div>
   </div>
   <div class="col-sm"></div>
-  <div>
+  <!-- <div>
   <hr>
   <center><p><small><a href="#" style="text-decoration: none; padding-right:5%; font: size 0.5em;">Condition of Use</a>  <a href="#" style="text-decoration: none; padding-right:5%; font: size 0.5em;">Privacy Notice</a>  <a href="#" style="text-decoration: none; font: size 0.5em;"> Help</a></small></p></center>
   <center><p><small>© 2021, TekFund.com, Inc. or its affiliates</small></p></center>
-  </div>
+  </div> -->
   </div>
 
   </div>
