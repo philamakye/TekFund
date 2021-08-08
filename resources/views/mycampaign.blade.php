@@ -36,7 +36,7 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
       class="nav-link active"
       id="ex1-tab-2"
       data-mdb-toggle="tab"
-      href="{{route('My Campaigns')}}"
+      href="{{route('campaigns.index')}}"
       role="tab"
       aria-controls="ex1-tabs-2"
       aria-selected="false"
@@ -61,16 +61,18 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 <h3 style="margin-left: 15px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">Campaigns I'm On<i aria-hidden="true"></i></h3>
 <hr style="margin:15px;">
 <br>
+@foreach ($us_camp as $c )
+
 
 <div class="mx-3 px-2 py-2" style="border: 1px dashed rgb(88, 86, 86)">
         <div class="row">
           <div class="col-3">
-            <img src="/images/test.svg" class="img-fluid" style="height:15em" alt="...">
+            <img src="{{asset('storage/covers/'. $c->cover_img)}}" class="img-fluid" style="height:15em; width:20em" alt="...">
           </div>
           <div class="col">
-            <h4><b>KNUST Student innovation to end Ghana's waste management challenges</b></h4>
-            <p style="font-weight: bold; font-size:large">By: <a style="color: rgb(40, 245, 211)">West</a></p>
-            <p class="lead">Too much waste in this country. Time for a change</p>
+            <h4 style="text-transform:capitalize;"><b>{{ $c->title }}</b></h4>
+            <p style="font-weight: bold; font-size:large">By: <a style="color: rgb(40, 245, 211)">{{ Auth::user()->name}}</a></p>
+            <p class="d-inline-block text-truncate" style="max-width:350px;">{{ $c->story }}</p>
           </div>
           <div class="col-2">
             <button onclick="document.getElementById('drop-btn-1').style.display='block'; document.getElementById('down-tog-1').style.display='none';document.getElementById('up-tog-1').style.display='inline'"> Actions    <i class="fas fa-chevron-down" id="down-tog-1"></i><i class="fab fa-artstation" style="display: none" id="up-tog-1"></i></button>
@@ -78,39 +80,6 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
           </div>
         </div>
 </div>
-
-<div class="mx-3 px-2 py-2" style="border: 1px dashed rgb(88, 86, 86)">
-    <div class="row">
-      <div class="col-3">
-        <img src="/images/test.svg" class="img-fluid" style="height:15em" alt="...">
-      </div>
-      <div class="col">
-        <h4><b>KNUST Student innovation to end Ghana's waste management challenges</b></h4>
-        <p style="font-weight: bold; font-size:large">By: <a style="color: rgb(40, 245, 211)">West</a></p>
-        <p class="lead">Too much waste in this country. Time for a change</p>
-      </div>
-      <div class="col-2">
-        <button onclick="document.getElementById('drop-btn-2').style.display='block'; document.getElementById('down-tog-2').style.display='none';document.getElementById('up-tog-2').style.display='inline'"> Actions    <i class="fas fa-chevron-down" id="down-tog-2"></i><i class="fab fa-artstation" style="display: none" id="up-tog-2"></i></button>
-        <button style="display: none; padding-left:22px; padding-right:22px;" id="drop-btn-2"> Drop</button>
-      </div>
-    </div>
-</div>
-
-<div class="mx-3 px-2 py-2" style="border: 1px dashed rgb(88, 86, 86)">
-    <div class="row">
-      <div class="col-3">
-        <img src="/images/test.svg" class="img-fluid" style="height:15em" alt="...">
-      </div>
-      <div class="col">
-        <h4><b>KNUST Student innovation to end Ghana's waste management challenges</b></h4>
-        <p style="font-weight: bold; font-size:large">By: <a style="color: rgb(40, 245, 211)">West</a></p>
-        <p class="lead">Too much waste in this country. Time for a change</p>
-      </div>
-      <div class="col-2">
-        <button onclick="document.getElementById('drop-btn-3').style.display='block'; document.getElementById('down-tog-3').style.display='none';document.getElementById('up-tog-3').style.display='inline'"> Actions    <i class="fas fa-chevron-down" id="down-tog-3"></i><i class="fab fa-artstation" style="display: none" id="up-tog-3"></i></button>
-        <button style="display: none; padding-left:22px; padding-right:22px;" id="drop-btn-3"> Drop</button>
-      </div>
-    </div>
-</div>
+@endforeach
 
 @endsection

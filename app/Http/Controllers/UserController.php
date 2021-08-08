@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Campaign;
+use Illuminate\Support\Facades\DB;
+
 
 class UserController extends Controller
 {
@@ -30,7 +32,11 @@ class UserController extends Controller
     }
 
     public function profile(){
-
+        $usId = Auth::id();
+        $count = User::findOrFail($usId);
+        $campain_num = DB::table('campaigns')->where('us_id',$usId)->count();
+        $count->campaign_num =$campain_num;
+        $count->save();
         return view('profile');
     }
     public function uploadAvt(Request $request){
@@ -83,8 +89,6 @@ class UserController extends Controller
             $info->save();
             return redirect()->back()->with('success', 'Basic Info Updated!!');
 
-
-
     }
 
     public function storeStory(Request $request){
@@ -112,7 +116,6 @@ class UserController extends Controller
         $story->save();
 
         return redirect()->back()->with('status', 'Update success!!');
-
 
     }
 
@@ -172,10 +175,10 @@ class UserController extends Controller
     {
         return view('Start Up.startup');
     }
-    public function mycamps()
-    {
-        return view('mycampaign');
-    }
+    // public function mycamps()
+    // {
+    //     return view('mycampaign');
+    // }
     public function store(Request $request)
     {
         //$campid = Auth::id();

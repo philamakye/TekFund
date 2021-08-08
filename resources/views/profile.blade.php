@@ -38,7 +38,7 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
       class="nav-link"
       id="ex1-tab-2"
       data-mdb-toggle="tab"
-      href="{{route('My Campaigns')}}"
+      href="{{route('campaigns.index')}}"
       role="tab"
       aria-controls="ex1-tabs-2"
       aria-selected="false"
@@ -68,7 +68,7 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
          <center><h3 style="margin-top: 10px;font-family: cooper; margin-top:50px;color:rgb(90, 86, 86); font-size: 25px;">About Me</h3></center>
                   <br>
 
-        <center><h5>This is the part I want to show all the cool things the user is going to write about himself. You feel me???? </h5></center>
+        <center><h5 style= "max-width: 1200px;">{{ Auth::user()->about_me }} </h5></center>
 </center>
     <hr style="margin:15px;">
     <br>

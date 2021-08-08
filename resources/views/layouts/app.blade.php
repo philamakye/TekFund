@@ -39,7 +39,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg shadow-sm" style="background-color: white">
             <div class="container-fluid" >
               <img src="images/icon.gif" class="img-fluid mr-2" style="height: 2.1em; border-radius:20px" alt="...">
-                <a class="navbar-brand" style="color: rgb(8, 4,32)" href="{{ url('/') }}">
+                <a class="navbar-brand" style="color: rgb(8, 4,32)" href="{{url('/') }}"
                     {{ config('app.name', 'TekFund') }}
                 </a>
                 <a href="#" class="navbar-brand pl-2 about-css" style="color: rgb(8, 4,32) !important; font-size:1em">
@@ -92,7 +92,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{route('My Campaigns')}}">My Campaigns</a>
+                                    <a class="dropdown-item" href="{{route('campaigns.index')}}">My Campaigns</a>
                                     <a class="dropdown-item" href="{{route('Contributions')}}">My Contributions</a>
                                     <a class="dropdown-item" href="{{route('Profile')}}">Profile</a>
                                     <a class="dropdown-item" href="{{route('settings')}}">Settings</a>

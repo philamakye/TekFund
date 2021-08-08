@@ -53,10 +53,10 @@ height: 35em;
     </h2>
 
     <div class="row text trio">
-
+     {{-- @foreach ( $showcards as $show )
       <div class="col-lg-3 col-md-6 mb-4">
           <div class="card index-card" style="height: 90vh">
-              <img class="card-img-top" src="images/cards/card1.jpg" alt="Img" style="height:40%">
+              <img class="card-img-top" src="{{asset('storage/covers/'. $show->cover_img)}}" alt="Img" style="height:40%">
               <div class="card-body nopadding mt-2" style="margin-left:0px;">
                 <div class="container nopadding">
                   <div class="row ">
@@ -74,12 +74,21 @@ height: 35em;
                   <hr>
                 </div>
 
-                  <h4 class="card-title px-2">Dwarf Telescope - A portable digital telescope</h4>
-                  <p class="card-text px-2">
-                    <small style="font-size:1em">See your friends clearly from 2000 meters away</small>
+                  <h4 class="card-title px-2 d-inline-block text-truncate" style = "max-width:300px; text-transform:capitalize;">{{$show->title}}</h4>
+                  <p class="card-text px-2 d-inline-block text-truncate">
+                    <small style="font-size:1em; max-width:400px;">See your friends clearly from 2000 meters away</small>
                   </p>
                   <p class="card-text px-2 nomargin">
-                    <small class="text-muted" style="font-size: 1.1em">TECH AND INNOVATION</small>
+
+                      @if ($show->business_cate)
+                    <small class="text-muted" style="font-size: 1.1em;text-transform:uppercase;">{{ $show->business_cate }}</small>
+                    @elseif ($show->project_field)
+                    <small class="text-muted" style="font-size: 1.1em;text-transform:uppercase;">{{ $show->project_field }}</small>
+                    @elseif ($show->cause)
+                    <small class="text-muted" style="font-size: 1.1em;text-transform:uppercase;">{{ $show->cause }}</small>
+                    @else
+                   <small class="text-muted" style="font-size: 1.1em;text-transform:uppercase;">HEALTH</small>
+                    @endif
                   </p>
 
                   <div class="container nopadding">
@@ -117,6 +126,7 @@ height: 35em;
               </div>
           </div>
       </div>
+      @endforeach --}}
 
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card index-card" style="height: 90vh">
@@ -246,6 +256,7 @@ height: 35em;
       </div>
   </div>
 
+
   <div class="col-lg-3 col-md-6 mb-4">
     <div class="card index-card" style="height: 90vh">
         <img class="card-img-top" src="images/cards/card4.jpeg" alt="Img" style="height:40%">
@@ -356,12 +367,12 @@ height: 35em;
                   <hr>
                 </div>
 
-                  <h4 class="card-title px-2">Dwarf Telescope - A portable digital telescope</h4>
+                  <h4 class="card-title px-2"style ="text-transform:capitalize;">Dwarf Telescope - A portable digital telescope</h4>
                   <p class="card-text px-2">
                     <small style="font-size:1em">See your friends clearly from 2000 meters away</small>
                   </p>
                   <p class="card-text px-2 nomargin">
-                    <small class="text-muted" style="font-size: 1.1em">TECH AND INNOVATION</small>
+                    <small class="text-muted" style="font-size: 1.1em; text-transform:uppercase;">TECH AND INNOVATION</small>
                   </p>
 
                   <div class="container nopadding">

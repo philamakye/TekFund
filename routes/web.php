@@ -6,6 +6,8 @@ use App\Http\Controllers\UserController;
 use App\Models\UserContribution;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 use PHPUnit\TextUI\XmlConfiguration\Group;
 use PHPUnit\TextUI\XmlConfiguration\IniSetting;
 
@@ -28,8 +30,12 @@ use PHPUnit\TextUI\XmlConfiguration\IniSetting;
 // });
 
 Route::get('/', function () {
+    // $userId = Auth::id();
+    // $cards['showcards'] = DB::table('campaigns')->whereNotIn($userId, 'us_id')->where('status', 'live')->get();
+    // return view('index')->with($cards);
     return view('index');
 });
+// Route::resource('home', 'CardsController')->parameters(['home' => 'campaign']);
 
 Route::get('/campaign', function () {
     return view('viewcampaign');
@@ -42,13 +48,14 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/startcampaign', [App\Http\Controllers\UserController::class, 'startcampaign'])->name('start campaign');
 
-
 //Route::get('/admin', 'AdminController@index' )->name('admin')->middleware('admin');
 //Route::get('/admin/pending', 'AdminController@pendingCamp')->name('pending campaigns');
 //Route::get('/analytics', 'AdminController@analytics')->name('admin_analytics');
 //Route::resource('campaigns', 'CampaignController');
 Route::resource('live', 'LiveController')->parameters(['live' => 'campaign']);
 Route::resource('pendcamp', 'PendingController')->parameters(['pendcamp' => 'campaign']);
+Route::resource('campaigns', 'CampaignController');
+// ->parameters(['campaigns'=>'campaign']);
 Route::get('/setting',[App\Http\Controllers\UserController::class, 'index'])->name('settings');
 Route::get('/healthcare', 'UserController@health_step1')->name('healthcare');
 Route::get('/analytics', 'AdminController@analytics') ->name('admin_analytics')->middleware('admin');
@@ -60,7 +67,6 @@ Route::get('/profile', 'UserController@profile')->name(('Profile'));
 Route::post('/upload', 'userController@uploadAvt')->name('Upload-profile image');
 Route::post('/upload-avatar', 'userController@uploadImg')->name('Upload-avatar');
 Route::get('/contributions','UserContributionController@index')->name('Contributions');
-Route::get('/mycampaigns','UserController@mycamps')->name('My Campaigns');
 Route::get('/others','UserController@others_step1')->name('Others');
 Route::get('/project','UserController@proj_step1')->name('project');
 Route::get('/startup', 'UserController@startup_step1')->name('Start Up');

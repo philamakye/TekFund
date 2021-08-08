@@ -1,35 +1,32 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Campaign;
-use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Laravel\Ui\Presets\React;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 
-class CampaignController extends Controller
+class CardsController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
-     *
      */
-
-
     public function __construct()
     {
+
         $this->middleware('auth');
     }
 
     public function index()
     {
         $userId =Auth::id();
-        $user_camp['us_camp'] = DB::table('campaigns')->where('us_id',$userId)->where('status','live')->get();
-        return view('mycampaign')->with($user_camp);
+        $cards['showcards'] = DB::table('campaigns')->whereNotIn($userId,'us_id')->where('status','live')->get();
+        return view('index')->with($cards);
+
     }
 
     /**
@@ -50,9 +47,8 @@ class CampaignController extends Controller
      */
     public function store(Request $request)
     {
-
+        //
     }
-
 
     /**
      * Display the specified resource.
