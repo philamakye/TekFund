@@ -15,7 +15,8 @@ class CreateCampaignContributionsTable extends Migration
     {
         Schema::create('campaign_contributions', function (Blueprint $table) {
             $table->id();
-            $table->integer('campaign_id');
+           // $table->integer('campaign_id');
+            $table->foreign('campaign_id')->references('id')->on('campaigns')->onDelete('cascade');
             $table->unsignedFloat('total_amount');
             $table->integer('num_contributors');
             $table->string('last_contribution');

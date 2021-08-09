@@ -15,7 +15,8 @@ class CreateUserContributionsTable extends Migration
     {
         Schema::create('user_contributions', function (Blueprint $table) {
             $table->id();
-            $table->integer('campaign_id');
+           // $table->integer('campaign_id');
+            $table->foreign('campaign_id')->references('id')->on('campaigns')->onDelete('cascade');
             $table->string('status')->nullable();
             $table->string('reference')->nullable();
             $table->string('contributor_name')->nullable();
