@@ -151,7 +151,9 @@ class UserController extends Controller
     public function startcampaign()
     {
         $get_schoolid = auth()->user()->school_id;
-        if (!empty($get_schoolid)) {
+        $get_city = auth()->user()->city;
+        $get_country = auth()->user()->country;
+        if (!empty($get_schoolid)&& (!empty($get_city)) && (!empty($get_country))) {
             return view('startcampaign');
         } else {
             return redirect('editprofile')->with('camp_error', 'Please fill out your basic information on your profile before you can begin a campaign!!');

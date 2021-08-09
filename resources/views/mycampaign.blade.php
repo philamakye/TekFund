@@ -64,7 +64,7 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 @foreach ($us_camp as $c )
 
 
-<div class="mx-3 px-2 py-2" style="border: 1px dashed rgb(88, 86, 86)">
+<div href ="{{ route('campaigns.edit', $c->id) }}" class="mx-3 px-2 py-2" style="border: 1px dashed rgb(88, 86, 86)">
         <div class="row">
           <div class="col-3">
             <img src="{{asset('storage/covers/'. $c->cover_img)}}" class="img-fluid" style="height:15em; width:20em" alt="...">

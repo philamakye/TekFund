@@ -6,6 +6,7 @@ use App\Models\Campaign;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 
 class CardsController extends Controller
@@ -15,16 +16,15 @@ class CardsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
+    // public function __construct()
+    // {
 
-        $this->middleware('auth');
-    }
+    //     $this->middleware('auth');
+    // }
 
     public function index()
     {
-        $userId =Auth::id();
-        $cards['showcards'] = DB::table('campaigns')->whereNotIn($userId,'us_id')->where('status','live')->get();
+        $cards['showcards'] = DB::table('campaigns')->where('status', 'live')->get();
         return view('index')->with($cards);
 
     }
@@ -58,7 +58,12 @@ class CardsController extends Controller
      */
     public function show(Campaign $campaign)
     {
-        //
+        $get_link = $campaign->camp_youtubelink;
+        $strip_link = explode("=",$get_link);
+        $fin_link = $strip_link[1];
+        $get_id = $campaign->us_id;
+        $getelem ['elem']= DB::table('users')->where('user_id',$get_id)->select('campaign_num', 'city', 'country')->first();
+        return view('viewcampaign')->with(['camp'=> $campaign])->with($getelem)->with(['fin'=>$fin_link]);
     }
 
     /**

@@ -73,7 +73,8 @@ class CampaignController extends Controller
      */
     public function edit(Campaign $campaign)
     {
-        //
+       // $spec['particular'] = DB::table('campaigns')->
+        return view('viewcampaign')->with($campaign);
     }
 
     /**

@@ -23,9 +23,9 @@
     <div class="row px-2 mx-1" style="border: 1px solid rgb(155, 146, 155); ">
       <div class="col px-3 py-3">
           <div class="mb-2 ratio ratio-16x9">
-        <iframe  src="https://www.youtube.com/embed/BXiHvgrJfkg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe  src="https://www.youtube.com/embed/{{$fin}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-
+{{-- https://www.youtube.com/watch?v=Miwv0EifRYM --}}
           <center>
               <a href=""><img src="images/north_shore_sunset_beach6869.jpg" style="height:4em" class="img-fluid pl-1" alt="..."></a>
               <a href=""><img src="images/north_shore_sunset_beach6869.jpg" style="height:4em" class="img-fluid pl-1" alt="..."></a>
@@ -39,18 +39,27 @@
 
    <div class="col  px-3 py-3" >
   <h3 style="color: turquoise"><b>Funding</b></h3>
-  <h3><b>SMART CROPS BUILDING MACHINE</b></h3>
-  <h3>Quicker and Satiating</h3>
-  <h4> The first ever smart crop making machine to ever exist on this planet. Created by Jehu Stevenson</h4>
+  <h3 style="text-transform: uppercase;"><b>{{ $camp->title }}</b></h3>
+  @if ($camp->business_cate)
+     <h3 style="text-transform: capitalize;">{{ $camp->business_cate }}</h3>
+  @elseif ($camp->project_type)
+    <h3 style="text-transform: capitalize;">{{ $camp->project_type }}</h3>
+  @elseif ($camp->cause)
+    <h3 class="d-inline-block text-truncate" style="max-width:200px; text-transform:capitalize;" >{{ $camp->cause}}</h3>
+    @else
+    <h3>Health And Wellbeing</h3>
+
+  @endif
+  {{-- <h4> Created by {{ $camp->full_name }}</h4> --}}
 
   <div class="container pt-3 pb-3">
     <div class="row">
       <div class="col-2">
-        <img src="images/north_shore_sunset_beach6869.jpg" style="height:4em" class="img-fluid" alt="...">
+        <img src="{{asset('storage/covers/'. $camp->cover_img)}}" style="height:4em" class="img-fluid" alt="...">
       </div>
       <div class="col">
-       <h4><b>SMART CROP MACHINE<b></h4>
-       <h4> 1 Campaign | Kumasi, Ghana</h4>
+       <h4><b>{{ $camp->full_name }}<b></h4>
+        <h4> {{$elem->campaign_num }} Campaign | {{ $elem->city }}, {{$elem->country}}</h4>
       </div>
     </div>
   </div>
@@ -60,7 +69,7 @@
   <div class="progress">
     <div class="progress-bar bg-info" role="progressbar" style="width: 90%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
   </div>
-  <a>90% of GHC 26,000</a>
+  <a>90% of GHC {{ $camp->target }}</a>
   <a style="float: right">31 days left</a>
 
 

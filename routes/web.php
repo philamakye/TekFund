@@ -30,12 +30,10 @@ use PHPUnit\TextUI\XmlConfiguration\IniSetting;
 // });
 
 Route::get('/', function () {
-    // $userId = Auth::id();
-    // $cards['showcards'] = DB::table('campaigns')->whereNotIn($userId, 'us_id')->where('status', 'live')->get();
-    // return view('index')->with($cards);
-    return view('index');
+    $cards['showcards'] = DB::table('campaigns')->where('status', 'live')->get();
+    return view('index')->with($cards);
 });
-// Route::resource('home', 'CardsController')->parameters(['home' => 'campaign']);
+ Route::resource('home', 'CardsController')->parameters(['home' => 'campaign']);
 
 Route::get('/campaign', function () {
     return view('viewcampaign');
@@ -45,7 +43,7 @@ Route::get('/campaign', function () {
 //Route::get('/tryhealth',[App\Http\Controllers\CampaignController:: class, 'please']);
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/startcampaign', [App\Http\Controllers\UserController::class, 'startcampaign'])->name('start campaign');
 
 //Route::get('/admin', 'AdminController@index' )->name('admin')->middleware('admin');

@@ -53,7 +53,7 @@ height: 35em;
     </h2>
 
     <div class="row text trio">
-     {{-- @foreach ( $showcards as $show )
+     @foreach ( $showcards as $show )
       <div class="col-lg-3 col-md-6 mb-4">
           <div class="card index-card" style="height: 90vh">
               <img class="card-img-top" src="{{asset('storage/covers/'. $show->cover_img)}}" alt="Img" style="height:40%">
@@ -81,13 +81,13 @@ height: 35em;
                   <p class="card-text px-2 nomargin">
 
                       @if ($show->business_cate)
-                    <small class="text-muted" style="font-size: 1.1em;text-transform:uppercase;">{{ $show->business_cate }}</small>
+                    <small class="text-muted d-inline-block text-truncate" style="font-size: 1.1em;text-transform:uppercase; max-width:600px;">{{ $show->business_cate }}</small>
                     @elseif ($show->project_field)
-                    <small class="text-muted" style="font-size: 1.1em;text-transform:uppercase;">{{ $show->project_field }}</small>
+                    <small class="text-muted" style="font-size: 1.1em;text-transform:uppercase;max-width:300px;">{{ $show->project_field }}</small>
                     @elseif ($show->cause)
-                    <small class="text-muted" style="font-size: 1.1em;text-transform:uppercase;">{{ $show->cause }}</small>
+                    <small class="text-muted d-inline-block text-truncate" style="font-size: 1.1em;text-transform:uppercase;max-width:250px;">{{ $show->cause }}</small>
                     @else
-                   <small class="text-muted" style="font-size: 1.1em;text-transform:uppercase;">HEALTH</small>
+                   <small class="text-muted" style="font-size: 1.1em;text-transform:uppercase;max-width:300px;">HEALTH AND WELLBEING</small>
                     @endif
                   </p>
 
@@ -122,11 +122,11 @@ height: 35em;
 
               </div>
               <div class="card-footer">
-                  <a href="#" class="btn btn" style="background-color: rgb(50, 18, 156); color: white">Find Out More!</a>
+                  <a href="{{ route('home.show', $show->id) }}" class="btn btn" style="background-color: rgb(50, 18, 156); color: white">Find Out More!</a>
               </div>
           </div>
       </div>
-      @endforeach --}}
+      @endforeach
 
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card index-card" style="height: 90vh">

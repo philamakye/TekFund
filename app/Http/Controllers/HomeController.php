@@ -28,9 +28,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // $userId = Auth::id();
-        // $cards['showcards'] = DB::table('campaigns')->whereNotIn($userId, 'us_id')->where('status', 'live')->get();
-        // return view('index')->with($cards);
-        return view('index');
+        $userId = Auth::id();
+        $cards['showcards'] = DB::table('campaigns')->where('status', 'live')->get();
+        return view('index')->with($cards);
+       // return view('index');->whereNotIn($userId, 'us_id')
     }
 }
