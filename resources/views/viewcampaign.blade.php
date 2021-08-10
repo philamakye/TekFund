@@ -138,8 +138,20 @@ follow(){
                 <center>  <button class="btn btn-success" type="submit" onclick="payWithPaystack()"> Pay </button> </center>
                 </div>
               </form>
+               <div id="dom-target"  style="display: none;">
+                    <?php
+                        $output = $camp->id; // Again, do some operation, get the output.
+                       echo $output //  htmlspecialchars($output);
+                    ?>
+                </div>
+               <script>
+               var div = document.getElementById("dom-target");
+                var campaignId = div.textContent;
+                  </script>
               <script src="https://js.paystack.co/v1/inline.js"></script>
+
               <script>
+
                 var paymentForm = document.getElementById('paymentForm');
                 if(paymentForm)
                 paymentForm.addEventListener("submit", payWithPaystack, false);
@@ -155,13 +167,13 @@ follow(){
               ref: 'TF'+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
               // label: "Optional string that replaces customer email"
               onClose: function(){
-                  window.location = "http://127.0.0.1:8000/campaign";
+                //    window.history.go(-1);
                 alert('Transaction cancelled.');
               },
               callback: function(response){
                 let message = 'Payment complete! Reference: ' + response.reference;
                 alert(message);
-                window.location.href = "/verify_transaction?reference="+ response.reference ;
+                window.location.href = "/verify_transaction?reference="+ response.reference + "=" + campaignId;
               }
             });
             handler.openIframe();

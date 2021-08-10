@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\campaign_contribution;
 use App\Models\UserContribution;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Unicodeveloper\Paystack\Paystack;
 use Illuminate\Support\Facades\Redirect;
 use phpDocumentor\Reflection\Location;
@@ -62,9 +64,9 @@ class PaymentController extends Controller
 public function verify(){
 
 $ref = $_GET['reference'];
-
-
-
+$split_ref = explode("=",$ref);
+$campaignId = $split_ref[1];
+$ref = $split_ref[0];
 if ($ref == "") {
     # code...
     header("Location:javascript://history.go(-1)");
@@ -98,20 +100,28 @@ if ($ref == "") {
 
     }
 
-
-
     if ($result->data->status == 'success') {
         # code...
+
         $contribution = new UserContribution();
         $contribution->reference = $result->data->reference;
+        $contribution->campaign_id = $campaignId;
         $contribution->status = $result->data->status;
         $fn = $result->data->customer->first_name;
         $Sn = $result->data->customer->last_name;
         $name=  $fn;
-        $contribution->contributor_name = $name;
+        // if (Auth::check()){
+        //     $contribution->contributor_name = auth()->user()->name;
+        // }
+        // else{
+        //     $contribution->contributor_name = $name;
+        // }
         $contribution->cont_email = $result->data->customer->email;
         $contribution->transaction_phone_num = $result->data->customer->phone;
         $amount = $result->data->amount;
+         if (Auth::check()) {
+            $contribution->user_id = Auth::id();
+         }
         $amount= $amount/100;
         $contribution->	contributed_amount = $amount;
         date_default_timezone_set('Africa/Accra');
@@ -119,17 +129,33 @@ if ($ref == "") {
         $contribution->paidAt = $Date_time;
         $contribution->save();
 
+        if(campaign_contribution::where('campaign_id',$campaignId)->exists()){
+            $t_amount = campaign_contribution::where('campaign_id', $campaignId)->value('total_amount');
+            $updated_amount = $t_amount + $amount;
+            $t_cont = campaign_contribution::where('campaign_id', $campaignId)->value('num_contributors');
+            $t_cont += 1;
+            campaign_contribution::where('campaign_id',$campaignId)->update([
+                'total_amount'=>$updated_amount,
+                'num_contributors'=>$t_cont,
+                'last_contribution'=>$Date_time,
+            ]);
 
-        $campCont = new campaign_contribution();
-        $campCont->total_amount += $amount;
-        $campCont->num_contributors += 1;
-        $campCont->last_contribution = $Date_time;
-        $campCont->save();
+        }
+         else{
+                $campCont = new campaign_contribution();
+                $campCont->total_amount = $amount;
+                $campCont->campaign_id = $campaignId;
+                $campCont->num_contributors = 1;
+                $campCont->last_contribution = $Date_time;
+                $campCont->save();
 
+         }
+
+        // echo 'donre';
          return redirect('/home');
 
     }else{
-        header("Location: http://127.0.0.1:8000/campaign");
+        header("Location: http://127.0.0.1:8000");
     }
 
 

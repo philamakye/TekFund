@@ -35,9 +35,9 @@ Route::get('/', function () {
 });
  Route::resource('home', 'CardsController')->parameters(['home' => 'campaign']);
 
-Route::get('/campaign', function () {
-    return view('viewcampaign');
-});
+// Route::get('/campaign', function () {
+//     return view('viewcampaign');
+// });
 
 
 //Route::get('/tryhealth',[App\Http\Controllers\CampaignController:: class, 'please']);
@@ -52,8 +52,8 @@ Route::get('/startcampaign', [App\Http\Controllers\UserController::class, 'start
 //Route::resource('campaigns', 'CampaignController');
 Route::resource('live', 'LiveController')->parameters(['live' => 'campaign']);
 Route::resource('pendcamp', 'PendingController')->parameters(['pendcamp' => 'campaign']);
+//Route::resource('contributions', 'UserContributionController');
 Route::resource('campaigns', 'CampaignController');
-// ->parameters(['campaigns'=>'campaign']);
 Route::get('/setting',[App\Http\Controllers\UserController::class, 'index'])->name('settings');
 Route::get('/healthcare', 'UserController@health_step1')->name('healthcare');
 Route::get('/analytics', 'AdminController@analytics') ->name('admin_analytics')->middleware('admin');

@@ -95,26 +95,15 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
     <th>Date</th>
     <th>Campaign</th>
     <th>Amount</th>
-    <th>Visibility</th>
   </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-    <td>True</td>
+  @foreach ( $us_cont as $u )
+   <tr>
+    <td>{{ $u->updated_at }}</td>
+    <td style="text-transform:capitalize;">{{ $u->title }}</td>
+    <td>GHS {{ $u->contributed_amount }}</td>
   </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-    <td>Ghana</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-    <td>Ghana</td>
-  </tr>
+
+  @endforeach
 </table>
 <br>
 <br>

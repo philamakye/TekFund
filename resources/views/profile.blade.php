@@ -1,4 +1,8 @@
-
+{{-- <style>
+    body{
+    background: #fbf8f6 !important;
+  }
+</style> --}}
 
 @extends('layouts.app')
 @section('content')

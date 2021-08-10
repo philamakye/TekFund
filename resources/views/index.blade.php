@@ -55,7 +55,7 @@ height: 35em;
     <div class="row text trio">
      @foreach ( $showcards as $show )
       <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card index-card" style="height: 90vh">
+          <div class="card index-card" style="height: 80vh">
               <img class="card-img-top" src="{{asset('storage/covers/'. $show->cover_img)}}" alt="Img" style="height:40%">
               <div class="card-body nopadding mt-2" style="margin-left:0px;">
                 <div class="container nopadding">
@@ -75,8 +75,8 @@ height: 35em;
                 </div>
 
                   <h4 class="card-title px-2 d-inline-block text-truncate" style = "max-width:300px; text-transform:capitalize;">{{$show->title}}</h4>
-                  <p class="card-text px-2 d-inline-block text-truncate">
-                    <small style="font-size:1em; max-width:400px;">See your friends clearly from 2000 meters away</small>
+                  <p class="card-text px-2">
+                    <small class = "d-inline-block text-truncate"style="font-size:1em; max-width:330px;">{{ $show->story }}</small>
                   </p>
                   <p class="card-text px-2 nomargin">
 

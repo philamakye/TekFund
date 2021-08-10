@@ -1,3 +1,8 @@
+{{-- <style>
+    body{
+    background: #fbf8f6 !important;
+  }
+</style> --}}
 @extends('layouts.app')
 @section('content')
 <form action="profile" method="GET" style="display: inline" >
