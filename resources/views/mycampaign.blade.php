@@ -75,9 +75,22 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
             <p class="d-inline-block text-truncate" style="max-width:350px;">{{ $c->story }}</p>
           </div>
           <div class="col-2">
-            <button onclick="document.getElementById('drop-btn-1').style.display='block'; document.getElementById('down-tog-1').style.display='none';document.getElementById('up-tog-1').style.display='inline'"> Actions    <i class="fas fa-chevron-down" id="down-tog-1"></i><i class="fab fa-artstation" style="display: none" id="up-tog-1"></i></button>
+            <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  Actions
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Drop</a></li>
+                  <li><a class="dropdown-item" href="#">Generate Link</a></li>
+
+                </ul>
+              </div>
+
+            {{-- <button onclick="document.getElementById('drop-btn-1').style.display='block'; document.getElementById('link').style.display='block' document.getElementById('down-tog-1').style.display='none';document.getElementById('up-tog-1').style.display='inline'"> Actions    <i class="fas fa-chevron-down" id="down-tog-1"></i><i class="fab fa-artstation" style="display: none" id="up-tog-1"></i></button>
             <button style="display: none; padding-left:22px; padding-right:22px;" id="drop-btn-1"> Drop</button>
-          </div>
+            <button style="display: none;" id="link"> Generate Link <i class="fas fa-link"></i> </button> --}}
+        </div>
         </div>
 </div>
 @endforeach
