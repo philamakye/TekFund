@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Campaign;
 use App\Models\campaign_contribution;
 use App\Models\UserContribution;
 use Illuminate\Support\Facades\DB;
@@ -129,21 +130,26 @@ if ($ref == "") {
         $contribution->paidAt = $Date_time;
         $contribution->save();
 
+        $target = Campaign::where('id',$campaignId)->value('target');
         if(campaign_contribution::where('campaign_id',$campaignId)->exists()){
             $t_amount = campaign_contribution::where('campaign_id', $campaignId)->value('total_amount');
             $updated_amount = $t_amount + $amount;
+            $percent = round(($updated_amount/$target)*100);
             $t_cont = campaign_contribution::where('campaign_id', $campaignId)->value('num_contributors');
             $t_cont += 1;
             campaign_contribution::where('campaign_id',$campaignId)->update([
                 'total_amount'=>$updated_amount,
                 'num_contributors'=>$t_cont,
                 'last_contribution'=>$Date_time,
+                'percent' => $percent,
             ]);
 
         }
          else{
+                $percent = round(($amount/$target)*100);
                 $campCont = new campaign_contribution();
                 $campCont->total_amount = $amount;
+                $campCont->percent = $percent;
                 $campCont->campaign_id = $campaignId;
                 $campCont->num_contributors = 1;
                 $campCont->last_contribution = $Date_time;

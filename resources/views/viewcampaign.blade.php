@@ -64,13 +64,13 @@
     </div>
   </div>
 
-  <a>GHC 24,000</a>
-  <a style="float: right">2,500 backers</a>
+  <a>GHC {{$amount}}</a>
+  <a style="float: right">{{$backers}} backers</a>
   <div class="progress">
-    <div class="progress-bar bg-info" role="progressbar" style="width: 90%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="progress-bar bg-info" role="progressbar" style="width: {{$perc}}%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
   </div>
-  <a>90% of GHC {{ $camp->target }}</a>
-  <a style="float: right">31 days left</a>
+  <a>{{$perc}}% of GHC {{ $camp->target }}</a>
+  <a style="float: right">{{ \Carbon\Carbon::parse($camp->updated_at)->addDays($camp->duration)->diffInDays() }} days left</a>
 
 
   <div class="container mt-3 ">

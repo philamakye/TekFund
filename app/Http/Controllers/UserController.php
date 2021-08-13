@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Campaign;
 use Illuminate\Support\Facades\DB;
-
+use App\Models\User\uploadAvatar;
 
 class UserController extends Controller
 {
