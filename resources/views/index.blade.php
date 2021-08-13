@@ -19,6 +19,9 @@ height: 35em;
   transition: .3s;
 
 }
+/* body{
+    background: #fbf8f6 !important;
+  } */
 </style>
 @extends('layouts.app')
 
@@ -94,13 +97,13 @@ height: 35em;
                   <div class="container nopadding">
                     <div class="row ">
                       <div class="col ">
-                          @if (empty($show->total_amount))
+                          @if (!empty($show->total_amount))
                            <p class="lead pl-2 nomargin " style="font-size: 1em " >
-                         0 GHS raised
+                         {{ $show->total_amount }} GHS raised
                         </p>
                           @else
                          <p class="lead pl-2 nomargin " style="font-size: 1em " >
-                         {{ $show->total_amount }} GHS raised
+                         0 GHS raised
                         </p>
                           @endif
 
@@ -119,7 +122,11 @@ height: 35em;
                     </div>
                     <div class="row mx-2" >
                       <div class="progress nopadding" style="height: 10px;">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: {{ $show->percent }}%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        @if (!empty($show->percent))
+                         <div class="progress-bar bg-success" role="progressbar" style="width: {{ $show->percent }}%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        @else
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        @endif
                       </div>
                     </div>
                     <div class="row px-3 pt-2 pb-0">

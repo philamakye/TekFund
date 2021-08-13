@@ -8,8 +8,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
-use Illuminate\Support\Carbon;
-// use Carbon\Carbon;
 
 
 class CardsController extends Controller
@@ -19,11 +17,11 @@ class CardsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // public function __construct()
-    // {
+    public function __construct()
+    {
 
-    //     $this->middleware('auth');
-    // }
+        $this->middleware('auth');
+    }
 
     public function index()
     {
@@ -61,7 +59,6 @@ class CardsController extends Controller
      */
     public function show(Campaign $campaign)
     {
-        $date =
         $get_percent = DB::table('campaign_contributions')->where('campaign_id',$campaign->id)->value('percent');
         $get_total_amount = campaign_contribution::where('campaign_id',$campaign->id)->value('total_amount');
         $get_backers = campaign_contribution::where('campaign_id',$campaign->id)->value('num_contributors');
