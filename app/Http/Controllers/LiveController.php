@@ -59,7 +59,8 @@ class LiveController extends Controller
      */
     public function edit(Campaign $campaign)
     {
-        echo $campaign->full_name;
+        // echo $campaign->full_name;
+        return view('admins.admin_details');
 
     }
 

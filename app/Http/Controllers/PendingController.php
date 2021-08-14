@@ -50,6 +50,7 @@ class PendingController extends Controller
     public function show(Campaign $campaign)
     {
         echo $campaign->title;
+        return view('admins.admin_details');
     }
 
     /**
