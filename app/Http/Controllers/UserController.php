@@ -67,9 +67,9 @@ class UserController extends Controller
         $basic_rule = ([
             'first_name' => 'nullable|string|max: 50',
             'last_name' => 'nullable|string|max:50',
-            'school_id' => 'nullable|digits:8|unique:users',
-            'city' => 'nullable|string',
-            'country' => 'nullable|string'
+            'school_id' => 'required|digits:8|unique:users',
+            'city' => 'required|string',
+            'country' => 'required|string'
         ]);
 
         $messages = ([
@@ -78,7 +78,8 @@ class UserController extends Controller
         ]);
         $this->validate($request,$basic_rule, $messages);
             // fill validated data
-        $info->fill([
+       // $info->fill
+        $info->update([
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
             'school_id' => $request->school_id,
@@ -88,7 +89,7 @@ class UserController extends Controller
 
         //save filled model
 
-            $info->save();
+          //  $info->save();
             return redirect()->back()->with('success', 'Basic Info Updated!!');
 
     }
@@ -110,12 +111,12 @@ class UserController extends Controller
 
         $this->validate($request, $rules, $customMessages);
 
-        $story->fill([
+        $story->update([
             'shrt_desc' =>$request->shrt_desc,
             'about_me' =>$request->about_me,
         ]);
 
-        $story->save();
+       // $story->save();
 
         return redirect()->back()->with('status', 'Update success!!');
 

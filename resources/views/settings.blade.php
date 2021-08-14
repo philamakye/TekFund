@@ -28,9 +28,9 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 
 <h2 style="margin-left:30px; font-family: cooper; margin-top:10px; font-size: 25px; text-transform: uppercase;">{{ Auth::user()->name}}</h2>
 @if (Auth::user()->city)
-    <h6 style="margin-left: 40px; color: grey; text-transform:capitalize"><i class="fa fa-map-marker" aria-hidden="true"></i>  {{Auth::user()->city}}, Ghana</h6>
-    @elseif (empty(Auth::user()->city))
-<h6 style="margin-left: 40px; color: grey;"><i class="fa fa-map-marker" aria-hidden="true"></i>  Ghana</h6>
+    <h6 style="margin-left: 40px; color: grey; text-transform:capitalize"><i class="fa fa-map-marker" aria-hidden="true"></i>  {{Auth::user()->city}}, {{Auth::user()->country}}</h6>
+    @elseif (Auth::user()->country)
+<h6 style="margin-left: 40px; color: grey;"><i class="fa fa-map-marker" aria-hidden="true"></i>{{Auth::user()->city}}, {{Auth::user()->country}}</h6>
 @endif
 <!-- Tabs navs -->
 <ul class="nav nav-tabs mb-3" id="ex1" role="tablist">

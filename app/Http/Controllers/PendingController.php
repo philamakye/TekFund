@@ -14,6 +14,13 @@ class PendingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+     public function __construct()
+    {
+
+        $this->middleware('auth');
+    }
     public function index()
     {
         $pending['pend'] = DB::table('campaigns')->where('status', 'pending')->get();
