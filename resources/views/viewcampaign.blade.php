@@ -26,14 +26,14 @@
         <iframe  src="https://www.youtube.com/embed/{{$fin}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
 {{-- https://www.youtube.com/watch?v=Miwv0EifRYM --}}
-          <center>
+          {{-- <center>
               <a href=""><img src="images/north_shore_sunset_beach6869.jpg" style="height:4em" class="img-fluid pl-1" alt="..."></a>
               <a href=""><img src="images/north_shore_sunset_beach6869.jpg" style="height:4em" class="img-fluid pl-1" alt="..."></a>
               <a href=""><img src="images/north_shore_sunset_beach6869.jpg" style="height:4em" class="img-fluid pl-1" alt="..."></a>
               <a href=""><img src="images/north_shore_sunset_beach6869.jpg" style="height:4em" class="img-fluid pl-1" alt="..."></a>
               <a href=""><img src="images/north_shore_sunset_beach6869.jpg" style="height:4em" class="img-fluid pl-1" alt="..."></a>
               <a href=""><img src="images/north_shore_sunset_beach6869.jpg" style="height:4em" class="img-fluid pl-1" alt="..."></a>
-          </center>
+          </center> --}}
 
     </div>
 
@@ -48,10 +48,7 @@
     <h3 class="d-inline-block text-truncate" style="max-width:200px; text-transform:capitalize;" >{{ $camp->cause}}</h3>
     @else
     <h3>Health And Wellbeing</h3>
-
   @endif
-  {{-- <h4> Created by {{ $camp->full_name }}</h4> --}}
-
   <div class="container pt-3 pb-3">
     <div class="row">
       <div class="col-2">
@@ -63,14 +60,25 @@
       </div>
     </div>
   </div>
-
-  <a>GHC 24,000</a>
-  <a style="float: right">2,500 backers</a>
+  @if ($amount)
+  <a>GHC {{$amount}}</a>
+  @else
+  <a>GHC 0</a>
+  @endif
+  @if ($backers)
+  <a style="float: right">{{$backers}} backers</a>
+  @else
+  <a style="float: right">0 backers</a>
+  @endif
   <div class="progress">
-    <div class="progress-bar bg-info" role="progressbar" style="width: 90%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="progress-bar bg-info" role="progressbar" style="width: {{$perc}}%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
   </div>
-  <a>90% of GHC {{ $camp->target }}</a>
-  <a style="float: right">31 days left</a>
+  @if ($perc)
+  <a>{{$perc}}% of GHC {{ $camp->target }}</a>
+  @else
+  <a>0% of GHC {{ $camp->target }}</a>
+  @endif
+  <a style="float: right">{{ \Carbon\Carbon::parse($camp->updated_at)->addDays($camp->duration)->diffInDays() }} days left</a>
 
 
   <div class="container mt-3 ">

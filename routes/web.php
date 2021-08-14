@@ -30,8 +30,9 @@ use PHPUnit\TextUI\XmlConfiguration\IniSetting;
 // });
 
 Route::get('/', function () {
-    $cards['showcards'] = DB::table('campaigns')->where('status', 'live')->get();
+    $cards['showcards'] = DB::table('campaign_contributions')->rightJoin('campaigns', 'campaign_contributions.campaign_id', '=', 'campaigns.id')->where('status', 'live')->get();
     return view('index')->with($cards);
+
 });
  Route::resource('home', 'CardsController')->parameters(['home' => 'campaign']);
 

@@ -10,6 +10,7 @@ class Campaign extends Model
     use HasFactory;
 
     protected $guarded  = [];
-   // protected $primary_key = 'campaign_id';
+    // protected $primary_key = 'campaign_id';
+    protected $dates = ['created_at', 'updated_at'];
 
 }
