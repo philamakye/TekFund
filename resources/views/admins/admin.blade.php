@@ -1,3 +1,7 @@
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/css/jQuery-plugin-progressbar.css">
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="/js/jQuery-plugin-progressbar.js"></script>
 <script>
 const numb = document.querySelector(".numb");
             let counter = 0;
@@ -12,139 +16,30 @@ const numb = document.querySelector(".numb");
 </script>
 
 <style>
-main{
-    padding: 0 !important;
-    margin: 0 !important;
-}
+    main{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
 
-.navbar input{
-    display: none !important;
-}
+    .navbar input{
+        display: none !important;
+    }
 
-.navbar-toggler{
-    display: none !important;
-}
-.sideColor {
-    background-color:rgb(8,4,32) !important;
-}
+    .navbar-toggler{
+        display: none !important;
+    }
+    .sideColor {
+        background-color:rgb(8,4,32) !important;
+    }
 
-
-/* progress bar*/
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-.circular{
-  height: 100px;
-  width: 100px;
-  position: relative;
-}
-.circular .inner, .circular .outer, .circular .circle{
-  position: absolute;
-  z-index: 6;
-  height: 100%;
-  width: 100%;
-  border-radius: 100%;
-  box-shadow: inset 0 1px 0 rgba(0,0,0,0.2);
-}
-.circular .inner{
-  top: 50%;
-  left: 50%;
-  height: 80px;
-  width: 80px;
-  margin: -40px 0 0 -40px;
-  /*background-color: #dde6f0; */
-  background-color: #fff;
-  border-radius: 100%;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.2);
-}
-.circular .circle{
-  z-index: 1;
-  box-shadow: none;
-}
-.circular .numb{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  font-size: 18px;
-  font-weight: 500;
-  color: #4158d0;
-}
-.circular .bar{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background:rgb(8,4,100);
-  -webkit-border-radius: 100%;
-  border-radius: 100%;
-  clip: rect(0px, 100px, 100px, 50px);
-}
-.circle .bar .progress{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  -webkit-border-radius: 100%;
-        border-radius: 100%;
-  clip: rect(0px, 50px, 100px, 0px);
-}
-.circle .bar .progress, .dot span{
-  background: rgb(56,216,208);
-}
-.circle .left .progress{
-  z-index: 1;
-  animation: left 4s linear both;
-}
-@keyframes left {
-  100%{
-    transform: rotate(180deg);
-  }
-}
-.circle .right{
-  z-index: 3;
-  transform: rotate(180deg);
-}
-.circle .right .progress{
-  animation: right 4s linear both;
-  animation-delay: 4s;
-}
-@keyframes right {
-  100%{
-    transform: rotate(180deg);
-  }
-}
-.circle .dot{
-  z-index: 2;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 50%;
-  height: 10px;
-  margin-top: -5px;
-  animation: dot 8s linear both;
-  transform-origin: 0% 50%;
-}
-.circle .dot span {
-  position: absolute;
-  right: 0;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-}
-@keyframes dot{
-  0% {
-    transform: rotate(-90deg);
-  }
-  50% {
-    transform: rotate(90deg);
-    z-index: 4;
-  }
-  100% {
-    transform: rotate(270deg);
-    z-index: 4;
-  }
-}
+    /* progress bar*/
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
 
-</style>
+
+
+    </style>
+
 
 
 @extends('layouts.adminlay')
@@ -194,41 +89,22 @@ main{
                             <div class="row align-items-start">
                                 <div class="col">
                                 <h3 style="text-transform: capitalize;">{{ $liv->title }}</h3>
-                                <div class="circular">
-                                    <div class="inner"></div>
-                                    <div class="outer"></div>
-                                    <div class="numb">
-                                    75%
-                                    </div>
-                                    <div class="circle">
-                                    <div class="dot">
-                                        <span></span>
-                                    </div>
-                                    <div class="bar left">
-                                        <div class="progress"></div>
-                                    </div>
-                                    <div class="bar right">
-                                        <div class="progress"></div>
-                                    </div>
-                                    </div>
+                                <div class="progress-bar position"  data-percent="75" data-color="#aadcf5,#12b321"></div>
                                 </div>
-
-
-                                </div>
-                                <div class="col">
+                                <div class="col mt-2 pt-5">
                                 <p>Campaign Starter</p>
                                 <p>Starting date</p>
                                 <p>Ending Date</p>
                                 <p>Target Amount</p>
                                 </div>
-                                <div class="col">
+                                <div class="col mt-2 pt-5">
                                 <p style="text-transform:capitalize;">{{ $liv->full_name }}</p>
                                 <p>21 May 2021</p>
                                 <p>21 May 2021</p>
                                 <p>GHC {{ $liv->target }}</p>
                                 </div>
 
-                                <div class="col">
+                                <div class="col mt-5 pt-5">
                                 <form action="{{ route('live.edit', $liv->id) }}" method="get" style="display: inline;">
                                   <button type="submit"  class="btn btn-outline-primary">DETAILS</button>
                                   </form>
@@ -247,39 +123,21 @@ main{
                         <div class="row align-items-start">
                                 <div class="col">
                                 <h3>Smart Crops</h3>
-                                <div class="circular">
-                                    <div class="inner"></div>
-                                    <div class="outer"></div>
-                                    <div class="numb">
-                                    75%
-                                    </div>
-                                    <div class="circle">
-                                    <div class="dot">
-                                        <span></span>
-                                    </div>
-                                    <div class="bar left">
-                                        <div class="progress"></div>
-                                    </div>
-                                    <div class="bar right">
-                                        <div class="progress"></div>
-                                    </div>
-                                    </div>
+                                <div class="progress-bar position"  data-percent="75" data-color="#aadcf5,#12b321"></div>
                                 </div>
-
-                                </div>
-                                <div class="col">
+                                <div class="col mt-2 pt-5">
                                   <p>Campaign Starter</p>
                                   <p>Starting date</p>
                                   <p>Ending Date</p>
                                   <p>Target Amount</p>
                                 </div>
-                                <div class="col">
+                                <div class="col mt-2 pt-5">
                                   <p>Jehu Stevenson</p>
                                   <p>21 May 2021</p>
                                   <p>21 May 2021</p>
                                   <p>GHC 25,000</p>
                                 </div>
-                                <div class="col">
+                                <div class="col mt-5 pt-5">
                                   <button type="button" class="btn btn-outline-primary">DETAILS</button>
                                 </div>
                             </div>
@@ -290,39 +148,21 @@ main{
                         <div class="row align-items-start">
                                 <div class="col">
                                 <h3>Smart Crops</h3>
-                                <div class="circular">
-                                    <div class="inner"></div>
-                                    <div class="outer"></div>
-                                    <div class="numb">
-                                    75%
-                                    </div>
-                                    <div class="circle">
-                                    <div class="dot">
-                                        <span></span>
-                                    </div>
-                                    <div class="bar left">
-                                        <div class="progress"></div>
-                                    </div>
-                                    <div class="bar right">
-                                        <div class="progress"></div>
-                                    </div>
-                                    </div>
+                                <div class="progress-bar position"  data-percent="75" data-color="#aadcf5,#12b321"></div>
                                 </div>
-
-                                </div>
-                                <div class="col">
+                                <div class="col mt-2 pt-5">
                                 <p>Campaign Starter</p>
                                 <p>Starting date</p>
                                 <p>Ending Date</p>
                                 <p>Target Amount</p>
                                 </div>
-                                <div class="col">
+                                <div class="col mt-2 pt-5">
                                 <p>Jehu Stevenson</p>
                                 <p>21 May 2021</p>
                                 <p>21 May 2021</p>
                                 <p>GHC 25,000</p>
                                 </div>
-                                <div class="col">
+                                <div class="col mt-5 pt-5">
                                   <button type="button" class="btn btn-outline-primary">DETAILS</button>
                                 </div>
                             </div>
@@ -334,7 +174,12 @@ main{
         </div>
 
 
-
+        <script>
+            $(".progress-bar").loading();
+            $('input').on('click', function () {
+                 $(".progress-bar").loading();
+            });
+        </script>
 
 
 @endsection
