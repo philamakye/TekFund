@@ -37,6 +37,7 @@ body{
 .reg-ft{
     display: none !important;
 }
+
 </style>
 @extends('layouts.app')
 
