@@ -40,7 +40,7 @@
             <div class="container-fluid" >
               <img src="images/icon.gif" class="img-fluid mr-2" style="height: 2.1em; border-radius:20px" alt="...">
                 <a class="navbar-brand" style="color: rgb(8, 4,32)" href="{{url('/') }}">
-                    {{ config('app.name', 'TekFund') }}
+                    {{ config('app.name', 'ｔ𝓔ķ𐍆ᵘ𝓝∂') }}
                 </a>
                 {{-- <a href="" class="navbar-brand pl-2 about-css" style="color: rgb(8, 4,32) !important; font-size:1em">
                   About Us

@@ -16,6 +16,28 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #301783;
+  color: white;
+}
 </style>
 
 @extends('layouts.app')
@@ -92,7 +114,7 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 <h5 style ="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; float: right;margin-right: 100px; display: inline;">Visibility</h5> --}}
 {{-- <hr style="margin: 10px;"> --}}
 <br>
-<table>
+<table id="customers">
   <tr>
     <th>Date</th>
     <th>Campaign</th>
