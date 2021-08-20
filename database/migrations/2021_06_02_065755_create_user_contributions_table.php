@@ -16,10 +16,10 @@ class CreateUserContributionsTable extends Migration
         Schema::create('user_contributions', function (Blueprint $table) {
             $table->id();
            // $table->integer('campaign_id');
-           $table->bigInteger('campaign_id')->nullable();
-            $table->foreign('campaign_id')->references('id')->on('campaigns')->onDelete('cascade');
+            $table->bigInteger('campaign_id')->nullable();
+           // $table->foreign('campaign_id')->references('id')->on('campaigns')->onDelete('cascade');
             $table->bigInteger('user_id')->nullable();
-            $table->foreign('user_id')->references('user_id')->on('users');
+           // $table->foreign('user_id')->references('user_id')->on('users');
             $table->string('status')->nullable();
             $table->string('reference')->nullable();
             $table->string('contributor_name')->nullable();

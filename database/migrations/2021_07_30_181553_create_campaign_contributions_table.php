@@ -17,7 +17,7 @@ class CreateCampaignContributionsTable extends Migration
             $table->id();
            // $table->integer('campaign_id');
             $table->bigInteger('campaign_id')->nullable();
-            $table->foreign('campaign_id')->references('id')->on('campaigns')->onDelete('cascade');
+          //  $table->foreign('campaign_id')->references('id')->on('campaigns')->onDelete('cascade');
             $table->unsignedFloat('total_amount');
             $table->unsignedFloat('percent');
             $table->integer('num_contributors');
