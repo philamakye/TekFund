@@ -54,7 +54,7 @@ const numb = document.querySelector(".numb");
                     <a class="list-group-item list-group-item-action sideColor p-3" href="{{route('pendcamp.index')}}" style="color: white;">Pending</a>
                     <a class="list-group-item list-group-item-action sideColor  p-3" href="#!"style="color: white;">Suspended</a>
                     <a class="list-group-item list-group-item-action sideColor p-3 text-center" href="#!" style="color: rgb(56,216,208);">Users</a>
-                    <a class="list-group-item list-group-item-action sideColor p-3" href="#!" style="color: white;">Signed up</a>
+                    <a class="list-group-item list-group-item-action sideColor p-3" href="{{route('admin') }}" style="color: white;">Signed up</a>
                     <a class="list-group-item list-group-item-action sideColor p-3" href="#!" style="color: white;">Anonymous Contributors</a>
                     <a class="list-group-item list-group-item-action sideColor p-3 text-center" href="#!" style="color: rgb(56,216,208);">Actions</a>
                     <a class="list-group-item list-group-item-action sideColor p-3 text-center" href="#!" style="color: rgb(56,216,208);">Logout</a>
@@ -82,14 +82,18 @@ const numb = document.querySelector(".numb");
                 <!-- Page content-->
                 <div class="container-fluid bg-light">
                     <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-
+                @if (!empty($campaigns))
                  @foreach ($campaigns as $liv)
                     <div class="card my-4 mx-3">
                         <div class="card-body">
                             <div class="row align-items-start">
                                 <div class="col">
                                 <h3 style="text-transform: capitalize;">{{ $liv->title }}</h3>
-                                <div class="progress-bar position"  data-percent="75" data-color="#aadcf5,#12b321"></div>
+                                @if (!empty($liv->percent))
+                                <div class="progress-bar position"  data-percent="{{ $liv->percent }}" data-color="#aadcf5,#12b321"></div>
+                                @elseif(empty($liv->percent))
+                                <div class="progress-bar position"  data-percent="00" data-color="#aadcf5,#12b321"></div>
+                                @endif
                                 </div>
                                 <div class="col mt-2 pt-5">
                                 <p>Campaign Starter</p>
@@ -99,8 +103,8 @@ const numb = document.querySelector(".numb");
                                 </div>
                                 <div class="col mt-2 pt-5">
                                 <p style="text-transform:capitalize;">{{ $liv->full_name }}</p>
-                                <p>21 May 2021</p>
-                                <p>21 May 2021</p>
+                                <p>{{ \Carbon\Carbon::parse($liv->updated_at)->format('d M Y')}}</p>
+                                <p>{{ \Carbon\Carbon::parse($liv->updated_at)->addDays($liv->duration)->format('d M Y')}}</p>
                                 <p>GHC {{ $liv->target }}</p>
                                 </div>
 
@@ -110,65 +114,13 @@ const numb = document.querySelector(".numb");
                                   </form>
                                 </div>
 
-
-
-
                             </div>
                         </div>
                     </div>
-
                  @endforeach
-                    <div class="card my-4 mx-3">
-                        <div class="card-body">
-                        <div class="row align-items-start">
-                                <div class="col">
-                                <h3>Smart Crops</h3>
-                                <div class="progress-bar position"  data-percent="75" data-color="#aadcf5,#12b321"></div>
-                                </div>
-                                <div class="col mt-2 pt-5">
-                                  <p>Campaign Starter</p>
-                                  <p>Starting date</p>
-                                  <p>Ending Date</p>
-                                  <p>Target Amount</p>
-                                </div>
-                                <div class="col mt-2 pt-5">
-                                  <p>Jehu Stevenson</p>
-                                  <p>21 May 2021</p>
-                                  <p>21 May 2021</p>
-                                  <p>GHC 25,000</p>
-                                </div>
-                                <div class="col mt-5 pt-5">
-                                  <button type="button" class="btn btn-outline-primary">DETAILS</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card my-4 mx-3">
-                        <div class="card-body">
-                        <div class="row align-items-start">
-                                <div class="col">
-                                <h3>Smart Crops</h3>
-                                <div class="progress-bar position"  data-percent="75" data-color="#aadcf5,#12b321"></div>
-                                </div>
-                                <div class="col mt-2 pt-5">
-                                <p>Campaign Starter</p>
-                                <p>Starting date</p>
-                                <p>Ending Date</p>
-                                <p>Target Amount</p>
-                                </div>
-                                <div class="col mt-2 pt-5">
-                                <p>Jehu Stevenson</p>
-                                <p>21 May 2021</p>
-                                <p>21 May 2021</p>
-                                <p>GHC 25,000</p>
-                                </div>
-                                <div class="col mt-5 pt-5">
-                                  <button type="button" class="btn btn-outline-primary">DETAILS</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                 @else
+                <h3 style="margin-left:300px">There are no on-going campaigns!</h3>
+                 @endif
                 </div>
             </div>
         </div>

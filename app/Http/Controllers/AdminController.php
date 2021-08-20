@@ -15,8 +15,8 @@ class AdminController extends Controller
     }
 
     public function index(){
-        $live['campaigns'] = DB::table('campaigns')->where('status', 'live')->get();
-        return view('admins.admin')->with($live);
+        $user['users'] = DB::table('users')->where('role', '1')->select('name','email','username','school_id','campaign_num','contribution_num')->get();
+        return view('admins.users')->with($user);
     }
 
     public function pendingCamp(){

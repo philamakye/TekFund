@@ -35,7 +35,28 @@ main{
 /* progress bar*/
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #301783;
+  color: white;
+}
 
 
 </style>
@@ -50,10 +71,10 @@ main{
                 <div class="list-group list-group-flush" style="width: 210px; font-size: 15px; background-color:rgb(8,4,32);">
                     <a class="list-group-item list-group-item-action sideColor  p-3 text-center" href="#!" style="color: rgb(56,216,208);">Campaigns</a>
                     <a class="list-group-item list-group-item-action sideColor p-3" href="{{route('live.index')}}" style="color: white;">Live</a>
-                    <a class="list-group-item list-group-item-action sideColor p-3" href="#!" style="color: white;">Pending</a>
+                    <a class="list-group-item list-group-item-action sideColor p-3" href="{{route('pendcamp.index')}}" style="color: white;">Pending</a>
                     <a class="list-group-item list-group-item-action sideColor  p-3" href="#!"style="color: white;">Suspended</a>
                     <a class="list-group-item list-group-item-action sideColor p-3 text-center" href="#!" style="color: rgb(56,216,208);">Users</a>
-                    <a class="list-group-item list-group-item-action sideColor p-3" href="{{route('admin') }}" style="color: white;">Signed up</a>
+                    <a class="list-group-item list-group-item-action sideColor p-3" href="#!" style="color: white;">Signed up</a>
                     <a class="list-group-item list-group-item-action sideColor p-3" href="#!" style="color: white;">Anonymous Contributors</a>
                     <a class="list-group-item list-group-item-action sideColor p-3 text-center" href="#!" style="color: rgb(56,216,208);">Actions</a>
                     <a class="list-group-item list-group-item-action sideColor p-3 text-center" href="#!" style="color: rgb(56,216,208);">Logout</a>
@@ -81,57 +102,29 @@ main{
                 <!-- Page content-->
                 <div class="container-fluid bg-light">
                     <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-                @include('layouts.flash')
-                @if (!empty($pending))
-                 @foreach ($pend as $p)
-                    <div class="card my-4 mx-3">
-                        <div class="card-body">
-                            <div class="row align-items-start">
-                                <div class="col">
-                                <h3 style="text-transform: capitalize;">{{ $p->title }}</h3>
-                                <div class="progress-bar position"  data-percent="00" data-color="#aadcf5,#12b321"></div>
-                                </div>
-                                <div class="col mt-2 pt-5">
-                                <p>Campaign Starter</p>
-                                <p>Starting date</p>
-                                <p>Ending Date</p>
-                                <p>Target Amount</p>
-                                </div>
-                                <div class="colmt-2 pt-5">
-                                <p style="text-transform: capitalize;">{{ $p->full_name }}</p>
-                                <p>Not started</p>
-                                <p>N/A</p>
-                                <p>GHC {{ $p->target }}</p>
-                                </div>
+               <table id="customers">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Username</th>
+                        <th>School_id</th>
+                        <th>Num of Capaigns</th>
+                        <th>Num of Contributions</th>
+                    </tr>
+                    @foreach ( $users as $u )
+                    <tr>
+                        <td>{{ $u->name }}</td>
+                        <td style="text-transform:uppercase;">{{ $u->email }}</td>
+                        <td>{{ $u->username }}</td>
+                        <td>{{ $u->school_id }}</td>
+                        <td>{{ $u->campaign_num }}</td>
+                        <td>{{ $u->contribution_num }}</td>
+                    </tr>
 
-                                <div class="col mt-5 pt-5">
-                                <form action="{{route('pendcamp.show',$p->id)}}" method="get" style="display: inline;">
-                                  <button type="submit"  class="btn btn-outline-primary">DETAILS</button>
-                                  </form>
-                                </div>
-
-
-
-
-                            </div>
-                        </div>
-                    </div>
-
-                 @endforeach
-                 @else
-                 <h3 style="margin-left:300px">There are no pending campaigns!</h3>
-                 @endif
+                    @endforeach
+                 </table>
                 </div>
             </div>
         </div>
-
-
-        <script>
-            $(".progress-bar").loading();
-            $('input').on('click', function () {
-                 $(".progress-bar").loading();
-            });
-        </script>
-
 
 @endsection

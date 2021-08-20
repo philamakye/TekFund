@@ -47,7 +47,7 @@ Auth::routes();
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/startcampaign', [App\Http\Controllers\UserController::class, 'startcampaign'])->name('start campaign');
 
-//Route::get('/admin', 'AdminController@index' )->name('admin')->middleware('admin');
+Route::get('/admin', 'AdminController@index' )->name('admin')->middleware('admin');
 //Route::get('/admin/pending', 'AdminController@pendingCamp')->name('pending campaigns');
 //Route::get('/analytics', 'AdminController@analytics')->name('admin_analytics');
 //Route::resource('campaigns', 'CampaignController');

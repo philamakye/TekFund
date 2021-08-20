@@ -55,7 +55,7 @@
         <img src="{{asset('storage/covers/'. $camp->cover_img)}}" style="height:4em" class="img-fluid" alt="...">
       </div>
       <div class="col">
-       <h4><b>{{ $camp->full_name }}<b></h4>
+       <h4><b>{{ Auth::user()->name }}<b></h4>
         <h4> {{$elem->campaign_num }} Campaign | {{ $elem->city }}, {{$elem->country}}</h4>
       </div>
     </div>

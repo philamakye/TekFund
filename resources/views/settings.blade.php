@@ -91,7 +91,7 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 <hr style="margin: 10px;">
   <div class="card-body">
 
-    <h5 class="card-title">heyitzwest@gmal.com         <a href="{{route('Email')}}" style="margin-left: 100px; color: red;"></a>
+    <h5 class="card-title">{{Auth::user()->email  }}      <a href="{{route('Email')}}" style="margin-left: 100px; color: red;"></a>
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Edit
 </button><div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

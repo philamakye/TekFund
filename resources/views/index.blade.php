@@ -136,7 +136,6 @@ height: 35em;
                         <i class="far fa-clock"></i><small class="text-muted pl-2" >{{ \Carbon\Carbon::parse($show->updated_at)->addDays($show->duration)->diffInDays() }} days left</small>
                       </p>
 
-
                     </div>
 
                   </div>

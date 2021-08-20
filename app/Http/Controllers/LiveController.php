@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Campaign;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class LiveController extends Controller
 {
@@ -20,9 +21,13 @@ class LiveController extends Controller
 
         $this->middleware('auth');
     }
+    public function getCreatedAtAttribute($timestamp)
+    {
+        return Carbon::parse($timestamp)->format('M d, Y');
+    }
     public function index()
     {
-        $live['campaigns'] = DB::table('campaigns')->where('status', 'live')->get();
+        $live['campaigns'] = DB::table('campaign_contributions')->rightJoin('campaigns', 'campaign_contributions.campaign_id', '=', 'campaigns.id')->where('status', 'live')->get();
         return view('admins.admin')->with($live);
     }
 
