@@ -35,7 +35,7 @@
 
 <body style="background-color:white; ">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg shadow-sm" style="background-color:white">
+        <nav class="navbar navbar-expand-md navbar-light bg shadow-sm" style="background-color:white;">
             <div class="container-fluid" >
               <img src="images/icon.gif" class="img-fluid mr-2" style="height: 2.1em; border-radius:20px" alt="...">
                 <a class="navbar-brand" style="color: rgb(8,4,32)" href="#">
