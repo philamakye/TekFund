@@ -118,7 +118,7 @@ const numb = document.querySelector(".numb");
                         </div>
                     </div>
                  @endforeach
-                 @else
+                 @elseif (empty($campaigns))
                 <h3 style="margin-left:300px">There are no on-going campaigns!</h3>
                  @endif
                 </div>

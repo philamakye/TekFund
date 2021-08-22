@@ -81,8 +81,7 @@ main{
                 <!-- Page content-->
                 <div class="container-fluid bg-light">
                     <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-                @include('layouts.flash')
-                @if (!empty($pending))
+
                  @foreach ($pend as $p)
                     <div class="card my-4 mx-3">
                         <div class="card-body">
@@ -97,7 +96,7 @@ main{
                                 <p>Ending Date</p>
                                 <p>Target Amount</p>
                                 </div>
-                                <div class="colmt-2 pt-5">
+                                <div class="col mt-2 pt-5">
                                 <p style="text-transform: capitalize;">{{ $p->full_name }}</p>
                                 <p>Not started</p>
                                 <p>N/A</p>
@@ -110,17 +109,11 @@ main{
                                   </form>
                                 </div>
 
-
-
-
                             </div>
                         </div>
                     </div>
-
                  @endforeach
-                 @else
-                 <h3 style="margin-left:300px">There are no pending campaigns!</h3>
-                 @endif
+
                 </div>
             </div>
         </div>

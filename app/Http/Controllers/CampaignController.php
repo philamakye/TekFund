@@ -74,7 +74,7 @@ class CampaignController extends Controller
     public function edit(Campaign $campaign)
     {
        // $spec['particular'] = DB::table('campaigns')->
-        return view('viewcampaign')->with($campaign);
+        // return view('viewcampaign')->with($campaign);
     }
 
     /**
@@ -86,7 +86,7 @@ class CampaignController extends Controller
      */
     public function update(Request $request, Campaign $campaign)
     {
-        //
+      //
     }
 
     /**
@@ -97,6 +97,9 @@ class CampaignController extends Controller
      */
     public function destroy(Campaign $campaign)
     {
-        //
+        // $grabcamp = campaign::find($campaign->id);
+        // $campaign->delete();
+        dd($campaign->id);
+        //return redirect()->route('campaigns.index')->with('message','Campaign successfully deleted');
     }
 }

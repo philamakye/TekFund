@@ -108,7 +108,7 @@ main{
                         <th>Email</th>
                         <th>Username</th>
                         <th>School_id</th>
-                        <th>Num of Capaigns</th>
+                        <th>Num of Campaigns</th>
                         <th>Num of Contributions</th>
                     </tr>
                     @foreach ( $users as $u )
