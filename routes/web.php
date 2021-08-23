@@ -36,9 +36,9 @@ Route::get('/', function () {
 });
  Route::resource('home', 'CardsController')->parameters(['home' => 'campaign']);
 
-// Route::get('/campaign', function () {
-//     return view('viewcampaign');
-// });
+ Route::get('/trial', function () {
+     return view('admins.new');
+ });
 
 
 //Route::get('/tryhealth',[App\Http\Controllers\CampaignController:: class, 'please']);

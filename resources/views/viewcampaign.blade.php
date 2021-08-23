@@ -18,7 +18,6 @@
 @extends('layouts.app')
 @section('content')
 
-
 <div class="container-fluid" >
     <div class="row px-2 mx-1" style="border: 1px solid rgb(155, 146, 155); ">
       <div class="col px-3 py-3">
@@ -34,9 +33,7 @@
               <a href=""><img src="images/north_shore_sunset_beach6869.jpg" style="height:4em" class="img-fluid pl-1" alt="..."></a>
               <a href=""><img src="images/north_shore_sunset_beach6869.jpg" style="height:4em" class="img-fluid pl-1" alt="..."></a>
           </center> --}}
-
     </div>
-
    <div class="col  px-3 py-3" >
   <h3 style="color: turquoise"><b>Funding</b></h3>
   <h3 style="text-transform: uppercase;"><b>{{ $camp->title }}</b></h3>
@@ -229,7 +226,7 @@ follow(){
            </div>
 
            <figure class="figure pt-5">
-            <img src="images/crop1.svg" class="img-fluid" alt="...">
+            <img src="/images/crop1.svg" class="img-fluid" alt="...">
             <figcaption class="figure-caption">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil asperiores porro tempore explicabo iure suscipit tenetur, id obcaecati voluptates officia nisi, amet voluptatum, qui ipsa autem quo dolor dolorem. Id!
                 lore
             </figcaption>
@@ -242,7 +239,7 @@ follow(){
            </div>
 
            <figure class="figure pt-5">
-            <img src="images/crop2.svg" class="img-fluid" alt="...">
+            <img src="/images/crop2.svg" class="img-fluid" alt="...">
             <figcaption class="figure-caption">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil asperiores porro tempore explicabo iure suscipit tenetur, id obcaecati voluptates officia nisi, amet voluptatum, qui ipsa autem quo dolor dolorem. Id!
                 lore
             </figcaption>
@@ -270,7 +267,7 @@ follow(){
                </div>
 
                <figure class="figure pt-5">
-                <img src="images/crop1.svg" class="img-fluid" alt="...">
+                <img src="/images/crop1.svg" class="img-fluid" alt="...">
                 <figcaption class="figure-caption">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil asperiores porro tempore explicabo iure suscipit tenetur, id obcaecati voluptates officia nisi, amet voluptatum, qui ipsa autem quo dolor dolorem. Id!
                     lore
                 </figcaption>
@@ -283,7 +280,7 @@ follow(){
                </div>
 
                <figure class="figure pt-5">
-                <img src="images/crop2.svg" class="img-fluid" alt="...">
+                <img src="/images/crop2.svg" class="img-fluid" alt="...">
                 <figcaption class="figure-caption">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil asperiores porro tempore explicabo iure suscipit tenetur, id obcaecati voluptates officia nisi, amet voluptatum, qui ipsa autem quo dolor dolorem. Id!
                     lore
                 </figcaption>
@@ -302,7 +299,7 @@ follow(){
 
             <div class="row my-2">
                 <div class="col-sm-2 py-1">
-                    <img src="images/Sebastiaan_ter_Burg_profile@2x.jpg" style="border-radius: 50%" class="img-fluid" alt="...">
+                    <img src="/images/Sebastiaan_ter_Burg_profile@2x.jpg" style="border-radius: 50%" class="img-fluid" alt="...">
                 </div>
                 <div class="col-sm">
                   <div class="card">
@@ -322,28 +319,7 @@ follow(){
 
               <div class="row my-2">
                 <div class="col-sm-2 py-1">
-                    <img src="images/Sebastiaan_ter_Burg_profile@2x.jpg" style="border-radius: 50%" class="img-fluid" alt="...">
-                </div>
-                <div class="col-sm">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title"><b>Kofi Sternberg</b>
-                      <a style="float: right">25 minutes ago</a>
-                     </h5>
-                      <p class="card-text">This is where backers of the campaign can comment and make certain suggestions on the campaign
-                          Users who are not backers are not eiligible to comment on campaigns  </p>
-                      <a style="font-size: 1.5em; color:rgb(52, 130, 233)"><i class="far fa-thumbs-up"></i> 87 </a>
-                      <a style="font-size:1.5em;"> | </a>
-                      <a style="font-size: 1.5em; color:rgb(250, 36, 36)" ><i class="far fa-thumbs-down"></i> 420</a>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="row my-2">
-                <div class="col-sm-2 py-1">
-                    <img src="images/Sebastiaan_ter_Burg_profile@2x.jpg" style="border-radius: 50%" class="img-fluid" alt="...">
+                    <img src="/images/Sebastiaan_ter_Burg_profile@2x.jpg" style="border-radius: 50%" class="img-fluid" alt="...">
                 </div>
                 <div class="col-sm">
                   <div class="card">
@@ -364,7 +340,7 @@ follow(){
 
               <div class="row my-2">
                 <div class="col-sm-2 py-1">
-                    <img src="images/Sebastiaan_ter_Burg_profile@2x.jpg" style="border-radius: 50%" class="img-fluid" alt="...">
+                    <img src="/images/Sebastiaan_ter_Burg_profile@2x.jpg" style="border-radius: 50%" class="img-fluid" alt="...">
                 </div>
                 <div class="col-sm">
                   <div class="card">
@@ -385,7 +361,7 @@ follow(){
 
               <div class="row my-2">
                 <div class="col-sm-2 py-1">
-                    <img src="images/Sebastiaan_ter_Burg_profile@2x.jpg" style="border-radius: 50%" class="img-fluid" alt="...">
+                    <img src="/images/Sebastiaan_ter_Burg_profile@2x.jpg" style="border-radius: 50%" class="img-fluid" alt="...">
                 </div>
                 <div class="col-sm">
                   <div class="card">
@@ -406,7 +382,7 @@ follow(){
 
               <div class="row my-2">
                 <div class="col-sm-2 py-1">
-                    <img src="images/Sebastiaan_ter_Burg_profile@2x.jpg" style="border-radius: 50%" class="img-fluid" alt="...">
+                    <img src="/images/Sebastiaan_ter_Burg_profile@2x.jpg" style="border-radius: 50%" class="img-fluid" alt="...">
                 </div>
                 <div class="col-sm">
                   <div class="card">
@@ -427,7 +403,28 @@ follow(){
 
               <div class="row my-2">
                 <div class="col-sm-2 py-1">
-                    <img src="images/Sebastiaan_ter_Burg_profile@2x.jpg" style="border-radius: 50%" class="img-fluid" alt="...">
+                    <img src="/images/Sebastiaan_ter_Burg_profile@2x.jpg" style="border-radius: 50%" class="img-fluid" alt="...">
+                </div>
+                <div class="col-sm">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>Kofi Sternberg</b>
+                      <a style="float: right">25 minutes ago</a>
+                     </h5>
+                      <p class="card-text">This is where backers of the campaign can comment and make certain suggestions on the campaign
+                          Users who are not backers are not eiligible to comment on campaigns  </p>
+                      <a style="font-size: 1.5em; color:rgb(52, 130, 233)"><i class="far fa-thumbs-up"></i> 87 </a>
+                      <a style="font-size:1.5em;"> | </a>
+                      <a style="font-size: 1.5em; color:rgb(250, 36, 36)" ><i class="far fa-thumbs-down"></i> 420</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row my-2">
+                <div class="col-sm-2 py-1">
+                    <img src="/images/Sebastiaan_ter_Burg_profile@2x.jpg" style="border-radius: 50%" class="img-fluid" alt="...">
                 </div>
                 <div class="col-sm">
                   <div class="card">

@@ -6,7 +6,8 @@ use App\Models\Campaign;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
-
+use App\Models\campaign_contribution;
+use App\Models\User;
 class LiveController extends Controller
 {
     /**
@@ -60,7 +61,9 @@ class LiveController extends Controller
      */
     public function show(Campaign $campaign)
     {
-
+        $count_backers['contris'] = campaign_contribution::where('campaign_id', $campaign->id)->select('num_contributors','total_amount')->first();
+        $schid['sch_id'] = User::where('user_id', $campaign->us_id)->select('school_id', 'username', 'phone_number', 'city', 'country', 'first_name', 'last_name', 'pro_image')->first();
+        return view('admins.live_details')->with(['details' => $campaign])->with($count_backers)->with($schid);
     }
 
     /**
@@ -72,7 +75,7 @@ class LiveController extends Controller
     public function edit(Campaign $campaign)
     {
         // echo $campaign->full_name;
-        return view('admins.admin_details');
+       // return view('admins.admin_details');
 
     }
 

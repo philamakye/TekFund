@@ -12,18 +12,28 @@
                                 <div class="progress-bar position"  data-percent="00" data-color="#aadcf5,#12b321"></div>
                                 </div>
                                 <div class="col mt-2 pt-5">
-                                <p>Campaign Starter</p>
+                                <p>Number of Contributors</p>
                                 <p>Target Amount</p>
-                                 <p>Duration of Campaign</p>
+                                <p>Amount raised</p>
+                                 <p>Days Remaining</p>
                                  @if (!empty($details->hospital_name))
                                 <p>Name of Hospital</p>
                                  @endif
 
                                 </div>
                                 <div class="col mt-2 pt-5">
-                                <p> {{ $details->full_name }}</p>
+                                    @if (!empty($contris->num_contributors))
+                                    <p> {{ $contris->num_contributors }}</p>
+                                    @else
+                                 <p>0</p>
+                                @endif
                                 <p>GHC {{ $details->target }}</p>
-                                <p>{{ $details->duration }} days</p>
+                                @if (!empty($contris->total_amount))
+                                  <p>GHC {{ $contris->total_amount}}</p>
+                                @else
+                                <p>GHC 0</p>
+                                @endif
+                                <p>{{ \Carbon\Carbon::parse($details->updated_at)->addDays($details->duration)->diffInDays() }} days</p>
                                 <p>{{$details->hospital_name}}</p>
 
                                 </div>
@@ -98,13 +108,7 @@
                             </div>
 <br>
                            <center> <div class="row align-items-start" style="padding-top: 50px;">
-                                <div class="col">
-                                    <form action="{{route('pendcamp.update',$details->id)}}" method="post">
-                                        @csrf
-                                        @method('PUT')
-                                    <button type="submit" class="btn btn-success" id="dbtn">Verify</button>
-                                    </form>
-                                </div>
+
                                 <div class="col">
                                     <button type="button" class="btn btn-danger" id="dbtn">End</button>
                                 </div>

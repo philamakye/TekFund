@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/icon.gif"  type="image/x-icon">
+    <link rel="shortcut icon" href="/images/icon.gif"  type="image/x-icon">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -37,7 +37,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg shadow-sm" style="background-color:white;">
             <div class="container-fluid" >
-              <img src="images/icon.gif" class="img-fluid mr-2" style="height: 2.1em; border-radius:20px" alt="...">
+              <img src="/images/icon.gif" class="img-fluid mr-2" style="height: 2.1em; border-radius:20px" alt="...">
                 <a class="navbar-brand" style="color: rgb(8,4,32)" href="#">
                     {{ config('app.name', 'TekFund') }}
                 </a>
@@ -105,6 +105,7 @@
                 </div>
             </div>
         </nav>
+
 
         <main style="padding-top: 1.5rem; margin-bottom: 5rem;">
             @yield('content')

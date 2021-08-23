@@ -192,6 +192,24 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
                 </ul>
 
               </div>
+                <div id="id01" class="modal">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+                    <form class="modal-content" action="{{ route('campaigns.destroy',$c->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+
+                        <div class="container">
+                        <h1>Drop Campaign</h1>
+                        <p>Are you sure you want to delete this campaign?</p>
+                        <div class="clearfix">
+                            <button type="button" id="cancelbtn" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                            <button type="submit" id="deletebtn" onclick="document.getElementById('id01').style.display='none'" class="deletebtn">Delete</button>
+                        </div>
+                        </div>
+                    </form>
+            </div>
+
+
 
 
             <script>
@@ -210,22 +228,5 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
         </div>
     </div>
      @endforeach
-     <div id="id01" class="modal">
-                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
-                    <form class="modal-content" action="{{ route('campaigns.destroy',$c->id) }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-
-                        <div class="container">
-                        <h1>Drop Campaign</h1>
-                        <p>Are you sure you want to delete this campaign?</p>
-                        <div class="clearfix">
-                            <button type="button" id="cancelbtn" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                            <button type="submit" id="deletebtn" onclick="document.getElementById('id01').style.display='none'" class="deletebtn">Delete</button>
-                        </div>
-                        </div>
-                    </form>
-            </div>
-
 
 @endsection

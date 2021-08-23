@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Campaign;
+use App\Models\UserContribution;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use App\Models\campaign_contribution;
+use App\Models\User;
 
 class PendingController extends Controller
 {
@@ -44,6 +46,7 @@ class PendingController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request)
     {
         //
@@ -57,8 +60,8 @@ class PendingController extends Controller
      */
     public function show(Campaign $campaign)
     {
-        echo $campaign->title;
-        return view('admins.admin_details');
+        $schid['sch_id']= User::where('user_id',$campaign->us_id)->select('school_id','username','phone_number','city','country','first_name','last_name','pro_image')->first();
+        return view('admins.admin_details')->with(['details' => $campaign])->with($schid);
     }
 
     /**
@@ -81,7 +84,9 @@ class PendingController extends Controller
      */
     public function update(Request $request, Campaign $campaign)
     {
-        //
+         Campaign::where('id',$campaign->id)->update(['status'=>'live','updated_at'=>now()]);
+         return redirect()->route('pendcamp.index')->with('message','Campaign status changed to live');
+
     }
 
     /**
