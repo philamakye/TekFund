@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\campaign_contribution;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class PendingController extends Controller
 {
@@ -85,7 +86,12 @@ class PendingController extends Controller
     public function update(Request $request, Campaign $campaign)
     {
          Campaign::where('id',$campaign->id)->update(['status'=>'live','updated_at'=>now()]);
-         return redirect()->route('pendcamp.index')->with('message','Campaign status changed to live');
+        $usId = $campaign->us_id;
+        $count = User::findOrFail($usId);
+        $campain_num = DB::table('campaigns')->where('us_id', $usId)->where('status', 'live')->count();
+        $count->campaign_num = $campain_num;
+        $count->save();
+        return redirect()->route('pendcamp.index')->with('message','Campaign status changed to live');
 
     }
 

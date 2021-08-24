@@ -100,7 +100,7 @@ color: red;
                                 <a id="navbarDropdown" style="color: rgb(8, 4,32); font-size:16px" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                    {{ Auth::user()->username }}
                                      @if(Auth::user()->avatar)
-                                    <img src="{{asset('storage/images/'. Auth::user()->avatar)}}" alt="avatar" class="avatar""/>
+                                    <img src="{{asset('storage/images/'. Auth::user()->avatar)}}" alt="avatar" class="avatar"/>
                                     @else
                                     <img src="{{asset('storage/avatar.png')}}" alt="avatar"class="avatar" />
 

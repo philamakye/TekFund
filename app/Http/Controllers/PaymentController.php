@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Campaign;
 use App\Models\campaign_contribution;
 use App\Models\UserContribution;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -122,6 +123,7 @@ if ($ref == "") {
         $amount = $result->data->amount;
          if (Auth::check()) {
             $contribution->user_id = Auth::id();
+
          }
         $amount= $amount/100;
         $contribution->	contributed_amount = $amount;
@@ -129,6 +131,13 @@ if ($ref == "") {
         $Date_time = date('d/m/Y h:i:s a', time());
         $contribution->paidAt = $Date_time;
         $contribution->save();
+
+
+        $usId = Auth::id();
+        $count = User::findOrFail($usId);
+        $contri_num = DB::table('user_contributions')->where('user_id', $usId)->count();
+        $count->contribution_num = $contri_num;
+        $count->save();
 
         $target = Campaign::where('id',$campaignId)->value('target');
         if(campaign_contribution::where('campaign_id',$campaignId)->exists()){
@@ -156,6 +165,8 @@ if ($ref == "") {
                 $campCont->save();
 
          }
+
+
 
         // echo 'donre';
          return redirect('/home');
