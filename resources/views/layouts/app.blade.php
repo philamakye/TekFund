@@ -30,6 +30,17 @@
        .nomargin{
            margin: 0;
        }
+
+
+.avatar {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.please:hover {
+color: red;
+}
    </style>
 
 </head>
@@ -39,8 +50,8 @@
         <nav class="navbar navbar-expand-md navbar-light bg shadow-sm" style="background-color: white">
             <div class="container-fluid" >
               <img src="/images/icon.gif" class="img-fluid mr-2" style="height: 2.1em; border-radius:20px" alt="...">
-                <a class="navbar-brand" style="color: rgb(8, 4,32)" href="{{url('/') }}">
-                    {{ config('app.name', 'TekFund') }}
+                <a class="navbar-brand" style="color: rgb(8, 4,32);font-family: cursive,sans-serif;font-weight:bold;color:rgb(153, 0, 255); font-size:25px;" href="{{url('/') }}">
+                    Tek<span style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color:rgb(73, 217, 243)">FUND</span>
                 </a>
 
                 {{-- <a href="" class="navbar-brand pl-2 about-css" style="color: rgb(8, 4,32) !important; font-size:1em">
@@ -67,7 +78,7 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         <li class="nav-item dropdown">
-                           <a id="navbarDropdown" style="color: rgb(8, 4,32);" class="nav-link " href="{{ route('start campaign') }}" role="button"  aria-haspopup="true" aria-expanded="false" >{{ __('Start Campaign') }}</a>
+                           <a id="navbarDropdown" style="color: rgb(8, 4,32); margin-top:3px; margin-right:7px" class="nav-link please" href="{{ route('start campaign') }}" role="button"  aria-haspopup="true" aria-expanded="false" >{{ __('Start Campaign') }}</a>
                            </li>
                         @guest
                             @if (Route::has('login'))
@@ -86,10 +97,13 @@
 
                            <li class="nav-item dropdown">
 
-                                <a id="navbarDropdown" style="color: rgb(8, 4,32)" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" style="color: rgb(8, 4,32); font-size:16px" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                    {{ Auth::user()->username }}
                                      @if(Auth::user()->avatar)
-                                    <img src="{{asset('storage/images/'. Auth::user()->avatar)}}" alt="avatar" style="height: 1.5em;width:1.5em; border-radius:40px;"/>
+                                    <img src="{{asset('storage/images/'. Auth::user()->avatar)}}" alt="avatar" class="avatar""/>
+                                    @else
+                                    <img src="{{asset('storage/avatar.png')}}" alt="avatar"class="avatar" />
+
                                     @endif
                                     <span class="caret" </span>
                                 </a>

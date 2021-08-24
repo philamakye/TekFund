@@ -165,10 +165,11 @@
                     <h3 class="offset-2 mb-5" style="font-family: Snell Roundhand, cursive; margin-inline-start: 5px;font-weight:bold">
                 Tell Your Story
             </h3>
-                   <div class="mb-3">
-             <textarea name="story" id="story" cols="50" rows="10" required>
+                    <div class="mb-3">
+             <textarea name="story" id="story" style ="border-radius: 5px; box-shadow:1px 1px 1px; line-height:1.5;border-color:rgb(80, 77, 77)" cols="75" rows="15" required>
 
              </textarea>
+
             </div>
                 </div>
                 <div class="tab" id="step-5">
