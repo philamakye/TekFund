@@ -23,11 +23,33 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
    <style>
+
+       .avatar {
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    }
        .nopadding{
            padding: 0;
        }
        .nomargin{
            margin: 0;
+       }
+
+       #dont-move{
+           overflow: hidden;
+           position: fixed;
+           z-index: 99;
+           top: 0;
+           width: 100%;
+
+       }
+           }
+       .main {
+         /* padding: 5px; */
+         /* margin-top: 25px; */
+         position: relative;
        }
    </style>
 
@@ -35,7 +57,7 @@
 
 <body style="background-color:white; ">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg shadow-sm" style="background-color:white;">
+        <nav class="navbar navbar-expand-md navbar-light bg shadow-sm navbars" id="dont-move" style="background-color:white; height:66px">
             <div class="container-fluid" >
               <img src="/images/icon.gif" class="img-fluid mr-2" style="height: 2.1em; border-radius:20px" alt="...">
                 <a class="navbar-brand" style="color: rgb(8,4,32)" href="#">
@@ -82,13 +104,12 @@
 
                                 <a id="navbarDropdown" style="color: rgb(8,4,32)" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                    {{ Auth::user()->username }}
-                                     @if(Auth::user()->avatar)
-                                    <img src="{{asset('storage/images/'. Auth::user()->avatar)}}" alt="avatar" style="height: 1.5em;width:1.5em; border-radius:40px;"/>
-                                    @endif
+                                    <img src="{{asset('storage/avatar.png')}}" alt="avatar" class="avatar"/>
+
                                     <span class="caret" </span>
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                {{-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -98,20 +119,21 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
-                                </div>
+                                </div> --}}
                             </li>
                         @endguest
                     </ul>
                 </div>
             </div>
         </nav>
+        <br>
+        <br>
+        <br>
 
 
-        <main style="padding-top: 1.5rem; margin-bottom: 5rem;">
+        <main class="mains" style="padding-top: 0px; margin-bottom: 5rem;">
             @yield('content')
         </main>
-
-
     </div>
 </body>
 </html>

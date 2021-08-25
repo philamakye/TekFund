@@ -1,5 +1,5 @@
 <style>
-    .avatar {
+    .avatars {
   vertical-align: middle;
   width: 150px;
   height: 150px;
@@ -54,9 +54,9 @@
                           <h3 style="margin-left:3%">{{ $sch_id->username }} </h3>
                           <div class="col-sm-2 py-1">
                               @if (!empty($sch_id->pro_image))
-                            <img src="{{asset('storage/images/'.$sch_id->pro_image)}}" class="avatar" alt="avt">
+                            <img src="{{asset('storage/images/'.$sch_id->pro_image)}}" class="avatars" alt="avt">
                               @else
-                           <img src="{{asset('storage/avatardefault_92824.png' )}}" class="avatar" alt="avt">
+                           <img src="{{asset('storage/avatardefault_92824.png' )}}" class="avatars" alt="avt">
                            @endif
                               </div>
                                  <br>

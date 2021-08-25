@@ -142,11 +142,11 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
     <br>
     <label for="exampleFormControlInput1" class="form-label">About Me</label>
     <div class="form-floating">
-    <textarea class="form-control" name="about_me" maxlength = "1000" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 250px"></textarea>
+    <textarea class="form-control" name="about_me" maxlength = "2000" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 250px"></textarea>
     </div>
     </div>
     </div>
-    <h3 style="margin-left: 20px;">500/500</h3>
+    {{-- <h3 style="margin-left: 20px;">500/500</h3> --}}
     </div>
     </div>
     <button type="submit" class="btn btn-primary mb-2" style="background-color:rgb(44, 20, 124); margin-top: 10px; float: right; margin-right: 80px;">  SAVE  </button>

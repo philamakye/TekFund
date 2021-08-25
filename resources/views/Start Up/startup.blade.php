@@ -80,11 +80,11 @@
                         <label for="Default select example2" style="font-size: large"><b>Category of Business</b></label>
                         <select class="form-select mb-5" name="business_cate" aria-label="Default select example2">
                             <option selected disabled value="" hidden>--please select--</option>
-                            <option value="Retailer">Retailer</option>
-                            <option value="Distributor">Distributor</option>
+                            <option value="Retailer">Retailing</option>
+                            <option value="Distributor">Distribution</option>
                             <option value="Food Service">Food Service</option>
-                            <option value="Manufacturer">Manufacturer</option>
-                            <option value="Investor">Investor</option>
+                            <option value="Manufacturer">Manufacturing</option>
+                            <option value="Investor">Investment</option>
                             <option value="Others">Others</option>
 
                         </select>

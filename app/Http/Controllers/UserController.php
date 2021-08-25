@@ -99,8 +99,8 @@ class UserController extends Controller
         $story = User::findOrFail($userId);
 
         $rules = [
-            'about_me' => 'nullable|max:800|string',
-            'shrt_desc' =>'nullable|max:300|string',
+            'about_me' => 'nullable|max:2000|string',
+            'shrt_desc' =>'nullable|max:500|string',
         ];
 
         $customMessages = [

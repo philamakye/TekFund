@@ -30,7 +30,12 @@ const numb = document.querySelector(".numb");
     }
     .sideColor {
         background-color:rgb(8,4,32) !important;
+        position: fixed;
+        z-index: 80;
+
     }
+
+
 
     /* progress bar*/
     @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
@@ -57,13 +62,29 @@ const numb = document.querySelector(".numb");
                     <a class="list-group-item list-group-item-action sideColor p-3" href="{{route('admin') }}" style="color: white;">Signed up</a>
                     <a class="list-group-item list-group-item-action sideColor p-3" href="#!" style="color: white;">Anonymous Contributors</a>
                     <a class="list-group-item list-group-item-action sideColor p-3 text-center" href="#!" style="color: rgb(56,216,208);">Actions</a>
-                    <a class="list-group-item list-group-item-action sideColor p-3 text-center" href="#!" style="color: rgb(56,216,208);">Logout</a>
+                    {{-- <a class="list-group-item list-group-item-action sideColor p-3 text-center" href="" style="color: rgb(56,216,208);">Logout</a> --}}
+                    <a class="list-group-item list-group-item-action sideColor p-3 text-center" href="{{ route('logout') }}" style="color: rgb(236, 71, 79);font-weight:bolder"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
                 </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
             </div>
             <!-- Page content wrapper-->
-            <div id="page-content-wrapper">
+            <div id="page-content-wrapper" style = margin-left:13.5%;>
                 <!-- Top navigation-->
-                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom" id="onlynav">
                     <div class="container-fluid">
                         <select class="custom-select custom-select-sm" style="width:auto;">
                             <option selected>Sort</option>
