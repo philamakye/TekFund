@@ -119,6 +119,7 @@ jobs:
   # Deployment Step
     - name: Require Vapor CLI
       run: composer global require laravel/vapor-cli
+      run: vapor init
     - name: Deploy Environment
       run: vapor deploy
       env:
