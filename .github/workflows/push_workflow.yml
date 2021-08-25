@@ -29,6 +29,12 @@ jobs:
       - name: Generate Key
         run: php artisan key:generate
       - name: Configure database
+    #Set Environment
+        env:
+           DB_CONNECTION: mysql
+           DB_DATABASE: test_db
+           DB_PORT: 3306
+           DB_USER: root
         run: php artisan migrate:fresh
       - name: Execute tests (Unit and Feature tests) via PHPUnit
         env:
