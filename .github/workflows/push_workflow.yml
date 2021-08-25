@@ -1,5 +1,122 @@
+Ghygen, GitHub Actions configurator for your Laravel / PHP Application
+Ghygen is a GitHub Actions configurator for your Laravel Application.
+Setup Database Service, use multiple PHP version, use multiple Laravel versions, build frontend, cache packages, execute Browser, Functional, and Unit tests…
+
+Laravel App
+
+Setup Workflow for Laravel with database and Code Quality.
+
+Select template:
+
+MYSQL POSTGRESQL
+PHP
+
+Setup Workflow for PHP Package.
+
+Select template:
+
+PHP
+Laravel Package
+
+Setup Workflow for Laravel Package.
+
+Select template:
+
+LARAVEL PACKAGE
+Name
+Template - Laravel package
+The name of your workflow. GitHub displays the names of your workflows on your repository's actions page.
+
+On - GitHub event that triggers the workflow.
+Manual Trigger
+On Push
+Branches
+main,develop,features/**
+Branches for the push, comma separated for example: 'main,develop'.
+
+On Pull Request
+Select Database
+Select the Database
+
+MySql Service
+Database: *None* if you don't want a database in your workflow. Otherwise select Mysql or Postgresql or Sqlite
+
+Mysql Version
+5.7
+Define the Mysql Version
+
+Mysql Database Name
+db_test_laravel
+Define the Mysql database name
+
+Mysql Database Port
+33306
+The Port exposed by the container, this is the external port.
+
+Mysql Password: skip, or read from secret or hardcoded
+
+Skip
+Mysql Password: skip, or read from secret or hardcoded
+
+Caching
+Cache PHP Packages
+Enable this, to improve speed of installing packages
+
+Cache Vendor directory
+Enable this, to skip installing packages using previous vendor cache
+
+Cache Npm Modules
+Enable this, to use cached Npm modules
+
+Environments (PHP / Node)
+PHP Versions
+8.07.47.3
+Select PHP Versions (Multiple)
+
+Install node for NPM build
+Node Js Version
+15.x
+Define the nodejs Version. 15.x is the current stable and it is the default value. Select 14.x if you want to use LTS version.
+
+Laravel stuff
+Define Specific Laravel versions
+Copy .env file
+Env template file
+.env.example
+Define env template file to use in actions
+
+Fix storage permission
+Fix storage permission via chmod 777
+
+Run migrations
+Execute php artisan migrate
+
+Generate key
+Execute php artisan key:generate
+
+Code Quality
+Execute Tests via phpunit
+Execute Tests via phpunit
+
+Execute Tests via PestPHP
+Execute Tests via PestPHP
+
+Execute Browser Test
+Execute Browser Test via Laravel Dusk
+
+Execute Code Sniffer with phpcs
+Execute Code Static Analysis
+Deployment (Experimental feature)
+Select Deployment Step
+
+Vapor
+Deployment: *None* if you don't want to deploy the code in your workflow. Otherwise select from available options
+
+You need to set a GitHub Secret in settings/secrets/actions/new named VAPOR_API_TOKEN. Take a look the documentation about Laravel Vapor, Deploying From CI
+COPY
+GENERATE YAML FILE
 # GithHub Actions Workflow generated with Ghygen
-# Original configuration: https://ghygen.hi-folks.dev?code=9f891a163856c80b7cbfc89ef44d9f61
+# Original configuration: https://ghygen.hi-folks.dev?code=f53609fb6276acf8be071433ede500d0
 name: Template - Laravel package
 on:
   push:
@@ -7,7 +124,7 @@ on:
       - main
       - develop
       - features/**
-
+ 
 jobs:
   laravel-tests:
     runs-on: ubuntu-latest
@@ -29,15 +146,15 @@ jobs:
           --health-interval=10s
           --health-timeout=5s
           --health-retries=3
-
+ 
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
         php-versions: [ '8.0' ]
         dependency-stability: [ prefer-stable ]
-
+ 
     name: P${{ matrix.php-versions }} - L${{ matrix.laravel }} - ${{ matrix.dependency-stability }} - ${{ matrix.operating-system}}
-
+ 
     steps:
     - uses: actions/checkout@v2
     - name: Setup Node.js
@@ -63,14 +180,14 @@ jobs:
       id: composer-cache
       run: |
         echo "::set-output name=dir::$(composer config cache-files-dir)"
-    - uses: actions/cache@v2
+     - uses: actions/cache@v2
       id: actions-cache
       with:
         path: ${{ steps.composer-cache.outputs.dir }}
         key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
         restore-keys: |
           ${{ runner.os }}-composer-
-    - name: Cache PHP dependencies
+     - name: Cache PHP dependencies
       uses: actions/cache@v2
       id: vendor-cache
       with:
@@ -81,7 +198,7 @@ jobs:
     - name: Install Dependencies
       if: steps.vendor-cache.outputs.cache-hit != 'true'
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
-
+ 
     - name: Generate key
       run: php artisan key:generate
     - name: Directory Permissions
@@ -93,14 +210,14 @@ jobs:
         DB_DATABASE: db_test_laravel
         DB_PORT: 33306
         DB_USER: root
-
+ 
       run: php artisan migrate
-
+ 
     - name: Show dir
       run: pwd
     - name: PHP Version
       run: php --version
-
+ 
 # Code quality
     - name: Execute tests (Unit and Feature tests) via PHPUnit
 # Set environment
@@ -109,21 +226,13 @@ jobs:
         DB_DATABASE: db_test_laravel
         DB_PORT: 33306
         DB_USER: root
-
+ 
       run: vendor/bin/phpunit --testdox
-
-
-    - name: Execute Code Sniffer via phpcs
-      run: |
-        composer require --dev squizlabs/php_codesniffer
-        vendor/bin/phpcs --standard=PSR12 src
-
-    - name: Execute Code Static Analysis (PHP Stan + Larastan)
-      run: |
-        composer require --dev nunomaduro/larastan
-        vendor/bin/phpstan analyse src -c ./vendor/nunomaduro/larastan/extension.neon  --level=4 --no-progress
-
-
+ 
+ 
+ 
+ 
+ 
   # Deployment Step
     - name: Require Vapor CLI
       run: composer global require laravel/vapor-cli
@@ -131,3 +240,9 @@ jobs:
       run: vapor deploy
       env:
         VAPOR_API_TOKEN: ${{ secrets.VAPOR_API_TOKEN }}
+Ghygen
+Github Actions Workflow Configurator
+
+Source Code
+Home
+What is Ghygen?
