@@ -101,6 +101,7 @@
                                  <center><h7 style="margin: auto;">Click to download file </h7></center>
                                  </div>
                              </div>
+
                               @endif
                                  <br>
                             </div>
