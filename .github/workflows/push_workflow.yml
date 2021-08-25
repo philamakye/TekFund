@@ -1,4 +1,4 @@
-pname: PUSH Workflow
+name: PUSH Workflow
 
 on:
   push:
