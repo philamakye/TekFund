@@ -28,6 +28,8 @@ jobs:
         run: npm install
       - name: Generate Key
         run: php artisan key:generate
+      - name: Configure database
+        run: php artisan migrate:fresh
       - name: Execute tests (Unit and Feature tests) via PHPUnit
         env:
           DB_PORT: ${{ job.services.mysql.ports[3306] }}
