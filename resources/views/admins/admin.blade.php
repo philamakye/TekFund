@@ -1,7 +1,7 @@
 @extends('layouts.triallay')
 
 @section('trial')
-@if (!empty($campaigns))
+@if($campaigns->count() > 0)
                  @foreach ($campaigns as $liv)
                     <div class="card my-4 mx-3">
                         <div class="card-body">
@@ -36,9 +36,9 @@
                             </div>
                         </div>
                     </div>
-                 @endforeach
-                 @elseif (empty($campaigns))
-                <h3 style="margin-left:300px">There are no on-going campaigns!</h3>
+                   @endforeach
+                 @else
+                 <h3 style="margin-left:300px">There are no on-going campaigns!</h3>
                  @endif
                     <script>
             $(".progress-bar").loading();

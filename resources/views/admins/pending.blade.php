@@ -2,7 +2,10 @@
 
 @section('trial')
 @include('layouts.flash')
- @foreach ($pend as $p)
+@if($pend->count()<1)
+   <h3 style="margin-left:300px">There are no pending campaigns!</h3>
+@else
+  @foreach ($pend as $p)
                     <div class="card my-4 mx-3">
                         <div class="card-body">
                             <div class="row align-items-start">
@@ -33,6 +36,8 @@
                         </div>
                     </div>
                  @endforeach
+
+            @endif
 
                    <script>
             $(".progress-bar").loading();

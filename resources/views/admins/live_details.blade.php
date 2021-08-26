@@ -1,3 +1,12 @@
+<style>
+    .avatars {
+  vertical-align: middle;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+    </style>
+
 @extends('layouts.triallay')
 
 @section('trial')
@@ -9,7 +18,11 @@
                                 <center><h3>Campaign Details</h3></center>
                                 <div class="col">
                                 <h3 style="text-transform: capitalize;">{{ $details->title }}</h3>
-                                <div class="progress-bar position"  data-percent="00" data-color="#aadcf5,#12b321"></div>
+                                @if (!empty($contris->percent))
+                                <div class="progress-bar position"  data-percent="{{ $contris->percent }}" data-color="#aadcf5,#12b321"></div>
+                                @else
+                               <div class="progress-bar position"  data-percent="00" data-color="#aadcf5,#12b321"></div>
+                                @endif
                                 </div>
                                 <div class="col mt-2 pt-5">
                                 <p>Number of Contributors</p>
@@ -56,9 +69,9 @@
                           <h3 style="margin-left:3%">{{ $sch_id->username }} </h3>
                           <div class="col-sm-2 py-1">
                               @if (!empty($sch_id->pro_image))
-                            <img src="{{asset('storage/images/'.$sch_id->pro_image)}}" style="border-radius: 50%" class="img-fluid" alt="avt">
+                            <img src="{{asset('storage/images/'.$sch_id->pro_image)}}" class="avatars" alt="avt">
                               @else
-                           <img src="{{asset('storage/avatardefault_92824.png' )}}" style="border-radius: 50%" class="img-fluid" alt="avt">
+                           <img src="{{asset('storage/avatardefault_92824.png' )}}" class="avatars" alt="avt">
                            @endif
                               </div>
                                  <br>

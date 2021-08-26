@@ -80,11 +80,11 @@
                         <label for="Default select example2" style="font-size: large"><b>Category of Business</b></label>
                         <select class="form-select mb-5" name="business_cate" aria-label="Default select example2">
                             <option selected disabled value="" hidden>--please select--</option>
-                            <option value="Retailer">Retailer</option>
-                            <option value="Distributor">Distributor</option>
+                            <option value="Retailer">Retailing</option>
+                            <option value="Distributor">Distribution</option>
                             <option value="Food Service">Food Service</option>
-                            <option value="Manufacturer">Manufacturer</option>
-                            <option value="Investor">Investor</option>
+                            <option value="Manufacturer">Manufacturing</option>
+                            <option value="Investor">Investment</option>
                             <option value="Others">Others</option>
 
                         </select>
@@ -170,10 +170,11 @@
                     <h3 class="offset-2 mb-5" style="font-family: Snell Roundhand, cursive; margin-inline-start: 5px;font-weight:bold">
                 Tell Your Story
             </h3>
-                   <div class="mb-3">
-             <textarea name="story" id="story" cols="50" rows="10" required>
+                  <div class="mb-3">
+             <textarea name="story" id="story" style ="border-radius: 5px; box-shadow:1px 1px 1px; line-height:1.5;border-color:rgb(80, 77, 77)" cols="75" rows="15" required>
 
              </textarea>
+
             </div>
                 </div>
                 <div class="tab" id="step-5">

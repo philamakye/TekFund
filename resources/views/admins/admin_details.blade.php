@@ -1,3 +1,11 @@
+<style>
+    .avatars {
+  vertical-align: middle;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+    </style>
 @extends('layouts.triallay')
 
 @section('trial')
@@ -46,9 +54,9 @@
                           <h3 style="margin-left:3%">{{ $sch_id->username }} </h3>
                           <div class="col-sm-2 py-1">
                               @if (!empty($sch_id->pro_image))
-                            <img src="{{asset('storage/images/'.$sch_id->pro_image)}}" style="border-radius: 50%" class="img-fluid" alt="avt">
+                            <img src="{{asset('storage/images/'.$sch_id->pro_image)}}" class="avatars" alt="avt">
                               @else
-                           <img src="{{asset('storage/avatardefault_92824.png' )}}" style="border-radius: 50%" class="img-fluid" alt="avt">
+                           <img src="{{asset('storage/avatardefault_92824.png' )}}" class="avatars" alt="avt">
                            @endif
                               </div>
                                  <br>
@@ -93,6 +101,7 @@
                                  <center><h7 style="margin: auto;">Click to download file </h7></center>
                                  </div>
                              </div>
+
                               @endif
                                  <br>
                             </div>
