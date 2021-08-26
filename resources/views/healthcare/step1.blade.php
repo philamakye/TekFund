@@ -1,6 +1,11 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
 @extends('layouts.app')
 
 <style>
+    main{
+        padding-top: 0 !important;
+    }
 
     .nomargin{
         margin:0 !important;
@@ -43,15 +48,15 @@
 </style>
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
 <div class="row ">
-    <div class="col-1">
+    <!-- <div class="col-1">
 
-    </div>
-    <div class="col" style="background-color: #b2e6f0; border-radius:5px">
-<br>
+    </div> -->
+    <div class="col" style="background-color: #b2e6f0;">
+<!-- <br> -->
         <div class="text-center">
-            <h2 style = "font-family:Comic Sans MS, cursive, sans-serif; font-size:40px; color:rgb(52, 2, 145)">HEALTHCARE</h2>
+            <h2 style = "font-family:Candara; font-size:40px; color:rgb(52, 2, 145); padding-top: 10px;">HEALTHCARE</h2>
         </div>
        <div class="row text-center">
            <center>
@@ -212,13 +217,13 @@
             <div class="col-3"></div>
 
         </div>
-<br>
+<!-- <br> -->
     </div>
 
 
-    <div class="col-1">
+    <!-- <div class="col-1">
 
-    </div>
+    </div> -->
 </div>
 
 </div>
