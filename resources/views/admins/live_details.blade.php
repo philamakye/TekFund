@@ -18,7 +18,11 @@
                                 <center><h3>Campaign Details</h3></center>
                                 <div class="col">
                                 <h3 style="text-transform: capitalize;">{{ $details->title }}</h3>
-                                <div class="progress-bar position"  data-percent="00" data-color="#aadcf5,#12b321"></div>
+                                @if (!empty($contris->percent))
+                                <div class="progress-bar position"  data-percent="{{ $contris->percent }}" data-color="#aadcf5,#12b321"></div>
+                                @else
+                               <div class="progress-bar position"  data-percent="00" data-color="#aadcf5,#12b321"></div>
+                                @endif
                                 </div>
                                 <div class="col mt-2 pt-5">
                                 <p>Number of Contributors</p>

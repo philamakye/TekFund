@@ -82,7 +82,7 @@ const numb = document.querySelector(".numb");
                 <br>
             </div>
             <!-- Page content wrapper-->
-            <div id="page-content-wrapper" style = margin-left:13.5%;>
+            <div id="page-content-wrapper" style = "margin-left:13.5%; width:2000px">
                 <!-- Top navigation-->
                 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom" id="onlynav">
                     <div class="container-fluid">
