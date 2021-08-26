@@ -55,6 +55,10 @@
     </div> -->
     <div class="col" style="background-color: #b2e6f0;">
 <!-- <br> -->
+    </div>
+
+    <div class="col" style="background-color: #b2e6f0; border-radius:5px">
+<br>
         <div class="text-center">
             <h2 style = "font-family:Candara; font-size:40px; color:rgb(52, 2, 145); padding-top: 10px;">HEALTHCARE</h2>
         </div>
@@ -72,7 +76,7 @@
            </center>
         </div>
         <div class="row mt-5 pt-2">
-            <div class="col-3"></div>
+            <div class="col-1"></div>
             <div class=col>
    <form action="{{route('store-campaign')}}" method="post" id="regForm" enctype="multipart/form-data">
          @csrf
@@ -214,7 +218,6 @@
            </form>
             </div>
 
-            <div class="col-3"></div>
 
         </div>
 <!-- <br> -->
@@ -224,6 +227,26 @@
     <!-- <div class="col-1">
 
     </div> -->
+    <div class="col-3">
+        <div class="card" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <div class="container">
+                    <div class="row">
+                      <div class="col nomargin nopadding">
+                        Tips from Gerald Pino, our fundraising expert (SBA Lord)
+                      </div>
+                      <div class="col-2 nomargin nopadding">
+                        <img src="/images/profile.jpg" style="height: 2.5em; border-radius: 30px;" class="img-fluid" alt="...">
+                      </div>
+                    </div>
+                  </div>
+              </li>
+              <li class="list-group-item">You will be eligible for withdrawal after reaching 70% of the target</li>
+
+            </ul>
+          </div>
+    </div>
 </div>
 
 </div>
