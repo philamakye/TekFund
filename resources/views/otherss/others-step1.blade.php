@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 <style>
+    main{
+        padding-top: 0 !important;
+        margin-bottom: 0px !important;
+        color: white !important;
+
+    }
     /* Mark input boxes that gets an error on validation: */
     input.invalid {
     background-color: #f89797;

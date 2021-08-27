@@ -6,11 +6,12 @@
     main{
         padding-top: 0 !important;
         margin-bottom: 0px !important;
+        color: white !important;
 
     }
 
     body{
-        background-color: #b2e6f0 !important;
+        background-color: #03989E !important;
     }
 
     .nomargin{
@@ -51,6 +52,10 @@
     .step.finish {
     background-color: rgb(18, 214, 27);
     }
+    label {
+        color: white !important;
+    }
+
 </style>
 
 @section('content')
