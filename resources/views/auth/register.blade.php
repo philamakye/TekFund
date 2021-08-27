@@ -37,6 +37,9 @@ body{
 .reg-ft{
     display: none !important;
 }
+.main-footer {
+    display: none;
+}
 
 </style>
 @extends('layouts.app')
@@ -51,9 +54,8 @@ body{
       <div class="col-sm icon" style="border: 0.2px solid white; background:white; border-radius: 5px; box-shadow: 0 0.5rem 1.5rem 0 rgb(0 0 0 / 10%)">
       <div>
       <center><h3 style="text-decoration-style: solid; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Sign Up</h3></center>
-    </div><hr>
+    </div>
      <div class=" sign-box" style="border: none;">
-
 
        <form method="POST" action="{{ route('register') }}">
                           @csrf
