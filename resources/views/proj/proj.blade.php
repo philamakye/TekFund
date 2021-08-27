@@ -35,15 +35,15 @@
 </style>
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
 <div class="row ">
-    <div class="col-1">
+    <div class="col-1" style="background-color: #03989E;">
 
     </div>
-    <div class="col" style="background-color: #b2e6f0; border-radius:5px">
+    <div class="col" style="background-color: #03989E; border-radius:5px">
 <br>
         <div class="text-center">
-            <h2 style = "font-family:Comic Sans MS, cursive, sans-serif; font-size:40px; color:rgb(52, 2, 145)">PROJECT</h2>
+            <h2 style = "font-family: Candara; font-size:40px; color:rgb(52, 2, 145)">PROJECT</h2>
             <!--<img src="images/healthcare.svg" class="img-fluid" alt="..." "> -->
         </div>
        <div class="row text-center">
@@ -210,17 +210,30 @@
             </form>
             </div>
 
-
-            <div class="col-3"></div>
         </div>
 
     </div>
 
-    <div class="col-1">
+        <div class="col-4" style="background-color: #03989E;">
+                <div class="card" style="width: 18rem; float:right;">
+                    <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class="container">
+                            <div class="row">
+                            <div class="col nomargin nopadding">
+                                Tips from Gerald Pino, our fundraising expert (SBA Lord)
+                            </div>
+                            <div class="col-2 nomargin nopadding">
+                                <img src="/images/profile.jpg" style="height: 2.5em; border-radius: 30px;" class="img-fluid" alt="...">
+                            </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">You will be eligible for withdrawal after reaching 70% of the target</li>
 
-    </div>
-</div>
-
+                    </ul>
+                </div>
+            </div>
 </div>
 
 <script>
