@@ -13,6 +13,7 @@
 #TekFund:hover{
   color: turquoise !important;
 }
+.main
 </style>
 
 @extends('layouts.app')

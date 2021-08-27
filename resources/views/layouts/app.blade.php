@@ -144,10 +144,10 @@ main{
 
 
 <!-- Footer -->
-<footer class=" page-footer font-small " style="background-color: rgb(44, 20, 124); " position: absolute;>
+<footer class="page-footer font-small " style="background-color: rgb(44, 20, 124); " position: absolute;>
 
   <!-- Footer Links -->
-  <div class="container text-center text-md-left" >
+  <div class="container text-center text-md-left main-footer" >
 
     <!-- Grid row -->
     <div class="row ">

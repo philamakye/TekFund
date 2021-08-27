@@ -40,6 +40,9 @@
 .login-ft{
     display: none !important;
 }
+.main-footer {
+    display: none;
+}
 </style>
 
 @extends('layouts.app')
