@@ -215,7 +215,7 @@
     </div>
 
         <div class="col-4" style="background-color: #03989E;">
-                <div class="card" style="width: 18rem; float:right;">
+                <div class="card" style="width: 18rem; float:right;margin-top:20%"">
                     <ul class="list-group list-group-flush">
                     <li class="list-group-item">
                         <div class="container">

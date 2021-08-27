@@ -6,7 +6,7 @@
     main{
         padding-top: 0 !important;
         margin-bottom: 0px !important;
-    
+
     }
 
     body{
@@ -56,7 +56,7 @@
 @section('content')
 <div class="container-fluid">
 <div class="row ">
-    
+
     <div class="col-1" style="background-color: #03989E;">
 
     </div>
@@ -230,7 +230,7 @@
 
 
     <div class="col-4" style="background-color: #03989E;">
-        <div class="card" style="width: 18rem; float:right;">
+        <div class="card" style="width: 18rem; float:right;margin-top:20%">
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
                 <div class="container">
