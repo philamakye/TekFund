@@ -35,12 +35,12 @@
 </style>
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
 <div class="row ">
     <div class="col-1">
 
     </div>
-    <div class="col" style="background-color: #b2e6f0; border-radius:5px">
+    <div class="col" style="background-color: #03989E; border-radius:5px">
 <br>
         <div class="text-center">
             <h2 style = "font-family:Candara; font-size:40px; color:rgb(52, 2, 145)">START UP</h2>

@@ -47,7 +47,7 @@ color: red;
 
 <body style="background-color:white; ">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg shadow-sm" style="background-color: white;">
+        <nav class="navbar navbar-expand-md navbar-light bg shadow-sm" style="background-color: white;position:fixed;z-index:99; width:100%;">
             <div class="container-fluid">
               <img src="/images/icon.gif" class="img-fluid mr-2" style="height: 2.1em; border-radius:20px" alt="...">
                 <a class="navbar-brand" style="color: rgb(8, 4,32);font-family: cursive,sans-serif;font-weight:bold;color:rgb(153, 0, 255); font-size:25px;" href="{{url('/') }}">
@@ -129,8 +129,9 @@ color: red;
                 </div>
             </div>
         </nav>
-
-        <main style="padding-top: 1.5rem; margin-bottom: 5rem;">
+ <br><br>
+ 
+        <main style="padding-top: 2rem; margin-bottom: 5rem;">
             @yield('content')
         </main>
 
@@ -143,7 +144,7 @@ color: red;
 <footer class=" page-footer font-small " style="background-color: rgb(44, 20, 124); " position: absolute;>
 
   <!-- Footer Links -->
-  <div class="container text-center text-md-left">
+  <div class="container text-center text-md-left" >
 
     <!-- Grid row -->
     <div class="row ">

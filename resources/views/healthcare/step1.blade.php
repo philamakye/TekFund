@@ -5,6 +5,12 @@
 <style>
     main{
         padding-top: 0 !important;
+        margin-bottom: 0px !important;
+    
+    }
+
+    body{
+        background-color: #b2e6f0 !important;
     }
 
     .nomargin{
@@ -50,14 +56,12 @@
 @section('content')
 <div class="container-fluid">
 <div class="row ">
-    <!-- <div class="col-1">
+    
+    <div class="col-1" style="background-color: #03989E;">
 
-    </div> -->
-    <div class="col" style="background-color: #b2e6f0;">
-<!-- <br> -->
     </div>
 
-    <div class="col" style="background-color: #b2e6f0; border-radius:5px">
+    <div class="col" style="background-color: #03989E; border-radius:0px">
 <br>
         <div class="text-center">
             <h2 style = "font-family:Candara; font-size:40px; color:rgb(52, 2, 145); padding-top: 10px;">HEALTHCARE</h2>
@@ -224,11 +228,9 @@
     </div>
 
 
-    <!-- <div class="col-1">
 
-    </div> -->
-    <div class="col-3">
-        <div class="card" style="width: 18rem;">
+    <div class="col-4" style="background-color: #03989E;">
+        <div class="card" style="width: 18rem; float:right;">
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
                 <div class="container">
