@@ -49,7 +49,7 @@
     <div class="col" style="background-color: #03989E; border-radius:5px">
 <br>
         <div class="text-center">
-            <h2 style = "font-family:Comic Sans MS, cursive, sans-serif; font-size:40px; color:rgb(52, 2, 145)">OTHERS</h2>
+            <h2 style = "font-family:Candara; font-size:40px; color:rgb(52, 2, 145)">OTHERS</h2>
             <!--<img src="images/healthcare.svg" class="img-fluid" alt="..." "> -->
         </div>
        <div class="row text-center">

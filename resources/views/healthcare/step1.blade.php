@@ -126,7 +126,7 @@
                             <i class="fas fa-exclamation-circle"></i> Minimum target amount that can be set is GHC 200.
                         </div>
                         <h4 class="mb-5">
-                        <small class="text-muted">Keep in mind that transaction fees including credit and debit charges, are deducted from each donation
+                        <small class="text-muted" style="color: white !important;">Keep in mind that transaction fees including credit and debit charges, are deducted from each donation
                         <br><br>
                         To receive money raised, please make sure the person withdrawing has:  <br><br>
                         <i class="fas fa-arrow-circle-right"></i> Valid National ID <br><br>
@@ -183,7 +183,7 @@
             </h3>
 
             <div class="mb-3">
-             <textarea name="story" id="story" style ="border-radius: 5px; box-shadow:1px 1px 1px; line-height:1.5;border-color:rgb(80, 77, 77)" cols="75" rows="15" required>
+             <textarea name="story" id="story" style ="border-radius: 5px; box-shadow:1px 1px 1px; line-height:1.5;border-color:rgb(80, 77, 77);background:white" cols="75" rows="15" required>
 
              </textarea>
 
