@@ -37,7 +37,7 @@
 @section('content')
 <div class="container-fluid">
 <div class="row ">
-    <div class="col-1">
+    <div class="col-1" style="background-color: #03989E;">
 
     </div>
     <div class="col" style="background-color: #03989E; border-radius:5px">
