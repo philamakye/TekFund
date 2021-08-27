@@ -41,6 +41,9 @@
 .please:hover {
 color: red;
 }
+main{
+    overflow:hidden;
+}
    </style>
 
 </head>

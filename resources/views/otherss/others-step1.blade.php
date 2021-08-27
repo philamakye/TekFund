@@ -78,7 +78,7 @@
                         </select>
 
                           <label for="title" style="font-size: large"><b>Cause for Fundraising</b></label>
-                        <input oninput="this.className = 'form-control'" name="cause" type="text" id="inputPassword6" placeholder="Ex: Honoring COE(IV) Class Rep" class="form-control" aria-describedby="passwordHelpBlock">
+                        <input oninput="this.className = 'form-control'" name="cause" type="text" maxlength="150" id="inputPassword6" placeholder="Ex: Honoring COE(IV) Class Rep" class="form-control" aria-describedby="passwordHelpBlock">
 <br>
 <br>
                         <label for="title" style="font-size: large"><b>What is your fundraiser title?</b></label>
