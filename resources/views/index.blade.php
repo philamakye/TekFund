@@ -1,5 +1,55 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap">
 <style>
+  .valign {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+  }
+  .side-title{
+    font-size: 50px !important;
+    line-height: 110%;
+    letter-spacing: -.5px !important;
+    font-family: RalewayBold,Helvetica,sans-serif;
+    margin-bottom: 27px;
+    color: #152235 !important;
+    max-width: 433px;
+    padding-top: 70px;
+  }
+  h2.side-text {
+    line-height: 28px;
+    color: #929aa3;
+    font-family: RalewayBold,Helvetica,sans-serif;
+    font-size: 20px;
+    max-width: 433px;
+    letter-spacing: .25px;
+  }
+  .button-row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+  }
+  .demo-button{
+    font-size: 20px !important;
+    line-height: 36px !important;
+    letter-spacing: .25px !important;
+    font-family: RalewayBold,Helvetica,sans-serif;
+    padding: 11px 30px !important;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-weight: 500 !important;
+    color: white !important;
+    display: inline-block;
+    cursor: pointer;
+    background: #3181ff !important;
+    height: fit-content !important;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 8%), 0 0.5px 2px rgb(5 18 37 / 24%) !important;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+    vertical-align: middle;
+    white-space: nowrap;
+    
+  }
   .carousel img{
 height: 35em;
   }
@@ -27,26 +77,44 @@ height: 35em;
 
 
 @section('content')
-<div id="carouselExampleControls"  class="carousel slide " data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active px-5">
-        <img src="images/land.jpg" class="d-block w-100" alt="...">
+<div class="container">
+  <div class="row" style="margin-top: 40px; padding-top:25px; background:white">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-4 wow-hero-col valign">
+      <h1 class="side-title">Want to touch a life?</h1>
+      <h2 class="side-text">
+        Unlike gofundme, Tekfund gives you the opportunity to make donations via mobile money.
+      </h2>
+      <div class="button-row">
+        <a class="btn btn-md demo-button" href="#">Sign Up</a>
       </div>
-      <div class="carousel-item px-5">
-        <img src="images/land1.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item px-5">
-        <img src="images/north_shore_sunset_beach6869.jpg" class="d-block w-100" alt="...">
-      </div>
+      <div class="button-row"></div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+
+    <!-- Carousel -->
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-8 wow-hero-col valign">
+  <div id="carouselExampleControls"  class="carousel slide " data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active px-5">
+          <img src="images/land.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item px-5">
+          <img src="images/land1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item px-5">
+          <img src="images/north_shore_sunset_beach6869.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    </div>
+    </div>
   </div>
 
   <div class=" my-4 mx-3">

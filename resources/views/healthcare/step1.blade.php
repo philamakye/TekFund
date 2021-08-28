@@ -5,11 +5,12 @@
     main{
         padding-top: 0 !important;
         margin-bottom: 0px !important;
+        color: white !important;
 
     }
 
     body{
-        background-color: #b2e6f0 !important;
+        background-color: #03989E !important;
     }
 
     .nomargin{
@@ -50,6 +51,10 @@
     .step.finish {
     background-color: rgb(18, 214, 27);
     }
+    label {
+        color: white !important;
+    }
+
 </style>
 
 @section('content')
@@ -120,7 +125,7 @@
                             <i class="fas fa-exclamation-circle"></i> <span style="color:red; font-weight:100;">Minimum target amount that can be set is GHC 200.</span>
                         </div>
                         <h4 class="mb-5">
-                        <small class="text-muted">Keep in mind that transaction fees including credit and debit charges, are deducted from each donation
+                        <small class="text-muted" style="color: white !important;">Keep in mind that transaction fees including credit and debit charges, are deducted from each donation
                         <br><br>
                         To receive money raised, please make sure the person withdrawing has:  <br><br>
                         <i class="fas fa-arrow-circle-right"></i> Valid National ID <br><br>
@@ -177,7 +182,7 @@
             </h3>
 
             <div class="mb-3">
-             <textarea name="story" id="story" style ="border-radius: 5px; box-shadow:1px 1px 1px; line-height:1.5;border-color:rgb(80, 77, 77)" cols="75" rows="15" required>
+             <textarea name="story" id="story" style ="border-radius: 5px; box-shadow:1px 1px 1px; line-height:1.5;border-color:rgb(80, 77, 77);background:white" cols="75" rows="15" required>
 
              </textarea>
 
