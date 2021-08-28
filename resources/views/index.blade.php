@@ -52,7 +52,6 @@
   }
   .carousel img{
 height: 35em;
-width:  60%
   }
 
 .nopadding{

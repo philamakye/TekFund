@@ -243,9 +243,9 @@ const numb = document.querySelector(".numb");
                                 </div>
                                 <div class="col">
                                     @if(!empty($contris->percent >=70))
-                                    <button type="button" class="btn btn-success"  id="dbtn-c">Complete</button>
+                                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" id="dbtn-c">Complete</button>
                                     @else
-                                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="dbtn">Complete</button>
+                                    <button type="button" class="btn btn-secondary" id="dbtn">Complete</button>
                                     @endif
                                 </div>
                             </div>
@@ -256,14 +256,13 @@ const numb = document.querySelector(".numb");
              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                    <div class="modal-header">
-                    </div>
-                    <div class="mb-3" style="padding: 15px;">
-
-                    <br>
-                  </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    {{-- <div class="modal-header"><h4><b>Complete this campaign?</b></h4></div> --}}
+                    <center> <h3 style="margin-top:10%"><b>Complete this campaign?</b></h3></center>
+                    <div class="modal-footer" style="margin-top: 20%">
+                        <form action="{{ route('campaigns.show', $mydetails->id) }}" method="get">
+                      <button type="submit" style="margin-right:10%" class="btn btn-success">Continue</button>
+                        </form>
+                      <button type="button" class="btn btn-secondary"data-bs-dismiss="modal">Cancel</button>
                     </div>
                     </div>
                  </div>
@@ -283,10 +282,8 @@ const numb = document.querySelector(".numb");
                         </div>
                   </div>
                     <div class="modal-footer">
+                         <button type="button" class="btn btn-success" style="margin-right:10%">Send</button>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-
-                        <button type="button" class="btn btn-success">Send</button>
-
                     </div>
                     </div>
                  </div>

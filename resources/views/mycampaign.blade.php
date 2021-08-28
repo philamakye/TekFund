@@ -187,7 +187,7 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
                   Actions
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                 <li><a type="button" href="{{ route('campaigns.show',$c->id) }}" id="id02" class="dropdown-item">View Details</a></li>
+                 <li><a type="button" href="{{ route('campaigns.edit',$c->id) }}" id="id02" class="dropdown-item">View Details</a></li>
                  {{-- <li><button id="id02" onclick="document.getElementById('id01').style.display='block'">Drop</button></li> --}}
                 <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">Generate Link</button></li>
 
@@ -214,24 +214,6 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
                     </div>
                  </div>
                 </div>
-
-
-
-                {{-- <div id="id01" class="modal">
-                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
-                    <form class="modal-content" action="{{ route('campaigns.destroy',$c->id) }}" method="post">
-                        @csrf
-                        @method('delete')
-                        <div class="container">
-                        <h1>Drop Campaign</h1>
-                        <p>Are you sure you want to delete this campaign?</p>
-                        <div class="clearfix">
-                            <button type="button" id="cancelbtn" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                            <button  type="submit" id="deletebtn" onclick="document.getElementById('id01').style.display='none'" class="deletebtn">Delete</button>
-                        </div>
-                        </div>
-                    </form>
-              </div> --}}
 
         </div>
 
