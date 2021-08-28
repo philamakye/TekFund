@@ -6,13 +6,14 @@
     float: none;
   }
   .side-title{
-    font-size: 50px;
+    font-size: 50px !important;
     line-height: 110%;
-    letter-spacing: -.5px;
+    letter-spacing: -.5px !important;
     font-family: RalewayBold,Helvetica,sans-serif;
     margin-bottom: 27px;
     color: #152235 !important;
     max-width: 433px;
+    padding-top: 70px;
   }
   h2.side-text {
     line-height: 28px;
@@ -35,7 +36,7 @@
     padding: 11px 30px !important;
     border: 1px solid transparent;
     border-radius: 4px;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
     color: white !important;
     display: inline-block;
     cursor: pointer;
@@ -81,7 +82,7 @@ height: 35em;
     <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-4 wow-hero-col valign">
       <h1 class="side-title">Want to touch a life?</h1>
       <h2 class="side-text">
-        Unlike screen sharing, Prezi Video lets you interact with your visuals on screen.
+        Unlike gofundme, Tekfund gives you the opportunity to make donations via mobile money.
       </h2>
       <div class="button-row">
         <a class="btn btn-md demo-button" href="#">Sign Up</a>
@@ -89,6 +90,7 @@ height: 35em;
       <div class="button-row"></div>
     </div>
 
+    <!-- Carousel -->
     <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-8 wow-hero-col valign">
   <div id="carouselExampleControls"  class="carousel slide " data-bs-ride="carousel">
       <div class="carousel-inner">
