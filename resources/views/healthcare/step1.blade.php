@@ -139,7 +139,7 @@
                             <i class="fas fa-exclamation-circle"></i> <span style="color:red; font-weight:100;">Minimum campaign duration that can be set is 10 days.</span>
                         </div>
                            <h4 class="mb-5">
-                          <small class="text-muted">
+                          <small class="text-muted" style="color:white !important;">
                             Duration begins after campaign goes online
                           </small>
                       </h4>
@@ -149,7 +149,7 @@
                     <h3 class="offset-2 mb-5" style="font-family: Snell Roundhand, cursive; margin-inline-start: 5px; font-weight:bold">
                 Add a Cover Photo Or Video
             </h3>
-                    <h4 class="text-muted mb-5">A high-quality photo or video will help tell your story and build trust with donors</h4>
+                    <h4 class="text-muted mb-5" style="color:white !important">A high-quality photo or video will help tell your story and build trust with donors</h4>
 
                     <div class="mb-5" style="border-style: dashed">
                         <div class="my-3 px-3 text-center">
@@ -193,7 +193,7 @@
                     <h3 class="offset-2 mb-5" style="font-family: Snell Roundhand, cursive; margin-inline-start: 5px; font-weight:bold">
                 You're Almost There!
             </h3>
-           <h5 class="text-muted"> <i class="fas fa-lock"></i> We just need a little more information before you can accept donations</h5>
+           <h5 class="text-muted" style="color:white !important"> <i class="fas fa-lock"></i> We just need a little more information before you can accept donations</h5>
 
            <label for="title" style="font-size: large; margin:13px"><b>Full Name of Person of Concern</b></label>
            <input oninput="this.className = 'form-control'" type="text" id="inputPassword5"  class="form-control mb-5" aria-describedby="passwordHelpBlock" name="full_name">
