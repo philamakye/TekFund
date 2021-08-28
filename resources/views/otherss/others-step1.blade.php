@@ -84,9 +84,9 @@
                         <label for="title" style="font-size: large"><b>What is your fundraiser title?</b></label>
                         <input oninput="this.className = 'form-control'" name="title" type="text" id="inputPassword5" placeholder="Ex: Help Stevenson get a new brain" class="form-control" aria-describedby="passwordHelpBlock">
                         <div id="passwordHelpBlock" class="form-text mb-4">
-                            <i class="fas fa-exclamation-circle"></i> Try to include a person's name and the purpose.
+                            <i class="fas fa-exclamation-circle"></i> <span style="color:red; font-weight:100;">Try to include a person's name and the purpose.</span>
                         </div>
-                        <p><small> By continuing, you agree to Tekfund's  <a href="#" style="text-decoration: none;">Conditions of Use</a> and <a href="#" style="text-decoration: none;">Privacy Notice</a>.</small></p>
+                        <p><small> <span style="font-weight:200;">By continuing, you agree to Tekfund's</span>  <a href="#" style="color:white">Conditions of Use</a> and <a href="#" style="color:white">Privacy Notice</a></small></p>
                 </div>
 
                 <div class="tab" id="step-2">
@@ -96,7 +96,7 @@
                     <label for="title" style="font-size: large"><b>How much would you like to raise?</b></label>
                     <input type="text" min="200" oninput="validity.valid||(value='');" name="target" id="inputPassword5" placeholder="Enter Target Amount in GHC" class="form-control" aria-describedby="passwordHelpBlock">
                     <div id="passwordHelpBlock" class="form-text mb-4">
-                            <i class="fas fa-exclamation-circle"></i> Minimum target amount that can be set is GHC 200.
+                            <i class="fas fa-exclamation-circle"></i> <span style="color:red; font-weight:100;">Minimum target amount that can be set is GHC 200.</span>
                         </div>
 
                       <h4 class="mb-5">

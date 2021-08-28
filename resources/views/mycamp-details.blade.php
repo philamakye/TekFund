@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
 <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="/css/jQuery-plugin-progressbar.css">
@@ -217,7 +218,7 @@ const numb = document.querySelector(".numb");
                         <tr>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Amount</th>
+                            <th>Amount (GHC)</th>
                             <th>Contribution Date</th>
                         </tr>
                         @foreach ($cont_details as $d )

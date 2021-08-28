@@ -166,13 +166,11 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 <hr style="margin: 10px;">
   <div class="card-body">
 
-    <h7 class="card-title" style="color: rgb(71, 69, 69);">By deactivating your account, you will no longer be able to log in, manage any contributions, and will lose
-any draft campaigns. Please review our <a href="#" style="color: red;">Privacy Policy</a> for how we store data.</h7>
+    <h4 style="color: rgb(71, 69, 69); text-transform:justify;">By deactivating your account, you will no longer be able to log in, manage any contributions, and will lose
+any draft campaigns. Please review our <a href="#" style="color: red;">Privacy Policy</a> for how we store data.</h4>
 
-<h7 class="card-title" style="color: rgb(71, 69, 69);"> If you need to change your subscription settings, visit your email preferences. If you would like changes
-made to your account because of privacy laws enacted in your country or region, please submit a request.</h7>
-    <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
-<br>
+<h4 style="color: rgb(71, 69, 69); text-transform:justify;"> If you need to change your subscription settings, visit your email preferences. If you would like changes
+made to your account because of privacy laws enacted in your country or region, please submit a request.</h4>
 <br>
 <button type="submit" class="btn btn-primary mb-2" style="background-color:rgb(44, 20, 124)">DEACTIVATE YOUR ACCOUNT</button>
   </div>
