@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 <style>
+    main{
+        padding-top: 0 !important;
+        margin-bottom: 0px !important;
+        color: white !important;
+
+    }
     /* Mark input boxes that gets an error on validation: */
     input.invalid {
     background-color: #f89797;
@@ -35,15 +41,15 @@
 </style>
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
 <div class="row ">
-    <div class="col-1">
+    <div class="col-1" style="background-color:#03989E;">
 
     </div>
-    <div class="col" style="background-color: #b2e6f0; border-radius:5px">
+    <div class="col" style="background-color: #03989E; border-radius:5px;">
 <br>
         <div class="text-center">
-            <h2 style = "font-family:Comic Sans MS, cursive, sans-serif; font-size:40px; color:rgb(52, 2, 145)">START UP</h2>
+            <h2 style = "font-family:Candara; font-size:40px; color:rgb(52, 2, 145)">START UP</h2>
             <!--<img src="images/healthcare.svg" class="img-fluid" alt="..." "> -->
         </div>
        <div class="row text-center">
@@ -80,11 +86,11 @@
                         <label for="Default select example2" style="font-size: large"><b>Category of Business</b></label>
                         <select class="form-select mb-5" name="business_cate" aria-label="Default select example2">
                             <option selected disabled value="" hidden>--please select--</option>
-                            <option value="Retailer">Retailing</option>
-                            <option value="Distributor">Distribution</option>
+                            <option value="Retailing">Retailing</option>
+                            <option value="Distribution">Distribution</option>
                             <option value="Food Service">Food Service</option>
-                            <option value="Manufacturer">Manufacturing</option>
-                            <option value="Investor">Investment</option>
+                            <option value="Manufacturing">Manufacturing</option>
+                            <option value="Investment">Investment</option>
                             <option value="Others">Others</option>
 
                         </select>
@@ -92,9 +98,9 @@
                         <label for="title" style="font-size: large"><b>What is your fundraiser title?</b></label>
                         <input oninput="this.className = 'form-control'" name="title" type="text" id="inputPassword5" placeholder="Ex: Help Stevenson get a new brain" class="form-control" aria-describedby="passwordHelpBlock">
                         <div id="passwordHelpBlock" class="form-text mb-4">
-                            <i class="fas fa-exclamation-circle"></i> Try to include a person's name and the purpose.
+                            <i class="fas fa-exclamation-circle"></i> <span style="color:red; font-weight:100;">Try to include a person's name and the purpose.</span>
                         </div>
-                        <p><small> By continuing, you agree to Tekfund's  <a href="#" style="text-decoration: none;">Conditions of Use</a> and <a href="#" style="text-decoration: none;">Privacy Notice</a>.</small></p>
+                        <p><small> <span style="font-weight:200;">By continuing, you agree to Tekfund's</span>  <a href="#" style="color:white">Conditions of Use</a> and <a href="#" style="color:white">Privacy Notice</a></small></p>
                 </div>
 
                 <div class="tab" id="step-2">
@@ -104,7 +110,7 @@
                     <label for="title" style="font-size: large"><b>How much would you like to raise?</b></label>
                     <input type="text" min="200" name="target" oninput="validity.valid||(value='');" id="inputPassword5" placeholder="Enter Target Amount in GHC" class="form-control" aria-describedby="passwordHelpBlock">
                     <div id="passwordHelpBlock" class="form-text mb-4">
-                            <i class="fas fa-exclamation-circle"></i> Minimum target amount that can be set is GHC 200.
+                            <i class="fas fa-exclamation-circle"></i> <span style="color:red; font-weight:100;">Minimum target amount that can be set is GHC 200.</span>
                         </div>
 
                       {{-- <label for="Default select example2" style="font-size: large"><b>Who are you crowdfunding for? </b></label>
@@ -115,7 +121,7 @@
                       </select> --}}
 
                       <h4 class="mb-5">
-                        <small class="text-muted">Keep in mind that transaction fees including credit and debit charges, are deducted from each donation
+                        <small class="text-muted" style="color:white !important">Keep in mind that transaction fees including credit and debit charges, are deducted from each donation
                         <br><br>
                         To receive money raised, please make sure the person withdrawing has:  <br><br>
                         <i class="fas fa-arrow-circle-right"></i> Valid National ID <br><br>
@@ -126,9 +132,9 @@
                       <label for="title" style="font-size: large"><b>Campaign Duration</b></label>
                       <input type="text" name="duration" min="10" oninput="validity.valid||(value='');" id="inputPassword5" placeholder="Set Campaign duration in Days" class="form-control" aria-describedby="passwordHelpBlock">
                       <div id="passwordHelpBlock" class="form-text mb-4">
-                            <i class="fas fa-exclamation-circle"></i> Minimum campaign duration that can be set is 10 days.
+                            <i class="fas fa-exclamation-circle"></i> <span style="color:red; font-weight:100;">Minimum campaign duration that can be set is 10 days.</span>
                         </div>                      <h4 class="mb-5">
-                          <small class="text-muted">
+                          <small class="text-muted" style="color:white !important">
                             Duration begins after campaign goes online
                           </small>
                       </h4>
@@ -138,7 +144,7 @@
                     <h3 class="offset-2 mb-5" style="font-family: Snell Roundhand, cursive; margin-inline-start: 5px;font-weight:bold">
                 Add a Cover Photo Or Video
             </h3>
-                    <h5 class="text-muted mb-5">A high-quality photo or video will help tell your story and build trust with donors</h5>
+                    <h5 class="text-muted mb-5" style="color:white !important">A high-quality photo or video will help tell your story and build trust with donors</h5>
 
                     <div class="mb-5" style="border-style: dashed">
                         <div class="my-3 px-3 text-center">
@@ -181,7 +187,7 @@
                     <h3 class="offset-2 mb-5" style="font-family: Snell Roundhand, cursive; margin-inline-start: 5px;font-weight:bold">
                 You're Almost There!
             </h3>
-                    <h5 class="text-muted"> <i class="fas fa-lock"></i> We just need a little more information before you can accept donations</h5>
+                    <h5 class="text-muted" style="color:white !important"> <i class="fas fa-lock"></i> We just need a little more information before you can accept donations</h5>
 
            <label for="title" style="font-size: large; margin:13px"><b>Full Name</b></label>
            <input oninput="this.className = 'form-control'" name="full_name" type="text" id="inputPassword5"  class="form-control mb-5" aria-describedby="passwordHelpBlock">
@@ -211,15 +217,30 @@
             </form>
             </div>
 
-            <div class="col-3"></div>
-        </div>
 
-    </div>
-    <div class="col-1">
 
     </div>
 </div>
+        <div class="col-4" style="background-color: #03989E;">
+                        <div class="card" style="width: 18rem; float:right;margin-top:20%"">
+                            <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <div class="container">
+                                    <div class="row">
+                                    <div class="col nomargin nopadding">
+                                        Tips from Gerald Pino, our fundraising expert (SBA Lord)
+                                    </div>
+                                    <div class="col-2 nomargin nopadding">
+                                        <img src="/images/profile.jpg" style="height: 2.5em; border-radius: 30px;" class="img-fluid" alt="...">
+                                    </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">You will be eligible for withdrawal after reaching 70% of the target</li>
 
+                            </ul>
+                        </div>
+                    </div>
 </div>
 
 <script>

@@ -29,9 +29,6 @@
                                 <p>Target Amount</p>
                                 <p>Amount raised</p>
                                  <p>Days Remaining</p>
-                                 @if (!empty($details->hospital_name))
-                                <p>Name of Hospital</p>
-                                 @endif
 
                                 </div>
                                 <div class="col mt-2 pt-5">
@@ -47,7 +44,6 @@
                                 <p>GHC 0</p>
                                 @endif
                                 <p>{{ \Carbon\Carbon::parse($details->updated_at)->addDays($details->duration)->diffInDays() }} days</p>
-                                <p>{{$details->hospital_name}}</p>
 
                                 </div>
 
@@ -95,22 +91,75 @@
     <br>
                 <br>
 
-                             @if (empty($details->cause))
-                             <div class="col-md-5" style="margin-left:20%">
+                              <div class="container">
+                                <div class="row">
+                                 <div class="col-1"></div>
+                                 <div class="col"><hr></div>
+                                 <div class="col-1"></div>
+                                </div>
+                                </div>
+                                <br>
+                                <br>
+                                <br>
+                                <center><h3> Verification Details</h3></center>
+                                <br>
+                                <br>
+                                <h4 style="margin-left: 5%"><b>Campgaign Story</b></h4>
+                                <p style="margin-left: 5%; max-width:90%; text-align:justify">{{ $details->story }}</p>
 
+                                <br>
+                                <br>
+                                 <div class="col-md-5" style="margin-left:5%">
+                                <div class="row align-items-start">
+                                <div class="col mt-2 pt-5" style="text-align:left;">
+                                 <p>Campaign Type</p>
+                                 @if (!empty($details->hospital_name))
+                                <p>Name of Hospital</p>
+                                 @endif
+                                 @if (!empty($details->business_cate))
+                                     <p>Category of Business</p>
+                                     <p>Name of Business</p>
+                                 @endif
+                                 @if (!empty($details->project_field))
+                                        <p>Field of Project</p>
+                                 @endif
+                                 @if (!empty($details->cause))
+                                 <p>Cause for Fundraising</p>
+                                 <p>First Reference School ID</p>
+                                 <p>Second Reference School ID</p>
+                                 @endif
+
+                                </div>
+                                <div class="col mt-2 pt-5">
+                                <p style="text-transform: capitalize;">{{ $details->campaign_type}}
+                                <p>{{$details->hospital_name}}</p>
+                                 <p>{{ $details->business_cate }}</p>
+                                 <p>{{ $details->business_name }}</p>
+                                 <p>{{ $details->project_field }}</p>
+                                 <p>{{ $details->cause }}</p>
+                                 <p>{{ $details->reference_1 }}</p>
+                                 <p>{{ $details->reference_2 }}</p>
+                                </div>
+                                </div>
+                            </div>
+<br>
+                             @if (empty($details->cause))
+                              <div class="col-md-3" style="margin-left:19%">
+                                  <br>
+                                  <br>
                                  <div class="card-header">Download File->{{ $details->business_plan}}{{$details->doctors_report }}{{ $details->project_plan}}</div>
                                  <div class="card-body">
                                         @if (!empty($details->doctors_report))
                                <center> <a href="{{asset('storage/docReports/'. $details->doctors_report)}}" download="{{ $details->doctors_report }}">
-                                <img src="{{asset('storage/docReports/'. $details->doctors_report)}}" alt="Tekfund" width="104" height="142">
+                                <img src="{{asset('storage/docReports/'. $details->doctors_report)}}" alt="Tekfund" width="90" height="100">
                                 </a></center>
                                 @elseif (!empty($details->business_plan))
                                <center>  <a href="{{asset('storage/business-plans/'. $details->business_plan)}}" download="{{ $details->business_plan }}">
-                                <img src="{{asset('storage/1200px-PDF_file_icon.svg.png' )}}" alt="Tekfund" width="104" height="142">
+                                <img src="{{asset('storage/1200px-PDF_file_icon.svg.png' )}}" alt="Tekfund" width="90" height="100">
                                 </a></center>
                                 @elseif (!empty($details->project_plan))
                                 <center>  <a href="{{asset('storage/project-files/'. $details->project_plan)}}" download="{{ $details->project_plan }}">
-                                <img src="{{asset('storage/1200px-PDF_file_icon.svg.png' )}}" alt="Tekfund" width="104" height="142">
+                                <img src="{{asset('storage/1200px-PDF_file_icon.svg.png' )}}" alt="Tekfund" width="90" height="100">
                                 </a></center>
                                  @endif
                                  <center><h7 style="margin: auto;">Click to download file </h7></center>

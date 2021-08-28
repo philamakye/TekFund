@@ -34,6 +34,10 @@ const numb = document.querySelector(".numb");
         z-index: 80;
 
     }
+    #page-content-wrapper{
+        overflow: hidden;
+
+    }
 
 
 
@@ -82,7 +86,7 @@ const numb = document.querySelector(".numb");
                 <br>
             </div>
             <!-- Page content wrapper-->
-            <div id="page-content-wrapper" style = "margin-left:13.5%; width:2000px">
+            <div id="page-content-wrapper" style = "margin-left:13.5%; width:1900px">
                 <!-- Top navigation-->
                 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom" id="onlynav">
                     <div class="container-fluid">
@@ -103,7 +107,7 @@ const numb = document.querySelector(".numb");
                 </nav>
                 <!-- Page content-->
                 <div class="container-fluid bg-light">
-                    <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
+                    {{-- <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p> --}}
                      <main style="padding-top: 1.5rem; margin-bottom: 5rem;">
                    @yield('trial')
                    </main>

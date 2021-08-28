@@ -112,12 +112,12 @@ if ($ref == "") {
         $fn = $result->data->customer->first_name;
         $Sn = $result->data->customer->last_name;
         $name=  $fn;
-        // if (Auth::check()){
-        //     $contribution->contributor_name = auth()->user()->name;
-        // }
-        // else{
-        //     $contribution->contributor_name = $name;
-        // }
+        if (Auth::check()){
+            $contribution->contributor_name = auth()->user()->name;
+        }
+        else{
+            $contribution->contributor_name = "Guest";
+        }
         $contribution->cont_email = $result->data->customer->email;
         $contribution->transaction_phone_num = $result->data->customer->phone;
         $amount = $result->data->amount;

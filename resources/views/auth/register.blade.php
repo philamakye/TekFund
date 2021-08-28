@@ -37,6 +37,9 @@ body{
 .reg-ft{
     display: none !important;
 }
+.main-footer {
+    display: none;
+}
 
 </style>
 @extends('layouts.app')
@@ -48,12 +51,11 @@ body{
       <div class="col-sm-3">
 
       </div>
-      <div class="col-sm icon" style="border: 0.2px solid rgb(202,199,199); background:white; border-radius: 5px; box-shadow:5px 5px #666666">
+      <div class="col-sm icon" style="border: 0.2px solid white; background:white; border-radius: 5px; box-shadow: 0 0.5rem 1.5rem 0 rgb(0 0 0 / 10%)">
       <div>
-            <center><h2><img src="images/icon.gif" class="img-fluid mr-2" style="height: 2.0em; border-radius:30px; font-family: Garamond;" alt="...">TekFund</h2></center>
+      <center><h3 style="text-decoration-style: solid; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Sign Up</h3></center>
     </div>
-     <div class=" sign-box">
-
+     <div class=" sign-box" style="border: none;">
 
        <form method="POST" action="{{ route('register') }}">
                           @csrf

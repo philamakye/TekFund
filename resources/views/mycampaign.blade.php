@@ -1,9 +1,11 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
 /* Set a style for all buttons */
-#id02 {
+ #id02 {
   /* background-color: #04AA6D; */
   color: rgb(3, 3, 3);
   padding: 14px 20px;
@@ -103,46 +105,6 @@ hr {
   }
 }
 
-
-
-/* .tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 140px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px;
-  position: absolute;
-  z-index: 1;
-  bottom: 150%;
-  left: 50%;
-  margin-left: -75px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-} */
-
 </style>
 @extends('layouts.app')
 @section('content')
@@ -206,7 +168,7 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 <h3 style="margin-left: 15px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">Campaigns I'm On<i aria-hidden="true"></i></h3>
 <hr style="margin:15px;">
 <br>
-@include('layouts.flash')
+{{-- @include('layouts.flash') --}}
 @foreach ($us_camp as $c )
 <div class="mx-3 px-2 py-2" style="border: 1px dashed rgb(88, 86, 86)">
 
@@ -225,8 +187,8 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
                   Actions
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  {{-- <li><a class="dropdown-item" href="#">Drop</a></li> --}}
-                 <li><button id="id02" onclick="document.getElementById('id01').style.display='block'">Drop</button></li>
+                 <li><a type="button" href="{{ route('campaigns.edit',$c->id) }}" id="id02" class="dropdown-item">View Details</a></li>
+                 {{-- <li><button id="id02" onclick="document.getElementById('id01').style.display='block'">Drop</button></li> --}}
                 <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">Generate Link</button></li>
 
                 </ul>
@@ -253,31 +215,6 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
                  </div>
                 </div>
 
-
-
-                <div id="id01" class="modal">
-                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
-                    <form class="modal-content" action="{{ route('campaigns.destroy',$c->id) }}" method="post">
-                        @csrf
-                        @method('delete')
-                        <div class="container">
-                        <h1>Drop Campaign</h1>
-                        <p>Are you sure you want to delete this campaign?</p>
-                        <div class="clearfix">
-                            <button type="button" id="cancelbtn" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                            <button  type="submit" id="deletebtn" onclick="document.getElementById('id01').style.display='none'" class="deletebtn">Delete</button>
-                        </div>
-                        </div>
-                    </form>
-              </div>
-
-
-
-
-            <script>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-
-            </script>
         </div>
 
         </div>
