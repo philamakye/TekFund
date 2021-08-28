@@ -223,7 +223,7 @@
                 <div class="container">
                     <div class="row">
                       <div class="col nomargin nopadding">
-                        Tips from Gerald Pino, our fundraising expert (SBA Lord)
+                        Tekfund Healthcare campaign policy
                       </div>
                       <div class="col-2 nomargin nopadding">
                         <img src="/images/profile.jpg" style="height: 2.5em; border-radius: 30px;" class="img-fluid" alt="...">
@@ -231,7 +231,7 @@
                     </div>
                   </div>
               </li>
-              <li class="list-group-item">You will be eligible for withdrawal after reaching 70% of the target</li>
+              <li class="list-group-item">You will only be able to withdraw after campaign period </li>
 
             </ul>
           </div>
