@@ -1,3 +1,4 @@
+
 <style>
     .nomargin{
         margin: 0 !important;
@@ -89,7 +90,7 @@
 
   <script>
 follow(){
-    console.log('3tw3')
+    console.log('follow')
 }
   </script>
 
