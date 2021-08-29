@@ -63,16 +63,31 @@ height: 35em;
 .nomargin{
   margin: 0 !important;
 }
-
+.index-card{
+  background-color:white;
+  border:none;
+  box-shadow: 0 0.5rem 1.5rem 0 rgb(0 0 0 / 10%);
+}
 .index-card:hover {
   /* margin-bottom: 2px; */
-  box-shadow: 5px 5px 5px 5px grey;
-  transition: .3s;
+  box-shadow: 3px 3px 3px grey;
+  transition: ease-in .3s;
 
 }
-/* body{
-    background: #fbf8f6 !important;
-  } */
+@keyframes wipe-enter {
+  0% {
+    transform: scale(0, 0.025);
+  }
+  50%{
+    transform: scale(0, 0.025);
+  }
+  
+}
+@media (prefers-reduced-motion: no-preference){
+  .card-animation{
+    animation: wipe-enter 1s 1;
+  }
+}
 </style>
 @extends('layouts.app')
 
@@ -80,7 +95,7 @@ height: 35em;
 @section('content')
   @guest
 <div class="container">
-  <div class="row" style="margin-top: 40px; padding-top:25px; background:white">
+  <div class="row" style="margin-top: 40px; padding-top:20px; background:white">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-4 wow-hero-col valign">
       <h1 class="side-title">Want to touch a life?</h1>
       <h2 class="side-text">
@@ -89,11 +104,16 @@ height: 35em;
       <div class="button-row">
         <a class="btn btn-md demo-button" href="{{ route('register') }}">Sign Up</a>
       </div>
-      <div class="button-row"></div>
+      
+      <center>
+      <a class="link-text"><h5>Read more <i class="fas fa-angle-double-right ml-2"></i></h5></a>
+      </center>
     </div>
 
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-1 wow-hero-col valign"></div>
+
     <!-- Carousel -->
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-8 wow-hero-col valign">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-7 wow-hero-col valign">
   <div id="carouselExampleControls"  class="carousel slide " data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active px-5">
@@ -152,7 +172,7 @@ height: 35em;
     <div class="row text trio">
      @foreach ( $showcards as $show )
       <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card index-card" style="height: 80vh">
+          <div class="card index-card card-animation" style="height: 80vh">
               <img class="card-img-top" src="{{asset('storage/covers/'. $show->cover_img)}}" alt="Img" style="height:40%">
               <div class="card-body nopadding mt-2" style="margin-left:0px;">
                 <div class="container nopadding">
@@ -266,7 +286,7 @@ height: 35em;
     <div class="row text trio">
 
       <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card index-card" style="height: 90vh">
+          <div class="card index-card card-animation" style="height: 90vh">
               <img class="card-img-top" src="images/cards/card1.jpg" alt="Img" style="height:40%">
               <div class="card-body nopadding mt-2" style="margin-left:0px;">
                 <div class="container nopadding">
@@ -330,7 +350,7 @@ height: 35em;
       </div>
 
       <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card index-card" style="height: 90vh">
+        <div class="card index-card card-animation" style="height: 90vh">
             <img class="card-img-top" src="images/cards/card2.jpg" alt="Img" style="height:40%">
             <div class="card-body nopadding mt-2" style="margin-left:0px;">
               <div class="container nopadding">
@@ -394,7 +414,7 @@ height: 35em;
     </div>
 
     <div class="col-lg-3 col-md-6 mb-4">
-      <div class="card index-card" style="height: 90vh">
+      <div class="card index-card card-animation" style="height: 90vh">
           <img class="card-img-top" src="images/cards/card3.jpg" alt="Img" style="height:40%">
           <div class="card-body nopadding mt-2" style="margin-left:0px;">
             <div class="container nopadding">
@@ -458,7 +478,7 @@ height: 35em;
   </div>
 
   <div class="col-lg-3 col-md-6 mb-4">
-    <div class="card index-card" style="height: 90vh">
+    <div class="card index-card card-animation" style="height: 90vh">
         <img class="card-img-top" src="images/cards/card4.jpeg" alt="Img" style="height:40%">
         <div class="card-body nopadding mt-2" style="margin-left:0px;">
           <div class="container nopadding">
@@ -532,7 +552,7 @@ height: 35em;
     <div class="row text trio">
 
       <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card index-card" style="height: 90vh">
+          <div class="card index-card card-animation" style="height: 90vh">
               <img class="card-img-top" src="images/cards/card1.jpg" alt="Img" style="height:40%">
               <div class="card-body nopadding mt-2" style="margin-left:0px;">
                 <div class="container nopadding">
@@ -596,7 +616,7 @@ height: 35em;
       </div>
 
       <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card index-card " style="height: 90vh">
+        <div class="card index-card card-animation" style="height: 90vh">
             <img class="card-img-top" src="images/cards/card2.jpg" alt="Img" style="height:40%">
             <div class="card-body nopadding mt-2" style="margin-left:0px;">
               <div class="container nopadding">
@@ -660,7 +680,7 @@ height: 35em;
     </div>
 
     <div class="col-lg-3 col-md-6 mb-4">
-      <div class="card index-card" style="height: 90vh">
+      <div class="card index-card card-animation" style="height: 90vh">
           <img class="card-img-top" src="images/cards/card3.jpg" alt="Img" style="height:40%">
           <div class="card-body nopadding mt-2" style="margin-left:0px;">
             <div class="container nopadding">
@@ -724,7 +744,7 @@ height: 35em;
   </div>
 
   <div class="col-lg-3 col-md-6 mb-4">
-    <div class="card index-card" style="height: 90vh">
+    <div class="card index-card card-animation" style="height: 90vh">
         <img class="card-img-top" src="images/cards/card4.jpeg" alt="Img" style="height:40%">
         <div class="card-body nopadding mt-2" style="margin-left:0px;">
           <div class="container nopadding">
@@ -790,4 +810,22 @@ height: 35em;
   </div>
   </div>
 
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry =>{
+        const card = entry.target.querySelector('.card') ;
+
+        if(entry.isIntersecting){
+          card.classList.add('card-animation');
+          return;
+        }
+
+        card.classList.remove('card-animation');
+      });
+
+    });
+
+    observer.observe(document.querySelector('.card'));
+
+  </script>
 @endsection
