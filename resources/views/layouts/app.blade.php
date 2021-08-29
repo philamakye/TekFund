@@ -99,7 +99,7 @@ main{
                                     <img src="{{asset('storage/avatar.png')}}" alt="avatar"class="avatar" />
 
                                     @endif
-                                    <span class="caret" </span>
+                                    <span class="caret"> </span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

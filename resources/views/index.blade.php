@@ -81,7 +81,7 @@ height: 35em;
   50%{
     transform: scale(0, 0.025);
   }
-  
+
 }
 @media (prefers-reduced-motion: no-preference){
   .card-animation{
@@ -104,7 +104,7 @@ height: 35em;
       <div class="button-row">
         <a class="btn btn-md demo-button" href="{{ route('register') }}">Sign Up</a>
       </div>
-      
+
       <center>
       <a class="link-text"><h5>Read more <i class="fas fa-angle-double-right ml-2"></i></h5></a>
       </center>
