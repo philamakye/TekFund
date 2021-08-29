@@ -11,7 +11,7 @@
   margin-left: 20px;
   transition: 1s;
 }
- a text:hover{
+ .camp-card text:hover{
   color: turquoise !important;
   text-decoration: none;
 }
