@@ -55,13 +55,12 @@ const numb = document.querySelector(".numb");
                     <div class="card-header" style="text-transform: uppercase; font-weight:bolder;">{{ $mydetails->title }}</div>
                         <div class="card-body">
                             <div class="row align-items-start">
-                                {{-- <center><h3>Campaign Details</h3></center> --}}
                                 <div class="col">
                                 <h3 style="text-transform: capitalize;">{{ $mydetails->title }}</h3>
-                                @if (!empty($contris->percent))
-                                <div class="progress-bar position"  data-percent="{{ $contris->percent }}" data-color="#aadcf5,#12b321"></div>
-                                @else
-                               <div class="progress-bar position"  data-percent="00" data-color="#aadcf5,#12b321"></div>
+                                  @if(isset($contris))
+                                  <div class="progress-bar position"  data-percent="{{ $contris->percent }}" data-color="#aadcf5,#12b321"></div>
+                                 @else
+                                <div class="progress-bar position"  data-percent="00" data-color="#aadcf5,#12b321"></div>
                                 @endif
                              </div>
                                 <div class="col mt-2 pt-5">
@@ -80,7 +79,7 @@ const numb = document.querySelector(".numb");
                                 <p> {{ $mydetails->full_name }}</p>
                                 <p>GHC {{ $mydetails->target }}</p>
                                 <p>{{ $mydetails->duration }} days</p>
-                                 @if (!empty($contris->total_amount))
+                                 @if (isset($contris))
                                   <p>GHC {{ $contris->total_amount}}</p>
                                 @else
                                 <p>GHC 0</p>
@@ -90,6 +89,7 @@ const numb = document.querySelector(".numb");
                                 <p>{{$mydetails->hospital_name}}</p>
 
                                 </div>
+                            </div>
 
                                 <br>
                                 <br>
@@ -144,6 +144,7 @@ const numb = document.querySelector(".numb");
                                 <br>
                                 <br>
                                 <br>
+                                <div class="row align-items-start">
                                 <center><h3>Campaign Details</h3></center>
                                 <br>
                                 <br>
@@ -183,7 +184,7 @@ const numb = document.querySelector(".numb");
                                 </div>
                             </div>
                             @if (empty($details->cause))
-                             <div class="col-md-3" style="margin-left:19%">
+                             <div class="col-md-3" style="margin-left:21%">
 
 <br>
 <br>
@@ -207,6 +208,7 @@ const numb = document.querySelector(".numb");
 
                              </div>
                              @endif
+                                </div>
 
                                  <br>
                             </div>
@@ -235,15 +237,17 @@ const numb = document.querySelector(".numb");
                         @endforeach
                         </table>
                         @else
-                        <h4>There are no contributions made to this campaign.</h4>
+                        <h4 style="margin-left:5%">There are no contributions made to this campaign.</h4>
                         @endif
                            <center> <div class="row align-items-start" style="padding-top: 50px;margin-top:10px;">
                                 <div class="col">
                                     <button type="button" class="btn btn-danger"data-bs-toggle="modal" data-bs-target="#exampleModal2" id="dbtn">End</button>
                                 </div>
                                 <div class="col">
-                                    @if(!empty($contris->percent >=70))
+                                    @if(isset($contris->percent))
+                                    @if($contris->percent >=70)
                                     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" id="dbtn-c">Complete</button>
+                                    @endif
                                     @else
                                     <button type="button" class="btn btn-secondary" id="dbtn">Complete</button>
                                     @endif
