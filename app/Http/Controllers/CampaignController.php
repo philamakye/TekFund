@@ -62,10 +62,7 @@ class CampaignController extends Controller
      */
     public function show(Campaign $campaign)
     {
-        $campcont= UserContribution::where('campaign_id',$campaign->id)->select('contributor_name','cont_email', 'contributed_amount','updated_at')->get();
-        $count_backers['contris'] = campaign_contribution::where('campaign_id', $campaign->id)->select('num_contributors', 'total_amount', 'percent')->first();
-        $schid['sch_id'] = User::where('user_id', $campaign->us_id)->select('school_id', 'username', 'phone_number', 'city', 'country', 'first_name', 'last_name', 'pro_image')->first();
-        return view('mycamp-details')->with(['mydetails' => $campaign])->with($count_backers)->with($schid)->with('cont_details',$campcont);
+        return view('withdrawal');
     }
 
     /**
@@ -76,8 +73,10 @@ class CampaignController extends Controller
      */
     public function edit(Campaign $campaign)
     {
-       // $spec['particular'] = DB::table('campaigns')->
-        // return view('viewcampaign')->with($campaign);
+        $campcont = UserContribution::where('campaign_id', $campaign->id)->select('contributor_name', 'cont_email', 'contributed_amount', 'updated_at')->get();
+        $count_backers['contris'] = campaign_contribution::where('campaign_id', $campaign->id)->select('num_contributors', 'total_amount', 'percent')->first();
+        $schid['sch_id'] = User::where('user_id', $campaign->us_id)->select('school_id', 'username', 'phone_number', 'city', 'country', 'first_name', 'last_name', 'pro_image')->first();
+        return view('mycamp-details')->with(['mydetails' => $campaign])->with($count_backers)->with($schid)->with('cont_details', $campcont);
     }
 
     /**
