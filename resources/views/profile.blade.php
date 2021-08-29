@@ -3,6 +3,7 @@
     background: #fbf8f6 !important;
   }
 </style> --}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
 @extends('layouts.app')
 @section('content')

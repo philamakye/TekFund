@@ -55,13 +55,12 @@ const numb = document.querySelector(".numb");
                     <div class="card-header" style="text-transform: uppercase; font-weight:bolder;">{{ $mydetails->title }}</div>
                         <div class="card-body">
                             <div class="row align-items-start">
-                                {{-- <center><h3>Campaign Details</h3></center> --}}
                                 <div class="col">
                                 <h3 style="text-transform: capitalize;">{{ $mydetails->title }}</h3>
-                                @if (!empty($contris->percent))
-                                <div class="progress-bar position"  data-percent="{{ $contris->percent }}" data-color="#aadcf5,#12b321"></div>
-                                @else
-                               <div class="progress-bar position"  data-percent="00" data-color="#aadcf5,#12b321"></div>
+                                  @if(isset($contris))
+                                  <div class="progress-bar position"  data-percent="{{ $contris->percent }}" data-color="#aadcf5,#12b321"></div>
+                                 @else
+                                <div class="progress-bar position"  data-percent="00" data-color="#aadcf5,#12b321"></div>
                                 @endif
                              </div>
                                 <div class="col mt-2 pt-5">
@@ -80,7 +79,7 @@ const numb = document.querySelector(".numb");
                                 <p> {{ $mydetails->full_name }}</p>
                                 <p>GHC {{ $mydetails->target }}</p>
                                 <p>{{ $mydetails->duration }} days</p>
-                                 @if (!empty($contris->total_amount))
+                                 @if (isset($contris))
                                   <p>GHC {{ $contris->total_amount}}</p>
                                 @else
                                 <p>GHC 0</p>
@@ -90,6 +89,7 @@ const numb = document.querySelector(".numb");
                                 <p>{{$mydetails->hospital_name}}</p>
 
                                 </div>
+                            </div>
 
                                 <br>
                                 <br>
@@ -129,7 +129,6 @@ const numb = document.querySelector(".numb");
                                     <p>{{$sch_id->city}}</p>
                                     <p>{{ $sch_id->country }}</p>
                                     <p>{{ $sch_id->phone_number}}
-
                                 </div>
                             </div>
     <br>
@@ -144,16 +143,26 @@ const numb = document.querySelector(".numb");
                                 <br>
                                 <br>
                                 <br>
+                                <div class="row align-items-start">
                                 <center><h3>Campaign Details</h3></center>
                                 <br>
                                 <br>
+                                @include('layouts.flash')
                                 <h4 style="margin-left: 5%"><b>Campaign Story</b></h4>
-                                <p style="margin-left: 5%; max-width:90%; text-align:justify">{{ $mydetails->story }}</p>
+                                <form method="post" action="{{ route('campaigns.update',$mydetails->id) }}">
+                                    @csrf
+                                    @method('put')
+                               <center> <textarea class="form-control" name="update_story" id="floatingTextarea2" style="height:350px; width:90%">{{ $mydetails->story }}</textarea></center>
+                               <button type ="submit"style="margin-left:5%; width:100px;margin-top:1%;"id ="btn" class = "btn btn-outline-secondary" > Update</button>
+                                </form>
+
                                 <br>
-                                  <div class="col-md-5" style="margin-left:5%">
+                                <br>
+                                <div class="col-md-5" style="margin-left:5%; margin-top:3%">
                                 <div class="row align-items-start">
                                 <div class="col mt-2 pt-5" style="text-align:left;">
                                  <p>Campaign Type</p>
+                                 <p>Number of Contributors</p>
                                  @if (!empty($mydetails->hospital_name))
                                 <p>Name of Hospital</p>
                                  @endif
@@ -171,7 +180,12 @@ const numb = document.querySelector(".numb");
                                  @endif
                                 </div>
                                 <div class="col mt-2 pt-5">
-                                <p style="text-transform: capitalize;">{{ $mydetails->campaign_type}}
+                                <p style="text-transform: capitalize;">{{ $mydetails->campaign_type}}</p>
+                                @if(isset($contris))
+                                <p>{{ $contris->num_contributors }}</p>
+                                @else
+                                <p>0</p>
+                                @endif
                                 <p>{{$mydetails->hospital_name}}</p>
                                  <p>{{ $mydetails->business_cate }}</p>
                                  <p>{{ $mydetails->business_name }}</p>
@@ -183,7 +197,7 @@ const numb = document.querySelector(".numb");
                                 </div>
                             </div>
                             @if (empty($details->cause))
-                             <div class="col-md-3" style="margin-left:19%">
+                             <div class="col-md-3" style="margin-left:12%">
 
 <br>
 <br>
@@ -207,6 +221,7 @@ const numb = document.querySelector(".numb");
 
                              </div>
                              @endif
+                                </div>
 
                                  <br>
                             </div>
@@ -235,19 +250,28 @@ const numb = document.querySelector(".numb");
                         @endforeach
                         </table>
                         @else
-                        <h4>There are no contributions made to this campaign.</h4>
+                        <h4 style="margin-left:5%">There are no contributions made to this campaign.</h4>
                         @endif
                            <center> <div class="row align-items-start" style="padding-top: 50px;margin-top:10px;">
                                 <div class="col">
                                     <button type="button" class="btn btn-danger"data-bs-toggle="modal" data-bs-target="#exampleModal2" id="dbtn">End</button>
                                 </div>
                                 <div class="col">
-                                    @if(!empty($contris->percent >=70))
-                                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" id="dbtn-c">Complete</button>
-                                    @else
-                                    <button type="button" class="btn btn-secondary" id="dbtn">Complete</button>
-                                    @endif
+                                 @if(isset($contris->percent))
+                                     @if($contris->percent >=70)
+                                     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" id="dbtn-c">Complete</button>
+                                     @else
+                                     <button type="button" class="btn btn-secondary" onclick="alert_func()" id="dbtn">Complete</button>
+                                     @endif
+                                  @else
+                                    <button type="button" class="btn btn-secondary" onclick="alert_func()" id="dbtn">Complete</button>
+                                  @endif
                                 </div>
+                                <script>
+                                    function alert_func(){
+                                        alert('Campaign is not eligible for completion');
+                                    }
+                                </script>
                             </div>
                           </center>
 
@@ -273,11 +297,11 @@ const numb = document.querySelector(".numb");
                     <div class="modal-content">
                     <div class="modal-header"><h4><b>Do you want to end this Campaign?</b></h4> </div>
                     <div class="mb-3" style="padding: 15px;">
-                        <label for="em1">Please kindly state your reason(s) for this action.</label>
+                        <label for="em1" style="color: black">Please kindly state your reason(s) for this action.</label>
                         <textarea name="endit" maxlength = "2000" placeholder="Send us an email" id="em1" style="height: 100px; width:100%"></textarea>
                     <br>
                       <div id="passwordHelpBlock" style="margin-top: 5%;">
-                            <i class="fas fa-exclamation-circle"style="padding:1%"></i><span style="font-size: 12px; color:red; text-align:justify;">Please kindly note that if contributions are not up to 70% of the target amount, the various contributions made, would be refunded to the backers.</span>
+                            <i class="fas fa-exclamation-circle"style="padding:1%"></i><span style="font-size: 12px; color:red; text-align:justify;">Please note that if contributions are not up to 70% of the target amount, the various contributions made, would be refunded to the backers.</span>
 
                         </div>
                   </div>
