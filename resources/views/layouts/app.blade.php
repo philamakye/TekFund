@@ -43,6 +43,7 @@ color: red;
 }
 main{
     overflow:hidden;
+    margin-top:1%;
 }
    </style>
 
