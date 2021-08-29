@@ -208,7 +208,7 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 
                   </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" style="margin-left:20%" data-bs-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary" onclick="myFunction()">Copy</button>
                     </div>
                     </div>

@@ -96,7 +96,15 @@ class CampaignController extends Controller
      */
     public function update(Request $request, Campaign $campaign)
     {
-      //
+      if (!empty($request->update_story)){
+          Campaign::where('id',$campaign->id)->update([
+              'story'=> $request->update_story
+          ]);
+          return redirect()->back()->with('message','Story successfuly updated!');
+      }
+      else{
+          return redirect()->back()->with('error','Nothing to update!');
+      }
     }
 
     /**

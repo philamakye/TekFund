@@ -52,9 +52,10 @@ main{
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg shadow-sm" style="background-color: white;position:fixed;z-index:99; width:100%;">
             <div class="container-fluid">
-              <img src="/images/icon.gif" class="img-fluid mr-2" style="height: 2.1em; border-radius:20px" alt="...">
+              {{-- <img src="/images/icon.gif" class="img-fluid mr-2" style="height: 2.1em; border-radius:20px" alt="..."> --}}
                 <a class="navbar-brand" style="color: rgb(8, 4,32);font-family: cursive,sans-serif;font-weight:bold;color:rgb(153, 0, 255); font-size:25px;" href="{{url('/') }}">
-                    Tek<span style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color:rgb(73, 217, 243)">FUND</span>
+                 <img src="/storage/final_logo.png" class="logo" style="height:2.1em; width:100%" alt="...">
+                    {{-- Tek<span style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color:rgb(73, 217, 243)">FUND</span> --}}
                 </a>
 
                 {{-- <a href="" class="navbar-brand pl-2 about-css" style="color: rgb(8, 4,32) !important; font-size:1em">
@@ -133,7 +134,7 @@ main{
             </div>
         </nav>
  <br><br>
- 
+
         <main style="padding-top: 2rem; margin-bottom: 5rem;">
             @yield('content')
         </main>

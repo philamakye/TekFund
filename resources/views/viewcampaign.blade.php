@@ -90,7 +90,7 @@
 
   <script>
 follow(){
-    console.log('3tw3')
+    console.log('follow')
 }
   </script>
 
