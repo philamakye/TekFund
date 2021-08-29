@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap">
+
 <style>
   .valign {
     display: inline-block;
@@ -13,7 +14,7 @@
     margin-bottom: 27px;
     color: #152235 !important;
     max-width: 433px;
-    padding-top: 70px;
+    padding-top: 60px;
   }
   h2.side-text {
     line-height: 28px;
