@@ -62,6 +62,8 @@ const numb = document.querySelector(".numb");
                     <a class="list-group-item list-group-item-action sideColor p-3" href="{{ route('live.index')}}" style="color: white;">Live</a>
                     <a class="list-group-item list-group-item-action sideColor p-3" href="{{route('pendcamp.index')}}" style="color: white;">Pending</a>
                     <a class="list-group-item list-group-item-action sideColor  p-3" href="#!"style="color: white;">Suspended</a>
+                    <a class="list-group-item list-group-item-action sideColor  p-3" href="https://aka.ms/AAdn7vx"style="color: white;">Analytics</a>
+
                     <a class="list-group-item list-group-item-action sideColor p-3 text-center" href="#!" style="color: rgb(56,216,208);">Users</a>
                     <a class="list-group-item list-group-item-action sideColor p-3" href="{{route('admin') }}" style="color: white;">Signed up</a>
                     <a class="list-group-item list-group-item-action sideColor p-3" href="#!" style="color: white;">Anonymous Contributors</a>
