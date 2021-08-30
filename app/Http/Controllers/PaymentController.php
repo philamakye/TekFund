@@ -74,6 +74,7 @@ if ($ref == "") {
     header("Location:javascript://history.go(-1)");
 }
 
+
     $curl = curl_init();
 
     curl_setopt_array($curl, array(
@@ -122,7 +123,13 @@ if ($ref == "") {
         $contribution->cont_email = $result->data->customer->email;
         $contribution->transaction_phone_num = $result->data->customer->phone;
         $amount = $result->data->amount;
-        //  if (Auth::check()) {
+         if (Auth::check()) {
+            $contribution->user_id = Auth::id();
+            $usId = Auth::id();
+        $count = User::findOrFail($usId);
+        $contri_num = DB::table('user_contributions')->where('user_id', $usId)->count();
+        $count->contribution_num = $contri_num;
+        $count->save();
 
 
         //  }
@@ -134,11 +141,7 @@ if ($ref == "") {
         $contribution->save();
 
 
-        $usId = Auth::id();
-        $count = User::findOrFail($usId);
-        $contri_num = DB::table('user_contributions')->where('user_id', $usId)->count();
-        $count->contribution_num = $contri_num;
-        $count->save();
+
 
         $target = Campaign::where('id',$campaignId)->value('target');
         if(campaign_contribution::where('campaign_id',$campaignId)->exists()){
@@ -181,7 +184,7 @@ if ($ref == "") {
 
 
 
-}
+ }
 
 
 }
