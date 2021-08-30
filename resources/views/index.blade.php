@@ -81,7 +81,7 @@ height: 35em;
   50%{
     transform: scale(0, 0.025);
   }
-  
+
 }
 @media (prefers-reduced-motion: no-preference){
   .card-animation{
@@ -104,7 +104,7 @@ height: 35em;
       <div class="button-row">
         <a class="btn btn-md demo-button" href="{{ route('register') }}">Sign Up</a>
       </div>
-      
+
       <center>
       <a class="link-text"><h5>Read more <i class="fas fa-angle-double-right ml-2"></i></h5></a>
       </center>
@@ -114,7 +114,11 @@ height: 35em;
 
     <!-- Carousel -->
     <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-7 wow-hero-col valign">
-  <div id="carouselExampleControls"  class="carousel slide " data-bs-ride="carousel">
+  <div id="carouselExampleControls"  class="carousel slide carousel-fade" data-bs-ride="carousel"
+  
+  
+  00.
+  .>
       <div class="carousel-inner">
         <div class="carousel-item active px-5">
           <img src="images/land.jpg" class="d-block w-100" alt="...">
@@ -126,11 +130,11 @@ height: 35em;
           <img src="images/north_shore_sunset_beach6869.jpg" class="d-block w-100" alt="...">
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" style="padding-left: 20px;">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" style="padding-right: 20px;">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
@@ -140,7 +144,7 @@ height: 35em;
   </div>
     @else
      <div style="width:100%">
-  <div id="carouselExampleControls"  class="carousel slide " data-bs-ride="carousel">
+  <div id="carouselExampleControls"  class="carousel slide carousel-fade" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active px-5">
           <img src="images/land.jpg" class="d-block w-100" alt="...">
@@ -247,7 +251,7 @@ height: 35em;
 
                       <p>
 
-                        <i class="far fa-clock"></i><small class="text-muted pl-2" >{{ \Carbon\Carbon::parse($show->updated_at)->addDays($show->duration)->diffInDays() }} days left</small>
+                        <i class="far fa-clock"></i><small class="text-muted pl-2" >{{ \Carbon\Carbon::parse($show->created_at)->addDays($show->duration)->diffInDays() }} days left</small>
                       </p>
 
                     </div>
@@ -811,6 +815,7 @@ height: 35em;
   </div>
 
   <script>
+
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry =>{
         const card = entry.target.querySelector('.card') ;

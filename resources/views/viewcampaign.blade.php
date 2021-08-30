@@ -25,7 +25,6 @@
           <div class="mb-2 ratio ratio-16x9">
         <iframe  src="https://www.youtube.com/embed/{{$fin}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-{{-- https://www.youtube.com/watch?v=Miwv0EifRYM --}}
           {{-- <center>
               <a href=""><img src="images/north_shore_sunset_beach6869.jpg" style="height:4em" class="img-fluid pl-1" alt="..."></a>
               <a href=""><img src="images/north_shore_sunset_beach6869.jpg" style="height:4em" class="img-fluid pl-1" alt="..."></a>
@@ -50,11 +49,19 @@
   <div class="container pt-3 pb-3">
     <div class="row">
       <div class="col-2">
-        <img src="{{asset('storage/covers/'. $camp->cover_img)}}" style="height:4em" class="img-fluid" alt="...">
+         @if($elem->pro_image)
+        <img src="{{asset('storage/images/'. $elem->pro_image)}}" style="height:4em" class="img-fluid" alt="...">
+        @else
+        <img src="{{asset('storage/avatar.png')}}" style="height:4em" class="img-fluid" alt="...">
+        @endif
       </div>
       <div class="col">
        <h4><b>{{ $camp->full_name }}<b></h4>
-        <h4> {{$elem->campaign_num }} Campaign | {{ $elem->city }}, {{$elem->country}}</h4>
+        @if ($elem->campaign_num ==1 )
+         <h4> {{$elem->campaign_num }} Campaign | {{ $elem->city }}, {{$elem->country}}</h4>
+         @else
+        <h4> {{$elem->campaign_num }} Campaigns | {{ $elem->city }}, {{$elem->country}}</h4>
+        @endif
       </div>
     </div>
   </div>
@@ -76,16 +83,28 @@
   @else
   <a>0% of GHC {{ $camp->target }}</a>
   @endif
-  <a style="float: right">{{ \Carbon\Carbon::parse($camp->updated_at)->addDays($camp->duration)->diffInDays() }} days left</a>
+  <a style="float: right">{{ \Carbon\Carbon::parse($camp->created_at)->addDays($camp->duration)->diffInDays() }} days left</a>
 
 
   <div class="container mt-3 ">
       <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="mr-5 px-4 py-2" style="background-color: rgb(65, 39, 151); color:white; text-decoration:none;">Contribute</a>
       <button id="follow-btn1" onclick="document.getElementById('follow-btn2').style.display = 'inline'; this.style.display = 'none';" class="mr-5 px-3 py-2" style="background-color: whitesmoke; color:black; border:1px solid; text-decoration:none; display:inline;" ><i class="far fa-heart"></i> Follow</button>
       <button id="follow-btn2" onclick="document.getElementById('follow-btn1').style.display = 'inline'; this.style.display = 'none';" class="mr-5 px-3 py-2" style="background-color: whitesmoke; color:red; border:1px solid; text-decoration:none; display:none" ><i class="fas fa-heart"></i> Following</button>
-      <a href="" class="mr-1 px-1 py-2" style="color:rgb(51, 51, 248); font-size: 1.5em"><i class="fab fa-facebook-f"></i></a>
-      <a href="" class="mr-2 px-1 py-2" style="color:rgb(66, 201, 241); font-size: 1.5em"><i class="fab fa-twitter"></i></a>
-      <a href="" class="mr-2 px-1 py-2" style="color:rgb(116, 119, 121); font-size: 1.5em"><i class="fas fa-link"></i></a>
+      @if($elem->user_facebooklink)
+      <a href="{{ $elem->user_facebooklink }}" target="_blank" class="mr-1 px-1 py-2" style="color:rgb(51, 51, 248); font-size: 1.5em"><i class="fab fa-facebook-f"></i></a>
+      @else
+      <a href="#!" class="mr-1 px-1 py-2" style="color:rgb(51, 51, 248); font-size: 1.5em"><i class="fab fa-facebook-f"></i></a>
+      @endif
+      @if ($elem->user_twitterlink)
+      <a href="{{ $elem->user_twitterlink }}" target="_blank" class="mr-2 px-1 py-2" style="color:rgb(66, 201, 241); font-size: 1.5em"><i class="fab fa-twitter"></i></a>
+      @else
+      <a href="#!" class="mr-2 px-1 py-2" style="color:rgb(66, 201, 241); font-size: 1.5em"><i class="fab fa-twitter"></i></a>
+      @endif
+      @if ($elem->user_websitelink)
+      <a href="{{ $elem->user_websitelink }}" target="_blank" class="mr-2 px-1 py-2" style="color:rgb(116, 119, 121); font-size: 1.5em"><i class="fas fa-link"></i></a>
+      @else
+      <a href="#" class="mr-2 px-1 py-2" style="color:rgb(116, 119, 121); font-size: 1.5em"><i class="fas fa-link"></i></a>
+      @endif
   </div>
 
   <script>

@@ -22,7 +22,7 @@ class UserContributionController extends Controller
 
     public function index()
     {
-        $user_contributions['us_cont'] = DB::table('user_contributions')->join('campaigns','campaigns.id', '=','user_contributions.campaign_id')->select('campaigns.title','user_contributions.contributed_amount','user_contributions.updated_at')->where('user_id', Auth::id())->get();
+        $user_contributions['us_cont'] = DB::table('user_contributions')->join('campaigns','campaigns.id', '=','user_contributions.campaign_id')->select('campaigns.title','user_contributions.contributed_amount','user_contributions.created_at')->where('user_id', Auth::id())->get();
 
         return view('contribution')->with($user_contributions);
     }

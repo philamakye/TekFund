@@ -55,19 +55,8 @@ main{
             <div class="container-fluid">
               {{-- <img src="/images/icon.gif" class="img-fluid mr-2" style="height: 2.1em; border-radius:20px" alt="..."> --}}
                 <a class="navbar-brand" style="color: rgb(8, 4,32);font-family: cursive,sans-serif;font-weight:bold;color:rgb(153, 0, 255); font-size:25px;" href="{{url('/') }}">
-                 <img src="/storage/final_logo.png" class="logo" style="height:2.1em; width:100%" alt="...">
-                    {{-- Tek<span style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color:rgb(73, 217, 243)">FUND</span> --}}
+                 <img src={{asset('storage/final_logo.png' )}} class="logo" style="height:2.1em; width:100%" alt="...">
                 </a>
-
-                {{-- <a href="" class="navbar-brand pl-2 about-css" style="color: rgb(8, 4,32) !important; font-size:1em">
-                  About Us
-                </a> --}}
-                {{-- <a href="#" class="navbar-brand pl-2" style="color: rgb(8, 4,32) !important; font-size:1em">
-                  <div class="input-group input-group-sm search-bar">
-                <input type="text" class="form-control " placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
-                <span class="input-group-text "><i class="fas fa-search" style = "color:rgb(8, 4,32)"></i></span>
-                </div>
-                </a> --}}
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -110,7 +99,7 @@ main{
                                     <img src="{{asset('storage/avatar.png')}}" alt="avatar"class="avatar" />
 
                                     @endif
-                                    <span class="caret" </span>
+                                    <span class="caret"> </span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

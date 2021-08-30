@@ -59,9 +59,10 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg shadow-sm navbars" id="dont-move" style="background-color:white; height:66px">
             <div class="container-fluid" >
-              <img src="/images/icon.gif" class="img-fluid mr-2" style="height: 2.1em; border-radius:20px" alt="...">
+              {{-- <img src="/images/icon.gif" class="img-fluid mr-2" style="height: 2.1em; border-radius:20px" alt="..."> --}}
                 <a class="navbar-brand" style="color: rgb(8,4,32)" href="#">
-                    {{ config('app.name', 'TekFund') }}
+                    {{-- {{ config('app.name', 'TekFund') }} --}}
+                  <img src="/storage/final_logo.png" class="logo" style="height:2.1em; width:100%" alt="...">
                 </a>
                 <a href="#" class="navbar-brand pl-2" style="color: rgb(8,4,32); font-size:1em">
                   About Us
