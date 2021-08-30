@@ -46,7 +46,7 @@
     <div class="col-1" style="background-color: #03989E;">
 
     </div>
-    <div class="col" style="background-color: #03989E; border-radius:5px">
+    <div class="col" style="background-color: #03989E; ">
 <br>
         <div class="text-center">
             <h2 style = "font-family: Candara; font-size:40px; color:rgb(52, 2, 145)">PROJECT</h2>
