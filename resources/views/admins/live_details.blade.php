@@ -43,7 +43,7 @@
                                 @else
                                 <p>GHC 0</p>
                                 @endif
-                                <p>{{ \Carbon\Carbon::parse($details->updated_at)->addDays($details->duration)->diffInDays() }} days</p>
+                                <p>{{ \Carbon\Carbon::parse($details->created_at)->addDays($details->duration)->diffInDays() }} days</p>
 
                                 </div>
 

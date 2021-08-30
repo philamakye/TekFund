@@ -122,7 +122,7 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
   </tr>
   @foreach ( $us_cont as $u )
    <tr>
-    <td>{{ \Carbon\Carbon::parse($u->updated_at)->format('d M Y') }}</td>
+    <td>{{ \Carbon\Carbon::parse($u->created_at)->format('d M Y') }}</td>
     <td style="text-transform:capitalize;">{{ $u->title }}</td>
     <td>GHS {{ $u->contributed_amount }}</td>
   </tr>

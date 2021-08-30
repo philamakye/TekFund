@@ -11,7 +11,7 @@
   margin-left: 20px;
   transition: 1s;
 }
- .camp-card text:hover{
+ .camp-card:hover text{
   color: turquoise !important;
   text-decoration: none;
 }
@@ -111,7 +111,7 @@
                       <p class="card-text">Tekfund is a trusted social platform where users can start croudfouding campaigns to support various other causes</p>
                       <h6 class="card-subtitle mb-2 text-muted">8% Platform fee</h6>
                       <a class="TekFund" style="font-size: 2em; text-decoration:none;">
-                        <text id="TekFund" style=" color:#707070; text-decoration:none;  font-family:CooperBlack, Cooper "><tspan x="-161.875" y="0">TekFund</tspan></text>
+                        <text class="camp-card" id="tek" style=" color:#707070; text-decoration:none;  font-family:CooperBlack, Cooper "><tspan x="-161.875" y="0">TekFund</tspan></text>
                       </a>
 
                     </div>

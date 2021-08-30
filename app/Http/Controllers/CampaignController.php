@@ -73,7 +73,7 @@ class CampaignController extends Controller
      */
     public function edit(Campaign $campaign)
     {
-        $campcont = UserContribution::where('campaign_id', $campaign->id)->select('contributor_name', 'cont_email', 'contributed_amount', 'updated_at')->get();
+        $campcont = UserContribution::where('campaign_id', $campaign->id)->select('contributor_name', 'cont_email', 'contributed_amount', 'created_at','updated_at')->get();
         $schid['sch_id'] = User::where('user_id', $campaign->us_id)->select('school_id', 'username', 'phone_number', 'city', 'country', 'first_name', 'last_name', 'pro_image')->first();
 
         if (campaign_contribution::where('campaign_id', $campaign->id)->exists()){

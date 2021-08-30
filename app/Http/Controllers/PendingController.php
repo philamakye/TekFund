@@ -85,7 +85,7 @@ class PendingController extends Controller
      */
     public function update(Request $request, Campaign $campaign)
     {
-         Campaign::where('id',$campaign->id)->update(['status'=>'live','updated_at'=>now()]);
+         Campaign::where('id',$campaign->id)->update(['status'=>'live','created_at'=>now()]);
         $usId = $campaign->us_id;
         $count = User::findOrFail($usId);
         $campain_num = DB::table('campaigns')->where('us_id', $usId)->where('status', 'live')->count();

@@ -25,7 +25,7 @@ class CardsController extends Controller
 
     public function index()
     {
-        $cards['showcards'] = DB::table('campaign_contributions')->rightJoin('campaigns', 'campaign_contributions.campaign_id', '=', 'campaigns.id')->where('status', 'live')->get();
+        $cards['showcards'] = DB::table('campaign_contributions')->rightJoin('campaigns', 'campaign_contributions.campaign_id', '=', 'campaigns.id')->where('status', 'live')->orderBy('campaigns.created_at','desc')->get();
         return view('index')->with($cards);
 
     }
@@ -65,7 +65,7 @@ class CardsController extends Controller
         $get_link = $campaign->camp_youtubelink;
         $strip_link = explode("=",$get_link);
         $get_id = $campaign->us_id;
-        $getelem ['elem']= DB::table('users')->where('user_id',$get_id)->select('campaign_num', 'city', 'country')->first();
+        $getelem ['elem']= DB::table('users')->where('user_id',$get_id)->select('campaign_num', 'city', 'country','pro_image','user_facebooklink','user_twitterlink','user_websitelink')->first();
         return view('viewcampaign')->with(['camp'=> $campaign])->with($getelem)->with(['fin'=>$strip_link[1]])->with(['perc'=>$get_percent])->with(['amount'=>$get_total_amount])->with(['backers'=>$get_backers]);
     }
 
