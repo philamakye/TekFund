@@ -30,7 +30,7 @@ use PHPUnit\TextUI\XmlConfiguration\IniSetting;
 // });
 
 Route::get('/', function () {
-    $cards['showcards'] = DB::table('campaign_contributions')->rightJoin('campaigns', 'campaign_contributions.campaign_id', '=', 'campaigns.id')->where('status', 'live')->get();
+    $cards['showcards'] = DB::table('campaign_contributions')->rightJoin('campaigns', 'campaign_contributions.campaign_id', '=', 'campaigns.id')->where('status', 'live')->orderBy('campaigns.created_at','desc')->get();
     return view('index')->with($cards);
 
 });

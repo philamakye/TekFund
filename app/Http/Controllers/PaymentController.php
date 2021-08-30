@@ -66,7 +66,7 @@ class PaymentController extends Controller
 public function verify(){
 
 $ref = $_GET['reference'];
-$split_ref = explode("=",$ref);
+$split_ref = explode(".",$ref);
 $campaignId = $split_ref[1];
 $ref = $split_ref[0];
 if ($ref == "") {
@@ -114,6 +114,7 @@ if ($ref == "") {
         $name=  $fn;
         if (Auth::check()){
             $contribution->contributor_name = auth()->user()->name;
+            $contribution->user_id = Auth::id();
         }
         else{
             $contribution->contributor_name = "Guest";
@@ -121,10 +122,10 @@ if ($ref == "") {
         $contribution->cont_email = $result->data->customer->email;
         $contribution->transaction_phone_num = $result->data->customer->phone;
         $amount = $result->data->amount;
-         if (Auth::check()) {
-            $contribution->user_id = Auth::id();
+        //  if (Auth::check()) {
 
-         }
+
+        //  }
         $amount= $amount/100;
         $contribution->	contributed_amount = $amount;
         date_default_timezone_set('Africa/Accra');
@@ -152,7 +153,6 @@ if ($ref == "") {
                 'last_contribution'=>$Date_time,
                 'percent' => $percent,
             ]);
-
         }
          else{
                 $percent = round(($amount/$target)*100);
@@ -165,11 +165,15 @@ if ($ref == "") {
                 $campCont->save();
 
          }
+        //  if(Auth::check()){
+            return redirect('/home');
+        //  }
+        //  else{
 
+        //  return redirect()->route('/resources/views/index.blade.php');
 
-
-        // echo 'donre';
-         return redirect('/home');
+        //  }
+        // dd($campaignId);
 
     }else{
         header("Location: http://127.0.0.1:8000");
