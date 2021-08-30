@@ -132,7 +132,7 @@ if ($ref == "") {
         $count->save();
 
 
-        //  }
+          }
         $amount= $amount/100;
         $contribution->	contributed_amount = $amount;
         date_default_timezone_set('Africa/Accra');
