@@ -95,7 +95,7 @@ height: 35em;
 @section('content')
   @guest
 <div class="container">
-  <div class="row" style="margin-top: 40px; padding-top:20px; background:white">
+  <div class="row" style="margin-top: 30px; padding-top:20px; background:white">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-4 wow-hero-col valign">
       <h1 class="side-title">Want to touch a life?</h1>
       <h2 class="side-text">
@@ -114,31 +114,36 @@ height: 35em;
 
     <!-- Carousel -->
     <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-7 wow-hero-col valign">
-  <div id="carouselExampleControls"  class="carousel slide carousel-fade" data-bs-ride="carousel"
-  
-  
-  00.
-  .>
-      <div class="carousel-inner">
-        <div class="carousel-item active px-5">
-          <img src="images/land.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item px-5">
-          <img src="images/land1.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item px-5">
-          <img src="images/north_shore_sunset_beach6869.jpg" class="d-block w-100" alt="...">
-        </div>
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="/images/jehu.jpg" alt="First slide">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>...</h5>
+        <p>...</p>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" style="padding-left: 20px;">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" style="padding-right: 20px;">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="/images/land.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="/images/north_shore_sunset_beach6869.jpg" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
     </div>
     </div>
   </div>
