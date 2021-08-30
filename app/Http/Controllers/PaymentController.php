@@ -66,13 +66,14 @@ class PaymentController extends Controller
 public function verify(){
 
 $ref = $_GET['reference'];
-$split_ref = explode("=",$ref);
+$split_ref = explode(".",$ref);
 $campaignId = $split_ref[1];
 $ref = $split_ref[0];
 if ($ref == "") {
     # code...
     header("Location:javascript://history.go(-1)");
 }
+
 
     $curl = curl_init();
 
@@ -114,6 +115,7 @@ if ($ref == "") {
         $name=  $fn;
         if (Auth::check()){
             $contribution->contributor_name = auth()->user()->name;
+            $contribution->user_id = Auth::id();
         }
         else{
             $contribution->contributor_name = "Guest";
@@ -123,8 +125,14 @@ if ($ref == "") {
         $amount = $result->data->amount;
          if (Auth::check()) {
             $contribution->user_id = Auth::id();
+            $usId = Auth::id();
+        $count = User::findOrFail($usId);
+        $contri_num = DB::table('user_contributions')->where('user_id', $usId)->count();
+        $count->contribution_num = $contri_num;
+        $count->save();
 
-         }
+
+          }
         $amount= $amount/100;
         $contribution->	contributed_amount = $amount;
         date_default_timezone_set('Africa/Accra');
@@ -133,11 +141,7 @@ if ($ref == "") {
         $contribution->save();
 
 
-        $usId = Auth::id();
-        $count = User::findOrFail($usId);
-        $contri_num = DB::table('user_contributions')->where('user_id', $usId)->count();
-        $count->contribution_num = $contri_num;
-        $count->save();
+
 
         $target = Campaign::where('id',$campaignId)->value('target');
         if(campaign_contribution::where('campaign_id',$campaignId)->exists()){
@@ -152,7 +156,6 @@ if ($ref == "") {
                 'last_contribution'=>$Date_time,
                 'percent' => $percent,
             ]);
-
         }
          else{
                 $percent = round(($amount/$target)*100);
@@ -165,11 +168,15 @@ if ($ref == "") {
                 $campCont->save();
 
          }
+        //  if(Auth::check()){
+            return redirect('/home');
+        //  }
+        //  else{
 
+        //  return redirect()->route('/resources/views/index.blade.php');
 
-
-        // echo 'donre';
-         return redirect('/home');
+        //  }
+        // dd($campaignId);
 
     }else{
         header("Location: http://127.0.0.1:8000");
@@ -177,7 +184,7 @@ if ($ref == "") {
 
 
 
-}
+ }
 
 
 }

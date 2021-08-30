@@ -109,7 +109,7 @@
 
   <script>
 follow(){
-    console.log('follow')
+    console.log('3tw3')
 }
   </script>
 
@@ -198,8 +198,8 @@ follow(){
               callback: function(response){
                 let message = 'Payment complete! Reference: ' + response.reference;
                 alert(message);
-                window.location.href = "/verify_transaction?reference="+ response.reference + "=" + campaignId;
-              }
+                window.location.href = "/verify_transaction?reference="+ response.reference + "." + campaignId;
+              },
             });
             handler.openIframe();
             }
@@ -226,7 +226,7 @@ follow(){
     <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
           <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><b>Story</b></button>
-          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><b>Updates</b></button>
+          {{-- <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><b>Updates</b></button> --}}
           <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false"><b>Comments</b></button>
         </div>
       </nav>
@@ -237,16 +237,17 @@ follow(){
             <div class="pt-1">
                <h3><b>Design Summary</b></h3>
                <p>
-                   <h4>
-                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, natus incidunt! Quidem id sit quasi beatae repellendus error qui, adipisci mollitia non placeat quae facilis neque dicta sapiente optio ex?
-                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptas et, ullam, a magni reiciendis tenetur ut pariatur laudantium repudiandae molestiae quisquam excepturi quos obcaecati fugit at nostrum. Alias, eum!
+                   <h4 style="text-align: justify;">
+                   {{ $camp->story }}
+                   {{-- {{-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, natus incidunt! Quidem id sit quasi beatae repellendus error qui, adipisci mollitia non placeat quae facilis neque dicta sapiente optio ex?
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptas et, ullam, a magni reiciendis tenetur ut pariatur laudantium repudiandae molestiae quisquam excepturi quos obcaecati fugit at nostrum. Alias, eum! --}}
                    </h4>
                 </p>
             </div>
            </div>
 
            <figure class="figure pt-5">
-            <img src="/images/crop1.svg" class="img-fluid" alt="...">
+            <img src="{{asset('/storage/covers/'. $camp->cover_img)}}" class="img-fluid" alt="...">
             <figcaption class="figure-caption">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil asperiores porro tempore explicabo iure suscipit tenetur, id obcaecati voluptates officia nisi, amet voluptatum, qui ipsa autem quo dolor dolorem. Id!
                 lore
             </figcaption>
@@ -467,34 +468,6 @@ follow(){
 </div>
 <br>
 
-
 @endsection
 
 
-
-<script>
-    var paymentForm = document.getElementById('paymentForm');
-    if(paymentForm)
-    paymentForm.addEventListener("submit", payWithPaystack, false);
-function payWithPaystack(e) {
-e.preventDefault();
-let handler = PaystackPop.setup({
-  key: 'pk_test_21e06242bcedd353065b56a55c5ad3b369750ab3', // Replace with your public key
-  email: document.getElementById("email-address").value,
-  amount: document.getElementById("amount").value * 100,
-  currency: "GHS",
-  ref: 'TF'+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
-  // label: "Optional string that replaces customer email"
-  onClose: function(){
-      window.location = "http://127.0.0.1:8000/campaign";
-    alert('Transaction cancelled.');
-  },
-  callback: function(response){
-    let message = 'Payment complete! Reference: ' + response.reference;
-    alert(message);
-    window.location = "http://127.0.0.1:8000/verify_transaction.php?reference=" + response.reference;
-  }
-});
-handler.openIframe();
-}
-</script>
