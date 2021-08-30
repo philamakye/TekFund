@@ -22,8 +22,8 @@
                                 </div>
                                 <div class="col mt-2 pt-5">
                                 <p style="text-transform:capitalize;">{{ $liv->full_name }}</p>
-                                <p>{{ \Carbon\Carbon::parse($liv->updated_at)->format('d M Y')}}</p>
-                                <p>{{ \Carbon\Carbon::parse($liv->updated_at)->addDays($liv->duration)->format('d M Y')}}</p>
+                                <p>{{ \Carbon\Carbon::parse($liv->created_at)->format('d M Y')}}</p>
+                                <p>{{ \Carbon\Carbon::parse($liv->created_at)->addDays($liv->duration)->format('d M Y')}}</p>
                                 <p>GHC {{ $liv->target }}</p>
                                 </div>
 

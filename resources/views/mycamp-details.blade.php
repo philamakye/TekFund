@@ -245,7 +245,7 @@ const numb = document.querySelector(".numb");
                             @endif
                             <td>{{ $d->cont_email }}</td>
                             <td>{{ $d->contributed_amount }}</td>
-                            <td>{{ \Carbon\Carbon::parse($d->updated_at)->format('d M Y') }}</td>
+                            <td>{{ \Carbon\Carbon::parse($d->created_at)->format('d M Y') }}</td>
                         </tr>
                         @endforeach
                         </table>
