@@ -18,6 +18,8 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap"> -->
+
     <script src="https://kit.fontawesome.com/d78432a841.js" crossorigin="anonymous"></script>
 
 
@@ -55,7 +57,7 @@ main{
             <div class="container-fluid">
               {{-- <img src="/images/icon.gif" class="img-fluid mr-2" style="height: 2.1em; border-radius:20px" alt="..."> --}}
                 <a class="navbar-brand" style="color: rgb(8, 4,32);font-family: cursive,sans-serif;font-weight:bold;color:rgb(153, 0, 255); font-size:25px;" href="{{url('/') }}">
-                 <img src={{asset('storage/final_logo.png' )}} class="logo" style="height:2.1em; width:100%" alt="...">
+                 <img src={{asset('storage/final_logo.png' )}} class="logo" style="height:1.3em; width:100%" alt="...">
                 </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

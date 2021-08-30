@@ -74,6 +74,18 @@ height: 35em;
   transition: ease-in .3s;
 
 }
+.caption-text{
+  border: 1px solid silver;
+	box-shadow: 7px 7px 5px black;
+	position: absolute;
+	top: 75%;
+	left: 5%; 
+  padding: 10px 10px 10px 10px;
+	font-family: lobster;
+  width: auto;
+  height: 70px;
+  text-align: center;
+}
 @keyframes wipe-enter {
   0% {
     transform: scale(0, 0.025);
@@ -123,9 +135,9 @@ height: 35em;
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img class="d-block w-100" src="/images/jehu.jpg" alt="First slide">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>...</h5>
-        <p>...</p>
+      <div class="carousel-caption d-none d-md-block caption-text" style="border-radius: 5px;">
+        <h3 style="text-align: center; font-family: lobster;backdrop-filter: blur(10px); font-weight:bold; border-radius:5px; padding:0px !important; margin: 0px !important">Cocoa Plucking Robotic Arm</h3>
+        <p style="font-style: italic;">Automatic cocoa plucking robot built with arduino</p>
       </div>
     </div>
     <div class="carousel-item">
