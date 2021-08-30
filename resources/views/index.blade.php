@@ -202,7 +202,7 @@ height: 35em;
 
                   <h4 class="card-title px-2 d-inline-block text-truncate" style = "max-width:300px; text-transform:capitalize;">{{$show->title}}</h4>
                   <p class="card-text px-2">
-                    <small class = "d-inline-block text-truncate"style="font-size:1em; max-width:330px;">{{ $show->story }}</small>
+                    <small class = "d-inline-block text-truncate"style="font-size:1em; max-width:320px;">{{ $show->story }}</small>
                   </p>
                   <p class="card-text px-2 nomargin">
 
