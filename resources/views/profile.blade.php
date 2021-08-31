@@ -1,19 +1,20 @@
-{{-- <style>
+<style>
     body{
     background: #fbf8f6 !important;
   }
-</style> --}}
+</style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
 @extends('layouts.app')
 @section('content')
+<div class="container-fluid" style="padding-left: 20px; padding-right:20px">
 <form action="profile" method="GET" style="display: inline" >
-<button class="btn btn-primary" style="margin-left: 15px;background-color: rgb(44, 20, 124); color: white;" type="submit"><i class="fa fa-eye" aria-hidden="false"></i>
+<button class="btn btn-primary" style="margin-left: 15px;color: white;" type="submit">
 VIEW PROFILE <span class="badge bg-secondary"></span>
 </button>
 </form>
 <form action="editprofile" method="GET" style="display: inline" >
-<button class="btn btn-primary" style="background-color: white; color: black;" type="submit"><i class="fa fa-pencil" aria-hidden="true"></i>
+<button class="btn btn-primary" style="background-color: white; color: black;" type="submit">
 EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 </button>
 </form>
@@ -104,4 +105,6 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 <br>
 <br>
 <br>
+
+</div>
 @endsection

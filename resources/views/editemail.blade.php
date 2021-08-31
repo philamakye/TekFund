@@ -15,12 +15,12 @@
 
 @section('content')
 <form action="profile" method="GET" style="display: inline" >
-<button class="btn btn-primary" style="margin-left: 15px; background-color: white; color: black;" type="submit"><i class="fa fa-eye" aria-hidden="false"></i>
+<button class="btn btn-primary" style="margin-left: 15px; color: black;" type="submit">
 VIEW PROFILE <span class="badge bg-secondary"></span>
 </button>
 </form>
 <form action="editprofile" method="GET" style="display: inline">
-<button type="submit" class="btn btn-primary" style="background-color: rgb(44, 20, 124); color: white;" ><i class="fa fa-pencil" aria-hidden="true"></i>
+<button type="submit" class="btn btn-primary" style="background-color:white; color: black;" >
 EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 </button>
 </form>
