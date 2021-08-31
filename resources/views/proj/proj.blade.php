@@ -46,7 +46,7 @@
     <div class="col-1" style="background-color: #03989E;">
 
     </div>
-    <div class="col" style="background-color: #03989E; border-radius:5px">
+    <div class="col" style="background-color: #03989E; ">
 <br>
         <div class="text-center">
             <h2 style = "font-family: Candara; font-size:40px; color:rgb(52, 2, 145)">PROJECT</h2>
@@ -220,26 +220,54 @@
 
     </div>
 
-        <div class="col-4" style="background-color: #03989E;">
-                <div class="card" style="width: 18rem; float:right;margin-top:20%"">
-                    <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        <div class="container">
-                            <div class="row">
-                            <div class="col nomargin nopadding">
-                                Tips from Gerald Pino, our fundraising expert (SBA Lord)
-                            </div>
-                            <div class="col-2 nomargin nopadding">
-                                <img src="/images/profile.jpg" style="height: 2.5em; border-radius: 30px;" class="img-fluid" alt="...">
-                            </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">You will be eligible for withdrawal after reaching 70% of the target</li>
+    <div class="col-4" style="background-color: #03989E;">
+        <div class="card" style="width: 18rem; float:right;margin-top:15%">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <div class="container">
+                    <div class="row">
+                      <div class="col nomargin nopadding">
+                        Tekfund Project campaign policy
+                      </div>
+                      <div class="col-2 nomargin nopadding">
+                        <img src="/images/profile.jpg" style="height: 2.5em; border-radius: 30px;" class="img-fluid" alt="...">
+                      </div>
+                    </div>
+                  </div>
+              </li>
+              <li class="list-group-item">You will only be able to withdraw if campaign reaches or exceeds 70% completion and after campaign period is reached</li>
+            </ul>
+          </div>
 
-                    </ul>
-                </div>
-            </div>
+
+          <div class="card" style="width: 18rem; float:right;margin-top:20%">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <div class="container">
+                    <div class="row">
+                      <div class="col nomargin nopadding">
+                        To raise the most money for a project campaign, make sure you:
+                      </div>
+                    </div>
+                  </div>
+              </li>
+              <li class="list-group-item">
+                   <a><i class="far fa-check-circle" style="color: #03989E"></i> Describe your project idea</a><br>
+                   <a><i class="far fa-check-circle" style="color: #03989E"></i> Describe your project time lines</a><br>
+                   <a><i class="far fa-check-circle" style="color: #03989E"></i> Explain how the funds would be used in pursuance of your idea</a><br>
+                   <a><i class="far fa-check-circle" style="color: #03989E"></i> Explain how soon you need the funds</a><br>
+                   <a><i class="far fa-check-circle" style="color: #03989E"></i> Explain if there are other ways you need help</a>
+
+
+            </li>
+
+            </ul>
+          </div>
+
+
+
+
+    </div>
 </div>
 
 <script>

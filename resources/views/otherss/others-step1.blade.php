@@ -46,7 +46,7 @@
     <div class="col-1" style="background-color: #03989E;">
 
     </div>
-    <div class="col" style="background-color: #03989E; border-radius:5px">
+    <div class="col" style="background-color: #03989E; ">
 <br>
         <div class="text-center">
             <h2 style = "font-family:Candara; font-size:40px; color:rgb(52, 2, 145)">OTHERS</h2>
@@ -219,6 +219,33 @@
 
                     </ul>
                 </div>
+
+
+                <div class="card" style="width: 18rem; float:right;margin-top:20%">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col nomargin nopadding">
+                                To raise the most money for a cause, make sure you:
+                              </div>
+                            </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item">
+                           <a><i class="far fa-check-circle" style="color: #03989E"></i> Describe the cause for the campaign</a><br>
+                           <a><i class="far fa-check-circle" style="color: #03989E"></i> Give time lines</a><br>
+                           <a><i class="far fa-check-circle" style="color: #03989E"></i> Explain how the funds would be used in pursuance of your cause</a><br>
+                           <a><i class="far fa-check-circle" style="color: #03989E"></i> Explain how soon you need the funds</a><br>
+                           <a><i class="far fa-check-circle" style="color: #03989E"></i> Explain if there are other ways you need help</a><br>
+                           <a><i class="far fa-check-circle" style="color: #03989E"></i>Provide school IDs of two active users</a>
+
+
+                    </li>
+
+                    </ul>
+                  </div>
+
             </div>
 </div>
 

@@ -249,10 +249,42 @@
                   </div>
               </li>
               <li class="list-group-item">You will only be able to withdraw after campaign period </li>
+            </ul>
+          </div>
+
+
+          <div class="card" style="width: 18rem; float:right;margin-top:20%">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <div class="container">
+                    <div class="row">
+                      <div class="col nomargin nopadding">
+                        To raise the most money for a medical campaign, make sure you:
+                      </div>
+                    </div>
+                  </div>
+              </li>
+              <li class="list-group-item">
+                   <a><i class="far fa-check-circle" style="color: #03989E"></i> Explain what happened</a><br>
+                   <a><i class="far fa-check-circle" style="color: #03989E"></i> Describe the recommended treatment</a><br>
+                   <a><i class="far fa-check-circle" style="color: #03989E"></i> Explain how soon need the funds</a><br>
+                   <a><i class="far fa-check-circle" style="color: #03989E"></i> Tell how this funds would help you or your loved one</a><br>
+                   <a><i class="far fa-check-circle" style="color: #03989E"></i> Explain if there are other ways you need help</a><br>
+                   <a><i class="far fa-check-circle" style="color: #03989E"></i> Tell the potential donors how urgent your situation is</a>
+
+            </li>
 
             </ul>
           </div>
+
+
+
+
     </div>
+
+
+
+
 </div>
 
 </div>
