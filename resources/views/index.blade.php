@@ -87,15 +87,16 @@ height: 35em;
   height: 70px;
   text-align: center;
 }
-/* .classy{
-    text
-     max-width: 400px;
+.classy{
+    margin-left:2%;
+    display: -webkit-box;
+    max-width: 300px;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    white-space:normal;
+    overflow: hidden;
 
 
-} */
+}
 @keyframes wipe-enter {
   0% {
     transform: scale(0, 0.025);
@@ -225,10 +226,10 @@ height: 35em;
                   <hr>
                 </div>
 
-                  <h4 class="card-title px-2 d-inline-block text-truncate" style = "max-width:300px; text-transform:capitalize;">{{$show->title}}</h4>
+                  <h4 class="classy card-title px-2 d-inline-block text-truncate" style = "max-width:300px; text-transform:capitalize;">{{$show->title}}</h4>
                   <div class="text-muted">
-                  <p class="card-text d-block text-truncate" style="max-width:320;">
-                    <small c>{{ $show->story }}</small>
+                  <p class="classy">
+                    <small>{{ $show->story }}</small>
                   </p>
                   </div>
                   <p class="card-text px-2 nomargin">
