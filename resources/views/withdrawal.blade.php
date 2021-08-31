@@ -21,7 +21,8 @@
 
         <div class="col-6">
             <div class="container-withdraw" style="background: white;padding:20px">
-                <h4 style="text-align: center;">Withdraw</h4>
+                <h4 style="text-align: center;">Withdrawal</h4>
+                <hr style="width: 75%; margin:auto"><br>
                 <form class="row g-3">
                     <div class="col-md-6">
                         <label for="inputEmail4" class="form-label">Email</label>
