@@ -67,6 +67,7 @@ height: 35em;
   background-color:white;
   border:none;
   box-shadow: 0 0.5rem 1.5rem 0 rgb(0 0 0 / 10%);
+  width:90%;
 }
 .index-card:hover {
   /* margin-bottom: 2px; */
@@ -86,6 +87,15 @@ height: 35em;
   height: 70px;
   text-align: center;
 }
+/* .classy{
+    text
+     max-width: 400px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space:normal;
+
+
+} */
 @keyframes wipe-enter {
   0% {
     transform: scale(0, 0.025);
@@ -109,7 +119,7 @@ height: 35em;
 <div class="container">
   <div class="row" style="margin-top: 30px; padding-top:20px; background:white">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-4 wow-hero-col valign">
-      <h1 class="side-title">Want to touch a life?</h1>
+      <h1 class="side-title">Do you want to touch a life?</h1>
       <h2 class="side-text">
         Unlike other crowdfunding platforms, Tekfund gives you the opportunity to make donations via mobile money.
       </h2>
@@ -187,7 +197,7 @@ height: 35em;
     </div>
     </div>
 @endguest
-  <div class=" my-4 mx-3">
+  <div class=" my-4 mx-3;" style="padding-left:40px; padding-right:40px;">
     <h2>
        Recently Lauched Campaigns
       <hr>
@@ -196,7 +206,7 @@ height: 35em;
     <div class="row text trio">
      @foreach ( $showcards as $show )
       <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card index-card card-animation" style="height: 80vh">
+          <div class="card index-card card-animation" style="height: 70vh">
               <img class="card-img-top" src="{{asset('storage/covers/'. $show->cover_img)}}" alt="Img" style="height:40%">
               <div class="card-body nopadding mt-2" style="margin-left:0px;">
                 <div class="container nopadding">
@@ -216,11 +226,12 @@ height: 35em;
                 </div>
 
                   <h4 class="card-title px-2 d-inline-block text-truncate" style = "max-width:300px; text-transform:capitalize;">{{$show->title}}</h4>
-                  <p class="card-text px-2">
-                    <small class = "d-inline-block text-truncate"style="font-size:1em; max-width:320px;">{{ $show->story }}</small>
+                  <div class="text-muted">
+                  <p class="card-text d-block text-truncate" style="max-width:320;">
+                    <small c>{{ $show->story }}</small>
                   </p>
+                  </div>
                   <p class="card-text px-2 nomargin">
-
                       @if ($show->business_cate)
                     <small class="text-muted d-inline-block text-truncate" style="font-size: 1.1em;text-transform:uppercase; max-width:600px;">{{ $show->business_cate }}</small>
                     @elseif ($show->project_field)
