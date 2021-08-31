@@ -15,7 +15,7 @@
 
     <div class="container-fluid">
     <div class="row">
-        <div class="col-3" style="">
+        <div class="col-3">
 
         </div>
 
@@ -82,7 +82,7 @@
             </div>
         </div>
 
-        <div class="col-3" style="">
+        <div class="col-3">
 
         </div>
     </div>

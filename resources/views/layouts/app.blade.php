@@ -26,9 +26,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
    <style>
-       body{
-
-       }
+       
        .nopadding{
            padding: 0;
        }

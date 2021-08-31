@@ -856,21 +856,21 @@ height: 35em;
 
   <script>
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry =>{
-        const card = entry.target.querySelector('.card') ;
+    // const observer = new IntersectionObserver(entries => {
+    //   entries.forEach(entry =>{
+    //     const card = entry.target.querySelector('.card') ;
 
-        if(entry.isIntersecting){
-          card.classList.add('card-animation');
-          return;
-        }
+    //     if(entry.isIntersecting){
+    //       card.classList.add('card-animation');
+    //       return;
+    //     }
 
-        card.classList.remove('card-animation');
-      });
+    //     card.classList.remove('card-animation');
+    //   });
 
-    });
+    // });
 
-    observer.observe(document.querySelector('.card'));
+    // observer.observe(document.querySelector('.card'));
 
   </script>
 @endsection
