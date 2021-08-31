@@ -9,10 +9,21 @@
 </style>
 @section('content')
     
-    <div class="container-fluid" style="background: turquoise;">
+    <div class="container-fluid">
     <div class="row">
-        <div class="col col-lg-5">
-            
+        <div class="col">
+        wo maame tw3
+        </div>
+        
+        <div class="col">
+            <div class="container-withdraw">
+                <h4>Withdraw</h4>
+                
+            </div>
+        </div>
+
+        <div class="col">
+    wo nana tw3
         </div>
     </div>
     </div>
