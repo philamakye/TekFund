@@ -75,7 +75,7 @@
                     <h3 class="offset-2 mb-5" style="font-family: Snell Roundhand, cursive; margin-inline-start: 5px;font-weight:bold">
                 Let's start with the basics
             </h3>
-                    <label for="Default select example" style="font-size: large"><b>I am a ... ?</b></label>
+                    <label for="Default select example" style="font-size: large">I am a ... ?</label>
                         <select class="form-select mb-5" name="starter" aria-label="Default select example">
                             <option selected disabled value="" hidden>--please select--</option>
                             <option value="student">Student</option>
@@ -83,11 +83,11 @@
                             <option value="lecturer">Lecturer</option>
                         </select>
 
-                          <label for="title" style="font-size: large"><b>Cause for Fundraising</b></label>
+                          <label for="title" style="font-size: large">Cause for Fundraising</label>
                         <input oninput="this.className = 'form-control'" name="cause" type="text" maxlength="150" id="inputPassword6" placeholder="Ex: Honoring COE(IV) Class Rep" class="form-control" aria-describedby="passwordHelpBlock">
 <br>
 <br>
-                        <label for="title" style="font-size: large"><b>What is your fundraiser title?</b></label>
+                        <label for="title" style="font-size: large">What is your fundraiser title?</label>
                         <input oninput="this.className = 'form-control'" name="title" type="text" id="inputPassword5" placeholder="Ex: Help Stevenson get a new brain" class="form-control" aria-describedby="passwordHelpBlock">
                         <div id="passwordHelpBlock" class="form-text mb-4">
                             <i class="fas fa-exclamation-circle"></i> <span style="color:red; font-weight:100;">Try to include a person's name and the purpose.</span>
@@ -99,14 +99,14 @@
                     <h3 class="offset-2 mb-5" style="font-family: Snell Roundhand, cursive; margin-inline-start: 5px;font-weight:bold">
                 Set your fundraising goal
             </h3>
-                    <label for="title" style="font-size: large"><b>How much would you like to raise?</b></label>
+                    <label for="title" style="font-size: large">How much would you like to raise?</label>
                     <input type="text" min="200" oninput="validity.valid||(value='');" name="target" id="inputPassword5" placeholder="Enter Target Amount in GHC" class="form-control" aria-describedby="passwordHelpBlock">
                     <div id="passwordHelpBlock" class="form-text mb-4">
                             <i class="fas fa-exclamation-circle"></i> <span style="color:red; font-weight:100;">Minimum target amount that can be set is GHC 200.</span>
                         </div>
 
                       <h4 class="mb-5">
-                        <small class="text-muted" style="color:white !important;">Keep in mind that transaction fees including credit and debit charges, are deducted from each donation
+                        <small class="text-muted" style="color: rgb(241, 237, 237) !important;">Keep in mind that transaction fees including credit and debit charges, are deducted from each donation
                         <br><br>
                         To receive money raised, please make sure the person withdrawing has:  <br><br>
                         <i class="fas fa-arrow-circle-right"></i> Valid National ID <br><br>
@@ -114,14 +114,14 @@
                         <i class="fas fa-arrow-circle-right"></i> An active email address
                         </small>
                       </h4>
-                      <label for="title" style="font-size: large"><b>Campaign Duration</b></label>
+                      <label for="title" style="font-size: large">Campaign Duration</label>
                       <input type="text" min="10" oninput="validity.valid||(value='');" name="duration" id="inputPassword5" placeholder="Set Campaign duration in Days" class="form-control" aria-describedby="passwordHelpBlock">
                       <div id="passwordHelpBlock" class="form-text mb-4">
                             <i class="fas fa-exclamation-circle"></i> <span style="color:red; font-weight:100;">Minimum target amount that can be set is GHC 200.</span>
                         </div>
                       <h4 class="mb-5">
                           <small class="text-muted" style="color:white !important">
-                            Duration begins after campaign goes online
+                            Please note that the campaign officially begins immediately after it has been verified.
                           </small>
                       </h4>
                 </div>
@@ -172,15 +172,15 @@
                     <h3 class="offset-2 mb-5" style="font-family: Snell Roundhand, cursive; margin-inline-start: 5px;font-weight:bold">
                 You're Almost There!
             </h3>
-                    <h5 class="text-muted" style="color:white !important"> <i class="fas fa-lock"></i> We just need a little more information before you can accept donations</h5>
+                    <h5 class="text-muted" style="color: rgb(241, 237, 237) !important"> <i class="fas fa-lock"></i> We just need a little more information before you can accept donations</h5>
 
-           <label for="title" style="font-size: large; margin:13px"><b>Full Name</b></label>
+           <label for="title" style="font-size: large; margin:13px">Full Name</label>
            <input oninput="this.className = 'form-control'" name="full_name" type="text" id="inputPassword5"  class="form-control mb-5" aria-describedby="passwordHelpBlock">
 
-           <label for="title" style="font-size: large; margin:13px"><b>Username of Reference 1</b></label>
+           <label for="title" style="font-size: large; margin:13px">Username of Reference 1</label>
            <input oninput="this.className = 'form-control'" name="reference_1" type="text" id="inputPassword5"  class="form-control mb-5" aria-describedby="passwordHelpBlock">
 
-           <label for="title" style="font-size: large; margin:13px"><b>Username of Reference 2</b></label>
+           <label for="title" style="font-size: large; margin:13px">Username of Reference 2</label>
            <input oninput="this.className = 'form-control'" name="reference_2" type="text" id="inputPassword5"  class="form-control mb-5" aria-describedby="passwordHelpBlock">
 
                 </div>
