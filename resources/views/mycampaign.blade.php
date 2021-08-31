@@ -1,7 +1,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
+body {font-family: Arial, Helvetica, sans-serif;
+    background: #fbf8f6 !important;
+  
+}
 * {box-sizing: border-box;}
 
 /* Set a style for all buttons */
@@ -109,12 +112,12 @@ hr {
 @extends('layouts.app')
 @section('content')
 <form action="profile" method="GET" style="display: inline" >
-<button class="btn btn-primary" style="margin-left: 15px;background-color: rgb(44, 20, 124); color: white;" type="submit"><i class="fa fa-eye" aria-hidden="false"></i>
+<button class="btn btn-primary" style="margin-left: 15px;background-color: rgb(44, 20, 124); color: white;" type="submit">
 VIEW PROFILE <span class="badge bg-secondary"></span>
 </button>
 </form>
 <form action="editprofile" method="GET" style="display: inline" >
-<button class="btn btn-primary" style="background-color: rgb(255, 255, 255); color: black;" type="submit"><i class="fa fa-pencil" aria-hidden="true"></i>
+<button class="btn btn-primary" style="background:white; color: black;" type="submit">
 EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 </button>
 </form>
@@ -126,7 +129,9 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 <h6 style="margin-left: 40px; color: grey;"><i class="fa fa-map-marker" aria-hidden="true"></i>{{Auth::user()->city}}, {{Auth::user()->country}}</h6>
 @endif
 <!-- Tabs navs -->
-<ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
+<div class="row">
+<ul class="nav nav-pills mb-3" id="ex1" role="tablist">
+  <div class="col-4 text-center">
   <li class="nav-item" role="presentation">
     <a
       class="nav-link"
@@ -137,8 +142,9 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
       aria-controls="ex1-tabs-1"
       aria-selected="true"
       >Profile</a>
-  </li>
-  <li class="nav-item" role="presentation">
+  </li></div>
+  <div class="col-4 text-center">
+  <li class="nav-item" role="presentation"><li>
     <a
       class="nav-link active"
       id="ex1-tab-2"
@@ -147,9 +153,10 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
       role="tab"
       aria-controls="ex1-tabs-2"
       aria-selected="false"
-      >Campaigns</a
-    >
+      >Campaigns</a>
   </li>
+  </div>
+  <div class="col-4 text-center">
   <li class="nav-item" role="presentation">
     <a
       class="nav-link"
@@ -162,7 +169,9 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
       >Contributions</a
     >
   </li>
+  </div>
 </ul>
+</div>
 <br>
 <br>
 <h3 style="margin-left: 15px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">Campaigns I'm On<i aria-hidden="true"></i></h3>
@@ -170,7 +179,7 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 <br>
 {{-- @include('layouts.flash') --}}
 @foreach ($us_camp as $c )
-<div class="mx-3 px-2 py-2" style="border: 1px dashed rgb(88, 86, 86)">
+<div class="mx-3 px-2 py-2" style="border: 1px solid silver; margin-top:20px">
 
         <div class="row">
           <div class="col-3">

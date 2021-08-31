@@ -52,7 +52,7 @@ main{
 
 }
 .container-fluid{
-    padding-left:50px;
+    padding-left:55px;
     padding-right:50px;
 }
    </style>

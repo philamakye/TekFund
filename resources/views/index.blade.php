@@ -226,7 +226,7 @@ height: 35em;
                   <hr>
                 </div>
 
-                  <h4 class="classy card-title px-2 d-inline-block text-truncate" style = "max-width:300px; text-transform:capitalize;">{{$show->title}}</h4>
+                  <h4 class="classy card-title px-2 d-inline-block text-truncate" style = "max-width:280px; text-transform:capitalize;">{{$show->title}}</h4>
                   <div class="text-muted">
                   <p class="classy">
                     <small>{{ $show->story }}</small>
@@ -298,7 +298,7 @@ height: 35em;
       </div>
       @endforeach
 
-  <div class="container-fluid">
+  <div class="container-fluid"><br>
     <div class="row">
       <div class="col">
         <img src="/images/light.jpg" style="height:30em" class="img-fluid" alt="...">
