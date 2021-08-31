@@ -26,6 +26,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
    <style>
+       body{
+
+       }
        .nopadding{
            padding: 0;
        }
@@ -46,6 +49,13 @@ color: red;
 main{
     overflow:hidden;
     margin-top:1%;
+      padding-left: 50px;
+           padding-right: 50px;
+
+}
+.container-fluid{
+    padding-left:50px;
+    padding-right:50px;
 }
    </style>
 
@@ -57,7 +67,7 @@ main{
             <div class="container-fluid">
               {{-- <img src="/images/icon.gif" class="img-fluid mr-2" style="height: 2.1em; border-radius:20px" alt="..."> --}}
                 <a class="navbar-brand" style="color: rgb(8, 4,32);font-family: cursive,sans-serif;font-weight:bold;color:rgb(153, 0, 255); font-size:25px;" href="{{url('/') }}">
-                 <img src={{asset('storage/final_logo.png' )}} class="logo" style="height:1.3em; width:100%" alt="...">
+                 <img src={{asset('storage/final_logo.png' )}} class="logo" style="height:1.3em; width:90%; margin-left:20px;" alt="...">
                 </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

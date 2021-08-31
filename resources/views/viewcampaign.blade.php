@@ -141,7 +141,7 @@ follow(){
 
                  <div class="form-group">
                     <div class="mb-3">
-                  <label for="amount" class="form-label">Amount</label>
+                  <label for="amount" class="form-label">Amount in GHS</label>
                   <input type="tel" class="form-control" id="amount" required />
                 </div>
                 </div>
