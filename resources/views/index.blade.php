@@ -67,6 +67,7 @@ height: 35em;
   background-color:white;
   border:none;
   box-shadow: 0 0.5rem 1.5rem 0 rgb(0 0 0 / 10%);
+  width:90%;
 }
 .index-card:hover {
   /* margin-bottom: 2px; */
@@ -85,6 +86,16 @@ height: 35em;
   width: auto;
   height: 70px;
   text-align: center;
+}
+.classy{
+    margin-left:2%;
+    display: -webkit-box;
+    max-width: 300px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+
 }
 @keyframes wipe-enter {
   0% {
@@ -109,7 +120,7 @@ height: 35em;
 <div class="container">
   <div class="row" style="margin-top: 30px; padding-top:20px; background:white">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-4 wow-hero-col valign">
-      <h1 class="side-title">Want to touch a life?</h1>
+      <h1 class="side-title">Do you want to touch a life?</h1>
       <h2 class="side-text">
         Unlike other crowdfunding platforms, Tekfund gives you the opportunity to make donations via mobile money.
       </h2>
@@ -165,9 +176,12 @@ height: 35em;
       <div class="carousel-inner">
         <div class="carousel-item active px-5">
           <img src="images/handsfree.jpg" class="d-block w-100" alt="...">
+      {{-- <div class="carousel-caption d-none d-md-block " style="border-radius: 5px;" style="width: 50%; margin-right:30%">
+          <p style="margin-right: 80%; font-size:30px; font-weight:bold">Will it work?</p>
+          </div> --}}
         </div>
         <div class="carousel-item px-5">
-          <img src="images/jehu.jpg" class="d-block w-100" alt="...">
+          <img src="images/sports.png" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item px-5">
           <img src="images/skateboard.jpg" class="d-block w-100" alt="...">
@@ -184,7 +198,7 @@ height: 35em;
     </div>
     </div>
 @endguest
-  <div class=" my-4 mx-3">
+  <div class=" my-4 mx-3;" style="padding-left:40px; padding-right:40px;">
     <h2>
        Recently Lauched Campaigns
       <hr>
@@ -193,7 +207,7 @@ height: 35em;
     <div class="row text trio">
      @foreach ( $showcards as $show )
       <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card index-card card-animation" style="height: 80vh">
+          <div class="card index-card card-animation" style="height: 70vh">
               <img class="card-img-top" src="{{asset('storage/covers/'. $show->cover_img)}}" alt="Img" style="height:40%">
               <div class="card-body nopadding mt-2" style="margin-left:0px;">
                 <div class="container nopadding">
@@ -212,12 +226,13 @@ height: 35em;
                   <hr>
                 </div>
 
-                  <h4 class="card-title px-2 d-inline-block text-truncate" style = "max-width:300px; text-transform:capitalize;">{{$show->title}}</h4>
-                  <p class="card-text px-2">
-                    <small class = "d-inline-block text-truncate"style="font-size:1em; max-width:320px;">{{ $show->story }}</small>
+                  <h4 class="classy card-title px-2 d-inline-block text-truncate" style = "max-width:300px; text-transform:capitalize;">{{$show->title}}</h4>
+                  <div class="text-muted">
+                  <p class="classy">
+                    <small>{{ $show->story }}</small>
                   </p>
+                  </div>
                   <p class="card-text px-2 nomargin">
-
                       @if ($show->business_cate)
                     <small class="text-muted d-inline-block text-truncate" style="font-size: 1.1em;text-transform:uppercase; max-width:600px;">{{ $show->business_cate }}</small>
                     @elseif ($show->project_field)
@@ -286,10 +301,18 @@ height: 35em;
   <div class="container-fluid">
     <div class="row">
       <div class="col">
-        <img src="images/img-cards/camping.jpg" style="height:30em" class="img-fluid" alt="...">
+        <img src="/images/light.jpg" style="height:30em" class="img-fluid" alt="...">
+         <div class="carousel-caption d-none d-md-block " style="border-radius: 5px;" style="width: 50%; margin-right:30%">
+         <h5 style="margin-right: 60%; font-size:25px; font-weight:bold;font-family:'Times New Roman', Times, serif">Robotic-Arm Lamp</h5>
+          <p style="margin-right:60%;">Quality lamp for night studies</p>
+          </div>
       </div>
       <div class="col">
-        <img src="images/img-cards/whitehouse.jpg" style="height: 30em" class="img-fluid" alt="...">
+        <img src="/images/rotary-cameras.jpg" style="height: 30em; margin-left:11%" class="img-fluid" alt="...">
+         <div class="carousel-caption d-none d-md-block " style="border-radius: 5px;" style="width: 50%; margin-right:30%">
+          <h5 style="margin-right: 60%; font-size:25px; font-weight:bold;font-family:'Times New Roman', Times, serif">Rotary Camera</h5>
+          <p style="margin-right:60%;">100% complete rotation</p>
+          </div>
       </div>
     </div>
 
