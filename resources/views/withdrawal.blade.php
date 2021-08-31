@@ -39,22 +39,31 @@
                         <label for="inputAddress2" class="form-label">Address 2</label>
                         <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
                     </div>
-                    <div class="col-md-6">
-                        <label for="inputCity" class="form-label">City</label>
-                        <input type="text" class="form-control" id="inputCity">
-                    </div>
-                    <div class="col-md-4">
-                        <label for="inputState" class="form-label">State</label>
-                        <select id="inputState" class="form-select">
+                    <div class="col-md-12">
+                        <label for="inputAccType" class="form-label">Account Type</label>
+                        <select id="inputAccType" class="form-select">
                         <option selected>Choose...</option>
-                        <option>...</option>
+                        <option>Mobile Money</option>
+                        <option>Bank</option>
                         </select>
                     </div>
-                    <div class="col-md-2">
-                        <label for="inputZip" class="form-label">Zip</label>
-                        <input type="text" class="form-control" id="inputZip">
+                    <div class="col-12">
+                        <label for="inputAccNumb" class="form-label">Account Number</label>
+                        <input type="number" class="form-control" id="inputAccNumb">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="inputIDType" class="form-label">ID Type</label>
+                        <select id="inputIDType" class="form-select">
+                        <option selected>Choose...</option>
+                        <option>Voter's ID</option>
+                        <option>Driver's License</option>
+                        </select>
                     </div>
                     <div class="col-12">
+                        <label for="inputIDNumb" class="form-label">ID Number</label>
+                        <input type="number" class="form-control" id="inputIDNumb">
+                    </div>
+                    <div class="col-12" style="text-align: center;">
                         <button type="submit" class="btn btn-primary">Withdraw</button>
                     </div>
                     
