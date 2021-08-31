@@ -165,9 +165,12 @@ height: 35em;
       <div class="carousel-inner">
         <div class="carousel-item active px-5">
           <img src="images/handsfree.jpg" class="d-block w-100" alt="...">
+      {{-- <div class="carousel-caption d-none d-md-block " style="border-radius: 5px;" style="width: 50%; margin-right:30%">
+          <p style="margin-right: 80%; font-size:30px; font-weight:bold">Will it work?</p>
+          </div> --}}
         </div>
         <div class="carousel-item px-5">
-          <img src="images/jehu.jpg" class="d-block w-100" alt="...">
+          <img src="images/sports.png" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item px-5">
           <img src="images/skateboard.jpg" class="d-block w-100" alt="...">
@@ -286,10 +289,18 @@ height: 35em;
   <div class="container-fluid">
     <div class="row">
       <div class="col">
-        <img src="images/img-cards/camping.jpg" style="height:30em" class="img-fluid" alt="...">
+        <img src="/images/light.jpg" style="height:30em" class="img-fluid" alt="...">
+         <div class="carousel-caption d-none d-md-block " style="border-radius: 5px;" style="width: 50%; margin-right:30%">
+         <h5 style="margin-right: 60%; font-size:25px; font-weight:bold;font-family:'Times New Roman', Times, serif">Robotic-Arm Lamp</h5>
+          <p style="margin-right:60%;">Quality lamp for night studies</p>
+          </div>
       </div>
       <div class="col">
-        <img src="images/img-cards/whitehouse.jpg" style="height: 30em" class="img-fluid" alt="...">
+        <img src="/images/rotary-cameras.jpg" style="height: 30em; margin-left:11%" class="img-fluid" alt="...">
+         <div class="carousel-caption d-none d-md-block " style="border-radius: 5px;" style="width: 50%; margin-right:30%">
+          <h5 style="margin-right: 60%; font-size:25px; font-weight:bold;font-family:'Times New Roman', Times, serif">Rotary Camera</h5>
+          <p style="margin-right:60%;">100% complete rotation</p>
+          </div>
       </div>
     </div>
 
