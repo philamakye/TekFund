@@ -12,13 +12,13 @@
 }
 </style>
 @section('content')
-    
+
     <div class="container-fluid">
     <div class="row">
         <div class="col-3" style="">
-        
+
         </div>
-        
+
         <div class="col-6">
             <div class="container-withdraw" style="background: white;padding:20px">
                 <h4 style="text-align: center;">Withdraw</h4>
@@ -32,7 +32,7 @@
                         <input type="password" class="form-control" id="inputPassword4">
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress" class="form-label">Address</label>
+                        <label for="inputAddress" class="form-label">ID Number</label>
                         <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
                     </div>
                     <div class="col-12">
@@ -57,7 +57,7 @@
                     <div class="col-12">
                         <button type="submit" class="btn btn-primary">Withdraw</button>
                     </div>
-                    
+
                     <div class="col-12">
                     <hr style="width: 75%; margin:auto"><br>
                         <h5>Note:</h5>
@@ -68,12 +68,12 @@
                         </ul>
                     </div>
                 </form>
-                
+
             </div>
         </div>
 
         <div class="col-3" style="">
-    
+
         </div>
     </div>
     </div>

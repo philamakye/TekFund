@@ -79,7 +79,7 @@ height: 35em;
 	box-shadow: 7px 7px 5px black;
 	position: absolute;
 	top: 75%;
-	left: 5%; 
+	left: 5%;
   padding: 10px 10px 10px 10px;
 	font-family: lobster;
   width: auto;
@@ -164,13 +164,13 @@ height: 35em;
   <div id="carouselExampleControls"  class="carousel slide carousel-fade" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active px-5">
-          <img src="images/land.jpg" class="d-block w-100" alt="...">
+          <img src="images/handsfree.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item px-5">
-          <img src="images/land1.jpg" class="d-block w-100" alt="...">
+          <img src="images/jehu.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item px-5">
-          <img src="images/north_shore_sunset_beach6869.jpg" class="d-block w-100" alt="...">
+          <img src="images/skateboard.jpg" class="d-block w-100" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
