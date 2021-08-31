@@ -427,8 +427,8 @@ main{
   </div>
 </div>
 
-  <div class="footer-copyright text-center py-3" style="color: white">© 2020 TekFund:
-    <a href="https://mdbootstrap.com/" style="color: white"> All Rights Reserved</a>
+  <div class="footer-copyright text-center" style="color: white;">
+  <p>© 2020 TekFund: All Rights Reserved</p>
   </div>
   <!-- Copyright -->
 
