@@ -18,12 +18,12 @@
 @section('content')
 
 <form action="profile" method="GET" style="display: inline" >
-<button class="btn btn-primary" style="margin-left: 15px; background-color: white; color: black; font-size:13px; padding:2px 2px;" type="submit"><i class="fa fa-eye" aria-hidden="false"></i>
+<button class="btn btn-primary" style="margin-left: 15px; color: black; font-size:13px; padding:2px 2px;" type="submit">
 View Profile <span class="badge bg-secondary"></span>
 </button>
 </form>
 <form action="editprofile" method="GET" style="display: inline">
-<button type="submit" class="btn btn-primary" style="background-color: rgb(44, 20, 124); color: white;" ><i class="fa fa-pencil" aria-hidden="true"></i>
+<button type="submit" class="btn btn-primary" style="background:white; color: black;" >
 Edit profile & Settings<span class="badge bg-secondary"></span>
 </button>
 </form>
