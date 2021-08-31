@@ -258,7 +258,10 @@ const numb = document.querySelector(".numb");
                                 </div>
                                 <div class="col">
                                  @if(isset($contris->percent))
+                                 {{-- && \Carbon\Carbon::parse($mydetails->updated_at)->addDays($mydetails->duration)->diffInDays() == 0 --}}
                                      @if($contris->percent >=70)
+                                     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" id="dbtn-c">Complete</button>
+                                     @elseif ($mydetails->status== 'health' && \Carbon\Carbon::parse($mydetails->updated_at)->addDays($mydetails->duration)->diffInDays()==0)
                                      <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" id="dbtn-c">Complete</button>
                                      @else
                                      <button type="button" class="btn btn-secondary" onclick="alert_func()" id="dbtn">Complete</button>
@@ -269,7 +272,7 @@ const numb = document.querySelector(".numb");
                                 </div>
                                 <script>
                                     function alert_func(){
-                                        alert('Campaign is not eligible for completion');
+                                        alert('Campaign will be eligible for completion only after the duration has expired.');
                                     }
                                 </script>
                             </div>
