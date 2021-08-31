@@ -120,9 +120,9 @@ height: 35em;
 <div class="container">
   <div class="row" style="margin-top: 30px; padding-top:20px; background:white">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-4 wow-hero-col valign">
-      <h1 class="side-title">Do you want to touch a life?</h1>
-      <h2 class="side-text">
-        Unlike other crowdfunding platforms, Tekfund gives you the opportunity to make donations via mobile money.
+      <h1 class="side-title text-center" style="font-family: Teko, Serif">Do you want to touch a life?</h1>
+      <h2 class="side-text text-center">
+        TekFund brings people with issues regarding funding to one place allowing you donate to make a change with ease
       </h2>
       <div class="button-row">
         <a class="btn btn-md demo-button" href="{{ route('register') }}">Sign Up</a>
