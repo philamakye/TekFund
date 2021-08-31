@@ -198,7 +198,7 @@ height: 35em;
     </div>
 @endguest
   <div class=" my-4 mx-3;" style="padding-left:40px; padding-right:40px;">
-    <h2>
+    <h2 style="font-size: 1.5rem;">
        Recently Lauched Campaigns
       <hr>
     </h2>
@@ -321,7 +321,7 @@ height: 35em;
 
   </div>
   <div class=" my-5 mx-3">
-    <h2>
+    <h2 style="font-size: 1.5rem;">
       Trending Campaigns
       <hr>
     </h2>
