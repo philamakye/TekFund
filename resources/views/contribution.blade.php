@@ -1,6 +1,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
 <style>
+  body{
+    background: #fbf8f6 !important;
+  }
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -45,12 +48,12 @@ tr:nth-child(even) {
 
 @section('content')
 <form action="profile" method="GET" style="display: inline" >
-<button class="btn btn-primary" style="margin-left: 15px;background-color: rgb(44, 20, 124); color: white;" type="submit"><i class="fa fa-eye" aria-hidden="false"></i>
+<button class="btn btn-primary" style="margin-left: 15px;background-color: rgb(44, 20, 124); color: white;" type="submit">
 VIEW PROFILE <span class="badge bg-secondary"></span>
 </button>
 </form>
 <form action="editprofile" method="GET" style="display: inline" >
-<button class="btn btn-primary" style="background-color: white; color: black;" type="submit"><i class="fa fa-pencil" aria-hidden="true"></i>
+<button class="btn btn-primary" style="background-color: white; color: black;" type="submit">
 EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 </button>
 </form>
@@ -63,7 +66,9 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 <h6 style="margin-left: 40px; color: grey;"><i class="fa fa-map-marker" aria-hidden="true"></i>{{Auth::user()->city}}, {{Auth::user()->country}}</h6>
 @endif
 <!-- Tabs navs -->
-<ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
+<div class="row">
+<ul class="nav nav-pills mb-3" id="ex1" role="tablist">
+  <div class="col-4 text-center">
   <li class="nav-item" role="presentation">
     <a
       class="nav-link"
@@ -73,9 +78,10 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
       role="tab"
       aria-controls="ex1-tabs-1"
       aria-selected="true"
-      >Profile</a
-    >
+      >Profile</a>
   </li>
+  </div>
+  <div class="col-4 text-center">
   <li class="nav-item" role="presentation">
     <a
       class="nav-link"
@@ -88,6 +94,8 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
       >Campaigns</a>
 
   </li>
+  </div>
+  <div class="col-4 text-center">
   <li class="nav-item" role="presentation">
     <a
       class="nav-link active"
@@ -100,7 +108,9 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
       >Contributions</a
     >
   </li>
+  </div>
 </ul>
+</div>
 <!-- Tabs navs -->
 <br>
 <br>
