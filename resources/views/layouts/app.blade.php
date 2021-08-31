@@ -74,18 +74,18 @@ main{
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         <li class="nav-item dropdown">
-                           <a id="navbarDropdown" style="color: rgb(8, 4,32); margin-top:1.9px; margin-right:7px" class="nav-link please" href="{{ route('start campaign') }}" role="button"  aria-haspopup="true" aria-expanded="false" >{{ __('Start Campaign') }}</a>
+                          <b> <a id="navbarDropdown" style="color: rgb(8, 4,32); margin-top:1.9px; margin-right:7px" class="nav-link please" href="{{ route('start campaign') }}" role="button"  aria-haspopup="true" aria-expanded="false" >{{ __('Start Campaign') }}</a></b>
                            </li>
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item login-ft">
-                                    <a class="nav-link" style="color: rgb(8, 4,32)hite" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <b><a class="nav-link" style="color: rgb(8, 4,32)hite" href="{{ route('login') }}">{{ __('Login') }}</a></b>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item reg-ft">
-                                    <a class="nav-link" style="color: rgb(8, 4,32)" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                   <b> <a class="nav-link" style="color: rgb(8, 4,32)" href="{{ route('register') }}">{{ __('Register') }}</a></b>
                                 </li>
                             @endif
 
@@ -94,7 +94,7 @@ main{
                            <li class="nav-item dropdown">
 
                                 <a id="navbarDropdown" style="color: rgb(8, 4,32); font-size:16px" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                   {{ Auth::user()->username }}
+                                  <b> {{ Auth::user()->username }}</b>
                                      @if(Auth::user()->avatar)
                                     <img src="{{asset('storage/images/'. Auth::user()->avatar)}}" alt="avatar" class="avatar"/>
                                     @else
