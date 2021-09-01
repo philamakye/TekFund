@@ -32,13 +32,13 @@ class UserController extends Controller
     }
 
     public function profile(){
-        // $usId = Auth::id();
-        // $count = User::findOrFail($usId);
-        // $campain_num = DB::table('campaigns')->where('us_id',$usId)->where('status','live')->count();
-        // $contri_num = DB::table('user_contributions')->where('user_id',$usId)->count();
-        // $count->contribution_num = $contri_num;
-        // $count->campaign_num =$campain_num;
-        // $count->save();
+        $usId = Auth::id();
+        $count = User::findOrFail($usId);
+        $campain_num = DB::table('campaigns')->where('us_id',$usId)->where('status','live')->count();
+        $contri_num = DB::table('user_contributions')->where('user_id',$usId)->count();
+        $count->contribution_num = $contri_num;
+        $count->campaign_num =$campain_num;
+        $count->save();
         return view('profile');
     }
     public function uploadAvt(Request $request){
