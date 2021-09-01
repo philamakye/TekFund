@@ -181,7 +181,6 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 <h3 style="margin-left: 15px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">Campaigns I'm On<i aria-hidden="true"></i></h3>
 <hr style="margin:15px;">
 <br>
-{{-- @include('layouts.flash') --}}
 @foreach ($us_camp as $c )
 <div class="container-fluid mx-3 px-2 py-2" style="border: 1px solid silver; margin-top:20px;">
 
@@ -232,7 +231,8 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 
         </div>
     </div>
+    @endforeach
+
     </div>
-     @endforeach
 
 @endsection

@@ -19,13 +19,13 @@
 <div class="container-fluid" style="padding-left: 20px; padding-right:20px">
 
 <form action="profile" method="GET" style="display: inline" >
-<button class="btn btn-primary" style="margin-left: 15px; color: black; font-size:13px; padding:2px 2px;" type="submit">
-View Profile <span class="badge bg-secondary"></span>
+<button class="btn btn-primary" style="margin-left: 15px;color: white;" type="submit">
+VIEW PROFILE <span class="badge bg-secondary"></span>
 </button>
 </form>
-<form action="editprofile" method="GET" style="display: inline">
-<button type="submit" class="btn btn-primary" style="background:white; color: black;" >
-Edit profile & Settings<span class="badge bg-secondary"></span>
+<form action="editprofile" method="GET" style="display: inline" >
+<button class="btn btn-primary" style="background-color: white; color: black;" type="submit">
+EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 </button>
 </form>
 

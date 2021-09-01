@@ -17,12 +17,12 @@
 <div class="container-fluid" style="padding-left: 20px; padding-right:20px">
 
 <form action="profile" method="GET" style="display: inline" >
-<button class="btn btn-primary" style="margin-left: 15px; color: black;" type="submit">
+<button class="btn btn-primary" style="margin-left: 15px;color: white;" type="submit">
 VIEW PROFILE <span class="badge bg-secondary"></span>
 </button>
 </form>
-<form action="editprofile" method="GET" style="display: inline">
-<button type="submit" class="btn btn-primary" style="background-color:white; color: black;" >
+<form action="editprofile" method="GET" style="display: inline" >
+<button class="btn btn-primary" style="background-color: white; color: black;" type="submit">
 EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 </button>
 </form>
