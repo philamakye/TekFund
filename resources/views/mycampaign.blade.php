@@ -179,7 +179,7 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 <br>
 {{-- @include('layouts.flash') --}}
 @foreach ($us_camp as $c )
-<div class="mx-3 px-2 py-2" style="border: 1px solid silver; margin-top:20px">
+<div class="container-fluid mx-3 px-2 py-2" style="border: 1px solid silver; margin-top:20px;">
 
         <div class="row">
           <div class="col-3">
