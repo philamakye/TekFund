@@ -106,7 +106,7 @@ const numb = document.querySelector(".numb");
                             <br>
                          <div class="row align-items-start">
                                 <center> <h3> Account Details</h3></center>
-                          <h3 style="margin-left:3%">{{ $sch_id->username }} </h3>
+                          <h3 style="margin-left:3%; text-transform:lowercase;">{{ $sch_id->username }} </h3>
                           <div class="col-sm-2 py-1">
                               @if (!empty($sch_id->pro_image))
                             <img src="{{asset('storage/images/'.$sch_id->pro_image)}}" class="avatars" alt="avt">

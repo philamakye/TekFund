@@ -132,7 +132,7 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
     <div class="card basic-model" style="margin-left:70px; width: 90%;    background-color: rgb(175, 250, 242);">
 <form action="{{route('Your Story')}}" method="POST">
     @csrf
-    <h3 style="margin-top: 20px; margin-left: 20px;">Your Story</h3>
+    <h3 style="margin-top: 20px; margin-left: 20px;">Tell Us A Bit About Yourself</h3>
     <hr style="margin: 10px;">
     @include('layouts.error')
     <div class="card-body">

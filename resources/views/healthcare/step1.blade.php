@@ -108,7 +108,7 @@
                         </select>
 
                         <label for="title" style="font-size: large">What is your fundraiser title?</label>
-                        <input oninput="this.className = 'form-control'" name="title" type="text" id="inputPassword5" placeholder="Ex: Help Stevenson get a new brain" class="form-control" aria-describedby="passwordHelpBlock">
+                        <input oninput="this.className = 'form-control'" name="title" maxlength="70" type="text" id="inputPassword5" placeholder="Ex: Help Stevenson get a new brain" class="form-control" aria-describedby="passwordHelpBlock">
                         <div id="passwordHelpBlock" class="form-text mb-4">
                             <i class="fas fa-exclamation-circle"></i> <span style="color:red; font-weight:100;">Try to include a person's name and the purpose.</span>
                         </div>
@@ -195,8 +195,8 @@
             </h3>
            <h5 class="text-muted" style="color: rgb(241, 237, 237) !important;"> <i class="fas fa-lock"></i> We just need a little more information before you can accept donations</h5>
 
-           <label for="title" style="font-size: large; margin:13px">Full Name of Person of Concern</label>
-           <input oninput="this.className = 'form-control'" type="text" id="inputPassword5"  class="form-control mb-5" aria-describedby="passwordHelpBlock" name="full_name">
+           <label for="title" style="font-size: large; margin:13px">Full Name</label>
+           <input oninput="this.className = 'form-control'" type="text" id="inputPassword5" placeholder="Enter your name" class="form-control mb-5" aria-describedby="passwordHelpBlock" name="full_name">
 <br>
            <label for="Default select example" style="font-size: large">Hospital of concern</label>
            <select class="form-select mb-5" aria-label="Default select example" name="hospital_name">

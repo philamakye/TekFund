@@ -152,10 +152,10 @@ height: 35em;
       </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="/images/land.jpg" alt="Second slide">
+      <img class="d-block w-100" src="/images/skateboard.jpg" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="/images/north_shore_sunset_beach6869.jpg" alt="Third slide">
+      <img class="d-block w-100" src="/images/sports.png" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -238,7 +238,7 @@ height: 35em;
                     @elseif ($show->project_field)
                     <small class="text-muted d-inline-block text-truncate" style="font-size: 1em;text-transform:uppercase;max-width:250px;">{{ $show->project_field }}</small>
                     @elseif ($show->cause)
-                    <small class="text-muted d-inline-block text-truncate" style="font-size: 1em;text-transform:uppercase;max-width:260px;">{{ $show->cause }}</small>
+                    <small class="text-muted d-inline-block text-truncate" style="font-size: 1em;text-transform:uppercase;max-width:260px;">SOCIAL CAUSE</small>
                     @else
                    <small class="text-muted" style="font-size: 1em;text-transform:uppercase;max-width:300px;">HEALTH AND WELLBEING</small>
                     @endif
@@ -299,16 +299,16 @@ height: 35em;
       @endforeach
 
   <div class="container-fluid"><br>
-    <div class="row">
+    <div class="row pt-4">
       <div class="col">
-        <img src="/images/light.jpg" style="height:30em" class="img-fluid" alt="...">
+        <img src="/images/light.jpg" style="height:30em; width:90%" class="img-fluid" alt="...">
          <div class="carousel-caption d-none d-md-block " style="border-radius: 5px;" style="width: 50%; margin-right:30%">
          <h5 style="margin-right: 60%; font-size:25px; font-weight:bold;font-family:'Times New Roman', Times, serif">Robotic-Arm Lamp</h5>
           <p style="margin-right:60%;">Quality lamp for night studies</p>
           </div>
       </div>
       <div class="col">
-        <img src="/images/rotary-cameras.jpg" style="height: 25em; width:125em; margin-left:11%" class="img-fluid" alt="...">
+        <img src="/images/rotary-cameras.jpg" style="height: 30em; width:90%; margin-left:11%" class="img-fluid" alt="...">
          <div class="carousel-caption d-none d-md-block " style="border-radius: 5px;" style="width: 50%; margin-right:30%">
           <h5 style="margin-right: 60%; font-size:25px; font-weight:bold;font-family:'Times New Roman', Times, serif">Rotary Camera</h5>
           <p style="margin-right:60%;">100% complete rotation</p>
@@ -324,14 +324,14 @@ height: 35em;
   <div class=" my-5 mx-3">
     <h2 style="font-size: 1.5rem;">
       Trending Campaigns
-      <hr style="width: 97%">
+      <hr style="width: 97.5%">
     </h2>
 
     <div class="row text trio">
 
       <div class="col-lg-3 col-md-6 mb-4">
           <div class="card index-card card-animation" style="height: 75vh">
-              <img class="card-img-top" src="images/cards/card1.jpg" alt="Img" style="height:40%">
+              <img class="card-img-top" src="images/telescope.jpg" alt="Img" style="height:40%">
               <div class="card-body nopadding mt-2" style="margin-left:0px;">
                 <div class="container nopadding">
                   <div class="row ">
@@ -395,7 +395,7 @@ height: 35em;
 
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card index-card card-animation" style="height: 75vh">
-            <img class="card-img-top" src="images/cards/card2.jpg" alt="Img" style="height:40%">
+            <img class="card-img-top" src="images/hydroponics.jpg" alt="Img" style="height:40%">
             <div class="card-body nopadding mt-2" style="margin-left:0px;">
               <div class="container nopadding">
                 <div class="row ">
@@ -413,9 +413,9 @@ height: 35em;
                 <hr>
               </div>
 
-                <h4 class="card-title px-2">Dwarf Telescope - A portable digital telescope</h4>
+                <h4 class="card-title px-2">Hydroponics - Technology in Agriculture</h4>
                 <p class="card-text px-2">
-                  <small style="font-size:1em">See your friends clearly from 2000 meters away</small>
+                  <small style="font-size:1em">Advanced agricultural practice to promote efficiency.</small>
                 </p>
                 <p class="card-text px-2 nomargin">
                   <small class="text-muted" style="font-size: 1.1em">TECH AND INNOVATION</small>
@@ -459,7 +459,7 @@ height: 35em;
 
     <div class="col-lg-3 col-md-6 mb-4">
       <div class="card index-card card-animation" style="height: 75vh">
-          <img class="card-img-top" src="images/cards/card3.jpg" alt="Img" style="height:40%">
+          <img class="card-img-top" src="images/water.jpg" alt="Img" style="height:40%">
           <div class="card-body nopadding mt-2" style="margin-left:0px;">
             <div class="container nopadding">
               <div class="row ">
@@ -477,9 +477,9 @@ height: 35em;
               <hr>
             </div>
 
-              <h4 class="card-title px-2">Dwarf Telescope - A portable digital telescope</h4>
+              <h4 class="card-title px-2">Irrigation Device - Automated System</h4>
               <p class="card-text px-2">
-                <small style="font-size:1em">See your friends clearly from 2000 meters away</small>
+                <small style="font-size:1em">Aumated irrigation device with mobile app integration</small>
               </p>
               <p class="card-text px-2 nomargin">
                 <small class="text-muted" style="font-size: 1.1em">TECH AND INNOVATION</small>
@@ -523,7 +523,7 @@ height: 35em;
 
   <div class="col-lg-3 col-md-6 mb-4">
     <div class="card index-card card-animation" style="height: 75vh">
-        <img class="card-img-top" src="images/cards/card4.jpeg" alt="Img" style="height:40%">
+        <img class="card-img-top" src="images/smoke-detector.jpg" alt="Img" style="height:40%">
         <div class="card-body nopadding mt-2" style="margin-left:0px;">
           <div class="container nopadding">
             <div class="row ">
@@ -541,9 +541,9 @@ height: 35em;
             <hr>
           </div>
 
-            <h4 class="card-title px-2">Dwarf Telescope - A portable digital telescope</h4>
+            <h4 class="card-title px-2">Fire Alert Device - A digital fire detector</h4>
             <p class="card-text px-2">
-              <small style="font-size:1em">See your friends clearly from 2000 meters away</small>
+              <small style="font-size:1em">Comes with mobile application integration</small>
             </p>
             <p class="card-text px-2 nomargin">
               <small class="text-muted" style="font-size: 1.1em">TECH AND INNOVATION</small>
@@ -588,16 +588,16 @@ height: 35em;
   </div>
   </div>
   <div class=" mt-4 mx-3">
-    <h2>
-      Recently Lauched Campaigns
-      <hr style="width:97%">
+    <h2 style="font-size: 1.5rem">
+      Popular Campaigns
+      <hr style="width:97.5%">
     </h2>
 
     <div class="row text trio">
 
       <div class="col-lg-3 col-md-6 mb-4">
           <div class="card index-card card-animation" style="height: 75vh">
-              <img class="card-img-top" src="images/cards/card1.jpg" alt="Img" style="height:40%">
+              <img class="card-img-top" src="images/cupcake.png" alt="Img" style="height:40%">
               <div class="card-body nopadding mt-2" style="margin-left:0px;">
                 <div class="container nopadding">
                   <div class="row ">
@@ -615,12 +615,12 @@ height: 35em;
                   <hr>
                 </div>
 
-                  <h4 class="card-title px-2">Dwarf Telescope - A portable digital telescope</h4>
+                  <h4 class="card-title px-2">Beehive Bake Shop - All flour dishes</h4>
                   <p class="card-text px-2">
-                    <small style="font-size:1em">See your friends clearly from 2000 meters away</small>
+                    <small style="font-size:1em">Have a good time with friends and loved ones</small>
                   </p>
                   <p class="card-text px-2 nomargin">
-                    <small class="text-muted" style="font-size: 1.1em">TECH AND INNOVATION</small>
+                    <small class="text-muted" style="font-size: 1.1em">FOOD SERVICE</small>
                   </p>
 
                   <div class="container nopadding">
@@ -661,7 +661,7 @@ height: 35em;
 
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card index-card card-animation" style="height: 75vh">
-            <img class="card-img-top" src="images/cards/card2.jpg" alt="Img" style="height:40%">
+            <img class="card-img-top" src="images/outreachjpg.jpg" alt="Img" style="height:40%">
             <div class="card-body nopadding mt-2" style="margin-left:0px;">
               <div class="container nopadding">
                 <div class="row ">
@@ -679,12 +679,12 @@ height: 35em;
                 <hr>
               </div>
 
-                <h4 class="card-title px-2">Dwarf Telescope - A portable digital telescope</h4>
+                <h4 class="card-title px-2">SCC KNUST - Outreach to Ofinso Village</h4>
                 <p class="card-text px-2">
-                  <small style="font-size:1em">See your friends clearly from 2000 meters away</small>
+                  <small style="font-size:1em">Let's put a smile on the faces of the people of Ofinso.</small>
                 </p>
                 <p class="card-text px-2 nomargin">
-                  <small class="text-muted" style="font-size: 1.1em">TECH AND INNOVATION</small>
+                  <small class="text-muted" style="font-size: 1.1em">SOCIAL CUASE</small>
                 </p>
 
                 <div class="container nopadding">
@@ -725,7 +725,7 @@ height: 35em;
 
     <div class="col-lg-3 col-md-6 mb-4">
       <div class="card index-card card-animation" style="height: 75vh">
-          <img class="card-img-top" src="images/cards/card3.jpg" alt="Img" style="height:40%">
+          <img class="card-img-top" src="images/haiti.jpg" alt="Img" style="height:40%">
           <div class="card-body nopadding mt-2" style="margin-left:0px;">
             <div class="container nopadding">
               <div class="row ">
@@ -743,12 +743,12 @@ height: 35em;
               <hr>
             </div>
 
-              <h4 class="card-title px-2">Dwarf Telescope - A portable digital telescope</h4>
+              <h4 class="card-title px-2">Haiti Needs You - Give Haiti a Little Push</h4>
               <p class="card-text px-2">
-                <small style="font-size:1em">See your friends clearly from 2000 meters away</small>
+                <small style="font-size:1em">Let's lend a hand to the children in Haiti</small>
               </p>
               <p class="card-text px-2 nomargin">
-                <small class="text-muted" style="font-size: 1.1em">TECH AND INNOVATION</small>
+                <small class="text-muted" style="font-size: 1.1em">SOCIAL CAUSE</small>
               </p>
 
               <div class="container nopadding">
@@ -789,7 +789,7 @@ height: 35em;
 
   <div class="col-lg-3 col-md-6 mb-4">
     <div class="card index-card card-animation" style="height: 75vh">
-        <img class="card-img-top" src="images/cards/card4.jpeg" alt="Img" style="height:40%">
+        <img class="card-img-top" src="images/COVID-Funds-News.jpg" alt="Img" style="height:40%">
         <div class="card-body nopadding mt-2" style="margin-left:0px;">
           <div class="container nopadding">
             <div class="row ">
@@ -807,12 +807,12 @@ height: 35em;
             <hr>
           </div>
 
-            <h4 class="card-title px-2">Dwarf Telescope - A portable digital telescope</h4>
+            <h4 class="card-title px-2">COVID-19 Relief Funds- Let's lend a hand</h4>
             <p class="card-text px-2">
-              <small style="font-size:1em">See your friends clearly from 2000 meters away</small>
+              <small style="font-size:1em">Nima needs your help in the fight for covid</small>
             </p>
             <p class="card-text px-2 nomargin">
-              <small class="text-muted" style="font-size: 1.1em">TECH AND INNOVATION</small>
+              <small class="text-muted" style="font-size: 1.1em">SOCIAL CAUSE</small>
             </p>
 
             <div class="container nopadding">
