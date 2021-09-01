@@ -71,7 +71,8 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
   <div class="col-4 text-center">
   <li class="nav-item" role="presentation">
     <a
-      class="nav-link"
+      class="nav-link px-1"
+      style="background-color: whitesmoke;"
       id="ex1-tab-1"
       data-mdb-toggle="tab"
       href="{{route('Profile')}}"
@@ -84,7 +85,8 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
   <div class="col-4 text-center">
   <li class="nav-item" role="presentation">
     <a
-      class="nav-link"
+      class="nav-link px-1"
+      style="background-color: whitesmoke;"
       id="ex1-tab-2"
       data-mdb-toggle="tab"
       href="{{route('campaigns.index')}}"
@@ -98,7 +100,7 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
   <div class="col-4 text-center">
   <li class="nav-item" role="presentation">
     <a
-      class="nav-link active"
+      class="nav-link px-1 active"
       id="ex1-tab-3"
       data-mdb-toggle="tab"
       href="{{route('Contributions')}}"
