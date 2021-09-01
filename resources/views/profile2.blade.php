@@ -16,6 +16,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container-fluid" style="padding-left: 20px; padding-right:20px">
 
 <form action="profile" method="GET" style="display: inline" >
 <button class="btn btn-primary" style="margin-left: 15px; color: black; font-size:13px; padding:2px 2px;" type="submit">
@@ -35,7 +36,9 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
 <h6 style="margin-left: 40px; color: grey;"><i class="fa fa-map-marker" aria-hidden="true"></i>{{Auth::user()->city}}, {{Auth::user()->country}}</h6>
 @endif
 <!-- Tabs navs -->
+<div class="row">
 <ul class="nav nav-pills mb-3" id="ex1" role="tablist">
+  <div class="col-4 text-center">
   <li class="nav-item" role="presentation">
     <a
       class="nav-link active"
@@ -48,6 +51,8 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
       >Profile</a
     >
   </li>
+  </div>
+  <div class="col-4 text-center">
   <li class="nav-item" role="presentation">
     <a
       class="nav-link"
@@ -60,6 +65,8 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
       >Settings</a
     >
   </li>
+  </div>
+  <div class="col-4 text-center">
   <li class="nav-item" role="presentation">
     <a
       class="nav-link"
@@ -72,7 +79,9 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
       >Emails</a
     >
   </li>
+  </div>
 </ul>
+</div>
 <!-- Tabs navs -->
 
 <!--Tabs contenmt-->
@@ -234,5 +243,5 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
 <br>
 <!--</div>-->
 </div>
-
+</div>
 @endsection

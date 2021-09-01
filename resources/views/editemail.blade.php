@@ -14,6 +14,8 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container-fluid" style="padding-left: 20px; padding-right:20px">
+
 <form action="profile" method="GET" style="display: inline" >
 <button class="btn btn-primary" style="margin-left: 15px; color: black;" type="submit">
 VIEW PROFILE <span class="badge bg-secondary"></span>
@@ -34,7 +36,9 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 @endif
 
 <!-- Tabs navs -->
+<div class="row">
 <ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
+  <div class="col-4 text-center">
   <li class="nav-item" role="presentation">
     <a
       class="nav-link"
@@ -47,6 +51,8 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
       >Profile</a
     >
   </li>
+  </div>
+  <div class="col-4 text-center">
   <li class="nav-item" role="presentation">
     <a
       class="nav-link"
@@ -59,6 +65,8 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
       >Settings</a
     >
   </li>
+  </div>
+  <div class="col-4 text-center">
   <li class="nav-item" role="presentation">
     <a
       class="nav-link active"
@@ -71,7 +79,9 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
       >Emails</a
     >
   </li>
+  </div>
 </ul>
+</div>
 <!-- Tabs navs -->
   <div class="tab-pane fade show active" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
 
@@ -159,5 +169,6 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 <br>
 <br>
 <br>
+</div>
 
 @endsection

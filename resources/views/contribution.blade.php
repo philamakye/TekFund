@@ -47,8 +47,9 @@ tr:nth-child(even) {
 
 
 @section('content')
+<div class="container-fluid" style="padding-left: 20px; padding-right:20px">
 <form action="profile" method="GET" style="display: inline" >
-<button class="btn btn-primary" style="margin-left: 15px;background-color: rgb(44, 20, 124); color: white;" type="submit">
+<button class="btn btn-primary" style="margin-left: 15px; color: white;" type="submit">
 VIEW PROFILE <span class="badge bg-secondary"></span>
 </button>
 </form>
@@ -152,8 +153,5 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
+</div>
 @endsection
