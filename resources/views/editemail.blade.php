@@ -41,42 +41,44 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
   <div class="col-4 text-center">
   <li class="nav-item" role="presentation">
     <a
-      class="nav-link"
+      class="nav-link px-1"
+      style="background-color: whitesmoke"
       id="ex1-tab-1"
       data-mdb-toggle="tab"
       href="{{route('profile-2')}}"
       role="tab"
       aria-controls="ex1-tabs-1"
       aria-selected="true"
-      >Profile</a
+      ><b>Profile</b></a
     >
   </li>
   </div>
   <div class="col-4 text-center">
   <li class="nav-item" role="presentation">
     <a
-      class="nav-link"
+      class="nav-link px-1"
+      style="background-color: whitesmoke"
       id="ex1-tab-2"
       data-mdb-toggle="tab"
       href="{{route('settings')}}"
       role="tab"
       aria-controls="ex1-tabs-2"
       aria-selected="false"
-      >Settings</a
+      ><b>Settings</b></a
     >
   </li>
   </div>
   <div class="col-4 text-center">
   <li class="nav-item" role="presentation">
     <a
-      class="nav-link active"
+      class="nav-link px-1 active"
       id="ex1-tab-3"
       data-mdb-toggle="tab"
       href="{{route('Email')}}"
       role="tab"
       aria-controls="ex1-tabs-3"
       aria-selected="false"
-      >Emails</a
+      ><b>Emails</b></a
     >
   </li>
   </div>

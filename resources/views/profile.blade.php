@@ -39,7 +39,7 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
       role="tab"
       aria-controls="ex1-tabs-1"
       aria-selected="true"
-      >Profile</a>
+      ><b>Profile</b></a>
   </li>
   </div>
   <div class="col-4  text-center" >
@@ -53,7 +53,7 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
       role="tab"
       aria-controls="ex1-tabs-2"
       aria-selected="false"
-      >Campaigns</a>
+      ><b>Campaigns</b></a>
   </li>
   </div>
   <div class="col-4  text-center" >
@@ -67,7 +67,7 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
       role="tab"
       aria-controls="ex1-tabs-3"
       aria-selected="false"
-      >Contributions</a
+      ><b>Contributions</b></a
     >
   </li>
   </div>
