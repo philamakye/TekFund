@@ -11,4 +11,4 @@ TekFund is a crowdfunding platform originally built for the Kwame Nkrumah Univer
 - Run 'php artisan generate:key'
 - Go to the env file and enter the name and password of your database eg. 'DB_DATABASE: Tekfund', 'DB_USERNAME: Root', 'DB_PASSWORD: mysql123'
 - Run 'php artisan migrate --seed'
-- Finally run 'php artisan serve' to run the project in your localhost
+- Finally run 'php artisan serve' to run the project in your localhost.
