@@ -111,7 +111,7 @@ const numb = document.querySelector(".numb");
                               @if (!empty($sch_id->pro_image))
                             <img src="{{asset('storage/images/'.$sch_id->pro_image)}}" class="avatars" alt="avt">
                                @else
-                           <img src="{{asset('storage/avatardefault_92824.png' )}}" class="avatars" alt="avt">
+                           <img src="{{asset('storage/avatar.png' )}}" class="avatars" alt="avt">
                            @endif
                               </div>
                                  <br>
@@ -229,7 +229,7 @@ const numb = document.querySelector(".numb");
 <br>
                          <h4 style="margin-left: 5%"><b>Campgaign Contributors' Details</b></h4>
                          @if(count($cont_details) > 0)
-                        <table id="customers">
+                        <table class="responsive-table" id="customers">
                         <tr>
                             <th>Name</th>
                             <th>Email</th>
