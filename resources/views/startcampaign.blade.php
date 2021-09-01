@@ -92,9 +92,9 @@ background-color: #e3e0cd;
             <center>
               <a href = "{{route('project')}}" style="text-decoration: none; color:black">  <div class="card camp-card" style="width: 20rem; height:17rem; background-color:white; border:none;box-shadow: 0 0.5rem 1.5rem 0 rgb(0 0 0 / 10%)" >
                     <div class="card-body">
-                      <h5 class="card-title"><b>Socials</b></h5>
+                      <h5 class="card-title"><b>Project</b></h5>
                       <img src="https://img.icons8.com/dusk/64/000000/microsoft-project.png"/>
-                      <p class="card-text">Start campaigns to fund social events like weddings, parties and funerals</p>
+                      <p class="card-text">We can assist you to raise funds for projects and innovative ideas.</p>
                       <h6 class="card-subtitle mb-2 text-muted">5% Platform fee</h6>
                       <a class="TekFund" style="font-size: 2em; text-decoration:none;">
                         <text id="TekFund" style=" color:#707070; text-decoration:none;  font-family:CooperBlack, Cooper "><tspan x="-161.875" y="0">TekFund</tspan></text>
@@ -109,9 +109,9 @@ background-color: #e3e0cd;
             <center>
                <a href = "{{route('Others')}}" style="text-decoration: none; color:black"> <div class="card camp-card" style="width: 20rem; height:17rem; background-color:white; border:none;box-shadow: 0 0.5rem 1.5rem 0 rgb(0 0 0 / 10%)" >
                     <div class="card-body">
-                      <h5 class="card-title"><b>Others</b></h5>
+                      <h5 class="card-title"><b>Social</b></h5>
                       <img src="https://img.icons8.com/dusk/64/000000/money.png"/>
-                      <p class="card-text">Create campaigns for others personal purposes such as buying a musical instrument </p>
+                      <p class="card-text">Create campaigns for social events such as funerals and weddings and other purposes.</p>
                       <h6 class="card-subtitle mb-2 text-muted">8% Platform fee</h6>
                       <a class="TekFund" style="font-size: 2em; text-decoration:none;">
                         <text class="camp-card" id="tek" style=" color:#707070; text-decoration:none;  font-family:CooperBlack, Cooper "><tspan x="-161.875" y="0">TekFund</tspan></text>

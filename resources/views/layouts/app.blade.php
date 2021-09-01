@@ -26,7 +26,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
    <style>
-       
+
        .nopadding{
            padding: 0;
        }
@@ -102,7 +102,7 @@ main{
                            <li class="nav-item dropdown">
 
                                 <a id="navbarDropdown" style="color: rgb(8, 4,32); font-size:16px" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                  <b> {{ Auth::user()->username }}</b>
+                                  <b style="text-transform: lowercase;"> {{ Auth::user()->username }}</b>
                                      @if(Auth::user()->avatar)
                                     <img src="{{asset('storage/images/'. Auth::user()->avatar)}}" alt="avatar" class="avatar"/>
                                     @else

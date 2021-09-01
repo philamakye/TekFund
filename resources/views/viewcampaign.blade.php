@@ -235,7 +235,7 @@ follow(){
 
             <div class="container-fluid px-3" style="border: 1px solid">
             <div class="pt-1">
-               <h3><b>Design Summary</b></h3>
+               {{-- <h3><b>Design Summary</b></h3> --}}
                <p>
                    <h4 style="text-align: justify;">
                    {{ $camp->story }}
@@ -248,29 +248,29 @@ follow(){
 
            <figure class="figure pt-5">
             <img src="{{asset('/storage/covers/'. $camp->cover_img)}}" class="img-fluid" alt="...">
-            <figcaption class="figure-caption">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil asperiores porro tempore explicabo iure suscipit tenetur, id obcaecati voluptates officia nisi, amet voluptatum, qui ipsa autem quo dolor dolorem. Id!
+            {{-- <figcaption class="figure-caption">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil asperiores porro tempore explicabo iure suscipit tenetur, id obcaecati voluptates officia nisi, amet voluptatum, qui ipsa autem quo dolor dolorem. Id!
                 lore
-            </figcaption>
+            </figcaption> --}}
            </figure>
 
-           <div class="my-3">
+           {{-- <div class="my-3">
                <h3>
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod repellat tempora fuga architecto placeat inventore temporibus consequuntur dignissimos! Libero perspiciatis corrupti facere ducimus nostrum consectetur impedit dolores asperiores enim sed! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus sit autem dolor molestias? Dicta doloremque beatae iste voluptatem architecto accusamus nam amet corrupti corporis non possimus, consequatur quod voluptas laborum.
                </h3>
-           </div>
+           </div> --}}
 
-           <figure class="figure pt-5">
+           {{-- <figure class="figure pt-5">
             <img src="/images/crop2.svg" class="img-fluid" alt="...">
             <figcaption class="figure-caption">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil asperiores porro tempore explicabo iure suscipit tenetur, id obcaecati voluptates officia nisi, amet voluptatum, qui ipsa autem quo dolor dolorem. Id!
                 lore
             </figcaption>
-           </figure>
+           </figure> --}}
 
-           <div class="my-3">
+           {{-- <div class="my-3">
                <h3>
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod repellat tempora fuga architecto placeat inventore temporibus consequuntur dignissimos! Libero perspiciatis corrupti facere ducimus nostrum consectetur impedit dolores asperiores enim sed! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus sit autem dolor molestias? Dicta doloremque beatae iste voluptatem architecto accusamus nam amet corrupti corporis non possimus, consequatur quod voluptas laborum.
                </h3>
-           </div>
+           </div> --}}
 
         </div>
         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
