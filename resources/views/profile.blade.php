@@ -28,11 +28,12 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 <!-- Tabs navs -->
 <div class="row">
 <ul class="nav nav-pills mb-3" id="ex1" role="tablist">
-  <div class="col-4 text-center">
+  <div class="col-4  text-center" >
   <li class="nav-item" role="presentation">
     <a
-      class="nav-link active"
+      class="nav-link px-1 active"
       id="ex1-tab-1"
+
       data-mdb-toggle="tab"
       href="{{route('Profile')}}"
       role="tab"
@@ -41,10 +42,11 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
       >Profile</a>
   </li>
   </div>
-  <div class="col-4 text-center">
+  <div class="col-4  text-center" >
   <li class="nav-item" role="presentation">
     <a
-      class="nav-link"
+      class="nav-link px-1"
+      style="background-color: whitesmoke"
       id="ex1-tab-2"
       data-mdb-toggle="tab"
       href="{{route('campaigns.index')}}"
@@ -54,11 +56,12 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
       >Campaigns</a>
   </li>
   </div>
-  <div class="col-4 text-center">
+  <div class="col-4  text-center" >
   <li class="nav-item" role="presentation">
     <a
-      class="nav-link"
+      class="nav-link px-1"
       id="ex1-tab-3"
+      style="background-color: whitesmoke"
       data-mdb-toggle="tab"
       href="{{route('Contributions')}}"
       role="tab"
