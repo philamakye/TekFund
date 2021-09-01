@@ -35,7 +35,7 @@ Edit profile & Settings<span class="badge bg-secondary"></span>
 <h6 style="margin-left: 40px; color: grey;"><i class="fa fa-map-marker" aria-hidden="true"></i>{{Auth::user()->city}}, {{Auth::user()->country}}</h6>
 @endif
 <!-- Tabs navs -->
-<ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
+<ul class="nav nav-pills mb-3" id="ex1" role="tablist">
   <li class="nav-item" role="presentation">
     <a
       class="nav-link active"

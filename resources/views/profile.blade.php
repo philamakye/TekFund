@@ -26,7 +26,9 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 <h6 style="margin-left: 40px; color: grey;"><i class="fa fa-map-marker" aria-hidden="true"></i>{{Auth::user()->city}}, {{Auth::user()->country}}</h6>
 @endif
 <!-- Tabs navs -->
-<ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
+<div class="row">
+<ul class="nav nav-pills mb-3" id="ex1" role="tablist">
+  <div class="col-4 text-center">
   <li class="nav-item" role="presentation">
     <a
       class="nav-link active"
@@ -36,9 +38,10 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
       role="tab"
       aria-controls="ex1-tabs-1"
       aria-selected="true"
-      >Profile</a
-    >
+      >Profile</a>
   </li>
+  </div>
+  <div class="col-4 text-center">
   <li class="nav-item" role="presentation">
     <a
       class="nav-link"
@@ -48,9 +51,10 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
       role="tab"
       aria-controls="ex1-tabs-2"
       aria-selected="false"
-      >Campaigns</a
-    >
+      >Campaigns</a>
   </li>
+  </div>
+  <div class="col-4 text-center">
   <li class="nav-item" role="presentation">
     <a
       class="nav-link"
@@ -63,7 +67,9 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
       >Contributions</a
     >
   </li>
+  </div>
 </ul>
+</div>
 <!-- Tabs navs -->
 <center>
         @if(Auth::user()->pro_image)
