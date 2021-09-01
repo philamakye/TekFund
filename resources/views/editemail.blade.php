@@ -37,7 +37,7 @@ EDIT PROFILE & SETTINGS<span class="badge bg-secondary"></span>
 
 <!-- Tabs navs -->
 <div class="row">
-<ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
+<ul class="nav nav-pills mb-3" id="ex1" role="tablist">
   <div class="col-4 text-center">
   <li class="nav-item" role="presentation">
     <a
