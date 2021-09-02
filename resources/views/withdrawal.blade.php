@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+{{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> --}}
 
 @extends('layouts.app')
 <style>
@@ -7,9 +7,9 @@
     margin-bottom: 0px !important;
     background: silver;
 }
-.main-footer {
+/* .main-footer {
     display: none;
-}
+} */
 </style>
 @section('content')
 
@@ -65,7 +65,7 @@
                         <input type="number" class="form-control" id="inputIDNumb" placeholder="Enter a valid ID number">
                     </div>
                     <div class="col-12" style="text-align: center;">
-                        <button type="submit" class="btn btn-primary">Withdraw</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"> Withdraw</button>
                     </div>
 
                     <div class="col-12">
@@ -87,4 +87,35 @@
         </div>
     </div>
     </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <p>Withdrawal Request Made!</p><br>
+        <i class="fa fa-check fa-5x" aria-hidden="true"></i>
+
+      </div>
+      <div class="modal-footer">
+          <div class="col text-center">
+       <form action="{{route('campaigns.index')}}" method="get">
+        <button type="submit" class="btn btn-secondary text-center">Okay</a>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+</script>
 @endsection

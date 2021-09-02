@@ -9,7 +9,7 @@
                                 <div class="col">
                                 <h3 style="text-transform: capitalize;">{{ $liv->title }}</h3>
                                 @if (!empty($liv->percent))
-                                <div class="progress-bar position"  data-percent="{{ $liv->percent }}" data-color="#aadcf5,#12b321"></div>
+                                <div class="progress-bar position"  data-percent="{{ $liv->percent }}" data-color="rgb(8,4,32),#12b321"></div>
                                 @elseif(empty($liv->percent))
                                 <div class="progress-bar position"  data-percent="00" data-color="#aadcf5,#12b321"></div>
                                 @endif
