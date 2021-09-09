@@ -74,7 +74,7 @@
                         <ul>
                             <li>1. Maximum per transaction is GHC 10,000.00</li>
                             <li>2. Minimum per transaction is GHC 1.00</li>
-                            <li>3. Withdrawal is free, no transaction needed</li>
+                            <li>3. Withdrawal is free, no fee transaction  needed</li>
                         </ul>
                     </div>
                 </form>
