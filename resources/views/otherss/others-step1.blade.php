@@ -87,11 +87,11 @@
                         </select>
 
                           <label for="title" style="font-size: large">Cause for Fundraising</label>
-                        <input oninput="this.className = 'form-control'" name="cause" type="text" maxlength="150" id="inputPassword6" placeholder="Ex: Honoring COE(IV) Class Rep" class="form-control" aria-describedby="passwordHelpBlock">
+                        <input oninput="this.className = 'form-control'" name="cause" type="text" maxlength="150" id="inputdetail1" placeholder="Ex: Honoring COE(IV) Class Rep" class="form-control" aria-describedby="passwordHelpBlock">
 <br>
 <br>
                         <label for="title" style="font-size: large">What is your fundraiser title?</label>
-                        <input oninput="this.className = 'form-control'" maxlength="70" name="title" type="text" id="inputPassword5" placeholder="Ex: Help Stevenson get a new brain" class="form-control" aria-describedby="passwordHelpBlock">
+                        <input oninput="this.className = 'form-control'" maxlength="70" name="title" type="text" id="inputdetail2" placeholder="Ex: Help Stevenson get a new brain" class="form-control" aria-describedby="passwordHelpBlock">
                         <div id="passwordHelpBlock" class="form-text mb-4">
                             <i class="fas fa-exclamation-circle"></i> <span style="color:red; font-weight:100;">Try to include a person's name and the purpose.</span>
                         </div>
@@ -103,7 +103,7 @@
                 Set your fundraising goal
             </h3>
                     <label for="title" style="font-size: large">How much would you like to raise?</label>
-                    <input type="text" min="200" oninput="validity.valid||(value='');" name="target" id="inputPassword5" placeholder="Enter Target Amount in GHC" class="form-control" aria-describedby="passwordHelpBlock">
+                    <input type="text" min="200" oninput="validity.valid||(value='');" name="target" id="inputdetail3" placeholder="Enter Target Amount in GHC" class="form-control" aria-describedby="passwordHelpBlock">
                     <div id="passwordHelpBlock" class="form-text mb-4">
                             <i class="fas fa-exclamation-circle"></i> <span style="color:red; font-weight:100;">Minimum target amount that can be set is GHC 200.</span>
                         </div>
@@ -118,7 +118,7 @@
                         </small>
                       </h4>
                       <label for="title" style="font-size: large">Campaign Duration</label>
-                      <input type="text" min="10" oninput="validity.valid||(value='');" name="duration" id="inputPassword5" placeholder="Set Campaign duration in Days" class="form-control" aria-describedby="passwordHelpBlock">
+                      <input type="text" min="10" oninput="validity.valid||(value='');" name="duration" id="inputdetail4" placeholder="Set Campaign duration in Days" class="form-control" aria-describedby="passwordHelpBlock">
                       <div id="passwordHelpBlock" class="form-text mb-4">
                             <i class="fas fa-exclamation-circle"></i> <span style="color:red; font-weight:100;">Minimum target amount that can be set is GHC 200.</span>
                         </div>
@@ -178,13 +178,13 @@
                     <h5 class="text-muted" style="color: rgb(241, 237, 237) !important"> <i class="fas fa-lock"></i> We just need a little more information before you can accept donations</h5>
 
            <label for="title" style="font-size: large; margin:13px">Full Name</label>
-           <input oninput="this.className = 'form-control'" name="full_name" type="text" id="inputPassword5" placeholder="Enter your name"  class="form-control mb-5" aria-describedby="passwordHelpBlock">
+           <input oninput="this.className = 'form-control'" name="full_name" type="text" id="inputdetail5" placeholder="Enter your name"  class="form-control mb-5" aria-describedby="passwordHelpBlock">
 
            <label for="title" style="font-size: large; margin:13px">School ID of Reference 1</label>
-           <input oninput="this.className = 'form-control'" name="reference_1" type="text" id="inputPassword5" placeholder="Provide school ID number of first guarantor" class="form-control mb-5" aria-describedby="passwordHelpBlock">
+           <input oninput="this.className = 'form-control'" name="reference_1" type="text" id="inputdetail6" placeholder="Provide school ID number of first guarantor" class="form-control mb-5" aria-describedby="passwordHelpBlock">
 
            <label for="title" style="font-size: large; margin:13px">School ID of Reference 2</label>
-           <input oninput="this.className = 'form-control'" name="reference_2" type="text" id="inputPassword5" placeholder="Provide school ID number of second guarantor"  class="form-control mb-5" aria-describedby="passwordHelpBlock">
+           <input oninput="this.className = 'form-control'" name="reference_2" type="text" id="inputdetail7" placeholder="Provide school ID number of second guarantor"  class="form-control mb-5" aria-describedby="passwordHelpBlock">
 
                 </div>
 
@@ -380,6 +380,29 @@
                 return false;
             }
         }
+}
+
+</script>
+
+
+<script>
+    document.querySelector('#inputdetail1').addEventListener('keypress',preventEnterSubmit);
+    document.querySelector('#inputdetail2').addEventListener('keypress',preventEnterSubmit);
+    document.querySelector('#inputdetail3').addEventListener('keypress',preventEnterSubmit);
+    document.querySelector('#tubeUrl').addEventListener('keypress',preventEnterSubmit);
+    document.querySelector('#inputdetail4').addEventListener('keypress',preventEnterSubmit);
+    document.querySelector('#inputdetail5').addEventListener('keypress',preventEnterSubmit);
+    document.querySelector('#inputdetail6').addEventListener('keypress',preventEnterSubmit);
+    document.querySelector('#inputdetail7').addEventListener('keypress',preventEnterSubmit);
+
+
+    function preventEnterSubmit(e){
+        if(e.key === 'Enter'){
+          e.preventDefault();
+          document.getElementById('nextBtn').click();
+    }
+
+
 }
 
 </script>
