@@ -58,7 +58,7 @@ const numb = document.querySelector(".numb");
                                 <div class="col">
                                 <h3 style="text-transform: capitalize;">{{ $mydetails->title }}</h3>
                                   @if(isset($contris))
-                                  <div class="progress-bar position"  data-percent="{{ $contris->percent }}" data-color="#aadcf5,#12b321"></div>
+                                  <div class="progress-bar position"  data-percent="{{ $contris->percent }}" data-color="rgb(8,4,32),#12b321"></div>
                                  @else
                                 <div class="progress-bar position"  data-percent="00" data-color="#aadcf5,#12b321"></div>
                                 @endif

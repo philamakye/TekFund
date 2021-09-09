@@ -67,7 +67,7 @@ const numb = document.querySelector(".numb");
                     <a class="list-group-item list-group-item-action sideColor p-3 text-center" href="#!" style="color: rgb(56,216,208);">Users</a>
                     <a class="list-group-item list-group-item-action sideColor p-3" href="{{route('admin') }}" style="color: white;">Signed up</a>
                     <a class="list-group-item list-group-item-action sideColor p-3" href="#!" style="color: white;">Anonymous Contributors</a>
-                    <a class="list-group-item list-group-item-action sideColor p-3 text-center" href="#!" style="color: rgb(56,216,208);">Actions</a>
+                    <a class="list-group-item list-group-item-action sideColor p-3 text-center" href="#!" style="color: rgb(73, 145, 141);">Actions</a>
                     {{-- <a class="list-group-item list-group-item-action sideColor p-3 text-center" href="" style="color: rgb(56,216,208);">Logout</a> --}}
                     <a class="list-group-item list-group-item-action sideColor p-3 text-center" href="{{ route('logout') }}" style="color: rgb(236, 71, 79);font-weight:bolder"
                                        onclick="event.preventDefault();

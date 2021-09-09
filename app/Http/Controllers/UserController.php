@@ -245,7 +245,7 @@ class UserController extends Controller
         }
 
         if ($request->has('cause')) {
-            $store->campaign_type = 'other';
+            $store->campaign_type = 'social';
         }
         if ($request->has('business_cate')) {
             $store->campaign_type = 'startup';

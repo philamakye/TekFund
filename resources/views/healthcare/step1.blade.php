@@ -136,7 +136,7 @@
                       <label for="title" style="font-size: large">Campaign Duration</label>
                       <input type="text" min="10" oninput="validity.valid||(value='');" id="inputPassword5" placeholder="Set Campaign duration in Days" class="form-control" aria-describedby="passwordHelpBlock" name="duration">
                       <div id="passwordHelpBlock" class="form-text mb-4">
-                            <i class="fas fa-exclamation-circle"></i> <span style="color:red; font-weight:100;">Minimum campaign duration that can be set is 10 days.</span>
+                            <i class="fas fa-exclamation-circle"></i> <span style="color:red; font-weight:100;">Minimum campaign duration that can be set is 10 days and the maximum campaign duration is 90 days.</span>
                         </div>
                            <h4 class="mb-5">
                           <small class="text-muted" style="color:white !important; font-size:70%">
