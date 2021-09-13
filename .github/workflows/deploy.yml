@@ -18,6 +18,8 @@ jobs:
           coverage: none
       - name: Require Vapor CLI
         run: composer global require laravel/vapor-cli
+      - name: Start vapor
+        run: vapor init
       - name: Deploy Environment
         run: vapor deploy
         env:
