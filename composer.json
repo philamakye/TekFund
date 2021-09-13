@@ -12,6 +12,8 @@
         "laravel/framework": "^8.40",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.3",
+        "laravel/vapor-core": "^2.13",
+        "laravel/vapor-ui": "^1.2",
         "unicodeveloper/laravel-paystack": "^1.0"
     },
     "require-dev": {
