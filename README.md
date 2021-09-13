@@ -1,5 +1,5 @@
 # ABOUT TEKFUND
-TekFund is a crowdfunding platform originally built for the Kwame Nkrumah University of Science and Technology (KNUST) Community. Built by three final year students [Philip Oduro Amakye](https://github.com/philamakye), [Gerald Bosu Ofori](https://github.com/geraldofori), [Daniel Ofei Manasseh](https://github.com/heywest).
+TekFund is a crowdfunding platform originally built for the Kwame Nkrumah University of Science and Technology (KNUST) Community by three final year students [Philip Oduro Amakye](https://github.com/philamakye), [Gerald Bosu Ofori](https://github.com/geraldofori), [Daniel Ofei Manasseh](https://github.com/heywest).
 
 ## Running the project in localhost
 - Clone or Download zip of the repository
